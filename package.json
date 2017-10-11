@@ -1,8 +1,8 @@
 {
   "name": "eyeem-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shareable React Components for Frontend Projects at EyeEm",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "watch": "node_modules/.bin/webpack --config webpack.config.js --watch",
     "build": "node_modules/.bin/webpack --config webpack.config.js",
