@@ -1,0 +1,34 @@
+{
+  "name": "frontend-components",
+  "version": "1.0.0",
+  "description": "Shareable React Components for Frontend Projects at EyeEm",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "node_modules/.bin/webpack --config webpack.config.js",
+    "test": "echo 'no tests :(';"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyeem/frontend-components.git"
+  },
+  "author": "EyeEm Mobile GmbH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eyeem/frontend-components/issues"
+  },
+  "homepage": "https://github.com/eyeem/frontend-components#readme",
+  "dependencies": {
+    "babel-preset-stage-2": "^6.24.1",
+    "lodash": "^4.17.4",
+    "react": "^16.0.0",
+    "react-create-component-from-tag-prop": "^1.3.1",
+    "styled-components": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.6.0"
+  }
+}
