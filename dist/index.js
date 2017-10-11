@@ -3588,7 +3588,7 @@ var background = function background(props) {
   return '\n  border-color: ' + (0, _styleUtils.fromTheme)('colors.greys.grey4')(props) + ';\n  background-color: ' + (0, _styleUtils.fromTheme)('colors.whites.white')(props) + ';\n  ';
 };
 
-var StyledLabel = _styledComponents2.default.label(_templateObject2, background, (0, _styleUtils.fromPropsTernary)('checked', '9px 7px'));
+var StyledLabel = _styledComponents2.default.label(_templateObject2, background, (0, _styleUtils.fromPropsTernary)('checked', '9px 7px', '0'));
 
 var Wrapper = _styledComponents2.default.div(_templateObject3);
 

@@ -1,34 +1,38 @@
 {
-  "name": "frontend-components",
-  "version": "1.0.0",
+  "name": "eyeem-components",
+  "version": "0.0.1",
   "description": "Shareable React Components for Frontend Projects at EyeEm",
   "main": "build/index.js",
   "scripts": {
+    "watch": "node_modules/.bin/webpack --config webpack.config.js --watch",
     "build": "node_modules/.bin/webpack --config webpack.config.js",
-    "test": "echo 'no tests :(';"
+    "test": "echo 'no tests yet :(';",
+    "prepublish": "npm run build",
+    "release": "np"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eyeem/frontend-components.git"
   },
-  "author": "EyeEm Mobile GmbH",
-  "license": "ISC",
+  "author": "EyeEm Mobile GmbH (eyeem.com)",
   "bugs": {
     "url": "https://github.com/eyeem/frontend-components/issues"
   },
   "homepage": "https://github.com/eyeem/frontend-components#readme",
   "dependencies": {
-    "babel-preset-stage-2": "^6.24.1",
     "lodash": "^4.17.4",
     "react": "^16.0.0",
     "react-create-component-from-tag-prop": "^1.3.1",
     "styled-components": "^2.2.1"
   },
+  "license": "Apache-2.0",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "np": "^2.16.0",
     "webpack": "^3.6.0"
   }
 }
