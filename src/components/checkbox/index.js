@@ -68,7 +68,7 @@ const StyledLabel = styled.label`
     border-radius: 3px;
     background-image: url('/node-static/img/check-white-9x7px.svg');
     background-position: center center;
-    background-size: ${fromPropsTernary('checked', ('9px 7px': '0'))};
+    background-size: ${fromPropsTernary('checked', '9px 7px', '0')};
     background-repeat: no-repeat;
     content: '';
     transition: transform 0.15s ease-out, background 0.15s ease-out,
