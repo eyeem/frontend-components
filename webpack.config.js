@@ -10,7 +10,10 @@ module.exports = {
   entry: path.join(paths.SRC, 'index.js'),
   output: {
     path: paths.DIST,
-    filename: 'index.js'
+    filename: 'index.js',
+    library: 'eyeem-components',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [
@@ -23,11 +26,5 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx']
-  },
-  externals: [
-    'react',
-    'lodash',
-    'styled-components',
-    'react-create-component-from-tag-prop'
-  ]
+  }
 };
