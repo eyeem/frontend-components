@@ -95,7 +95,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.propsColorFromTheme = exports.fromPropsTernary = exports.fromProps = exports.fromTheme = exports.helvetica = exports.media = exports.BREAKPOINTS = undefined;
+exports.idealTextColor = exports.isRgbaColor = exports.propsColorFromTheme = exports.fromPropsTernary = exports.fromProps = exports.fromTheme = exports.helvetica = exports.media = exports.BREAKPOINTS = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  '], ['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  ']);
 
@@ -161,6 +161,44 @@ var propsColorFromTheme = exports.propsColorFromTheme = function propsColorFromT
   return function (props) {
     return fromTheme('colors.' + _lodash2.default.get(props, selector))(props);
   };
+};
+
+var isRgbaColor = exports.isRgbaColor = function isRgbaColor(color) {
+  return _lodash2.default.startsWith(color, 'rgba');
+};
+
+var getRGBComponents = function getRGBComponents(color) {
+  if (isRgbaColor(color)) {
+    var rgba = color.match(/\d+/g);
+    return {
+      red: rgba[0],
+      green: rgba[1],
+      blue: rgba[2],
+      alpha: rgba[3]
+    };
+  }
+
+  var red = color.substring(1, 3);
+  var green = color.substring(3, 5);
+  var blue = color.substring(5, 7);
+
+  return {
+    red: parseInt(red, 16),
+    green: parseInt(green, 16),
+    blue: parseInt(blue, 16)
+  };
+};
+
+var idealTextColor = exports.idealTextColor = function idealTextColor(bgColor) {
+  var threshold = 105;
+  var components = getRGBComponents(bgColor);
+  var bgDelta = components.red * 0.299 + components.green * 0.587 + components.blue * 0.114;
+
+  if (components.alpha && components.alpha < 0.4) {
+    return '#000000';
+  }
+
+  return 255 - bgDelta < threshold ? '#000000' : '#ffffff';
 };
 
 /***/ }),
@@ -781,11 +819,13 @@ var _checkbox2 = _interopRequireDefault(_checkbox);
 
 var _styleConfig = __webpack_require__(5);
 
-var _styleConfig2 = _interopRequireDefault(_styleConfig);
+var styleConfig = _interopRequireWildcard(_styleConfig);
 
 var _styleUtils = __webpack_require__(2);
 
-var _styleUtils2 = _interopRequireDefault(_styleUtils);
+var styleUtils = _interopRequireWildcard(_styleUtils);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -797,8 +837,8 @@ exports.StyledText = _text2.default;
 exports.Textarea = _textarea2.default;
 exports.FormRow = _formRow2.default;
 exports.Checkbox = _checkbox2.default;
-exports.styleConfig = _styleConfig2.default;
-exports.styleUtils = _styleUtils2.default;
+exports.styleConfig = styleConfig;
+exports.styleUtils = styleUtils;
 
 /***/ }),
 /* 10 */
