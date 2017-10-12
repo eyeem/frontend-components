@@ -10,6 +10,7 @@ import Checkbox from './components/checkbox/';
 
 import * as styleConfig from './styleConfig';
 import * as styleUtils from './styleUtils';
+import theme from './theme';
 
 export {
   StyledButton,
@@ -21,5 +22,6 @@ export {
   FormRow,
   Checkbox,
   styleConfig,
-  styleUtils
+  styleUtils,
+  theme
 };
