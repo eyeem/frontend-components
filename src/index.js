@@ -8,6 +8,9 @@ import StyledText from './components/text/';
 import Textarea from './components/textarea/';
 import Checkbox from './components/checkbox/';
 
+import styleConfig from './styleConfig';
+import styleUtils from './styleUtils';
+
 export {
   StyledButton,
   Icon,
@@ -16,5 +19,7 @@ export {
   StyledText,
   Textarea,
   FormRow,
-  Checkbox
+  Checkbox,
+  styleConfig,
+  styleUtils
 };
