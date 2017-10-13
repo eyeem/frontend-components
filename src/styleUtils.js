@@ -1,6 +1,7 @@
 /* @flow */
 import _ from 'lodash';
 import { css } from 'styled-components';
+import theme from './theme';
 
 // breakpoint lower limits
 export const BREAKPOINTS = {
@@ -37,8 +38,8 @@ export const helvetica = (type: 'regular' | 'light' | 'bold') => `
   font-family: ${typeToFontFamily[type]};
 `;
 
-export const fromTheme = (selector: string) => (props: { theme: Theme }) =>
-  _.get(props.theme, selector);
+export const fromTheme = (selector: string) => (props: {}) =>
+  _.get(theme, selector);
 export const fromProps = (selector: string) => (props: {}) =>
   _.get(props, selector);
 export const fromPropsTernary = (
@@ -52,9 +53,8 @@ export const fromPropsTernary = (
   return elseCase;
 };
 
-export const propsColorFromTheme = (selector: string) => (props: {
-  theme: Theme
-}) => fromTheme(`colors.${_.get(props, selector)}`)(props);
+export const propsColorFromTheme = (selector: string) => (props: {}) =>
+  fromTheme(`colors.${_.get(props, selector)}`)(props);
 
 export const isRgbaColor = (color: string) => _.startsWith(color, 'rgba');
 

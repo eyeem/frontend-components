@@ -1,5 +1,5 @@
 /* @flow */
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import _ from 'lodash';
 import createComponentFromTagProp from 'react-create-component-from-tag-prop';
 
@@ -31,7 +31,7 @@ const marginBottom = size => props => {
 
 const noWrap = props => {
   if (props.noWrap) {
-    return `
+    return css`
       white-space: nowrap;
     `;
   }
@@ -84,12 +84,12 @@ const StyledText = styled(ComponentFromTagProp)`
   }
   ${props => helvetica(props.font)} ${props =>
       props.ellipsis
-        ? `
-        width: 100%;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-      `
+        ? css`
+            width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          `
         : ''} ${noWrap};
 `;
 

@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { helvetica, fromTheme } from '../../styleUtils';
 
@@ -10,39 +10,38 @@ import Flyout from '../flyout';
 const background = (props: {
   error: boolean,
   pending: boolean,
-  showCheckmark: boolean,
-  theme: Theme
+  showCheckmark: boolean
 }) => {
   if (props.error) {
-    return `
-    border-color: ${fromTheme('colors.solidColors.red')(props)};
-    background-color: ${fromTheme('colors.lightColors.lightRed')(props)};
+    return css`
+      border-color: ${fromTheme('colors.solidColors.red')};
+      background-color: ${fromTheme('colors.lightColors.lightRed')};
     `;
   }
   if (props.pending) {
-    return `
-    border-color: ${fromTheme('colors.greys.grey4')(props)};
-    background-color: ${fromTheme('colors.whites.white')(props)};
-    background-image: url("/node-static/img/spinner-32-black.gif");
-    background-position: center right 8px;
-    background-size: 16px;
-    background-repeat: no-repeat;
+    return css`
+      border-color: ${fromTheme('colors.greys.grey4')};
+      background-color: ${fromTheme('colors.whites.white')};
+      background-image: url('/node-static/img/spinner-32-black.gif');
+      background-position: center right 8px;
+      background-size: 16px;
+      background-repeat: no-repeat;
     `;
   }
   if (props.showCheckmark) {
-    return `
-    border-color: ${fromTheme('colors.greys.grey4')(props)};
-    background-color: ${fromTheme('colors.whites.white')(props)};
-    padding-right: 30px;
-    background-image: url("/node-static/img/check-green.svg");
-    background-position: center right 8px;
-    background-size: 15px;
-    background-repeat: no-repeat;
+    return css`
+      border-color: ${fromTheme('colors.greys.grey4')};
+      background-color: ${fromTheme('colors.whites.white')};
+      padding-right: 30px;
+      background-image: url('/node-static/img/check-green.svg');
+      background-position: center right 8px;
+      background-size: 15px;
+      background-repeat: no-repeat;
     `;
   }
-  return `
-  border-color: ${fromTheme('colors.greys.grey4')(props)};
-  background-color: ${fromTheme('colors.whites.white')(props)};
+  return css`
+    border-color: ${fromTheme('colors.greys.grey4')};
+    background-color: ${fromTheme('colors.whites.white')};
   `;
 };
 

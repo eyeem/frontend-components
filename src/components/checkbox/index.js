@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { fromTheme, fromPropsTernary } from '../../styleUtils';
 
@@ -14,26 +14,22 @@ const StyledCheckbox = styled.input`
   margin-right: 16px;
 `;
 
-const background = (props: {
-  error: boolean,
-  checked: boolean,
-  theme: Theme
-}) => {
+const background = (props: { error: boolean, checked: boolean }) => {
   if (props.error) {
-    return `
-    border-color: ${fromTheme('colors.solidColors.red')(props)};
-    background-color: ${fromTheme('colors.lightColors.lightRed')(props)};
+    return css`
+      border-color: ${fromTheme('colors.solidColors.red')};
+      background-color: ${fromTheme('colors.lightColors.lightRed')};
     `;
   }
   if (props.checked) {
-    return `
-    border-color: ${fromTheme('colors.solidColors.green')(props)};
-    background-color: ${fromTheme('colors.solidColors.green')(props)};
+    return css`
+      border-color: ${fromTheme('colors.solidColors.green')};
+      background-color: ${fromTheme('colors.solidColors.green')};
     `;
   }
-  return `
-  border-color: ${fromTheme('colors.greys.grey4')(props)};
-  background-color: ${fromTheme('colors.whites.white')(props)};
+  return css`
+    border-color: ${fromTheme('colors.greys.grey4')};
+    background-color: ${fromTheme('colors.whites.white')};
   `;
 };
 

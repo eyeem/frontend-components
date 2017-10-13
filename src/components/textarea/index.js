@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Flyout from '../flyout';
 import FormRow from '../formRow';
@@ -10,18 +10,17 @@ import { helvetica, fromTheme } from '../../styleUtils';
 const background = (props: {
   error: boolean,
   pending: boolean,
-  showCheckmark: boolean,
-  theme: Theme
+  showCheckmark: boolean
 }) => {
   if (props.error) {
-    return `
-    border-color: ${fromTheme('colors.solidColors.red')(props)};
-    background-color: ${fromTheme('colors.lightColors.lightRed')(props)};
+    return css`
+      border-color: ${fromTheme('colors.solidColors.red')};
+      background-color: ${fromTheme('colors.lightColors.lightRed')};
     `;
   }
-  return `
-  border-color: ${fromTheme('colors.greys.grey4')(props)};
-  background-color: ${fromTheme('colors.whites.white')(props)};
+  return css`
+    border-color: ${fromTheme('colors.greys.grey4')};
+    background-color: ${fromTheme('colors.whites.white')};
   `;
 };
 

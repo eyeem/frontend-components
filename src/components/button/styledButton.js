@@ -1,5 +1,5 @@
 /* @flow */
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import createComponentFromTagProp from 'react-create-component-from-tag-prop';
 
 import {
@@ -26,22 +26,22 @@ const ComponentFromTagProp = createComponentFromTagProp({
 
 const disabled = props => {
   if (props.disabled || (props.progress && props.progress < 100)) {
-    return `
+    return css`
       cursor: default;
-      border-color: ${propsColorFromTheme('colors.borderDisabled')(props)};
-      background-color: ${propsColorFromTheme('colors.bgDisabled')(props)};
-      color: ${propsColorFromTheme('colors.fontDisabled')(props)};
-      fill: ${propsColorFromTheme('colors.fontDisabled')(props)};
+      border-color: ${propsColorFromTheme('colors.borderDisabled')};
+      background-color: ${propsColorFromTheme('colors.bgDisabled')};
+      color: ${propsColorFromTheme('colors.fontDisabled')};
+      fill: ${propsColorFromTheme('colors.fontDisabled')};
       &:focus,
       &:hover {
-        color: ${propsColorFromTheme('colors.fontDisabled')(props)};
-        fill: ${propsColorFromTheme('colors.fontDisabled')(props)};
-        background-color: ${propsColorFromTheme('colors.bgDisabled')(props)};
-        border-color: ${propsColorFromTheme('colors.borderDisabled')(props)};
+        color: ${propsColorFromTheme('colors.fontDisabled')};
+        fill: ${propsColorFromTheme('colors.fontDisabled')};
+        background-color: ${propsColorFromTheme('colors.bgDisabled')};
+        border-color: ${propsColorFromTheme('colors.borderDisabled')};
       }
       &:active {
-        background-color: ${propsColorFromTheme('colors.bgDisabled')(props)};
-        border-color: ${propsColorFromTheme('colors.borderDisabled')(props)};
+        background-color: ${propsColorFromTheme('colors.bgDisabled')};
+        border-color: ${propsColorFromTheme('colors.borderDisabled')};
       }
     `;
   }
@@ -50,16 +50,14 @@ const disabled = props => {
 
 const progress = props => {
   if (props.progress && props.progress < 100) {
-    return `
-      background-image: linear-gradient(to right, ${propsColorFromTheme(
-        'colors.bgRegular'
-      )(props)} 0%, ${propsColorFromTheme('colors.bgRegular')(
-      props
-    )} ${fromProps('progress')(props)}%, ${propsColorFromTheme(
-      'colors.bgDisabled'
-    )(props)} ${fromProps('progress')(props)}%, ${propsColorFromTheme(
-      'colors.bgDisabled'
-    )(props)} 100%);
+    return css`
+      background-image: linear-gradient(
+        to right,
+        ${propsColorFromTheme('colors.bgRegular')} 0%,
+        ${propsColorFromTheme('colors.bgRegular')} ${fromProps('progress')}%,
+        ${propsColorFromTheme('colors.bgDisabled')} ${fromProps('progress')}%,
+        ${propsColorFromTheme('colors.bgDisabled')} 100%
+      );
     `;
   }
   return '';

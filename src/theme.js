@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
   whites: {
     white: '#ffffff',
     pearlWhite: '#fafafa',
