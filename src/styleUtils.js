@@ -1,7 +1,7 @@
 /* @flow */
 import _ from 'lodash';
 import { css } from 'styled-components';
-import theme from './theme';
+import * as theme from './theme';
 
 // breakpoint lower limits
 export const BREAKPOINTS = {
