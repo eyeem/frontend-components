@@ -768,7 +768,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var colors = {
+var colors = exports.colors = {
   whites: {
     white: '#ffffff',
     pearlWhite: '#fafafa',
@@ -840,17 +840,13 @@ var colors = {
   }
 };
 
-var zIndices = {
+var zIndices = exports.zIndices = {
   suggestionsBox: 8,
   flyout: 3
 };
 
-exports.default = {
-  colors: colors,
-  zIndices: zIndices,
-  borderRadius: '2px',
-  navHeight: '56px'
-};
+var borderRadius = exports.borderRadius = '2px';
+var navHeight = exports.navHeight = '56px';
 
 /***/ }),
 /* 9 */
@@ -881,7 +877,7 @@ exports.default = _icon2.default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.theme = exports.styleUtils = exports.styleConfig = exports.RadioGroup = exports.Checkbox = exports.FormRow = exports.Textarea = exports.StyledText = exports.Select = exports.Input = exports.Icon = exports.StyledButton = undefined;
+exports.globalStyles = exports.theme = exports.styleUtils = exports.styleConfig = exports.RadioGroup = exports.Checkbox = exports.FormRow = exports.Textarea = exports.StyledText = exports.Select = exports.Input = exports.Icon = exports.StyledButton = undefined;
 
 var _button = __webpack_require__(11);
 
@@ -929,7 +925,11 @@ var styleUtils = _interopRequireWildcard(_styleUtils);
 
 var _theme = __webpack_require__(8);
 
-var _theme2 = _interopRequireDefault(_theme);
+var theme = _interopRequireWildcard(_theme);
+
+var _globalStyles = __webpack_require__(63);
+
+var _globalStyles2 = _interopRequireDefault(_globalStyles);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -946,7 +946,8 @@ exports.Checkbox = _checkbox2.default;
 exports.RadioGroup = _radioGroup2.default;
 exports.styleConfig = styleConfig;
 exports.styleUtils = styleUtils;
-exports.theme = _theme2.default;
+exports.theme = theme;
+exports.globalStyles = _globalStyles2.default;
 
 /***/ }),
 /* 11 */
@@ -3909,6 +3910,53 @@ RadioGroup.defaultProps = {
 };
 
 exports.default = RadioGroup;
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  ', ' body {\n    font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n  }\n'], ['\n  ', ' body {\n    font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n  }\n']);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledNormalize = __webpack_require__(64);
+
+var _styledNormalize2 = _interopRequireDefault(_styledNormalize);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+exports.default = (0, _styledComponents.css)(_templateObject, _styledNormalize2.default);
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.version = undefined;
+
+var _templateObject = _taggedTemplateLiteral(['\n  html {\n    line-height: 1.15;\n    -ms-text-size-adjust: 100%;\n    -webkit-text-size-adjust: 100%;\n  }\n\n  body {\n    margin: 0;\n  }\n\n  article,\n  aside,\n  footer,\n  header,\n  nav,\n  section {\n    display: block;\n  }\n\n  h1 {\n    font-size: 2em;\n    margin: 0.67em 0;\n  }\n\n  figcaption,\n  figure,\n  main {\n    display: block;\n  }\n\n  figure {\n    margin: 1em 40px;\n  }\n\n  hr {\n    box-sizing: content-box;\n    height: 0;\n    overflow: visible;\n  }\n\n  pre {\n    font-family: monospace, monospace;\n    font-size: 1em;\n  }\n\n  a {\n    background-color: transparent;\n    -webkit-text-decoration-skip: objects;\n  }\n\n  abbr[title] {\n    border-bottom: none;\n    text-decoration: underline;\n    text-decoration: underline dotted;\n  }\n\n  b,\n  strong {\n    font-weight: inherit;\n  }\n\n  b,\n  strong {\n    font-weight: bolder;\n  }\n\n  code,\n  kbd,\n  samp {\n    font-family: monospace, monospace;\n    font-size: 1em;\n  }\n\n  dfn {\n    font-style: italic;\n  }\n\n  mark {\n    background-color: #ff0;\n    color: #000;\n  }\n\n  small {\n    font-size: 80%;\n  }\n\n  sub,\n  sup {\n    font-size: 75%;\n    line-height: 0;\n    position: relative;\n    vertical-align: baseline;\n  }\n\n  sub {\n    bottom: -0.25em;\n  }\n\n  sup {\n    top: -0.5em;\n  }\n\n  audio,\n  video {\n    display: inline-block;\n  }\n\n  audio:not([controls]) {\n    display: none;\n    height: 0;\n  }\n\n  img {\n    border-style: none;\n  }\n\n  svg:not(:root) {\n    overflow: hidden;\n  }\n\n  button,\n  input,\n  optgroup,\n  select,\n  textarea {\n    font-family: sans-serif;\n    font-size: 100%;\n    line-height: 1.15;\n    margin: 0;\n  }\n\n  button,\n  input {\n    overflow: visible;\n  }\n\n  button,\n  select {\n    text-transform: none;\n  }\n\n  button,\n  html [type="button"],\n  [type="reset"],\n  [type="submit"] {\n    -webkit-appearance: button;\n  }\n\n  button::-moz-focus-inner,\n  [type="button"]::-moz-focus-inner,\n  [type="reset"]::-moz-focus-inner,\n  [type="submit"]::-moz-focus-inner {\n    border-style: none;\n    padding: 0;\n  }\n\n  button:-moz-focusring,\n  [type="button"]:-moz-focusring,\n  [type="reset"]:-moz-focusring,\n  [type="submit"]:-moz-focusring {\n    outline: 1px dotted ButtonText;\n  }\n\n  fieldset {\n    padding: 0.35em 0.75em 0.625em;\n  }\n\n  legend {\n    box-sizing: border-box;\n    color: inherit;\n    display: table;\n    max-width: 100%;\n    padding: 0;\n    white-space: normal;\n  }\n\n  progress {\n    display: inline-block;\n    vertical-align: baseline;\n  }\n\n  textarea {\n    overflow: auto;\n  }\n\n  [type="checkbox"],\n  [type="radio"] {\n    box-sizing: border-box;\n    padding: 0;\n  }\n\n  [type="number"]::-webkit-inner-spin-button,\n  [type="number"]::-webkit-outer-spin-button {\n    height: auto;\n  }\n\n  [type="search"] {\n    -webkit-appearance: textfield;\n    outline-offset: -2px;\n  }\n\n  [type="search"]::-webkit-search-cancel-button,\n  [type="search"]::-webkit-search-decoration {\n    -webkit-appearance: none;\n  }\n\n  ::-webkit-file-upload-button {\n    -webkit-appearance: button;\n    font: inherit;\n  }\n\n  details,\n  menu {\n    display: block;\n  }\n\n  summary {\n    display: list-item;\n  }\n\n  canvas {\n    display: inline-block;\n  }\n\n  template {\n    display: none;\n  }\n\n  [hidden] {\n    display: none;\n  }\n'], ['\n  html {\n    line-height: 1.15;\n    -ms-text-size-adjust: 100%;\n    -webkit-text-size-adjust: 100%;\n  }\n\n  body {\n    margin: 0;\n  }\n\n  article,\n  aside,\n  footer,\n  header,\n  nav,\n  section {\n    display: block;\n  }\n\n  h1 {\n    font-size: 2em;\n    margin: 0.67em 0;\n  }\n\n  figcaption,\n  figure,\n  main {\n    display: block;\n  }\n\n  figure {\n    margin: 1em 40px;\n  }\n\n  hr {\n    box-sizing: content-box;\n    height: 0;\n    overflow: visible;\n  }\n\n  pre {\n    font-family: monospace, monospace;\n    font-size: 1em;\n  }\n\n  a {\n    background-color: transparent;\n    -webkit-text-decoration-skip: objects;\n  }\n\n  abbr[title] {\n    border-bottom: none;\n    text-decoration: underline;\n    text-decoration: underline dotted;\n  }\n\n  b,\n  strong {\n    font-weight: inherit;\n  }\n\n  b,\n  strong {\n    font-weight: bolder;\n  }\n\n  code,\n  kbd,\n  samp {\n    font-family: monospace, monospace;\n    font-size: 1em;\n  }\n\n  dfn {\n    font-style: italic;\n  }\n\n  mark {\n    background-color: #ff0;\n    color: #000;\n  }\n\n  small {\n    font-size: 80%;\n  }\n\n  sub,\n  sup {\n    font-size: 75%;\n    line-height: 0;\n    position: relative;\n    vertical-align: baseline;\n  }\n\n  sub {\n    bottom: -0.25em;\n  }\n\n  sup {\n    top: -0.5em;\n  }\n\n  audio,\n  video {\n    display: inline-block;\n  }\n\n  audio:not([controls]) {\n    display: none;\n    height: 0;\n  }\n\n  img {\n    border-style: none;\n  }\n\n  svg:not(:root) {\n    overflow: hidden;\n  }\n\n  button,\n  input,\n  optgroup,\n  select,\n  textarea {\n    font-family: sans-serif;\n    font-size: 100%;\n    line-height: 1.15;\n    margin: 0;\n  }\n\n  button,\n  input {\n    overflow: visible;\n  }\n\n  button,\n  select {\n    text-transform: none;\n  }\n\n  button,\n  html [type="button"],\n  [type="reset"],\n  [type="submit"] {\n    -webkit-appearance: button;\n  }\n\n  button::-moz-focus-inner,\n  [type="button"]::-moz-focus-inner,\n  [type="reset"]::-moz-focus-inner,\n  [type="submit"]::-moz-focus-inner {\n    border-style: none;\n    padding: 0;\n  }\n\n  button:-moz-focusring,\n  [type="button"]:-moz-focusring,\n  [type="reset"]:-moz-focusring,\n  [type="submit"]:-moz-focusring {\n    outline: 1px dotted ButtonText;\n  }\n\n  fieldset {\n    padding: 0.35em 0.75em 0.625em;\n  }\n\n  legend {\n    box-sizing: border-box;\n    color: inherit;\n    display: table;\n    max-width: 100%;\n    padding: 0;\n    white-space: normal;\n  }\n\n  progress {\n    display: inline-block;\n    vertical-align: baseline;\n  }\n\n  textarea {\n    overflow: auto;\n  }\n\n  [type="checkbox"],\n  [type="radio"] {\n    box-sizing: border-box;\n    padding: 0;\n  }\n\n  [type="number"]::-webkit-inner-spin-button,\n  [type="number"]::-webkit-outer-spin-button {\n    height: auto;\n  }\n\n  [type="search"] {\n    -webkit-appearance: textfield;\n    outline-offset: -2px;\n  }\n\n  [type="search"]::-webkit-search-cancel-button,\n  [type="search"]::-webkit-search-decoration {\n    -webkit-appearance: none;\n  }\n\n  ::-webkit-file-upload-button {\n    -webkit-appearance: button;\n    font: inherit;\n  }\n\n  details,\n  menu {\n    display: block;\n  }\n\n  summary {\n    display: list-item;\n  }\n\n  canvas {\n    display: inline-block;\n  }\n\n  template {\n    display: none;\n  }\n\n  [hidden] {\n    display: none;\n  }\n']);
+
+var _styledComponents = __webpack_require__(1);
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var version = exports.version = '7.0.0';
+
+exports.default = (0, _styledComponents.css)(_templateObject);
 
 /***/ })
 /******/ ]);

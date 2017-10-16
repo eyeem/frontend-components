@@ -11,7 +11,9 @@ import RadioGroup from './components/radioGroup/';
 
 import * as styleConfig from './styleConfig';
 import * as styleUtils from './styleUtils';
-import theme from './theme';
+import * as theme from './theme';
+
+import globalStyles from './globalStyles';
 
 export {
   StyledButton,
@@ -25,5 +27,6 @@ export {
   RadioGroup,
   styleConfig,
   styleUtils,
-  theme
+  theme,
+  globalStyles
 };

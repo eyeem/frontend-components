@@ -1,4 +1,4 @@
-const colors = {
+export const colors = {
   whites: {
     white: '#ffffff',
     pearlWhite: '#fafafa',
@@ -70,14 +70,10 @@ const colors = {
   }
 };
 
-const zIndices = {
+export const zIndices = {
   suggestionsBox: 8,
   flyout: 3
 };
 
-export default {
-  colors,
-  zIndices,
-  borderRadius: '2px',
-  navHeight: '56px'
-};
+export const borderRadius = '2px';
+export const navHeight = '56px';
