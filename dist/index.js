@@ -745,7 +745,7 @@ var icons = exports.icons = {
   eyeconfont: ['star', 'image', 'mail', 'phone', 'close', 'timing', 'prize', 'remove', 'alert', 'flag', 'embed', 'delete', 'backToTop', 'contactEyeEm', 'contactFacebook', 'contactTwitter', 'contactTumblr'],
   buttons: ['cart', 'checkmark', 'download', 'upload', 'compDownload', 'like', 'comment', 'addToLightbox', 'isInLightbox', 'dragndrop', 'share', 'facebook'],
   services: ['dropbox', 'googledrive', 'flickr', 'picasa', 'instagram'],
-  uncategorized: ['leftArrow', 'rightArrow', 'leftArrow2', 'plus', 'terms', 'market']
+  uncategorized: ['leftArrow', 'rightArrow', 'leftArrow2', 'plus', 'terms', 'market', 'growth']
 };
 
 /***/ }),
@@ -893,27 +893,27 @@ var _formRow = __webpack_require__(3);
 
 var _formRow2 = _interopRequireDefault(_formRow);
 
-var _input = __webpack_require__(56);
+var _input = __webpack_require__(57);
 
 var _input2 = _interopRequireDefault(_input);
 
-var _select = __webpack_require__(57);
+var _select = __webpack_require__(58);
 
 var _select2 = _interopRequireDefault(_select);
 
-var _text = __webpack_require__(58);
+var _text = __webpack_require__(59);
 
 var _text2 = _interopRequireDefault(_text);
 
-var _textarea = __webpack_require__(61);
+var _textarea = __webpack_require__(62);
 
 var _textarea2 = _interopRequireDefault(_textarea);
 
-var _checkbox = __webpack_require__(62);
+var _checkbox = __webpack_require__(63);
 
 var _checkbox2 = _interopRequireDefault(_checkbox);
 
-var _radioGroup = __webpack_require__(63);
+var _radioGroup = __webpack_require__(64);
 
 var _radioGroup2 = _interopRequireDefault(_radioGroup);
 
@@ -933,7 +933,7 @@ var _theme = __webpack_require__(8);
 
 var theme = _interopRequireWildcard(_theme);
 
-var _globalStyles = __webpack_require__(64);
+var _globalStyles = __webpack_require__(65);
 
 var _globalStyles2 = _interopRequireDefault(_globalStyles);
 
@@ -1329,6 +1329,10 @@ var _market = __webpack_require__(55);
 
 var _market2 = _interopRequireDefault(_market);
 
+var _growth = __webpack_require__(56);
+
+var _growth2 = _interopRequireDefault(_growth);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
@@ -1378,7 +1382,8 @@ var icons = {
   rightArrow: _rightArrow2.default,
   plus: _plus2.default,
   terms: _terms2.default,
-  market: _market2.default
+  market: _market2.default,
+  growth: _growth2.default
 };
 
 function Icon(props) {
@@ -3364,6 +3369,48 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = __webpack_require__(0);
+
+var React = _interopRequireWildcard(_react);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function GrowthIcon(props) {
+  return React.createElement(
+    "svg",
+    {
+      id: props.id,
+      className: props.className,
+      height: props.size,
+      width: props.size,
+      viewBox: "0 0 12 12"
+    },
+    React.createElement("path", {
+      d: "M7 4.78V12H5V4.68L2.365 7.315 1 5.95 5.95 1l4.95 4.95-1.366 1.365L7 4.78z",
+      fillRule: "evenodd"
+    })
+  );
+}
+/* eslint-disable max-len */
+
+
+GrowthIcon.defaultProps = {
+  size: 18
+};
+
+exports.default = GrowthIcon;
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _templateObject = _taggedTemplateLiteral(['\n      border-color: ', ';\n      background-color: ', ';\n    '], ['\n      border-color: ', ';\n      background-color: ', ';\n    ']),
@@ -3438,7 +3485,7 @@ Input.defaultProps = {
 exports.default = Input;
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3523,7 +3570,7 @@ Select.defaultProps = {
 exports.default = Select;
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3533,7 +3580,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _text = __webpack_require__(59);
+var _text = __webpack_require__(60);
 
 var _text2 = _interopRequireDefault(_text);
 
@@ -3542,7 +3589,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _text2.default;
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3560,7 +3607,7 @@ var React = _interopRequireWildcard(_react);
 
 var _styleConfig = __webpack_require__(5);
 
-var _styledText = __webpack_require__(60);
+var _styledText = __webpack_require__(61);
 
 var _styledText2 = _interopRequireDefault(_styledText);
 
@@ -3620,7 +3667,7 @@ Text.defaultProps = {
 exports.default = Text;
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3699,7 +3746,7 @@ var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp)(_template
 exports.default = StyledText;
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3769,7 +3816,7 @@ Textarea.defaultProps = {
 exports.default = Textarea;
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3864,7 +3911,7 @@ Checkbox.defaultProps = {
 exports.default = Checkbox;
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3962,7 +4009,7 @@ RadioGroup.defaultProps = {
 exports.default = RadioGroup;
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3976,7 +4023,7 @@ var _templateObject = _taggedTemplateLiteral(['\n  ', ' body {\n    font-family:
 
 var _styledComponents = __webpack_require__(1);
 
-var _styledNormalize = __webpack_require__(65);
+var _styledNormalize = __webpack_require__(66);
 
 var _styledNormalize2 = _interopRequireDefault(_styledNormalize);
 
@@ -3987,7 +4034,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 exports.default = (0, _styledComponents.css)(_templateObject, _styledNormalize2.default);
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

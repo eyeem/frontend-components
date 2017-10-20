@@ -506,6 +506,7 @@ export const icons = {
     'leftArrow2',
     'plus',
     'terms',
-    'market'
+    'market',
+    'growth'
   ]
 };
