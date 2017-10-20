@@ -8,6 +8,7 @@ import StyledText from './components/text/';
 import Textarea from './components/textarea/';
 import Checkbox from './components/checkbox/';
 import RadioGroup from './components/radioGroup/';
+import Flyout from './components/flyout/';
 
 import * as styleConfig from './styleConfig';
 import * as styleUtils from './styleUtils';
@@ -25,6 +26,7 @@ export {
   FormRow,
   Checkbox,
   RadioGroup,
+  Flyout,
   styleConfig,
   styleUtils,
   theme,

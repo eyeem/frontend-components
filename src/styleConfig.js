@@ -489,6 +489,7 @@ export const icons = {
     'cart',
     'checkmark',
     'download',
+    'upload',
     'compDownload',
     'like',
     'comment',

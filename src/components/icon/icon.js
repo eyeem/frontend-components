@@ -23,6 +23,7 @@ import ContactTwitterIcon from './icons/contactTwitter.js';
 import ContactTumblrIcon from './icons/contactTumblr.js';
 
 import DownloadIcon from './icons/download.js';
+import UploadIcon from './icons/upload.js';
 import CheckmarkIcon from './icons/checkmark.js';
 import CartIcon from './icons/cart.js';
 import CompDownloadIcon from './icons/compDownload.js';
@@ -70,6 +71,7 @@ const icons = {
   checkmark: CheckmarkIcon,
   compDownload: CompDownloadIcon,
   download: DownloadIcon,
+  upload: UploadIcon,
   dragndrop: DragNDrop,
   addToLightbox: AddToLightboxIcon,
   isInLightbox: IsInLightboxIcon,
