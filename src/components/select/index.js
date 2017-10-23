@@ -78,7 +78,9 @@ function Select(props: Props) {
 
   return (
     <WrapperComponent>
-      <StyledSelect {...props.inputProps} error={!!props.errorMessage}>
+      <StyledSelect
+        {...props.inputProps}
+        error={!!props.errorMessage || props.error}>
         {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.text}
