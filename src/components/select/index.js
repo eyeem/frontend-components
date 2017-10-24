@@ -57,6 +57,7 @@ const StyledSelect = styled.select`
 declare type Props = {
   inputProps: mixed,
   errorMessage?: string,
+  error?: boolean,
   formRow?: boolean,
   options: Array<{
     value: string,
@@ -80,7 +81,8 @@ function Select(props: Props) {
     <WrapperComponent>
       <StyledSelect
         {...props.inputProps}
-        error={!!props.errorMessage || props.error}>
+        error={!!props.errorMessage || props.error}
+      >
         {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.text}

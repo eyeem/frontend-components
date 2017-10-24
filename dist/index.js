@@ -3545,7 +3545,9 @@ function Select(props) {
     null,
     _react2.default.createElement(
       StyledSelect,
-      _extends({}, props.inputProps, { error: !!props.errorMessage }),
+      _extends({}, props.inputProps, {
+        error: !!props.errorMessage || props.error
+      }),
       options.map(function (option) {
         return _react2.default.createElement(
           'option',
