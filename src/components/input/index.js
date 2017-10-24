@@ -71,6 +71,17 @@ const StyledInput = styled.input`
   }
 `;
 
+const InnerHint = styled.p`
+  font-size: 12px;
+
+  position: absolute;
+  top: 2px;
+  right: 12px;
+  cursor: pointer;
+
+  color: ${fromTheme('colors.greys.grey3')};
+`;
+
 declare type Props = {
   inputProps: {},
   pending?: boolean,
@@ -79,31 +90,57 @@ declare type Props = {
   formRow?: boolean
 };
 
-function Input(props: Props) {
-  const WrapperComponent = props.formRow ? FormRow : 'div';
-
-  return (
-    <WrapperComponent>
-      <StyledInput
-        error={!!props.errorMessage}
-        pending={props.pending}
-        showCheckmark={props.showCheckmark}
-        {...props.inputProps}
-      />
-      {props.errorMessage && (
-        <Flyout fontColor="whites.white" backgroundColor="solidColors.red">
-          {props.errorMessage}
-        </Flyout>
-      )}
-    </WrapperComponent>
-  );
-}
-
-Input.defaultProps = {
-  errorMessage: undefined,
-  pending: false,
-  formRow: true,
-  showCheckmark: false
+declare type State = {
+  showPassword: boolean
 };
+
+class Input extends React.Component<Props, State> {
+  state = { showPassword: false };
+
+  static defaultProps = {
+    errorMessage: undefined,
+    pending: false,
+    formRow: true,
+    showCheckmark: false
+  };
+
+  togglePassword = () =>
+    this.setState({
+      showPassword: !this.state.showPassword
+    });
+
+  render() {
+    const WrapperComponent = this.props.formRow ? FormRow : 'div';
+
+    return (
+      <WrapperComponent>
+        <StyledInput
+          {...this.props.inputProps}
+          error={!!this.props.errorMessage}
+          pending={this.props.pending}
+          showCheckmark={this.props.showCheckmark}
+          type={
+            (this.state.showPassword && 'text') ||
+            this.props.inputProps.type ||
+            'text'
+          }
+        />
+        {this.props.inputProps.type === 'password' && (
+          <InnerHint
+            onClick={this.togglePassword}
+            className="g_input_innerHint"
+          >
+            {this.state.showPassword ? 'hide' : 'show'}
+          </InnerHint>
+        )}
+        {this.props.errorMessage && (
+          <Flyout fontColor="whites.white" backgroundColor="solidColors.red">
+            {this.props.errorMessage}
+          </Flyout>
+        )}
+      </WrapperComponent>
+    );
+  }
+}
 
 export default Input;

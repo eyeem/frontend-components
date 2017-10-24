@@ -3413,11 +3413,14 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _templateObject = _taggedTemplateLiteral(['\n      border-color: ', ';\n      background-color: ', ';\n    '], ['\n      border-color: ', ';\n      background-color: ', ';\n    ']),
     _templateObject2 = _taggedTemplateLiteral(['\n      border-color: ', ';\n      background-color: ', ';\n      background-image: url(\'/node-static/img/spinner-32-black.gif\');\n      background-position: center right 8px;\n      background-size: 16px;\n      background-repeat: no-repeat;\n    '], ['\n      border-color: ', ';\n      background-color: ', ';\n      background-image: url(\'/node-static/img/spinner-32-black.gif\');\n      background-position: center right 8px;\n      background-size: 16px;\n      background-repeat: no-repeat;\n    ']),
     _templateObject3 = _taggedTemplateLiteral(['\n      border-color: ', ';\n      background-color: ', ';\n      padding-right: 30px;\n      background-image: url(\'/node-static/img/check-green.svg\');\n      background-position: center right 8px;\n      background-size: 15px;\n      background-repeat: no-repeat;\n    '], ['\n      border-color: ', ';\n      background-color: ', ';\n      padding-right: 30px;\n      background-image: url(\'/node-static/img/check-green.svg\');\n      background-position: center right 8px;\n      background-size: 15px;\n      background-repeat: no-repeat;\n    ']),
     _templateObject4 = _taggedTemplateLiteral(['\n    border-color: ', ';\n    background-color: ', ';\n  '], ['\n    border-color: ', ';\n    background-color: ', ';\n  ']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  ', ';\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  box-shadow: none;\n  color: ', ';\n  ', ' appearance: none;\n  -webkit-appearance: none;\n\n  &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n'], ['\n  ', ';\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  box-shadow: none;\n  color: ', ';\n  ', ' appearance: none;\n  -webkit-appearance: none;\n\n  &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n']);
+    _templateObject5 = _taggedTemplateLiteral(['\n  ', ';\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  box-shadow: none;\n  color: ', ';\n  ', ' appearance: none;\n  -webkit-appearance: none;\n\n  &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n'], ['\n  ', ';\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  box-shadow: none;\n  color: ', ';\n  ', ' appearance: none;\n  -webkit-appearance: none;\n\n  &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  font-size: 12px;\n\n  position: absolute;\n  top: 2px;\n  right: 12px;\n  cursor: pointer;\n\n  color: ', ';\n'], ['\n  font-size: 12px;\n\n  position: absolute;\n  top: 2px;\n  right: 12px;\n  cursor: pointer;\n\n  color: ', ';\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3439,6 +3442,12 @@ var _flyout2 = _interopRequireDefault(_flyout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var background = function background(props) {
@@ -3456,24 +3465,62 @@ var background = function background(props) {
 
 var StyledInput = _styledComponents2.default.input(_templateObject5, (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.fromTheme)('borderRadius'), (0, _styleUtils.fromTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromTheme)('colors.solidColors.green'), (0, _styleUtils.fromTheme)('colors.uncategorized.unnamed16'));
 
-function Input(props) {
-  var WrapperComponent = props.formRow ? _formRow2.default : 'div';
+var InnerHint = _styledComponents2.default.p(_templateObject6, (0, _styleUtils.fromTheme)('colors.greys.grey3'));
 
-  return _react2.default.createElement(
-    WrapperComponent,
-    null,
-    _react2.default.createElement(StyledInput, _extends({
-      error: !!props.errorMessage,
-      pending: props.pending,
-      showCheckmark: props.showCheckmark
-    }, props.inputProps)),
-    props.errorMessage && _react2.default.createElement(
-      _flyout2.default,
-      { fontColor: 'whites.white', backgroundColor: 'solidColors.red' },
-      props.errorMessage
-    )
-  );
-}
+var Input = function (_React$Component) {
+  _inherits(Input, _React$Component);
+
+  function Input() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Input);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Input.__proto__ || Object.getPrototypeOf(Input)).call.apply(_ref, [this].concat(args))), _this), _this.state = { showPassword: false }, _this.togglePassword = function () {
+      return _this.setState({
+        showPassword: !_this.state.showPassword
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Input, [{
+    key: 'render',
+    value: function render() {
+      var WrapperComponent = this.props.formRow ? _formRow2.default : 'div';
+
+      return _react2.default.createElement(
+        WrapperComponent,
+        null,
+        _react2.default.createElement(StyledInput, _extends({}, this.props.inputProps, {
+          error: !!this.props.errorMessage,
+          pending: this.props.pending,
+          showCheckmark: this.props.showCheckmark,
+          type: this.state.showPassword && 'text' || this.props.inputProps.type || 'text'
+        })),
+        this.props.inputProps.type === 'password' && _react2.default.createElement(
+          InnerHint,
+          {
+            onClick: this.togglePassword,
+            className: 'g_input_innerHint'
+          },
+          this.state.showPassword ? 'hide' : 'show'
+        ),
+        this.props.errorMessage && _react2.default.createElement(
+          _flyout2.default,
+          { fontColor: 'whites.white', backgroundColor: 'solidColors.red' },
+          this.props.errorMessage
+        )
+      );
+    }
+  }]);
+
+  return Input;
+}(_react2.default.Component);
 
 Input.defaultProps = {
   errorMessage: undefined,
@@ -3481,7 +3528,6 @@ Input.defaultProps = {
   formRow: true,
   showCheckmark: false
 };
-
 exports.default = Input;
 
 /***/ }),
