@@ -4067,7 +4067,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  ', ' body {\n    font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n  }\n'], ['\n  ', ' body {\n    font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  ', ' body {\n    font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n    text-decoration: none;\n  }\n'], ['\n  ', ' body {\n    font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n    text-decoration: none;\n  }\n']);
 
 var _styledComponents = __webpack_require__(1);
 

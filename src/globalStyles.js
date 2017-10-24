@@ -9,5 +9,6 @@ export default css`
   *:before,
   *:after {
     box-sizing: border-box;
+    text-decoration: none;
   }
 `;
