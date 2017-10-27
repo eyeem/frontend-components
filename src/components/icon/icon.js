@@ -2,7 +2,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { fromTheme } from '../../styleUtils';
+import { fromInternalTheme } from '../../styleUtils';
 
 import StarIcon from './icons/star.js';
 import ImageIcon from './icons/image.js';
@@ -107,7 +107,9 @@ function Icon(props: {
   let Component = icons[props.type] || StarIcon;
 
   if (props.color) {
-    Component = styled(Component)`fill: ${fromTheme(`colors.${props.color}`)};`;
+    Component = styled(Component)`
+      fill: ${fromInternalTheme(`colors.${props.color}`)};
+    `;
   }
 
   return (

@@ -33,13 +33,15 @@ const typeToFontFamily = {
     '"HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif'
 };
 
-export const helvetica = (type: 'regular' | 'light' | 'bold') => `
+export const helvetica = (type: 'regular' | 'light' | 'bold' = 'regular') => `
   font-weight: 300;
   font-family: ${typeToFontFamily[type]};
 `;
 
-export const fromTheme = (selector: string) => (props: {}) =>
+export const fromInternalTheme = (selector: string) => (props: {}) =>
   _.get(theme, selector);
+export const fromTheme = (selector: string) => (props: { theme: {} }) =>
+  _.get(props.theme, selector);
 export const fromProps = (selector: string) => (props: {}) =>
   _.get(props, selector);
 export const fromPropsTernary = (
@@ -54,7 +56,7 @@ export const fromPropsTernary = (
 };
 
 export const propsColorFromTheme = (selector: string) => (props: {}) =>
-  fromTheme(`colors.${_.get(props, selector)}`)(props);
+  fromInternalTheme(`colors.${_.get(props, selector)}`)(props);
 
 export const isRgbaColor = (color: string) => _.startsWith(color, 'rgba');
 

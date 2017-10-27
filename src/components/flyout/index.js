@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fromTheme, propsColorFromTheme } from '../../styleUtils';
+import { fromInternalTheme, propsColorFromTheme } from '../../styleUtils';
 
 const Flyout = styled.div`
   position: absolute;
@@ -18,12 +18,12 @@ const Flyout = styled.div`
   text-align: left;
   white-space: inherit;
 
-  z-index: ${fromTheme('zIndices.flyout')};
+  z-index: ${fromInternalTheme('zIndices.flyout')};
   color: ${propsColorFromTheme('fontColor')};
   background: ${propsColorFromTheme('backgroundColor')};
 
-  border-radius: ${fromTheme('borderRadius')};
-  box-shadow: 0 0 0 1px ${fromTheme('colors.uncategorized.unnamed3')};
+  border-radius: ${fromInternalTheme('borderRadius')};
+  box-shadow: 0 0 0 1px ${fromInternalTheme('colors.uncategorized.unnamed3')};
   &:before,
   &:after {
     position: absolute;

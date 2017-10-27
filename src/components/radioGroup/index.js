@@ -2,7 +2,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { fromTheme } from '../../styleUtils';
+import { fromInternalTheme } from '../../styleUtils';
 
 import FormRow from '../formRow';
 import Flyout from '../flyout';
@@ -21,8 +21,8 @@ const RadioRow = styled.div`
 
 const border = props =>
   props.checked
-    ? css`5px solid ${fromTheme('colors.solidColors.green')}`
-    : css`1px solid ${fromTheme('colors.greys.grey3')}`;
+    ? css`5px solid ${fromInternalTheme('colors.solidColors.green')}`
+    : css`1px solid ${fromInternalTheme('colors.greys.grey3')}`;
 
 const StyledLabel = styled.label`
   position: relative;

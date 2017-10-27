@@ -95,7 +95,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.idealTextColor = exports.isRgbaColor = exports.propsColorFromTheme = exports.fromPropsTernary = exports.fromProps = exports.fromTheme = exports.helvetica = exports.media = exports.BREAKPOINTS = undefined;
+exports.idealTextColor = exports.isRgbaColor = exports.propsColorFromTheme = exports.fromPropsTernary = exports.fromProps = exports.fromTheme = exports.fromInternalTheme = exports.helvetica = exports.media = exports.BREAKPOINTS = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  '], ['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  ']);
 
@@ -140,13 +140,19 @@ var typeToFontFamily = {
   bold: '"HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif'
 };
 
-var helvetica = exports.helvetica = function helvetica(type) {
+var helvetica = exports.helvetica = function helvetica() {
+  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'regular';
   return '\n  font-weight: 300;\n  font-family: ' + typeToFontFamily[type] + ';\n';
 };
 
-var fromTheme = exports.fromTheme = function fromTheme(selector) {
+var fromInternalTheme = exports.fromInternalTheme = function fromInternalTheme(selector) {
   return function (props) {
     return _lodash2.default.get(theme, selector);
+  };
+};
+var fromTheme = exports.fromTheme = function fromTheme(selector) {
+  return function (props) {
+    return _lodash2.default.get(props.theme, selector);
   };
 };
 var fromProps = exports.fromProps = function fromProps(selector) {
@@ -165,7 +171,7 @@ var fromPropsTernary = exports.fromPropsTernary = function fromPropsTernary(sele
 
 var propsColorFromTheme = exports.propsColorFromTheme = function propsColorFromTheme(selector) {
   return function (props) {
-    return fromTheme('colors.' + _lodash2.default.get(props, selector))(props);
+    return fromInternalTheme('colors.' + _lodash2.default.get(props, selector))(props);
   };
 };
 
@@ -257,7 +263,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Flyout = _styledComponents2.default.div(_templateObject, (0, _styleUtils.fromTheme)('zIndices.flyout'), (0, _styleUtils.propsColorFromTheme)('fontColor'), (0, _styleUtils.propsColorFromTheme)('backgroundColor'), (0, _styleUtils.fromTheme)('borderRadius'), (0, _styleUtils.fromTheme)('colors.uncategorized.unnamed3'), (0, _styleUtils.propsColorFromTheme)('backgroundColor'));
+var Flyout = _styledComponents2.default.div(_templateObject, (0, _styleUtils.fromInternalTheme)('zIndices.flyout'), (0, _styleUtils.propsColorFromTheme)('fontColor'), (0, _styleUtils.propsColorFromTheme)('backgroundColor'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed3'), (0, _styleUtils.propsColorFromTheme)('backgroundColor'));
 
 exports.default = Flyout;
 
@@ -842,13 +848,7 @@ var colors = exports.colors = {
   }
 };
 
-var zIndices = exports.zIndices = {
-  suggestionsBox: 8,
-  flyout: 3
-};
-
 var borderRadius = exports.borderRadius = '2px';
-var navHeight = exports.navHeight = '56px';
 
 /***/ }),
 /* 9 */
@@ -1103,7 +1103,7 @@ var spinner = function spinner(props) {
   return '';
 };
 
-var StyledButton = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), (0, _styleUtils.propsColorFromTheme)('colors.borderRegular'), (0, _styleUtils.fromTheme)('borderRadius'), (0, _styleUtils.propsColorFromTheme)('colors.bgRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgHover'), (0, _styleUtils.propsColorFromTheme)('colors.borderHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgActive'), (0, _styleUtils.propsColorFromTheme)('colors.borderActive'), (0, _styleUtils.fromPropsTernary)('moveIconToLeft', 'padding-left: 32px;', ''), (0, _styleUtils.helvetica)('regular'), spinner, disabled, progress);
+var StyledButton = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), (0, _styleUtils.propsColorFromTheme)('colors.borderRegular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.propsColorFromTheme)('colors.bgRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgHover'), (0, _styleUtils.propsColorFromTheme)('colors.borderHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgActive'), (0, _styleUtils.propsColorFromTheme)('colors.borderActive'), (0, _styleUtils.fromPropsTernary)('moveIconToLeft', 'padding-left: 32px;', ''), (0, _styleUtils.helvetica)('regular'), spinner, disabled, progress);
 
 exports.default = StyledButton;
 
@@ -1157,7 +1157,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['fill: ', ';'], ['fill: ', ';']);
+var _templateObject = _taggedTemplateLiteral(['\n      fill: ', ';\n    '], ['\n      fill: ', ';\n    ']);
 
 var _react = __webpack_require__(0);
 
@@ -1390,7 +1390,7 @@ function Icon(props) {
   var Component = icons[props.type] || _star2.default;
 
   if (props.color) {
-    Component = (0, _styledComponents2.default)(Component)(_templateObject, (0, _styleUtils.fromTheme)('colors.' + props.color));
+    Component = (0, _styledComponents2.default)(Component)(_templateObject, (0, _styleUtils.fromInternalTheme)('colors.' + props.color));
   }
 
   return React.createElement(Component, {
@@ -3452,20 +3452,20 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var background = function background(props) {
   if (props.error) {
-    return (0, _styledComponents.css)(_templateObject, (0, _styleUtils.fromTheme)('colors.solidColors.red'), (0, _styleUtils.fromTheme)('colors.lightColors.lightRed'));
+    return (0, _styledComponents.css)(_templateObject, (0, _styleUtils.fromInternalTheme)('colors.solidColors.red'), (0, _styleUtils.fromInternalTheme)('colors.lightColors.lightRed'));
   }
   if (props.pending) {
-    return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromTheme)('colors.greys.grey4'), (0, _styleUtils.fromTheme)('colors.whites.white'));
+    return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
   }
   if (props.showCheckmark) {
-    return (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromTheme)('colors.greys.grey4'), (0, _styleUtils.fromTheme)('colors.whites.white'));
+    return (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
   }
-  return (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromTheme)('colors.greys.grey4'), (0, _styleUtils.fromTheme)('colors.whites.white'));
+  return (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
 };
 
-var StyledInput = _styledComponents2.default.input(_templateObject5, (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.fromTheme)('borderRadius'), (0, _styleUtils.fromTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromTheme)('colors.solidColors.green'), (0, _styleUtils.fromTheme)('colors.uncategorized.unnamed16'));
+var StyledInput = _styledComponents2.default.input(_templateObject5, (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
 
-var InnerHint = _styledComponents2.default.p(_templateObject6, (0, _styleUtils.fromTheme)('colors.greys.grey3'));
+var InnerHint = _styledComponents2.default.p(_templateObject6, (0, _styleUtils.fromInternalTheme)('colors.greys.grey3'));
 
 var Input = function (_React$Component) {
   _inherits(Input, _React$Component);
@@ -3571,12 +3571,12 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var background = function background(props) {
   if (props.error) {
-    return (0, _styledComponents.css)(_templateObject, (0, _styleUtils.fromTheme)('colors.solidColors.red'), (0, _styleUtils.fromTheme)('colors.lightColors.lightRed'));
+    return (0, _styledComponents.css)(_templateObject, (0, _styleUtils.fromInternalTheme)('colors.solidColors.red'), (0, _styleUtils.fromInternalTheme)('colors.lightColors.lightRed'));
   }
-  return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromTheme)('colors.greys.grey4'), (0, _styleUtils.fromTheme)('colors.whites.white'));
+  return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
 };
 
-var StyledSelect = _styledComponents2.default.select(_templateObject3, (0, _styleUtils.fromTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromTheme)('colors.blacks.black1'), (0, _styleUtils.fromTheme)('borderRadius'), background, (0, _styleUtils.fromTheme)('colors.solidColors.green'), (0, _styleUtils.fromTheme)('colors.uncategorized.unnamed16'));
+var StyledSelect = _styledComponents2.default.select(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), (0, _styleUtils.fromInternalTheme)('borderRadius'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
 
 function Select(props) {
   var WrapperComponent = props.formRow ? _formRow2.default : 'div';
@@ -3834,12 +3834,12 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var background = function background(props) {
   if (props.error) {
-    return (0, _styledComponents.css)(_templateObject, (0, _styleUtils.fromTheme)('colors.solidColors.red'), (0, _styleUtils.fromTheme)('colors.lightColors.lightRed'));
+    return (0, _styledComponents.css)(_templateObject, (0, _styleUtils.fromInternalTheme)('colors.solidColors.red'), (0, _styleUtils.fromInternalTheme)('colors.lightColors.lightRed'));
   }
-  return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromTheme)('colors.greys.grey4'), (0, _styleUtils.fromTheme)('colors.whites.white'));
+  return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
 };
 
-var StyledTextarea = _styledComponents2.default.textarea(_templateObject3, (0, _styleUtils.fromTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromTheme)('borderRadius'), (0, _styleUtils.fromTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromTheme)('colors.solidColors.green'), (0, _styleUtils.fromTheme)('colors.uncategorized.unnamed16'));
+var StyledTextarea = _styledComponents2.default.textarea(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
 
 function Textarea(props) {
   var WrapperComponent = props.formRow ? _formRow2.default : 'div';
@@ -3908,12 +3908,12 @@ var StyledCheckbox = _styledComponents2.default.input(_templateObject);
 
 var background = function background(props) {
   if (props.error) {
-    return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromTheme)('colors.solidColors.red'), (0, _styleUtils.fromTheme)('colors.lightColors.lightRed'));
+    return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromInternalTheme)('colors.solidColors.red'), (0, _styleUtils.fromInternalTheme)('colors.lightColors.lightRed'));
   }
   if (props.checked) {
-    return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromTheme)('colors.solidColors.green'), (0, _styleUtils.fromTheme)('colors.solidColors.green'));
+    return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'));
   }
-  return (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromTheme)('colors.greys.grey4'), (0, _styleUtils.fromTheme)('colors.whites.white'));
+  return (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
 };
 
 var StyledLabel = _styledComponents2.default.label(_templateObject4, background, (0, _styleUtils.fromPropsTernary)('checked', '9px 7px', '0'));
@@ -4005,7 +4005,7 @@ var StyledRadio = _styledComponents2.default.input(_templateObject);
 var RadioRow = _styledComponents2.default.div(_templateObject2);
 
 var border = function border(props) {
-  return props.checked ? (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromTheme)('colors.solidColors.green')) : (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromTheme)('colors.greys.grey3'));
+  return props.checked ? (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green')) : (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromInternalTheme)('colors.greys.grey3'));
 };
 
 var StyledLabel = _styledComponents2.default.label(_templateObject5, border);

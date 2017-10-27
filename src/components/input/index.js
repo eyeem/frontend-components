@@ -2,7 +2,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { helvetica, fromTheme } from '../../styleUtils';
+import { helvetica, fromInternalTheme } from '../../styleUtils';
 
 import FormRow from '../formRow';
 import Flyout from '../flyout';
@@ -14,14 +14,14 @@ const background = (props: {
 }) => {
   if (props.error) {
     return css`
-      border-color: ${fromTheme('colors.solidColors.red')};
-      background-color: ${fromTheme('colors.lightColors.lightRed')};
+      border-color: ${fromInternalTheme('colors.solidColors.red')};
+      background-color: ${fromInternalTheme('colors.lightColors.lightRed')};
     `;
   }
   if (props.pending) {
     return css`
-      border-color: ${fromTheme('colors.greys.grey4')};
-      background-color: ${fromTheme('colors.whites.white')};
+      border-color: ${fromInternalTheme('colors.greys.grey4')};
+      background-color: ${fromInternalTheme('colors.whites.white')};
       background-image: url('/node-static/img/spinner-32-black.gif');
       background-position: center right 8px;
       background-size: 16px;
@@ -30,8 +30,8 @@ const background = (props: {
   }
   if (props.showCheckmark) {
     return css`
-      border-color: ${fromTheme('colors.greys.grey4')};
-      background-color: ${fromTheme('colors.whites.white')};
+      border-color: ${fromInternalTheme('colors.greys.grey4')};
+      background-color: ${fromInternalTheme('colors.whites.white')};
       padding-right: 30px;
       background-image: url('/node-static/img/check-green.svg');
       background-position: center right 8px;
@@ -40,8 +40,8 @@ const background = (props: {
     `;
   }
   return css`
-    border-color: ${fromTheme('colors.greys.grey4')};
-    background-color: ${fromTheme('colors.whites.white')};
+    border-color: ${fromInternalTheme('colors.greys.grey4')};
+    background-color: ${fromInternalTheme('colors.whites.white')};
   `;
 };
 
@@ -50,23 +50,23 @@ const StyledInput = styled.input`
   font-size: 16px;
   line-height: 20px;
   &::placeholder {
-    color: ${fromTheme('colors.uncategorized.unnamed10')};
+    color: ${fromInternalTheme('colors.uncategorized.unnamed10')};
   }
   padding: 9px 12px 10px 12px;
   max-height: 40px;
   width: 100%;
   border-width: 1px;
   border-style: solid;
-  border-radius: ${fromTheme('borderRadius')};
+  border-radius: ${fromInternalTheme('borderRadius')};
   box-shadow: none;
-  color: ${fromTheme('colors.blacks.black1')};
+  color: ${fromInternalTheme('colors.blacks.black1')};
   ${background} appearance: none;
   -webkit-appearance: none;
 
   &:focus {
-    border-color: ${fromTheme('colors.solidColors.green')};
+    border-color: ${fromInternalTheme('colors.solidColors.green')};
     &::placeholder {
-      color: ${fromTheme('colors.uncategorized.unnamed16')};
+      color: ${fromInternalTheme('colors.uncategorized.unnamed16')};
     }
   }
 `;
@@ -79,7 +79,7 @@ const InnerHint = styled.p`
   right: 12px;
   cursor: pointer;
 
-  color: ${fromTheme('colors.greys.grey3')};
+  color: ${fromInternalTheme('colors.greys.grey3')};
 `;
 
 declare type Props = {

@@ -4,7 +4,7 @@ import createComponentFromTagProp from 'react-create-component-from-tag-prop';
 
 import {
   helvetica,
-  fromTheme,
+  fromInternalTheme,
   fromProps,
   fromPropsTernary,
   propsColorFromTheme
@@ -99,7 +99,7 @@ const StyledButton = styled(ComponentFromTagProp)`
   padding: ${fromProps('sizeValues.padding')};
   max-height: ${fromProps('sizeValues.maxHeight')};
   border: 1px solid ${propsColorFromTheme('colors.borderRegular')};
-  border-radius: ${fromTheme('borderRadius')};
+  border-radius: ${fromInternalTheme('borderRadius')};
   background-color: ${propsColorFromTheme('colors.bgRegular')};
   color: ${propsColorFromTheme('colors.fontRegular')};
   fill: ${propsColorFromTheme('colors.fontRegular')};

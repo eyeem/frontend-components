@@ -2,7 +2,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { fromTheme, fromPropsTernary } from '../../styleUtils';
+import { fromInternalTheme, fromPropsTernary } from '../../styleUtils';
 
 import FormRow from '../formRow';
 import Flyout from '../flyout';
@@ -17,19 +17,19 @@ const StyledCheckbox = styled.input`
 const background = (props: { error: boolean, checked: boolean }) => {
   if (props.error) {
     return css`
-      border-color: ${fromTheme('colors.solidColors.red')};
-      background-color: ${fromTheme('colors.lightColors.lightRed')};
+      border-color: ${fromInternalTheme('colors.solidColors.red')};
+      background-color: ${fromInternalTheme('colors.lightColors.lightRed')};
     `;
   }
   if (props.checked) {
     return css`
-      border-color: ${fromTheme('colors.solidColors.green')};
-      background-color: ${fromTheme('colors.solidColors.green')};
+      border-color: ${fromInternalTheme('colors.solidColors.green')};
+      background-color: ${fromInternalTheme('colors.solidColors.green')};
     `;
   }
   return css`
-    border-color: ${fromTheme('colors.greys.grey4')};
-    background-color: ${fromTheme('colors.whites.white')};
+    border-color: ${fromInternalTheme('colors.greys.grey4')};
+    background-color: ${fromInternalTheme('colors.whites.white')};
   `;
 };
 
