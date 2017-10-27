@@ -70,10 +70,4 @@ export const colors = {
   }
 };
 
-export const zIndices = {
-  suggestionsBox: 8,
-  flyout: 3
-};
-
 export const borderRadius = '2px';
-export const navHeight = '56px';
