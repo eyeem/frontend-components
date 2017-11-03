@@ -18,7 +18,7 @@ const Flyout = styled.div`
   text-align: left;
   white-space: inherit;
 
-  z-index: ${fromInternalTheme('zIndices.flyout')};
+  z-index: 3;
   color: ${propsColorFromTheme('fontColor')};
   background: ${propsColorFromTheme('backgroundColor')};
 
