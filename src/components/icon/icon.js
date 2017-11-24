@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { fromInternalTheme } from '../../styleUtils';
 
 import StarIcon from './icons/star.js';
+import Star2Icon from './icons/star2.js';
 import ImageIcon from './icons/image.js';
 import MailIcon from './icons/mail.js';
 import PhoneIcon from './icons/phone.js';
