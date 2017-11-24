@@ -1495,7 +1495,7 @@ function Star2Icon(props) {
 /* eslint-disable max-len */
 
 
-StarIcon.defaultProps = {
+Star2Icon.defaultProps = {
   size: 14
 };
 
