@@ -15,7 +15,7 @@ function Star2Icon(props: { size?: number, className: string, id: string }) {
   );
 }
 
-StarIcon.defaultProps = {
+Star2Icon.defaultProps = {
   size: 14
 };
 
