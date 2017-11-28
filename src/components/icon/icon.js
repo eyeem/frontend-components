@@ -6,6 +6,7 @@ import { fromInternalTheme } from '../../styleUtils';
 
 import StarIcon from './icons/star.js';
 import Star2Icon from './icons/star2.js';
+import Star3Icon from './icons/star3.js';
 import ImageIcon from './icons/image.js';
 import MailIcon from './icons/mail.js';
 import PhoneIcon from './icons/phone.js';
@@ -52,6 +53,8 @@ import Growth from './icons/growth.js';
 
 const icons = {
   star: StarIcon,
+  star2: Star2Icon,
+  star3: Star3Icon,
   image: ImageIcon,
   mail: MailIcon,
   phone: PhoneIcon,
