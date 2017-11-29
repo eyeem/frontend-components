@@ -13,7 +13,7 @@ This project itself doesn't feature a showcase app, it should be developed toget
 
 
 - in `frontend-styleguide`
-- `npm link eyeem-components` (adss eyeem-components as symlink into node_modules folder)
+- `npm link eyeem-components` (adds eyeem-components as symlink into node_modules folder)
 - `npm run start`
 
 ## Publish new version

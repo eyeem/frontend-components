@@ -507,6 +507,8 @@ export const icons = {
     'plus',
     'terms',
     'market',
-    'growth'
+    'growth',
+    'star2',
+    'star3'
   ]
 };
