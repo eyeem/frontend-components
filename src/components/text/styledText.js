@@ -4,7 +4,7 @@ import _ from 'lodash';
 import createComponentFromTagProp from 'react-create-component-from-tag-prop';
 
 import {
-  helvetica,
+  font,
   propsColorFromTheme,
   fromProps,
   fromPropsTernary,
@@ -82,7 +82,7 @@ const StyledText = styled(ComponentFromTagProp)`
   `} &:last-child {
     margin-bottom: 0;
   }
-  ${props => helvetica(props.font)} ${props =>
+  ${props => font(props.font)} ${props =>
       props.ellipsis
         ? css`
             width: 100%;

@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import FormRow from '../formRow';
 import Flyout from '../flyout';
 
-import { helvetica, fromInternalTheme } from '../../styleUtils';
+import { font, fromInternalTheme } from '../../styleUtils';
 
 const background = (props: {
   error: boolean,
@@ -30,7 +30,7 @@ const StyledSelect = styled.select`
   &::placeholder {
     color: ${fromInternalTheme('colors.uncategorized.unnamed10')};
   }
-  ${helvetica('regular')};
+  ${font('regular')};
   padding: 9px 12px 10px 12px;
   max-height: 40px;
   width: 100%;

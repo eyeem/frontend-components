@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import Flyout from '../flyout';
 import FormRow from '../formRow';
 
-import { helvetica, fromInternalTheme } from '../../styleUtils';
+import { font, fromInternalTheme } from '../../styleUtils';
 
 const background = (props: {
   error: boolean,
@@ -30,7 +30,7 @@ const StyledTextarea = styled.textarea`
   &::placeholder {
     color: ${fromInternalTheme('colors.uncategorized.unnamed10')};
   }
-  ${helvetica('regular')};
+  ${font('regular')};
   padding: 9px 12px 10px 12px;
   max-width: 100%;
   width: 100%;

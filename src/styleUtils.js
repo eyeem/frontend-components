@@ -25,15 +25,11 @@ export const media = Object.keys(BREAKPOINTS).reduce((accumulator, label) => {
 }, {});
 
 const typeToFontFamily = {
-  regular:
-    '"HelveticaNeueW02-55Roma", "Helvetica Neue", Helvetica, Arial, sans-serif',
-  light:
-    '"HelveticaNeueW02-45Ligh", "Helvetica Neue", Helvetica, Arial, sans-serif',
-  bold:
-    '"HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif'
+  regular: '"Sailec Regular", sans-serif',
+  bold: '"Sailec Bold", sans-serif'
 };
 
-export const helvetica = (type: 'regular' | 'light' | 'bold' = 'regular') => `
+export const font = (type: 'regular' | 'bold' = 'regular') => `
   font-weight: 300;
   font-family: ${typeToFontFamily[type]};
 `;

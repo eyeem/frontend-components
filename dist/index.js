@@ -95,7 +95,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.idealTextColor = exports.isRgbaColor = exports.propsColorFromTheme = exports.fromPropsTernary = exports.fromProps = exports.fromTheme = exports.fromInternalTheme = exports.helvetica = exports.media = exports.BREAKPOINTS = undefined;
+exports.idealTextColor = exports.isRgbaColor = exports.propsColorFromTheme = exports.fromPropsTernary = exports.fromProps = exports.fromTheme = exports.fromInternalTheme = exports.font = exports.media = exports.BREAKPOINTS = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  '], ['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  ']);
 
@@ -135,12 +135,11 @@ var media = exports.media = Object.keys(BREAKPOINTS).reduce(function (accumulato
 }, {});
 
 var typeToFontFamily = {
-  regular: '"HelveticaNeueW02-55Roma", "Helvetica Neue", Helvetica, Arial, sans-serif',
-  light: '"HelveticaNeueW02-45Ligh", "Helvetica Neue", Helvetica, Arial, sans-serif',
-  bold: '"HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif'
+  regular: '"Sailec Regular", sans-serif',
+  bold: '"Sailec Bold", sans-serif'
 };
 
-var helvetica = exports.helvetica = function helvetica() {
+var font = exports.font = function font() {
   var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'regular';
   return '\n  font-weight: 300;\n  font-family: ' + typeToFontFamily[type] + ';\n';
 };
@@ -454,7 +453,7 @@ var textSizes = exports.textSizes = {
   }
 };
 
-var textFonts = exports.textFonts = ['regular', 'light', 'bold'];
+var textFonts = exports.textFonts = ['regular', 'bold'];
 var textDisplays = exports.textDisplays = ['block', 'inline-block', 'inline'];
 var textAligns = exports.textAligns = ['left', 'center', 'right'];
 var textTopMargins = exports.textTopMargins = {
@@ -1103,7 +1102,7 @@ var spinner = function spinner(props) {
   return '';
 };
 
-var StyledButton = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), (0, _styleUtils.propsColorFromTheme)('colors.borderRegular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.propsColorFromTheme)('colors.bgRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgHover'), (0, _styleUtils.propsColorFromTheme)('colors.borderHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgActive'), (0, _styleUtils.propsColorFromTheme)('colors.borderActive'), (0, _styleUtils.fromPropsTernary)('moveIconToLeft', 'padding-left: 32px;', ''), (0, _styleUtils.helvetica)('regular'), spinner, disabled, progress);
+var StyledButton = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), (0, _styleUtils.propsColorFromTheme)('colors.borderRegular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.propsColorFromTheme)('colors.bgRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgHover'), (0, _styleUtils.propsColorFromTheme)('colors.borderHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgActive'), (0, _styleUtils.propsColorFromTheme)('colors.borderActive'), (0, _styleUtils.fromPropsTernary)('moveIconToLeft', 'padding-left: 32px;', ''), (0, _styleUtils.font)('regular'), spinner, disabled, progress);
 
 exports.default = StyledButton;
 
@@ -3463,7 +3462,7 @@ var background = function background(props) {
   return (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
 };
 
-var StyledInput = _styledComponents2.default.input(_templateObject5, (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
+var StyledInput = _styledComponents2.default.input(_templateObject5, (0, _styleUtils.font)('regular'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
 
 var InnerHint = _styledComponents2.default.p(_templateObject6, (0, _styleUtils.fromInternalTheme)('colors.greys.grey3'));
 
@@ -3576,7 +3575,7 @@ var background = function background(props) {
   return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
 };
 
-var StyledSelect = _styledComponents2.default.select(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), (0, _styleUtils.fromInternalTheme)('borderRadius'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
+var StyledSelect = _styledComponents2.default.select(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.font)('regular'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), (0, _styleUtils.fromInternalTheme)('borderRadius'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
 
 function Select(props) {
   var WrapperComponent = props.formRow ? _formRow2.default : 'div';
@@ -3786,7 +3785,7 @@ var noWrap = function noWrap(props) {
 };
 
 var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject2, (0, _styleUtils.fromProps)('display'), (0, _styleUtils.fromProps)('sizeValues.letterSpacing'), (0, _styleUtils.fromProps)('align'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), fontSize('small'), lineHeight('small'), (0, _styleUtils.fromPropsTernary)('underline', 'underline', 'none'), marginBottom('small'), (0, _styleUtils.fromProps)('marginTop.small'), (0, _styleUtils.fromProps)('cursor'), (0, _styleUtils.propsColorFromTheme)('colors.hover'), (0, _styleUtils.propsColorFromTheme)('colors.hover'), (0, _styleUtils.propsColorFromTheme)('colors.active'), (0, _styleUtils.propsColorFromTheme)('colors.active'), _styleUtils.media.medium(_templateObject3, fontSize('medium'), lineHeight('medium'), marginBottom('medium'), (0, _styleUtils.fromProps)('marginTop.medium')), _styleUtils.media.large(_templateObject3, fontSize('large'), lineHeight('large'), marginBottom('large'), (0, _styleUtils.fromProps)('marginTop.large')), _styleUtils.media.xlarge(_templateObject3, fontSize('xlarge'), lineHeight('xlarge'), marginBottom('xlarge'), (0, _styleUtils.fromProps)('marginTop.xlarge')), function (props) {
-  return (0, _styleUtils.helvetica)(props.font);
+  return (0, _styleUtils.font)(props.font);
 }, function (props) {
   return props.ellipsis ? (0, _styledComponents.css)(_templateObject4) : '';
 }, noWrap);
@@ -3839,7 +3838,7 @@ var background = function background(props) {
   return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
 };
 
-var StyledTextarea = _styledComponents2.default.textarea(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.helvetica)('regular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
+var StyledTextarea = _styledComponents2.default.textarea(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.font)('regular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
 
 function Textarea(props) {
   var WrapperComponent = props.formRow ? _formRow2.default : 'div';
@@ -4067,7 +4066,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  ', ' body {\n    font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n    text-decoration: none;\n  }\n'], ['\n  ', ' body {\n    font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n    text-decoration: none;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  ', ';\n\n  @font-face {\n    font-family: \'Sailec Regular\';\n    src: url(\'/node-static/fonts/sailec/SailecRegular.eot?#iefix\');\n    src: url(\'/node-static/fonts/sailec/SailecRegular.eot?#iefix\') format(\'eot\'),\n      url(\'/node-static/fonts/sailec/SailecRegular.woff\') format(\'woff\'),\n      url(\'/node-static/fonts/sailec/SailecRegular.ttf\') format(\'truetype\'),\n      url(\'/node-static/fonts/sailec/SailecRegular.svg#48d599a6-92b5-4d43-a4ac-8959f6971853\')\n        format(\'svg\');\n  }\n\n  @font-face {\n    font-family: \'Sailec Bold\';\n    src: url(\'/node-static/fonts/sailec/SailecBold.eot?#iefix\');\n    src: url(\'/node-static/fonts/sailec/SailecBold.eot?#iefix\') format(\'eot\'),\n      url(\'/node-static/fonts/sailec/SailecBold.woff\') format(\'woff\'),\n      url(\'/node-static/fonts/sailec/SailecBold.ttf\') format(\'truetype\'),\n      url(\'/node-static/fonts/sailec/SailecBold.svg#25e09910-ffc3-4fc4-b0d1-db9a95dface8\')\n        format(\'svg\');\n  }\n\n  body {\n    font-family: \'Sailec Regular\', sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n    text-decoration: none;\n  }\n'], ['\n  ', ';\n\n  @font-face {\n    font-family: \'Sailec Regular\';\n    src: url(\'/node-static/fonts/sailec/SailecRegular.eot?#iefix\');\n    src: url(\'/node-static/fonts/sailec/SailecRegular.eot?#iefix\') format(\'eot\'),\n      url(\'/node-static/fonts/sailec/SailecRegular.woff\') format(\'woff\'),\n      url(\'/node-static/fonts/sailec/SailecRegular.ttf\') format(\'truetype\'),\n      url(\'/node-static/fonts/sailec/SailecRegular.svg#48d599a6-92b5-4d43-a4ac-8959f6971853\')\n        format(\'svg\');\n  }\n\n  @font-face {\n    font-family: \'Sailec Bold\';\n    src: url(\'/node-static/fonts/sailec/SailecBold.eot?#iefix\');\n    src: url(\'/node-static/fonts/sailec/SailecBold.eot?#iefix\') format(\'eot\'),\n      url(\'/node-static/fonts/sailec/SailecBold.woff\') format(\'woff\'),\n      url(\'/node-static/fonts/sailec/SailecBold.ttf\') format(\'truetype\'),\n      url(\'/node-static/fonts/sailec/SailecBold.svg#25e09910-ffc3-4fc4-b0d1-db9a95dface8\')\n        format(\'svg\');\n  }\n\n  body {\n    font-family: \'Sailec Regular\', sans-serif;\n  }\n  *,\n  *:before,\n  *:after {\n    box-sizing: border-box;\n    text-decoration: none;\n  }\n']);
 
 var _styledComponents = __webpack_require__(1);
 

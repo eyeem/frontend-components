@@ -173,7 +173,7 @@ export const textSizes = {
   }
 };
 
-export const textFonts = ['regular', 'light', 'bold'];
+export const textFonts = ['regular', 'bold'];
 export const textDisplays = ['block', 'inline-block', 'inline'];
 export const textAligns = ['left', 'center', 'right'];
 export const textTopMargins = {

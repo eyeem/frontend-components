@@ -2,7 +2,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { helvetica, fromInternalTheme } from '../../styleUtils';
+import { font, fromInternalTheme } from '../../styleUtils';
 
 import FormRow from '../formRow';
 import Flyout from '../flyout';
@@ -46,7 +46,7 @@ const background = (props: {
 };
 
 const StyledInput = styled.input`
-  ${helvetica('regular')};
+  ${font('regular')};
   font-size: 16px;
   line-height: 20px;
   &::placeholder {

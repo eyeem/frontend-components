@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import createComponentFromTagProp from 'react-create-component-from-tag-prop';
 
 import {
-  helvetica,
+  font,
   fromInternalTheme,
   fromProps,
   fromPropsTernary,
@@ -124,7 +124,7 @@ const StyledButton = styled(ComponentFromTagProp)`
   &:focus {
     outline: none;
   }
-  ${fromPropsTernary('moveIconToLeft', 'padding-left: 32px;', '')} ${helvetica(
+  ${fromPropsTernary('moveIconToLeft', 'padding-left: 32px;', '')} ${font(
       'regular'
     )} ${spinner} ${disabled} ${progress};
 `;
