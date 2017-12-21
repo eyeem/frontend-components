@@ -50,6 +50,7 @@ import RightArrow from './icons/rightArrow.js';
 import Terms from './icons/terms.js';
 import Market from './icons/market.js';
 import Growth from './icons/growth.js';
+import EyeEmVision from './icons/eyeEmVision.js';
 
 const icons = {
   star: StarIcon,
@@ -97,7 +98,8 @@ const icons = {
   plus: PlusIcon,
   terms: Terms,
   market: Market,
-  growth: Growth
+  growth: Growth,
+  eyeEmVision: EyeEmVision
 };
 
 function Icon(props: {
