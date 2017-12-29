@@ -51,6 +51,7 @@ import Terms from './icons/terms.js';
 import Market from './icons/market.js';
 import Growth from './icons/growth.js';
 import EyeEmVision from './icons/eyeEmVision.js';
+import Trophy from './icons/trophy.js';
 
 const icons = {
   star: StarIcon,
@@ -99,7 +100,8 @@ const icons = {
   terms: Terms,
   market: Market,
   growth: Growth,
-  eyeEmVision: EyeEmVision
+  eyeEmVision: EyeEmVision,
+  trophy: Trophy
 };
 
 function Icon(props: {
