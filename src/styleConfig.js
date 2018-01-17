@@ -251,6 +251,7 @@ export const textColors = {
   grey1: { regular: 'greys.grey1' },
   grey2: { regular: 'greys.grey2' },
   grey3: { regular: 'greys.grey3' },
+  orange: { regular: 'solidColors.orange' },
   opacityWhite: {
     regular: 'uncategorized.unnamed28'
   },

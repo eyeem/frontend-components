@@ -45,8 +45,8 @@ function Text(props: {
       target={props.target}
       sizeValues={textSizes[props.size]}
       colors={{
-        hover: textColors[props.color].regular,
-        active: textColors[props.color].regular,
+        hover: textColors[props.color] && textColors[props.color].regular,
+        active: textColors[props.color] && textColors[props.color].regular,
         ...textColors[props.color]
       }}
       cursor={textColors[props.color].hover ? 'pointer' : 'auto'}
@@ -56,8 +56,7 @@ function Text(props: {
       ellipsis={props.ellipsis}
       noWrap={props.noWrap}
       underline={props.underline}
-      align={props.align}
-    >
+      align={props.align}>
       {props.children}
     </StyledText>
   );

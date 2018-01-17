@@ -531,6 +531,7 @@ var textColors = exports.textColors = {
   grey1: { regular: 'greys.grey1' },
   grey2: { regular: 'greys.grey2' },
   grey3: { regular: 'greys.grey3' },
+  orange: { regular: 'solidColors.orange' },
   opacityWhite: {
     regular: 'uncategorized.unnamed28'
   },
@@ -4004,8 +4005,8 @@ function Text(props) {
       target: props.target,
       sizeValues: _styleConfig.textSizes[props.size],
       colors: _extends({
-        hover: _styleConfig.textColors[props.color].regular,
-        active: _styleConfig.textColors[props.color].regular
+        hover: _styleConfig.textColors[props.color] && _styleConfig.textColors[props.color].regular,
+        active: _styleConfig.textColors[props.color] && _styleConfig.textColors[props.color].regular
       }, _styleConfig.textColors[props.color]),
       cursor: _styleConfig.textColors[props.color].hover ? 'pointer' : 'auto',
       margin: props.margin,
@@ -4014,8 +4015,7 @@ function Text(props) {
       ellipsis: props.ellipsis,
       noWrap: props.noWrap,
       underline: props.underline,
-      align: props.align
-    },
+      align: props.align },
     props.children
   );
 }
