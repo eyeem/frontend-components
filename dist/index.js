@@ -4077,7 +4077,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var ComponentFromTagProp = (0, _reactCreateComponentFromTagProp2.default)({
   tag: 'a',
   prop: 'renderAs',
-  propsToOmit: ['renderAs', 'underline', 'colors']
+  propsToOmit: ['renderAs', 'underline', 'colors', 'font', 'sizeValues', 'margin', 'marginTop', 'ellipsis', 'noWrap', 'align']
 });
 
 var fontSizeToLineHeight = function fontSizeToLineHeight(fontSize) {
