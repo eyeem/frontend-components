@@ -14,7 +14,18 @@ import {
 const ComponentFromTagProp = createComponentFromTagProp({
   tag: 'a',
   prop: 'renderAs',
-  propsToOmit: ['renderAs', 'underline', 'colors']
+  propsToOmit: [
+    'renderAs',
+    'underline',
+    'colors',
+    'font',
+    'sizeValues',
+    'margin',
+    'marginTop',
+    'ellipsis',
+    'noWrap',
+    'align'
+  ]
 });
 
 const fontSizeToLineHeight = fontSize => fontSize + 8;
