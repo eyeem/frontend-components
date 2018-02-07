@@ -17,4 +17,4 @@ This project itself doesn't feature a showcase app, it should be developed toget
 - `npm run start`
 
 ## Publish new version
-- `$ npm run publish`
+- `$ npm run release`
