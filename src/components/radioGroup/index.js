@@ -19,10 +19,15 @@ const RadioRow = styled.div`
   margin-right: 32px;
 `;
 
-const border = props =>
-  props.checked
-    ? css`5px solid ${fromInternalTheme('colors.solidColors.green')}`
-    : css`1px solid ${fromInternalTheme('colors.greys.grey3')}`;
+const border = props => {
+  let border = css`1px solid ${fromInternalTheme('colors.greys.grey3')}`;
+  if (props.error) {
+    border = css`1px solid ${fromInternalTheme('colors.solidColors.red')}`;
+  } else if (props.checked) {
+    border = css`5px solid ${fromInternalTheme('colors.solidColors.green')}`;
+  }
+  return border;
+};
 
 const StyledLabel = styled.label`
   position: relative;
@@ -62,6 +67,9 @@ declare type Props = {
   }>
 };
 
+const compareAsString = (val1: number | string, val2: number | string) =>
+  `${val1}`.toLowerCase() === `${val2}`.toLowerCase();
+
 function RadioGroup(props: Props) {
   const WrapperComponent = props.formRow ? FormRow : Wrapper;
 
@@ -72,14 +80,14 @@ function RadioGroup(props: Props) {
           <StyledRadio
             {...props.inputProps}
             value={option.value}
-            checked={option.value === props.inputProps.value}
+            checked={compareAsString(option.value, props.inputProps.value)}
             type="radio"
             id={`${props.inputProps.name}_${option.value}`}
           />
           <StyledLabel
-            checked={option.value === props.inputProps.value}
-            htmlFor={`${props.inputProps.name}_${option.value}`}
-          >
+            error={!!props.errorMessage}
+            checked={compareAsString(option.value, props.inputProps.value)}
+            htmlFor={`${props.inputProps.name}_${option.value}`}>
             {option.text}
           </StyledLabel>
         </RadioRow>
