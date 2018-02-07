@@ -4299,8 +4299,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _templateObject = _taggedTemplateLiteral(['\n  display: none;\n  visibility: hidden;\n  float: left;\n  margin-right: 16px;\n'], ['\n  display: none;\n  visibility: hidden;\n  float: left;\n  margin-right: 16px;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  display: inline-block;\n  margin-right: 32px;\n'], ['\n  display: inline-block;\n  margin-right: 32px;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['5px solid ', ''], ['5px solid ', '']),
-    _templateObject4 = _taggedTemplateLiteral(['1px solid ', ''], ['1px solid ', '']),
+    _templateObject3 = _taggedTemplateLiteral(['1px solid ', ''], ['1px solid ', '']),
+    _templateObject4 = _taggedTemplateLiteral(['5px solid ', ''], ['5px solid ', '']),
     _templateObject5 = _taggedTemplateLiteral(['\n  position: relative;\n  padding-left: 24px;\n  cursor: pointer;\n\n  font-size: 14px;\n  line-height: 22px;\n\n  &:before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border: ', ';\n    border-radius: 12px;\n    transition: border-color 0.15s ease-out;\n    content: \'\';\n  }\n'], ['\n  position: relative;\n  padding-left: 24px;\n  cursor: pointer;\n\n  font-size: 14px;\n  line-height: 22px;\n\n  &:before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border: ', ';\n    border-radius: 12px;\n    transition: border-color 0.15s ease-out;\n    content: \'\';\n  }\n']),
     _templateObject6 = _taggedTemplateLiteral(['position: relative;'], ['position: relative;']);
 
@@ -4331,12 +4331,22 @@ var StyledRadio = _styledComponents2.default.input(_templateObject);
 var RadioRow = _styledComponents2.default.div(_templateObject2);
 
 var border = function border(props) {
-  return props.checked ? (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green')) : (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromInternalTheme)('colors.greys.grey3'));
+  var border = (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.greys.grey3'));
+  if (props.error) {
+    border = (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.solidColors.red'));
+  } else if (props.checked) {
+    border = (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'));
+  }
+  return border;
 };
 
 var StyledLabel = _styledComponents2.default.label(_templateObject5, border);
 
 var Wrapper = _styledComponents2.default.div(_templateObject6);
+
+var compareAsString = function compareAsString(val1, val2) {
+  return ('' + val1).toLowerCase() === ('' + val2).toLowerCase();
+};
 
 function RadioGroup(props) {
   var WrapperComponent = props.formRow ? _formRow2.default : Wrapper;
@@ -4350,16 +4360,16 @@ function RadioGroup(props) {
         { key: option.value },
         _react2.default.createElement(StyledRadio, _extends({}, props.inputProps, {
           value: option.value,
-          checked: option.value === props.inputProps.value,
+          checked: compareAsString(option.value, props.inputProps.value),
           type: 'radio',
           id: props.inputProps.name + '_' + option.value
         })),
         _react2.default.createElement(
           StyledLabel,
           {
-            checked: option.value === props.inputProps.value,
-            htmlFor: props.inputProps.name + '_' + option.value
-          },
+            error: !!props.errorMessage,
+            checked: compareAsString(option.value, props.inputProps.value),
+            htmlFor: props.inputProps.name + '_' + option.value },
           option.text
         )
       );
