@@ -7,6 +7,8 @@ import { fromInternalTheme } from '../../styleUtils';
 import StarIcon from './icons/star.js';
 import Star2Icon from './icons/star2.js';
 import Star3Icon from './icons/star3.js';
+import Star3IconPlus from './icons/star3Plus.js';
+import Star3IconMinus from './icons/star3Minus.js';
 import ImageIcon from './icons/image.js';
 import MailIcon from './icons/mail.js';
 import PhoneIcon from './icons/phone.js';
@@ -52,11 +54,15 @@ import Market from './icons/market.js';
 import Growth from './icons/growth.js';
 import EyeEmVision from './icons/eyeEmVision.js';
 import Trophy from './icons/trophy.js';
+import TrophyPlus from './icons/trophyPlus.js';
+import TrophyMinus from './icons/trophyMinus.js';
 
 const icons = {
   star: StarIcon,
   star2: Star2Icon,
   star3: Star3Icon,
+  star3Plus: Star3IconPlus,
+  star3Minus: Star3IconMinus,
   image: ImageIcon,
   mail: MailIcon,
   phone: PhoneIcon,
@@ -101,7 +107,9 @@ const icons = {
   market: Market,
   growth: Growth,
   eyeEmVision: EyeEmVision,
-  trophy: Trophy
+  trophy: Trophy,
+  trophyPlus: TrophyPlus,
+  trophyMinus: TrophyMinus
 };
 
 function Icon(props: {
