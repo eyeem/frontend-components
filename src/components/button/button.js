@@ -1,10 +1,12 @@
 /* @flow */
 import * as React from 'react';
+import styled from 'styled-components/primitives';
 
 import { getButtonColorSet, buttonSizes } from '../../styleConfig';
 
 import StyledButton from './styledButton';
-import StyledIcon from './styledIcon';
+
+const Text = styled.Text``;
 
 function Button(props: {
   className: string,
@@ -49,17 +51,8 @@ function Button(props: {
       spinner={props.spinner}
       fullWidth={props.fullWidth}
       moveIconToLeft={props.moveIconToLeft}
-      colors={getButtonColorSet(props.color)}
-    >
-      {props.icon && (
-        <StyledIcon
-          moveIconToLeft={props.moveIconToLeft}
-          size={buttonSizes[props.size].iconSize}
-          type={props.icon}
-          marginRight={props.children ? '8px' : 0}
-        />
-      )}
-      {props.children}
+      colors={getButtonColorSet(props.color)}>
+      <Text>{props.children}</Text>
     </StyledButton>
   );
 }

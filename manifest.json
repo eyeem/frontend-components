@@ -1,0 +1,15 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "EyeEm Components: Button",
+      "identifier": "main",
+      "script": "./sketch-entry.js"
+    }
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": ["main"]
+  }
+}

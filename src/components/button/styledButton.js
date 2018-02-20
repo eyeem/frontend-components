@@ -1,6 +1,5 @@
 /* @flow */
-import styled, { css } from 'styled-components';
-import createComponentFromTagProp from 'react-create-component-from-tag-prop';
+import styled, { css } from 'styled-components/primitives';
 
 import {
   font,
@@ -9,20 +8,6 @@ import {
   fromPropsTernary,
   propsColorFromTheme
 } from '../../styleUtils';
-
-const ComponentFromTagProp = createComponentFromTagProp({
-  tag: 'button',
-  prop: 'renderAs',
-  propsToOmit: [
-    'renderAs',
-    'progress',
-    'sizeValues',
-    'spinner',
-    'fullWidth',
-    'moveIconToLeft',
-    'colors'
-  ]
-});
 
 const disabled = props => {
   if (props.disabled || (props.progress && props.progress < 100)) {
@@ -86,7 +71,7 @@ const spinner = props => {
   return '';
 };
 
-const StyledButton = styled(ComponentFromTagProp)`
+const StyledButton = styled.View`
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -110,23 +95,10 @@ const StyledButton = styled(ComponentFromTagProp)`
   transition: background-color 0.2s ease-in-out, border 0.2s ease-out,
     color 0.2s ease-out, fill 0.2s ease-out;
   pointer-events: all;
-  &:focus,
-  &:hover {
-    color: ${propsColorFromTheme('colors.fontHover')};
-    fill: ${propsColorFromTheme('colors.fontHover')};
-    background-color: ${propsColorFromTheme('colors.bgHover')};
-    border-color: ${propsColorFromTheme('colors.borderHover')};
-  }
-  &:active {
-    background-color: ${propsColorFromTheme('colors.bgActive')};
-    border-color: ${propsColorFromTheme('colors.borderActive')};
-  }
-  &:focus {
-    outline: none;
-  }
+
   ${fromPropsTernary('moveIconToLeft', 'padding-left: 32px;', '')} ${font(
-      'regular'
-    )} ${spinner} ${disabled} ${progress};
+  'regular'
+)} ${spinner} ${disabled} ${progress};
 `;
 
 export default StyledButton;

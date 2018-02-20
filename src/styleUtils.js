@@ -25,8 +25,8 @@ export const media = Object.keys(BREAKPOINTS).reduce((accumulator, label) => {
 }, {});
 
 const typeToFontFamily = {
-  regular: '"Sailec Regular", sans-serif',
-  bold: '"Sailec Bold", sans-serif'
+  regular: 'sans-serif',
+  bold: 'sans-serif'
 };
 
 export const font = (type: 'regular' | 'bold' = 'regular') => `

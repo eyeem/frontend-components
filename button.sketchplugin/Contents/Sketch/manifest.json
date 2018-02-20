@@ -1,0 +1,24 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "EyeEm Components: Button",
+      "identifier": "main",
+      "script": "sketch-entry.js"
+    }
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": [
+      "main"
+    ]
+  },
+  "version": "0.1.19",
+  "description": "Shareable React Components for Frontend Projects at EyeEm",
+  "homepage": "https://github.com/eyeem/frontend-components#readme",
+  "name": "eyeem-components",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com/eyeem/frontend-components/master/.appcast.xml",
+  "author": "EyeEm Mobile GmbH"
+}
