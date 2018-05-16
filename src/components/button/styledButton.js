@@ -65,6 +65,15 @@ const progress = props => {
 
 const spinner = props => {
   if (props.spinner) {
+    const spinnerImg =
+      props.colors &&
+      props.colors.bgRegular &&
+      ['ghost', 'white', 'trans'].filter(
+        item => props.colors.bgRegular.indexOf(item) !== -1
+      ).length > 0
+        ? 'spinner-32-black.png'
+        : 'spinner-32-white.png';
+
     return `
       overflow: hidden;
       &:before {
@@ -74,7 +83,7 @@ const spinner = props => {
 
         width: 16px;
         height: 16px;
-        background-image: url("/node-static/img/spinner-32-white.png");
+        background-image: url("/node-static/img/${spinnerImg}");
         background-position: center;
         background-size: 16px 16px;
         background-repeat: no-repeat;
@@ -125,8 +134,8 @@ const StyledButton = styled(ComponentFromTagProp)`
     outline: none;
   }
   ${fromPropsTernary('moveIconToLeft', 'padding-left: 32px;', '')} ${font(
-      'regular'
-    )} ${spinner} ${disabled} ${progress};
+  'regular'
+)} ${spinner} ${disabled} ${progress};
 `;
 
 export default StyledButton;
