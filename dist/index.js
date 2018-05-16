@@ -1098,10 +1098,10 @@ var progress = function progress(props) {
 
 var spinner = function spinner(props) {
   if (props.spinner) {
-    console.log('props', props.colors.bgRegular);
     var spinnerImg = props.colors && props.colors.bgRegular && ['ghost', 'white', 'trans'].filter(function (item) {
       return props.colors.bgRegular.indexOf(item) !== -1;
     }).length > 0 ? 'spinner-32-black.png' : 'spinner-32-white.png';
+
     return '\n      overflow: hidden;\n      &:before {\n        display: inline-block;\n        margin-bottom: -2px;\n        margin-right: ' + (props.children ? '12px' : '0') + ';\n\n        width: 16px;\n        height: 16px;\n        background-image: url("/node-static/img/' + spinnerImg + '");\n        background-position: center;\n        background-size: 16px 16px;\n        background-repeat: no-repeat;\n        content: "";\n        animation: spin .7s linear infinite;\n      }\n    ';
   }
   return '';

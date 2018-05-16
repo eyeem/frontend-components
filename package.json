@@ -1,6 +1,6 @@
 {
   "name": "eyeem-components",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "Shareable React Components for Frontend Projects at EyeEm",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "node_modules/.bin/webpack --config webpack.config.js",
     "test": "echo 'no tests yet :(';",
     "prepublish": "npm run build",
-    "release": "np"
+    "release": "np --no-publish --no-yarn "
   },
   "repository": {
     "type": "git",
