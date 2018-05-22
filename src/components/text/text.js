@@ -30,7 +30,9 @@ function Text(props: {
 
   // use only when renderAs === 'a'
   href?: string,
-  target?: string
+  target?: string,
+
+  cursor?: string
 }) {
   return (
     <StyledText
@@ -49,7 +51,9 @@ function Text(props: {
         active: textColors[props.color] && textColors[props.color].regular,
         ...textColors[props.color]
       }}
-      cursor={textColors[props.color].hover ? 'pointer' : 'auto'}
+      cursor={
+        props.cursor || textColors[props.color].hover ? 'pointer' : 'auto'
+      }
       margin={props.margin}
       marginTop={textTopMargins[props.topMargin || 'none']}
       display={props.display}
