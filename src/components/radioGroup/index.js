@@ -15,8 +15,11 @@ const StyledRadio = styled.input`
 `;
 
 const RadioRow = styled.div`
-  display: inline-block;
-  margin-right: 32px;
+  display: block;
+  margin-bottom: 6px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const border = props => {
@@ -52,7 +55,9 @@ const StyledLabel = styled.label`
   }
 `;
 
-const Wrapper = styled.div`position: relative;`;
+const Wrapper = styled.div`
+  position: relative;
+`;
 
 declare type Props = {
   inputProps: {
