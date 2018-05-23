@@ -4302,11 +4302,11 @@ Object.defineProperty(exports, "__esModule", {
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _templateObject = _taggedTemplateLiteral(['\n  display: none;\n  visibility: hidden;\n  float: left;\n  margin-right: 16px;\n'], ['\n  display: none;\n  visibility: hidden;\n  float: left;\n  margin-right: 16px;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  display: inline-block;\n  margin-right: 32px;\n'], ['\n  display: inline-block;\n  margin-right: 32px;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  display: block;\n  margin-bottom: 6px;\n  &:last-child {\n    margin-bottom: 0;\n  }\n'], ['\n  display: block;\n  margin-bottom: 6px;\n  &:last-child {\n    margin-bottom: 0;\n  }\n']),
     _templateObject3 = _taggedTemplateLiteral(['1px solid ', ''], ['1px solid ', '']),
     _templateObject4 = _taggedTemplateLiteral(['5px solid ', ''], ['5px solid ', '']),
     _templateObject5 = _taggedTemplateLiteral(['\n  position: relative;\n  padding-left: 24px;\n  cursor: pointer;\n\n  font-size: 14px;\n  line-height: 22px;\n\n  &:before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border: ', ';\n    border-radius: 12px;\n    transition: border-color 0.15s ease-out;\n    content: \'\';\n  }\n'], ['\n  position: relative;\n  padding-left: 24px;\n  cursor: pointer;\n\n  font-size: 14px;\n  line-height: 22px;\n\n  &:before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border: ', ';\n    border-radius: 12px;\n    transition: border-color 0.15s ease-out;\n    content: \'\';\n  }\n']),
-    _templateObject6 = _taggedTemplateLiteral(['position: relative;'], ['position: relative;']);
+    _templateObject6 = _taggedTemplateLiteral(['\n  position: relative;\n'], ['\n  position: relative;\n']);
 
 var _react = __webpack_require__(0);
 
