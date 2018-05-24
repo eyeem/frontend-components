@@ -246,6 +246,7 @@ export const textTopMargins = {
 };
 export const textColors = {
   default: { regular: 'blacks.black5' },
+  black: { regular: 'blacks.black1' },
   green: { regular: 'solidColors.green' },
   white: { regular: 'whites.white' },
   grey1: { regular: 'greys.grey1' },

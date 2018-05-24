@@ -527,6 +527,7 @@ var textTopMargins = exports.textTopMargins = {
 };
 var textColors = exports.textColors = {
   default: { regular: 'blacks.black5' },
+  black: { regular: 'blacks.black1' },
   green: { regular: 'solidColors.green' },
   white: { regular: 'whites.white' },
   grey1: { regular: 'greys.grey1' },
@@ -4013,7 +4014,7 @@ function Text(props) {
         hover: _styleConfig.textColors[props.color] && _styleConfig.textColors[props.color].regular,
         active: _styleConfig.textColors[props.color] && _styleConfig.textColors[props.color].regular
       }, _styleConfig.textColors[props.color]),
-      cursor: props.cursor || _styleConfig.textColors[props.color].hover ? 'pointer' : 'auto',
+      cursor: props.cursor || _styleConfig.textColors[props.color] && _styleConfig.textColors[props.color].hover ? 'pointer' : undefined,
       margin: props.margin,
       marginTop: _styleConfig.textTopMargins[props.topMargin || 'none'],
       display: props.display,

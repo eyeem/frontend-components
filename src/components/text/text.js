@@ -52,7 +52,10 @@ function Text(props: {
         ...textColors[props.color]
       }}
       cursor={
-        props.cursor || textColors[props.color].hover ? 'pointer' : 'auto'
+        props.cursor ||
+        (textColors[props.color] && textColors[props.color].hover)
+          ? 'pointer'
+          : undefined
       }
       margin={props.margin}
       marginTop={textTopMargins[props.topMargin || 'none']}
