@@ -24,6 +24,16 @@ export default css`
         format('svg');
   }
 
+  @font-face {
+    font-family: 'Sailec Light';
+    src: url('/node-static/fonts/sailec/sailec-light.eot?#iefix');
+    src: url('/node-static/fonts/sailec/sailec-light.eot?#iefix') format('eot'),
+      url('/node-static/fonts/sailec/sailec-light.woff') format('woff'),
+      url('/node-static/fonts/sailec/sailec-light.ttf') format('truetype'),
+      url('/node-static/fonts/sailec/sailec-light.svg#48d599a6-92b5-4d43-a4ac-8959f6971853')
+        format('svg');
+  }
+
   body {
     font-family: 'Sailec Regular', sans-serif;
   }
