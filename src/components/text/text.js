@@ -21,6 +21,7 @@ function Text(props: {
   display: string,
   margin?: number,
   font: string,
+  fontStyle: string,
   topMargin: string,
 
   // eslint-disable-next-line react/no-unused-prop-types
@@ -37,6 +38,7 @@ function Text(props: {
   return (
     <StyledText
       font={props.font}
+      fontStyle={props.fontStyle}
       renderAs={props.renderAs}
       // eslint-disable-next-line react/prop-types
       data-test-id={props['data-test-id']}

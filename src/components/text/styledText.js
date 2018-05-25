@@ -19,6 +19,7 @@ const ComponentFromTagProp = createComponentFromTagProp({
     'underline',
     'colors',
     'font',
+    'fontStyle',
     'sizeValues',
     'margin',
     'marginTop',
@@ -55,6 +56,7 @@ const StyledText = styled(ComponentFromTagProp)`
   text-align: ${fromProps('align')};
   color: ${propsColorFromTheme('colors.regular')};
   fill: ${propsColorFromTheme('colors.regular')};
+  font-style: ${props => props.fontStyle};
   font-size: ${fontSize('small')}px;
   line-height: ${lineHeight('small')}px;
   text-decoration: ${fromPropsTernary('underline', 'underline', 'none')};
@@ -94,14 +96,14 @@ const StyledText = styled(ComponentFromTagProp)`
     margin-bottom: 0;
   }
   ${props => font(props.font)} ${props =>
-      props.ellipsis
-        ? css`
-            width: 100%;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-          `
-        : ''} ${noWrap};
+  props.ellipsis
+    ? css`
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      `
+    : ''} ${noWrap};
 `;
 
 export default StyledText;
