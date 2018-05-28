@@ -2,7 +2,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { fromInternalTheme } from '../../styleUtils';
+import { fromInternalTheme, fromPropsTernary } from '../../styleUtils';
 
 import FormRow from '../formRow';
 import Flyout from '../flyout';
@@ -15,11 +15,15 @@ const StyledRadio = styled.input`
 `;
 
 const RadioRow = styled.div`
-  display: block;
-  margin-bottom: 6px;
-  &:last-child {
-    margin-bottom: 0;
-  }
+  ${fromPropsTernary(
+    'radioColumned',
+    'display: inline-block;margin-right: 32px;',
+    `display: block;
+      margin-bottom: 6px;
+      &:last-child {
+        margin-bottom: 0;
+      }`
+  )};
 `;
 
 const border = props => {
@@ -69,7 +73,8 @@ declare type Props = {
   options: Array<{
     value: string,
     text: string
-  }>
+  }>,
+  radioColumned?: boolean
 };
 
 const compareAsString = (val1: number | string, val2: number | string) =>
@@ -81,7 +86,7 @@ function RadioGroup(props: Props) {
   return (
     <WrapperComponent>
       {props.options.map(option => (
-        <RadioRow key={option.value}>
+        <RadioRow key={option.value} radioColumned={props.radioColumned}>
           <StyledRadio
             {...props.inputProps}
             value={option.value}

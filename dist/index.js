@@ -4307,7 +4307,7 @@ Object.defineProperty(exports, "__esModule", {
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _templateObject = _taggedTemplateLiteral(['\n  display: none;\n  visibility: hidden;\n  float: left;\n  margin-right: 16px;\n'], ['\n  display: none;\n  visibility: hidden;\n  float: left;\n  margin-right: 16px;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  display: block;\n  margin-bottom: 6px;\n  &:last-child {\n    margin-bottom: 0;\n  }\n'], ['\n  display: block;\n  margin-bottom: 6px;\n  &:last-child {\n    margin-bottom: 0;\n  }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  ', ';\n'], ['\n  ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['1px solid ', ''], ['1px solid ', '']),
     _templateObject4 = _taggedTemplateLiteral(['5px solid ', ''], ['5px solid ', '']),
     _templateObject5 = _taggedTemplateLiteral(['\n  position: relative;\n  padding-left: 24px;\n  cursor: pointer;\n\n  font-size: 14px;\n  line-height: 22px;\n\n  &:before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border: ', ';\n    border-radius: 12px;\n    transition: border-color 0.15s ease-out;\n    content: \'\';\n  }\n'], ['\n  position: relative;\n  padding-left: 24px;\n  cursor: pointer;\n\n  font-size: 14px;\n  line-height: 22px;\n\n  &:before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border: ', ';\n    border-radius: 12px;\n    transition: border-color 0.15s ease-out;\n    content: \'\';\n  }\n']),
@@ -4337,7 +4337,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var StyledRadio = _styledComponents2.default.input(_templateObject);
 
-var RadioRow = _styledComponents2.default.div(_templateObject2);
+var RadioRow = _styledComponents2.default.div(_templateObject2, (0, _styleUtils.fromPropsTernary)('radioColumned', 'display: inline-block;margin-right: 32px;', 'display: block;\n      margin-bottom: 6px;\n      &:last-child {\n        margin-bottom: 0;\n      }'));
 
 var border = function border(props) {
   var border = (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.greys.grey3'));
@@ -4366,7 +4366,7 @@ function RadioGroup(props) {
     props.options.map(function (option) {
       return _react2.default.createElement(
         RadioRow,
-        { key: option.value },
+        { key: option.value, radioColumned: props.radioColumned },
         _react2.default.createElement(StyledRadio, _extends({}, props.inputProps, {
           value: option.value,
           checked: compareAsString(option.value, props.inputProps.value),
