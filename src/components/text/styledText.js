@@ -60,9 +60,9 @@ const StyledText = styled(ComponentFromTagProp)`
   font-size: ${fontSize('small')}px;
   line-height: ${lineHeight('small')}px;
   text-decoration: ${fromPropsTernary('underline', 'underline', 'none')};
+  margin: 0;
   margin-bottom: ${marginBottom('small')}px;
   margin-top: ${fromProps('marginTop.small')}px;
-  margin: 0;
   cursor: ${fromProps('cursor')};
   transition: color 0.2s ease-out;
   &:focus,
