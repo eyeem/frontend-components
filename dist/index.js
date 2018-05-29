@@ -895,27 +895,27 @@ var _formRow = __webpack_require__(3);
 
 var _formRow2 = _interopRequireDefault(_formRow);
 
-var _input = __webpack_require__(65);
+var _input = __webpack_require__(66);
 
 var _input2 = _interopRequireDefault(_input);
 
-var _select = __webpack_require__(66);
+var _select = __webpack_require__(67);
 
 var _select2 = _interopRequireDefault(_select);
 
-var _text = __webpack_require__(67);
+var _text = __webpack_require__(68);
 
 var _text2 = _interopRequireDefault(_text);
 
-var _textarea = __webpack_require__(70);
+var _textarea = __webpack_require__(71);
 
 var _textarea2 = _interopRequireDefault(_textarea);
 
-var _checkbox = __webpack_require__(71);
+var _checkbox = __webpack_require__(72);
 
 var _checkbox2 = _interopRequireDefault(_checkbox);
 
-var _radioGroup = __webpack_require__(72);
+var _radioGroup = __webpack_require__(73);
 
 var _radioGroup2 = _interopRequireDefault(_radioGroup);
 
@@ -935,7 +935,7 @@ var _theme = __webpack_require__(8);
 
 var theme = _interopRequireWildcard(_theme);
 
-var _globalStyles = __webpack_require__(73);
+var _globalStyles = __webpack_require__(74);
 
 var _globalStyles2 = _interopRequireDefault(_globalStyles);
 
@@ -1371,6 +1371,10 @@ var _trophyMinus = __webpack_require__(64);
 
 var _trophyMinus2 = _interopRequireDefault(_trophyMinus);
 
+var _userFollow = __webpack_require__(65);
+
+var _userFollow2 = _interopRequireDefault(_userFollow);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
@@ -1429,7 +1433,9 @@ var icons = {
   eyeEmVision: _eyeEmVision2.default,
   trophy: _trophy2.default,
   trophyPlus: _trophyPlus2.default,
-  trophyMinus: _trophyMinus2.default
+  trophyMinus: _trophyMinus2.default,
+
+  userFollow: _userFollow2.default
 };
 
 function Icon(props) {
@@ -3744,6 +3750,47 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = __webpack_require__(0);
+
+var React = _interopRequireWildcard(_react);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function UserFollow(props) {
+  return React.createElement(
+    "svg",
+    {
+      id: props.id,
+      className: props.className,
+      height: props.size,
+      width: props.size,
+      viewBox: "0 0 20 20" },
+    React.createElement("path", {
+      d: "M15.3333 4.3333V1h1.3334v3.3333H20v1.3334h-3.3333V9h-1.3334V5.6667H12V4.3333h3.3333zM7.8602 14.4158c.752-.744 1.3808-1.9533 1.3808-3.3198 0-2.2429-.6163-4.0638-2.8196-4.096-2.2029.0322-2.8193 1.8531-2.8193 4.096 0 1.3538.617 2.5528 1.3594 3.2985-.039 1.103-.5486 1.647-2.192 2.2842C1.0516 17.3467 0 18.0263 0 18.4911V20h13v-1.509c0-.4644-1.1488-1.1442-2.8676-1.8123-1.6327-.6334-2.2202-1.1741-2.2722-2.263z",
+      fillRule: "evenodd"
+    })
+  );
+}
+/* eslint-disable max-len */
+
+
+UserFollow.defaultProps = {
+  size: 20
+};
+
+exports.default = UserFollow;
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3864,7 +3911,7 @@ Input.defaultProps = {
 exports.default = Input;
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3951,7 +3998,7 @@ Select.defaultProps = {
 exports.default = Select;
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3961,7 +4008,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _text = __webpack_require__(68);
+var _text = __webpack_require__(69);
 
 var _text2 = _interopRequireDefault(_text);
 
@@ -3970,7 +4017,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _text2.default;
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3988,7 +4035,7 @@ var React = _interopRequireWildcard(_react);
 
 var _styleConfig = __webpack_require__(5);
 
-var _styledText = __webpack_require__(69);
+var _styledText = __webpack_require__(70);
 
 var _styledText2 = _interopRequireDefault(_styledText);
 
@@ -4048,7 +4095,7 @@ Text.defaultProps = {
 exports.default = Text;
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4129,7 +4176,7 @@ var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp)(_template
 exports.default = StyledText;
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4199,7 +4246,7 @@ Textarea.defaultProps = {
 exports.default = Textarea;
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4294,7 +4341,7 @@ Checkbox.defaultProps = {
 exports.default = Checkbox;
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4402,7 +4449,7 @@ RadioGroup.defaultProps = {
 exports.default = RadioGroup;
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4416,7 +4463,7 @@ var _templateObject = _taggedTemplateLiteral(['\n  ', ';\n\n  @font-face {\n    
 
 var _styledComponents = __webpack_require__(1);
 
-var _styledNormalize = __webpack_require__(74);
+var _styledNormalize = __webpack_require__(75);
 
 var _styledNormalize2 = _interopRequireDefault(_styledNormalize);
 
@@ -4427,7 +4474,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 exports.default = (0, _styledComponents.css)(_templateObject, _styledNormalize2.default);
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

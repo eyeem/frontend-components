@@ -57,6 +57,8 @@ import Trophy from './icons/trophy.js';
 import TrophyPlus from './icons/trophyPlus.js';
 import TrophyMinus from './icons/trophyMinus.js';
 
+import UserFollow from './icons/userFollow.js';
+
 const icons = {
   star: StarIcon,
   star2: Star2Icon,
@@ -109,7 +111,9 @@ const icons = {
   eyeEmVision: EyeEmVision,
   trophy: Trophy,
   trophyPlus: TrophyPlus,
-  trophyMinus: TrophyMinus
+  trophyMinus: TrophyMinus,
+
+  userFollow: UserFollow
 };
 
 function Icon(props: {
