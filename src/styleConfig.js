@@ -18,6 +18,15 @@ export const textSizes = {
     },
     letterSpacing: 0
   },
+  editorialBody: {
+    font: {
+      small: 18,
+      medium: 18,
+      large: 18,
+      xlarge: 18
+    },
+    letterSpacing: 0
+  },
   pMin: {
     font: {
       small: 12,
