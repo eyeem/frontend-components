@@ -1033,8 +1033,8 @@ function Button(props) {
       spinner: props.spinner,
       fullWidth: props.fullWidth,
       moveIconToLeft: props.moveIconToLeft,
-      colors: (0, _styleConfig.getButtonColorSet)(props.color)
-    },
+      colors: (0, _styleConfig.getButtonColorSet)(props.color),
+      title: props.title },
     props.icon && React.createElement(_styledIcon2.default, {
       moveIconToLeft: props.moveIconToLeft,
       size: _styleConfig.buttonSizes[props.size].iconSize,
