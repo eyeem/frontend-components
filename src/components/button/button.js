@@ -9,6 +9,7 @@ import StyledIcon from './styledIcon';
 function Button(props: {
   className: string,
   id: string,
+  title?: string,
 
   // html tag name this button will render to
   renderAs?: string,
@@ -50,7 +51,7 @@ function Button(props: {
       fullWidth={props.fullWidth}
       moveIconToLeft={props.moveIconToLeft}
       colors={getButtonColorSet(props.color)}
-    >
+      title={props.title}>
       {props.icon && (
         <StyledIcon
           moveIconToLeft={props.moveIconToLeft}
