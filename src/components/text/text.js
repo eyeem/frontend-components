@@ -24,7 +24,6 @@ function Text(props: {
   fontStyle: string,
   topMargin: string,
 
-  // eslint-disable-next-line react/no-unused-prop-types
   'data-test-id'?: string,
   onClick?: Function,
   children: React.Node,
@@ -40,7 +39,6 @@ function Text(props: {
       font={props.font}
       fontStyle={props.fontStyle}
       renderAs={props.renderAs}
-      // eslint-disable-next-line react/prop-types
       data-test-id={props['data-test-id']}
       id={props.id}
       onClick={props.onClick}

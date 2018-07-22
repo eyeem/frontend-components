@@ -25,7 +25,9 @@ const ComponentFromTagProp = createComponentFromTagProp({
     'marginTop',
     'ellipsis',
     'noWrap',
-    'align'
+    'cursor',
+    'align',
+    'display'
   ]
 });
 
@@ -41,14 +43,22 @@ const marginBottom = size => props => {
   return props.margin;
 };
 
-const noWrap = props => {
-  if (props.noWrap) {
-    return css`
-      white-space: nowrap;
-    `;
-  }
-  return '';
-};
+const noWrap = props =>
+  props.noWrap
+    ? css`
+        white-space: nowrap;
+      `
+    : '';
+
+const ellipsis = props =>
+  props.ellipsis
+    ? css`
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      `
+    : '';
 
 const StyledText = styled(ComponentFromTagProp)`
   display: ${fromProps('display')};
@@ -65,6 +75,9 @@ const StyledText = styled(ComponentFromTagProp)`
   margin-top: ${fromProps('marginTop.small')}px;
   cursor: ${fromProps('cursor')};
   transition: color 0.2s ease-out;
+  ${props => font(props.font)}
+  ${ellipsis};
+  ${noWrap};
   &:focus,
   &:hover {
     color: ${propsColorFromTheme('colors.hover')};
@@ -76,6 +89,9 @@ const StyledText = styled(ComponentFromTagProp)`
   }
   &:focus {
     outline: none;
+  }
+  &:last-child {
+    margin-bottom: 0;
   }
   ${media.medium`
     font-size: ${fontSize('medium')}px;
@@ -92,18 +108,7 @@ const StyledText = styled(ComponentFromTagProp)`
     line-height: ${lineHeight('xlarge')}px;
     margin-bottom: ${marginBottom('xlarge')}px;
     margin-top: ${fromProps('marginTop.xlarge')}px;
-  `} &:last-child {
-    margin-bottom: 0;
-  }
-  ${props => font(props.font)} ${props =>
-  props.ellipsis
-    ? css`
-        width: 100%;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-      `
-    : ''} ${noWrap};
+  `}
 `;
 
 export default StyledText;

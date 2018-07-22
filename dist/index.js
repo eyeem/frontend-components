@@ -4058,9 +4058,8 @@ function Text(props) {
     {
       font: props.font,
       fontStyle: props.fontStyle,
-      renderAs: props.renderAs
-      // eslint-disable-next-line react/prop-types
-      , 'data-test-id': props['data-test-id'],
+      renderAs: props.renderAs,
+      'data-test-id': props['data-test-id'],
       id: props.id,
       onClick: props.onClick,
       className: props.className,
@@ -4114,10 +4113,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n      white-space: nowrap;\n    '], ['\n      white-space: nowrap;\n    ']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  display: ', ';\n  letter-spacing: ', 'px;\n  text-align: ', ';\n  color: ', ';\n  fill: ', ';\n  font-style: ', ';\n  font-size: ', 'px;\n  line-height: ', 'px;\n  text-decoration: ', ';\n  margin: 0;\n  margin-bottom: ', 'px;\n  margin-top: ', 'px;\n  cursor: ', ';\n  transition: color 0.2s ease-out;\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n  }\n  &:active {\n    color: ', ';\n    fill: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  ', ' ', ' ', ' &:last-child {\n    margin-bottom: 0;\n  }\n  ', ' ', ' ', ';\n'], ['\n  display: ', ';\n  letter-spacing: ', 'px;\n  text-align: ', ';\n  color: ', ';\n  fill: ', ';\n  font-style: ', ';\n  font-size: ', 'px;\n  line-height: ', 'px;\n  text-decoration: ', ';\n  margin: 0;\n  margin-bottom: ', 'px;\n  margin-top: ', 'px;\n  cursor: ', ';\n  transition: color 0.2s ease-out;\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n  }\n  &:active {\n    color: ', ';\n    fill: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  ', ' ', ' ', ' &:last-child {\n    margin-bottom: 0;\n  }\n  ', ' ', ' ', ';\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n    font-size: ', 'px;\n    line-height: ', 'px;\n    margin-bottom: ', 'px;\n    margin-top: ', 'px;\n  '], ['\n    font-size: ', 'px;\n    line-height: ', 'px;\n    margin-bottom: ', 'px;\n    margin-top: ', 'px;\n  ']),
-    _templateObject4 = _taggedTemplateLiteral(['\n        width: 100%;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        overflow: hidden;\n      '], ['\n        width: 100%;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        overflow: hidden;\n      ']);
+var _templateObject = _taggedTemplateLiteral(['\n        white-space: nowrap;\n      '], ['\n        white-space: nowrap;\n      ']),
+    _templateObject2 = _taggedTemplateLiteral(['\n        width: 100%;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        overflow: hidden;\n      '], ['\n        width: 100%;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        overflow: hidden;\n      ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  display: ', ';\n  letter-spacing: ', 'px;\n  text-align: ', ';\n  color: ', ';\n  fill: ', ';\n  font-style: ', ';\n  font-size: ', 'px;\n  line-height: ', 'px;\n  text-decoration: ', ';\n  margin: 0;\n  margin-bottom: ', 'px;\n  margin-top: ', 'px;\n  cursor: ', ';\n  transition: color 0.2s ease-out;\n  ', '\n  ', ';\n  ', ';\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n  }\n  &:active {\n    color: ', ';\n    fill: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  &:last-child {\n    margin-bottom: 0;\n  }\n  ', ' ', ' ', '\n'], ['\n  display: ', ';\n  letter-spacing: ', 'px;\n  text-align: ', ';\n  color: ', ';\n  fill: ', ';\n  font-style: ', ';\n  font-size: ', 'px;\n  line-height: ', 'px;\n  text-decoration: ', ';\n  margin: 0;\n  margin-bottom: ', 'px;\n  margin-top: ', 'px;\n  cursor: ', ';\n  transition: color 0.2s ease-out;\n  ', '\n  ', ';\n  ', ';\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n  }\n  &:active {\n    color: ', ';\n    fill: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  &:last-child {\n    margin-bottom: 0;\n  }\n  ', ' ', ' ', '\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n    font-size: ', 'px;\n    line-height: ', 'px;\n    margin-bottom: ', 'px;\n    margin-top: ', 'px;\n  '], ['\n    font-size: ', 'px;\n    line-height: ', 'px;\n    margin-bottom: ', 'px;\n    margin-top: ', 'px;\n  ']);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -4140,7 +4139,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var ComponentFromTagProp = (0, _reactCreateComponentFromTagProp2.default)({
   tag: 'a',
   prop: 'renderAs',
-  propsToOmit: ['renderAs', 'underline', 'colors', 'font', 'fontStyle', 'sizeValues', 'margin', 'marginTop', 'ellipsis', 'noWrap', 'align']
+  propsToOmit: ['renderAs', 'underline', 'colors', 'font', 'fontStyle', 'sizeValues', 'margin', 'marginTop', 'ellipsis', 'noWrap', 'cursor', 'align', 'display']
 });
 
 var fontSizeToLineHeight = function fontSizeToLineHeight(fontSize) {
@@ -4168,19 +4167,18 @@ var marginBottom = function marginBottom(size) {
 };
 
 var noWrap = function noWrap(props) {
-  if (props.noWrap) {
-    return (0, _styledComponents.css)(_templateObject);
-  }
-  return '';
+  return props.noWrap ? (0, _styledComponents.css)(_templateObject) : '';
 };
 
-var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject2, (0, _styleUtils.fromProps)('display'), (0, _styleUtils.fromProps)('sizeValues.letterSpacing'), (0, _styleUtils.fromProps)('align'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), function (props) {
+var ellipsis = function ellipsis(props) {
+  return props.ellipsis ? (0, _styledComponents.css)(_templateObject2) : '';
+};
+
+var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, (0, _styleUtils.fromProps)('display'), (0, _styleUtils.fromProps)('sizeValues.letterSpacing'), (0, _styleUtils.fromProps)('align'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), function (props) {
   return props.fontStyle;
-}, fontSize('small'), lineHeight('small'), (0, _styleUtils.fromPropsTernary)('underline', 'underline', 'none'), marginBottom('small'), (0, _styleUtils.fromProps)('marginTop.small'), (0, _styleUtils.fromProps)('cursor'), (0, _styleUtils.propsColorFromTheme)('colors.hover'), (0, _styleUtils.propsColorFromTheme)('colors.hover'), (0, _styleUtils.propsColorFromTheme)('colors.active'), (0, _styleUtils.propsColorFromTheme)('colors.active'), _styleUtils.media.medium(_templateObject3, fontSize('medium'), lineHeight('medium'), marginBottom('medium'), (0, _styleUtils.fromProps)('marginTop.medium')), _styleUtils.media.large(_templateObject3, fontSize('large'), lineHeight('large'), marginBottom('large'), (0, _styleUtils.fromProps)('marginTop.large')), _styleUtils.media.xlarge(_templateObject3, fontSize('xlarge'), lineHeight('xlarge'), marginBottom('xlarge'), (0, _styleUtils.fromProps)('marginTop.xlarge')), function (props) {
+}, fontSize('small'), lineHeight('small'), (0, _styleUtils.fromPropsTernary)('underline', 'underline', 'none'), marginBottom('small'), (0, _styleUtils.fromProps)('marginTop.small'), (0, _styleUtils.fromProps)('cursor'), function (props) {
   return (0, _styleUtils.font)(props.font);
-}, function (props) {
-  return props.ellipsis ? (0, _styledComponents.css)(_templateObject4) : '';
-}, noWrap);
+}, ellipsis, noWrap, (0, _styleUtils.propsColorFromTheme)('colors.hover'), (0, _styleUtils.propsColorFromTheme)('colors.hover'), (0, _styleUtils.propsColorFromTheme)('colors.active'), (0, _styleUtils.propsColorFromTheme)('colors.active'), _styleUtils.media.medium(_templateObject4, fontSize('medium'), lineHeight('medium'), marginBottom('medium'), (0, _styleUtils.fromProps)('marginTop.medium')), _styleUtils.media.large(_templateObject4, fontSize('large'), lineHeight('large'), marginBottom('large'), (0, _styleUtils.fromProps)('marginTop.large')), _styleUtils.media.xlarge(_templateObject4, fontSize('xlarge'), lineHeight('xlarge'), marginBottom('xlarge'), (0, _styleUtils.fromProps)('marginTop.xlarge')));
 
 exports.default = StyledText;
 
