@@ -10,6 +10,7 @@ function Button(props: {
   className: string,
   id: string,
   title?: string,
+  htmlFor?: string,
 
   // html tag name this button will render to
   renderAs?: string,
@@ -51,7 +52,8 @@ function Button(props: {
       fullWidth={props.fullWidth}
       moveIconToLeft={props.moveIconToLeft}
       colors={getButtonColorSet(props.color)}
-      title={props.title}>
+      title={props.title}
+      htmlFor={props.htmlFor}>
       {props.icon && (
         <StyledIcon
           moveIconToLeft={props.moveIconToLeft}
