@@ -6,31 +6,40 @@ export default css`
 
   @font-face {
     font-family: 'Sailec Regular';
-    src: url('/node-static/fonts/sailec/SailecRegular.eot?#iefix');
-    src: url('/node-static/fonts/sailec/SailecRegular.eot?#iefix') format('eot'),
-      url('/node-static/fonts/sailec/SailecRegular.woff') format('woff'),
-      url('/node-static/fonts/sailec/SailecRegular.ttf') format('truetype'),
-      url('/node-static/fonts/sailec/SailecRegular.svg#48d599a6-92b5-4d43-a4ac-8959f6971853')
+    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.eot?#iefix');
+    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.eot?#iefix')
+        format('eot'),
+      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.woff')
+        format('woff'),
+      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.ttf')
+        format('truetype'),
+      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.svg#48d599a6-92b5-4d43-a4ac-8959f6971853')
         format('svg');
   }
 
   @font-face {
     font-family: 'Sailec Bold';
-    src: url('/node-static/fonts/sailec/SailecBold.eot?#iefix');
-    src: url('/node-static/fonts/sailec/SailecBold.eot?#iefix') format('eot'),
-      url('/node-static/fonts/sailec/SailecBold.woff') format('woff'),
-      url('/node-static/fonts/sailec/SailecBold.ttf') format('truetype'),
-      url('/node-static/fonts/sailec/SailecBold.svg#25e09910-ffc3-4fc4-b0d1-db9a95dface8')
+    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.eot?#iefix');
+    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.eot?#iefix')
+        format('eot'),
+      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.woff')
+        format('woff'),
+      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.ttf')
+        format('truetype'),
+      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.svg#25e09910-ffc3-4fc4-b0d1-db9a95dface8')
         format('svg');
   }
 
   @font-face {
     font-family: 'Sailec Light';
-    src: url('/node-static/fonts/sailec/sailec-light.eot?#iefix');
-    src: url('/node-static/fonts/sailec/sailec-light.eot?#iefix') format('eot'),
-      url('/node-static/fonts/sailec/sailec-light.woff') format('woff'),
-      url('/node-static/fonts/sailec/sailec-light.ttf') format('truetype'),
-      url('/node-static/fonts/sailec/sailec-light.svg#48d599a6-92b5-4d43-a4ac-8959f6971853')
+    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.eot?#iefix');
+    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.eot?#iefix')
+        format('eot'),
+      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.woff')
+        format('woff'),
+      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.ttf')
+        format('truetype'),
+      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.svg#48d599a6-92b5-4d43-a4ac-8959f6971853')
         format('svg');
   }
 
