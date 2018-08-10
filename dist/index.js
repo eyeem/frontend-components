@@ -4057,6 +4057,7 @@ function Text(props) {
   return React.createElement(
     _styledText2.default,
     {
+      to: props.to,
       font: props.font,
       fontStyle: props.fontStyle,
       renderAs: props.renderAs,
@@ -4078,7 +4079,8 @@ function Text(props) {
       ellipsis: props.ellipsis,
       noWrap: props.noWrap,
       underline: props.underline,
-      align: props.align },
+      align: props.align
+    },
     props.children
   );
 }

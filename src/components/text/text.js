@@ -8,6 +8,7 @@ import StyledText from './styledText.js';
 function Text(props: {
   className: string,
   id: string,
+  to: string,
 
   // html tag name this text will render to
   renderAs?: string,
@@ -36,6 +37,7 @@ function Text(props: {
 }) {
   return (
     <StyledText
+      to={props.to}
       font={props.font}
       fontStyle={props.fontStyle}
       renderAs={props.renderAs}
@@ -63,7 +65,8 @@ function Text(props: {
       ellipsis={props.ellipsis}
       noWrap={props.noWrap}
       underline={props.underline}
-      align={props.align}>
+      align={props.align}
+    >
       {props.children}
     </StyledText>
   );
