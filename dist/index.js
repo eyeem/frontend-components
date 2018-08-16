@@ -1028,6 +1028,8 @@ function Button(props) {
       // eslint-disable-next-line react/prop-types
       , 'data-test-id': props['data-test-id'],
       onClick: props.onClick,
+      display: props.display,
+      alignItems: props.alignItems,
       href: props.href,
       target: props.target,
       id: props.id,
@@ -1040,7 +1042,8 @@ function Button(props) {
       moveIconToLeft: props.moveIconToLeft,
       colors: (0, _styleConfig.getButtonColorSet)(props.color),
       title: props.title,
-      htmlFor: props.htmlFor },
+      htmlFor: props.htmlFor
+    },
     props.icon && React.createElement(_styledIcon2.default, {
       moveIconToLeft: props.moveIconToLeft,
       size: _styleConfig.buttonSizes[props.size].iconSize,
@@ -1077,7 +1080,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _templateObject = _taggedTemplateLiteral(['\n      cursor: default;\n      border-color: ', ';\n      background-color: ', ';\n      color: ', ';\n      fill: ', ';\n      &:focus,\n      &:hover {\n        color: ', ';\n        fill: ', ';\n        background-color: ', ';\n        border-color: ', ';\n      }\n      &:active {\n        background-color: ', ';\n        border-color: ', ';\n      }\n    '], ['\n      cursor: default;\n      border-color: ', ';\n      background-color: ', ';\n      color: ', ';\n      fill: ', ';\n      &:focus,\n      &:hover {\n        color: ', ';\n        fill: ', ';\n        background-color: ', ';\n        border-color: ', ';\n      }\n      &:active {\n        background-color: ', ';\n        border-color: ', ';\n      }\n    ']),
     _templateObject2 = _taggedTemplateLiteral(['\n      background-image: linear-gradient(\n        to right,\n        ', ' 0%,\n        ', ' ', '%,\n        ', ' ', '%,\n        ', ' 100%\n      );\n    '], ['\n      background-image: linear-gradient(\n        to right,\n        ', ' 0%,\n        ', ' ', '%,\n        ', ' ', '%,\n        ', ' 100%\n      );\n    ']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  position: relative;\n  display: inline-block;\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: ', ';\n  font-size: ', ';\n  line-height: ', ';\n  padding: ', ';\n  max-height: ', ';\n  border: 1px solid ', ';\n  border-radius: ', ';\n  background-color: ', ';\n  color: ', ';\n  fill: ', ';\n  vertical-align: top;\n  text-decoration: none;\n  text-shadow: none;\n  cursor: pointer;\n  transition: background-color 0.2s ease-in-out, border 0.2s ease-out,\n    color 0.2s ease-out, fill 0.2s ease-out;\n  pointer-events: all;\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:active {\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  ', ' ', ' ', ' ', ' ', ';\n'], ['\n  position: relative;\n  display: inline-block;\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: ', ';\n  font-size: ', ';\n  line-height: ', ';\n  padding: ', ';\n  max-height: ', ';\n  border: 1px solid ', ';\n  border-radius: ', ';\n  background-color: ', ';\n  color: ', ';\n  fill: ', ';\n  vertical-align: top;\n  text-decoration: none;\n  text-shadow: none;\n  cursor: pointer;\n  transition: background-color 0.2s ease-in-out, border 0.2s ease-out,\n    color 0.2s ease-out, fill 0.2s ease-out;\n  pointer-events: all;\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:active {\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  ', ' ', ' ', ' ', ' ', ';\n']);
+    _templateObject3 = _taggedTemplateLiteral(['\n  position: relative;\n  display: ', ';\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: ', ';\n  font-size: ', ';\n  line-height: ', ';\n  padding: ', ';\n  max-height: ', ';\n  border: 1px solid ', ';\n  border-radius: ', ';\n  background-color: ', ';\n  color: ', ';\n  fill: ', ';\n  ', '\n  vertical-align: top;\n  text-decoration: none;\n  text-shadow: none;\n  cursor: pointer;\n  transition: background-color 0.2s ease-in-out, border 0.2s ease-out,\n    color 0.2s ease-out, fill 0.2s ease-out;\n  pointer-events: all;\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:active {\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  ', ' ', ' ', ' ', ' ', ';\n'], ['\n  position: relative;\n  display: ', ';\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: ', ';\n  font-size: ', ';\n  line-height: ', ';\n  padding: ', ';\n  max-height: ', ';\n  border: 1px solid ', ';\n  border-radius: ', ';\n  background-color: ', ';\n  color: ', ';\n  fill: ', ';\n  ', '\n  vertical-align: top;\n  text-decoration: none;\n  text-shadow: none;\n  cursor: pointer;\n  transition: background-color 0.2s ease-in-out, border 0.2s ease-out,\n    color 0.2s ease-out, fill 0.2s ease-out;\n  pointer-events: all;\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:active {\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  ', ' ', ' ', ' ', ' ', ';\n']);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -1096,7 +1099,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var ComponentFromTagProp = (0, _reactCreateComponentFromTagProp2.default)({
   tag: 'button',
   prop: 'renderAs',
-  propsToOmit: ['renderAs', 'progress', 'sizeValues', 'spinner', 'fullWidth', 'moveIconToLeft', 'colors']
+  propsToOmit: ['renderAs', 'progress', 'sizeValues', 'spinner', 'fullWidth', 'moveIconToLeft', 'colors', 'display', 'alignItems']
 });
 
 var disabled = function disabled(props) {
@@ -1124,7 +1127,9 @@ var spinner = function spinner(props) {
   return '';
 };
 
-var StyledButton = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), (0, _styleUtils.propsColorFromTheme)('colors.borderRegular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.propsColorFromTheme)('colors.bgRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgHover'), (0, _styleUtils.propsColorFromTheme)('colors.borderHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgActive'), (0, _styleUtils.propsColorFromTheme)('colors.borderActive'), (0, _styleUtils.fromPropsTernary)('moveIconToLeft', 'padding-left: 32px;', ''), (0, _styleUtils.font)('regular'), spinner, disabled, progress);
+var StyledButton = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, props.display ? props.display : 'inline-block', (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), (0, _styleUtils.propsColorFromTheme)('colors.borderRegular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.propsColorFromTheme)('colors.bgRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), function (props) {
+  return (0, _styleUtils.alignItems)(props.alignItems);
+}, (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgHover'), (0, _styleUtils.propsColorFromTheme)('colors.borderHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgActive'), (0, _styleUtils.propsColorFromTheme)('colors.borderActive'), (0, _styleUtils.fromPropsTernary)('moveIconToLeft', 'padding-left: 32px;', ''), (0, _styleUtils.font)('regular'), spinner, disabled, progress);
 
 exports.default = StyledButton;
 

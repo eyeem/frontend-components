@@ -17,6 +17,8 @@ function Button(props: {
 
   color: string,
   size: string,
+  display?: string,
+  alignItems?: string,
 
   progress?: number,
   icon?: string | false,
@@ -41,6 +43,8 @@ function Button(props: {
       // eslint-disable-next-line react/prop-types
       data-test-id={props['data-test-id']}
       onClick={props.onClick}
+      display={props.display}
+      alignItems={props.alignItems}
       href={props.href}
       target={props.target}
       id={props.id}
@@ -53,7 +57,8 @@ function Button(props: {
       moveIconToLeft={props.moveIconToLeft}
       colors={getButtonColorSet(props.color)}
       title={props.title}
-      htmlFor={props.htmlFor}>
+      htmlFor={props.htmlFor}
+    >
       {props.icon && (
         <StyledIcon
           moveIconToLeft={props.moveIconToLeft}

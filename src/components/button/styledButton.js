@@ -6,6 +6,7 @@ import {
   font,
   fromInternalTheme,
   fromProps,
+  alignItems,
   fromPropsTernary,
   propsColorFromTheme
 } from '../../styleUtils';
@@ -20,7 +21,9 @@ const ComponentFromTagProp = createComponentFromTagProp({
     'spinner',
     'fullWidth',
     'moveIconToLeft',
-    'colors'
+    'colors',
+    'display',
+    'alignItems'
   ]
 });
 
@@ -97,7 +100,7 @@ const spinner = props => {
 
 const StyledButton = styled(ComponentFromTagProp)`
   position: relative;
-  display: inline-block;
+  display: ${props.display ? props.display : 'inline-block'};
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -112,6 +115,7 @@ const StyledButton = styled(ComponentFromTagProp)`
   background-color: ${propsColorFromTheme('colors.bgRegular')};
   color: ${propsColorFromTheme('colors.fontRegular')};
   fill: ${propsColorFromTheme('colors.fontRegular')};
+  ${props => alignItems(props.alignItems)}
   vertical-align: top;
   text-decoration: none;
   text-shadow: none;
