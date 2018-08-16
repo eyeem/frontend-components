@@ -1127,7 +1127,9 @@ var spinner = function spinner(props) {
   return '';
 };
 
-var StyledButton = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, props.display ? props.display : 'inline-block', (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), (0, _styleUtils.propsColorFromTheme)('colors.borderRegular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.propsColorFromTheme)('colors.bgRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), function (props) {
+var StyledButton = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, function (props) {
+  return props.display ? props.display : 'inline-block';
+}, (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), (0, _styleUtils.propsColorFromTheme)('colors.borderRegular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.propsColorFromTheme)('colors.bgRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), function (props) {
   return (0, _styleUtils.alignItems)(props.alignItems);
 }, (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgHover'), (0, _styleUtils.propsColorFromTheme)('colors.borderHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgActive'), (0, _styleUtils.propsColorFromTheme)('colors.borderActive'), (0, _styleUtils.fromPropsTernary)('moveIconToLeft', 'padding-left: 32px;', ''), (0, _styleUtils.font)('regular'), spinner, disabled, progress);
 

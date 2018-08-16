@@ -100,7 +100,7 @@ const spinner = props => {
 
 const StyledButton = styled(ComponentFromTagProp)`
   position: relative;
-  display: ${props.display ? props.display : 'inline-block'};
+  display: ${props => (props.display ? props.display : 'inline-block')};
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
