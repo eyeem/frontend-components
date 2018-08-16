@@ -1057,6 +1057,7 @@ function Button(props) {
 Button.defaultProps = {
   color: 'default',
   size: 'default',
+  display: 'inline-block',
   icon: false,
   disabled: false,
   spinner: false,
@@ -1128,7 +1129,7 @@ var spinner = function spinner(props) {
 };
 
 var StyledButton = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, function (props) {
-  return props.display ? props.display : 'inline-block';
+  return props.display;
 }, (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), (0, _styleUtils.propsColorFromTheme)('colors.borderRegular'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.propsColorFromTheme)('colors.bgRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), (0, _styleUtils.propsColorFromTheme)('colors.fontRegular'), function (props) {
   return (0, _styleUtils.alignItems)(props.alignItems);
 }, (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.fontHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgHover'), (0, _styleUtils.propsColorFromTheme)('colors.borderHover'), (0, _styleUtils.propsColorFromTheme)('colors.bgActive'), (0, _styleUtils.propsColorFromTheme)('colors.borderActive'), (0, _styleUtils.fromPropsTernary)('moveIconToLeft', 'padding-left: 32px;', ''), (0, _styleUtils.font)('regular'), spinner, disabled, progress);
@@ -4193,7 +4194,7 @@ var ellipsis = function ellipsis(props) {
 var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject3, (0, _styleUtils.fromProps)('display'), (0, _styleUtils.fromProps)('sizeValues.letterSpacing'), (0, _styleUtils.fromProps)('align'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), function (props) {
   return props.fontStyle;
 }, fontSize('small'), lineHeight('small'), (0, _styleUtils.fromPropsTernary)('underline', 'underline', 'none'), marginBottom('small'), (0, _styleUtils.fromProps)('marginTop.small'), (0, _styleUtils.fromProps)('cursor'), function (props) {
-  return (0, _styleUtils.alignItems)(position);
+  return (0, _styleUtils.alignItems)(props.alignItems);
 }, function (props) {
   return (0, _styleUtils.font)(props.font);
 }, ellipsis, noWrap, (0, _styleUtils.propsColorFromTheme)('colors.hover'), (0, _styleUtils.propsColorFromTheme)('colors.hover'), (0, _styleUtils.propsColorFromTheme)('colors.active'), (0, _styleUtils.propsColorFromTheme)('colors.active'), _styleUtils.media.medium(_templateObject4, fontSize('medium'), lineHeight('medium'), marginBottom('medium'), (0, _styleUtils.fromProps)('marginTop.medium')), _styleUtils.media.large(_templateObject4, fontSize('large'), lineHeight('large'), marginBottom('large'), (0, _styleUtils.fromProps)('marginTop.large')), _styleUtils.media.xlarge(_templateObject4, fontSize('xlarge'), lineHeight('xlarge'), marginBottom('xlarge'), (0, _styleUtils.fromProps)('marginTop.xlarge')));

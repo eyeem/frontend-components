@@ -17,7 +17,7 @@ function Button(props: {
 
   color: string,
   size: string,
-  display?: string,
+  display: string,
   alignItems?: string,
 
   progress?: number,
@@ -75,6 +75,7 @@ function Button(props: {
 Button.defaultProps = {
   color: 'default',
   size: 'default',
+  display: 'inline-block',
   icon: false,
   disabled: false,
   spinner: false,

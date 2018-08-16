@@ -77,7 +77,7 @@ const StyledText = styled(ComponentFromTagProp)`
   margin-top: ${fromProps('marginTop.small')}px;
   cursor: ${fromProps('cursor')};
   transition: color 0.2s ease-out;
-  ${props => alignItems(position)}
+  ${props => alignItems(props.alignItems)}
   ${props => font(props.font)}
   ${ellipsis};
   ${noWrap};
