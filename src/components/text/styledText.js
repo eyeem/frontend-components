@@ -6,6 +6,7 @@ import createComponentFromTagProp from 'react-create-component-from-tag-prop';
 import {
   font,
   propsColorFromTheme,
+  alignItems,
   fromProps,
   fromPropsTernary,
   media
@@ -27,7 +28,8 @@ const ComponentFromTagProp = createComponentFromTagProp({
     'noWrap',
     'cursor',
     'align',
-    'display'
+    'display',
+    'alignItems'
   ]
 });
 
@@ -62,7 +64,6 @@ const ellipsis = props =>
 
 const StyledText = styled(ComponentFromTagProp)`
   display: ${fromProps('display')};
-  align-items: ${fromProps('alignItems')};
   letter-spacing: ${fromProps('sizeValues.letterSpacing')}px;
   text-align: ${fromProps('align')};
   color: ${propsColorFromTheme('colors.regular')};
@@ -76,6 +77,7 @@ const StyledText = styled(ComponentFromTagProp)`
   margin-top: ${fromProps('marginTop.small')}px;
   cursor: ${fromProps('cursor')};
   transition: color 0.2s ease-out;
+  ${props => alignItems(position)}
   ${props => font(props.font)}
   ${ellipsis};
   ${noWrap};

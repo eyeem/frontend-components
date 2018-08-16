@@ -20,6 +20,7 @@ function Text(props: {
   size: string,
   align: string,
   display: string,
+  alignItems?: string,
   margin?: number,
   font: string,
   fontStyle: string,
@@ -62,6 +63,7 @@ function Text(props: {
       margin={props.margin}
       marginTop={textTopMargins[props.topMargin || 'none']}
       display={props.display}
+      alignItems={props.alignItems}
       ellipsis={props.ellipsis}
       noWrap={props.noWrap}
       underline={props.underline}

@@ -52,6 +52,16 @@ export const fromPropsTernary = (
   return elseCase;
 };
 
+// Flexbox helper
+export const alignItems = (
+  position: 'stretch' | 'flex-start' | 'flex-end' | 'center' | 'baseline'
+) =>
+  position
+    ? `
+    align-items: ${position};
+  `
+    : '';
+
 export const propsColorFromTheme = (selector: string) => (props: {}) =>
   fromInternalTheme(`colors.${_.get(props, selector)}`)(props);
 
