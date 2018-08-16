@@ -62,6 +62,7 @@ const ellipsis = props =>
 
 const StyledText = styled(ComponentFromTagProp)`
   display: ${fromProps('display')};
+  align-items: ${fromProps('alignItems')};
   letter-spacing: ${fromProps('sizeValues.letterSpacing')}px;
   text-align: ${fromProps('align')};
   color: ${propsColorFromTheme('colors.regular')};
