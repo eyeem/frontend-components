@@ -33,6 +33,7 @@ import CartIcon from './icons/cart.js';
 import CompDownloadIcon from './icons/compDownload.js';
 import AddToLightboxIcon from './icons/addToLightbox.js';
 import IsInLightboxIcon from './icons/isInLightbox.js';
+import LightboxIcon from './icons/lightbox.js';
 import LikeIcon from './icons/like.js';
 import CommentIcon from './icons/comment.js';
 import DragNDrop from './icons/dragndrop.js';
@@ -90,6 +91,7 @@ const icons = {
   dragndrop: DragNDrop,
   addToLightbox: AddToLightboxIcon,
   isInLightbox: IsInLightboxIcon,
+  lightboxIcon: LightboxIcon,
   like: LikeIcon,
   comment: CommentIcon,
   share: ShareIcon,
