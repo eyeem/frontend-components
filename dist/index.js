@@ -767,7 +767,7 @@ var icons = exports.icons = {
   eyeconfont: ['star', 'image', 'mail', 'phone', 'close', 'timing', 'prize', 'remove', 'alert', 'flag', 'embed', 'delete', 'backToTop', 'contactEyeEm', 'contactFacebook', 'contactTwitter', 'contactTumblr'],
   buttons: ['cart', 'checkmark', 'download', 'upload', 'compDownload', 'like', 'comment', 'addToLightbox', 'isInLightbox', 'dragndrop', 'share', 'facebook'],
   services: ['dropbox', 'googledrive', 'flickr', 'picasa', 'instagram'],
-  uncategorized: ['leftArrow', 'rightArrow', 'leftArrow2', 'plus', 'terms', 'market', 'growth', 'star2', 'star3']
+  uncategorized: ['leftArrow', 'rightArrow', 'leftArrow2', 'rightArrow2', 'plus', 'terms', 'market', 'growth', 'star2', 'star3']
 };
 
 /***/ }),
@@ -909,27 +909,27 @@ var _formRow = __webpack_require__(3);
 
 var _formRow2 = _interopRequireDefault(_formRow);
 
-var _input = __webpack_require__(67);
+var _input = __webpack_require__(68);
 
 var _input2 = _interopRequireDefault(_input);
 
-var _select = __webpack_require__(68);
+var _select = __webpack_require__(69);
 
 var _select2 = _interopRequireDefault(_select);
 
-var _text = __webpack_require__(69);
+var _text = __webpack_require__(70);
 
 var _text2 = _interopRequireDefault(_text);
 
-var _textarea = __webpack_require__(72);
+var _textarea = __webpack_require__(73);
 
 var _textarea2 = _interopRequireDefault(_textarea);
 
-var _checkbox = __webpack_require__(73);
+var _checkbox = __webpack_require__(74);
 
 var _checkbox2 = _interopRequireDefault(_checkbox);
 
-var _radioGroup = __webpack_require__(74);
+var _radioGroup = __webpack_require__(75);
 
 var _radioGroup2 = _interopRequireDefault(_radioGroup);
 
@@ -949,7 +949,7 @@ var _theme = __webpack_require__(8);
 
 var theme = _interopRequireWildcard(_theme);
 
-var _globalStyles = __webpack_require__(75);
+var _globalStyles = __webpack_require__(76);
 
 var _globalStyles2 = _interopRequireDefault(_globalStyles);
 
@@ -1370,35 +1370,39 @@ var _rightArrow = __webpack_require__(58);
 
 var _rightArrow2 = _interopRequireDefault(_rightArrow);
 
-var _terms = __webpack_require__(59);
+var _rightArrow3 = __webpack_require__(59);
+
+var _rightArrow4 = _interopRequireDefault(_rightArrow3);
+
+var _terms = __webpack_require__(60);
 
 var _terms2 = _interopRequireDefault(_terms);
 
-var _market = __webpack_require__(60);
+var _market = __webpack_require__(61);
 
 var _market2 = _interopRequireDefault(_market);
 
-var _growth = __webpack_require__(61);
+var _growth = __webpack_require__(62);
 
 var _growth2 = _interopRequireDefault(_growth);
 
-var _eyeEmVision = __webpack_require__(62);
+var _eyeEmVision = __webpack_require__(63);
 
 var _eyeEmVision2 = _interopRequireDefault(_eyeEmVision);
 
-var _trophy = __webpack_require__(63);
+var _trophy = __webpack_require__(64);
 
 var _trophy2 = _interopRequireDefault(_trophy);
 
-var _trophyPlus = __webpack_require__(64);
+var _trophyPlus = __webpack_require__(65);
 
 var _trophyPlus2 = _interopRequireDefault(_trophyPlus);
 
-var _trophyMinus = __webpack_require__(65);
+var _trophyMinus = __webpack_require__(66);
 
 var _trophyMinus2 = _interopRequireDefault(_trophyMinus);
 
-var _userFollow = __webpack_require__(66);
+var _userFollow = __webpack_require__(67);
 
 var _userFollow2 = _interopRequireDefault(_userFollow);
 
@@ -1454,6 +1458,7 @@ var icons = {
   leftArrow: _leftArrow2.default,
   leftArrow2: _leftArrow4.default,
   rightArrow: _rightArrow2.default,
+  rightArrow2: _rightArrow4.default,
   plus: _plus2.default,
   terms: _terms2.default,
   market: _market2.default,
@@ -3556,6 +3561,47 @@ var React = _interopRequireWildcard(_react);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
+function RightArrow2Icon(props) {
+  return React.createElement(
+    "svg",
+    {
+      id: props.id,
+      className: props.className,
+      height: props.size,
+      width: props.size,
+      viewBox: "0 0 20 20"
+    },
+    React.createElement("path", {
+      d: "m3.414 8 5.793-5.793c.39-.39.39-1.024 0-1.414s-1.024-.39-1.414 0l-7.4 7.4c-.39.39-.39 1.023 0 1.414l7.4 7.4c.39.39 1.024.39 1.414 0s.39-1.025 0-1.415l-5.592-5.592h12.385c.552 0 1-.448 1-1s-.448-1-1-1z",
+      transform: "matrix(-1 0 0 -1 17.1005 17.8)"
+    })
+  );
+}
+
+
+RightArrow2Icon.defaultProps = {
+  size: 18
+};
+
+exports.default = RightArrow2Icon;
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var React = _interopRequireWildcard(_react);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function TermsIcon(props) {
   return React.createElement(
     "svg",
@@ -3582,7 +3628,7 @@ TermsIcon.defaultProps = {
 exports.default = TermsIcon;
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3626,7 +3672,7 @@ MarketIcon.defaultProps = {
 exports.default = MarketIcon;
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3668,7 +3714,7 @@ GrowthIcon.defaultProps = {
 exports.default = GrowthIcon;
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3706,7 +3752,7 @@ EyeEmVision.defaultProps = {
 exports.default = EyeEmVision;
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3744,7 +3790,7 @@ Trophy.defaultProps = {
 exports.default = Trophy;
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3779,7 +3825,7 @@ function TrophyPlus(props) {
 exports.default = TrophyPlus;
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3813,7 +3859,7 @@ function TrophyMinus(props) {
 exports.default = TrophyMinus;
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3854,7 +3900,7 @@ UserFollow.defaultProps = {
 exports.default = UserFollow;
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3984,7 +4030,7 @@ Input.defaultProps = {
 exports.default = Input;
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4071,7 +4117,7 @@ Select.defaultProps = {
 exports.default = Select;
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4081,7 +4127,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _text = __webpack_require__(70);
+var _text = __webpack_require__(71);
 
 var _text2 = _interopRequireDefault(_text);
 
@@ -4090,7 +4136,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _text2.default;
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4108,7 +4154,7 @@ var React = _interopRequireWildcard(_react);
 
 var _styleConfig = __webpack_require__(5);
 
-var _styledText = __webpack_require__(71);
+var _styledText = __webpack_require__(72);
 
 var _styledText2 = _interopRequireDefault(_styledText);
 
@@ -4170,7 +4216,7 @@ Text.defaultProps = {
 exports.default = Text;
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4252,7 +4298,7 @@ var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp)(_template
 exports.default = StyledText;
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4322,7 +4368,7 @@ Textarea.defaultProps = {
 exports.default = Textarea;
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4417,7 +4463,7 @@ Checkbox.defaultProps = {
 exports.default = Checkbox;
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4525,7 +4571,7 @@ RadioGroup.defaultProps = {
 exports.default = RadioGroup;
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4539,7 +4585,7 @@ var _templateObject = _taggedTemplateLiteral(['\n  ', ';\n\n  @font-face {\n    
 
 var _styledComponents = __webpack_require__(1);
 
-var _styledNormalize = __webpack_require__(76);
+var _styledNormalize = __webpack_require__(77);
 
 var _styledNormalize2 = _interopRequireDefault(_styledNormalize);
 
@@ -4550,7 +4596,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 exports.default = (0, _styledComponents.css)(_templateObject, _styledNormalize2.default);
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

@@ -515,6 +515,7 @@ export const icons = {
     'leftArrow',
     'rightArrow',
     'leftArrow2',
+    'rightArrow2',
     'plus',
     'terms',
     'market',

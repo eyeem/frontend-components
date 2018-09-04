@@ -50,6 +50,7 @@ import PlusIcon from './icons/plus.js';
 import LeftArrow from './icons/leftArrow.js';
 import LeftArrow2 from './icons/leftArrow2.js';
 import RightArrow from './icons/rightArrow.js';
+import RightArrow2 from './icons/rightArrow2.js';
 import Terms from './icons/terms.js';
 import Market from './icons/market.js';
 import Growth from './icons/growth.js';
@@ -106,6 +107,7 @@ const icons = {
   leftArrow: LeftArrow,
   leftArrow2: LeftArrow2,
   rightArrow: RightArrow,
+  rightArrow2: RightArrow2,
   plus: PlusIcon,
   terms: Terms,
   market: Market,
