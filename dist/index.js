@@ -583,8 +583,8 @@ var textColors = exports.textColors = {
   },
   linkWhite: {
     regular: 'whites.white',
-    hover: 'whites.pearlWhite',
-    active: 'whites.pearlWhite'
+    hover: 'greys.grey4',
+    active: 'greys.grey4'
   }
 };
 
