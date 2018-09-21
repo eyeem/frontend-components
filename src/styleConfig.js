@@ -508,7 +508,8 @@ export const icons = {
     'isInLightbox',
     'dragndrop',
     'share',
-    'facebook'
+    'facebook',
+    'paypal'
   ],
   services: ['dropbox', 'googledrive', 'flickr', 'picasa', 'instagram'],
   uncategorized: [

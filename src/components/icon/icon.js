@@ -45,6 +45,7 @@ import GoogleDriveIcon from './icons/googledrive.js';
 import FlickrIcon from './icons/flickr.js';
 import PicasaIcon from './icons/picasa.js';
 import InstagramIcon from './icons/instagram.js';
+import PaypalIcon from './icons/paypal.js';
 
 import PlusIcon from './icons/plus.js';
 import LeftArrow from './icons/leftArrow.js';
@@ -103,6 +104,7 @@ const icons = {
   flickr: FlickrIcon,
   picasa: PicasaIcon,
   instagram: InstagramIcon,
+  paypal: PaypalIcon,
 
   leftArrow: LeftArrow,
   leftArrow2: LeftArrow2,
