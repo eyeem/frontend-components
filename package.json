@@ -1,6 +1,6 @@
 {
   "name": "eyeem-components",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "Shareable React Components for Frontend Projects at EyeEm",
   "main": "dist/index.js",
   "scripts": {
