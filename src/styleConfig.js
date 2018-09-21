@@ -363,9 +363,9 @@ export const buttonColors = {
   bluePaypal: {
     fontRegular: 'whites.white',
     bgRegular: 'foreigns.paypal',
-    bgHover: 'blacks.black1',
-    bgActive: 'blacks.black1',
-    bgDisabled: 'foreigns.paypal',
+    bgHover: 'foreigns.paypalHover',
+    bgActive: 'foreigns.paypalActive',
+    bgDisabled: 'foreigns.paypalDisabled',
     fontDisabled: 'whites.white'
   },
   whiteTrans: {

@@ -47,7 +47,10 @@ export const colors = {
     facebook2: '#3b5998',
     facebook2Hover: '#4c70ba',
     facebook2Disabled: '#96abd6',
-    paypal: '#009cde'
+    paypal: '#009cde',
+    paypalActive: '#007CB1',
+    paypalDisabled: '#7FCEEF',
+    paypalHover: '#008CC8'
   },
 
   uncategorized: {

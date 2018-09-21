@@ -649,9 +649,9 @@ var buttonColors = exports.buttonColors = {
   bluePaypal: {
     fontRegular: 'whites.white',
     bgRegular: 'foreigns.paypal',
-    bgHover: 'blacks.black1',
-    bgActive: 'blacks.black1',
-    bgDisabled: 'foreigns.paypal',
+    bgHover: 'foreigns.paypalHover',
+    bgActive: 'foreigns.paypalActive',
+    bgDisabled: 'foreigns.paypalDisabled',
     fontDisabled: 'whites.white'
   },
   whiteTrans: {
@@ -841,7 +841,10 @@ var colors = exports.colors = {
     facebook2: '#3b5998',
     facebook2Hover: '#4c70ba',
     facebook2Disabled: '#96abd6',
-    paypal: '#009cde'
+    paypal: '#009cde',
+    paypalActive: '#007CB1',
+    paypalDisabled: '#7FCEEF',
+    paypalHover: '#008CC8'
   },
 
   uncategorized: {
