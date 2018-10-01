@@ -490,6 +490,7 @@ export const icons = {
     'flag',
     'embed',
     'delete',
+    'edit',
     'backToTop',
     'contactEyeEm',
     'contactFacebook',

@@ -764,7 +764,7 @@ var buttonSizes = exports.buttonSizes = {
 };
 
 var icons = exports.icons = {
-  eyeconfont: ['star', 'image', 'mail', 'phone', 'close', 'timing', 'prize', 'remove', 'alert', 'flag', 'embed', 'delete', 'backToTop', 'contactEyeEm', 'contactFacebook', 'contactTwitter', 'contactTumblr'],
+  eyeconfont: ['star', 'image', 'mail', 'phone', 'close', 'timing', 'prize', 'remove', 'alert', 'flag', 'embed', 'delete', 'edit', 'backToTop', 'contactEyeEm', 'contactFacebook', 'contactTwitter', 'contactTumblr'],
   buttons: ['cart', 'checkmark', 'download', 'upload', 'compDownload', 'like', 'comment', 'addToLightbox', 'isInLightbox', 'dragndrop', 'share', 'facebook', 'paypal'],
   services: ['dropbox', 'googledrive', 'flickr', 'picasa', 'instagram'],
   uncategorized: ['leftArrow', 'rightArrow', 'leftArrow2', 'rightArrow2', 'plus', 'terms', 'market', 'growth', 'star2', 'star3']
@@ -912,27 +912,27 @@ var _formRow = __webpack_require__(3);
 
 var _formRow2 = _interopRequireDefault(_formRow);
 
-var _input = __webpack_require__(69);
+var _input = __webpack_require__(70);
 
 var _input2 = _interopRequireDefault(_input);
 
-var _select = __webpack_require__(70);
+var _select = __webpack_require__(71);
 
 var _select2 = _interopRequireDefault(_select);
 
-var _text = __webpack_require__(71);
+var _text = __webpack_require__(72);
 
 var _text2 = _interopRequireDefault(_text);
 
-var _textarea = __webpack_require__(74);
+var _textarea = __webpack_require__(75);
 
 var _textarea2 = _interopRequireDefault(_textarea);
 
-var _checkbox = __webpack_require__(75);
+var _checkbox = __webpack_require__(76);
 
 var _checkbox2 = _interopRequireDefault(_checkbox);
 
-var _radioGroup = __webpack_require__(76);
+var _radioGroup = __webpack_require__(77);
 
 var _radioGroup2 = _interopRequireDefault(_radioGroup);
 
@@ -952,7 +952,7 @@ var _theme = __webpack_require__(8);
 
 var theme = _interopRequireWildcard(_theme);
 
-var _globalStyles = __webpack_require__(77);
+var _globalStyles = __webpack_require__(78);
 
 var _globalStyles2 = _interopRequireDefault(_globalStyles);
 
@@ -1333,83 +1333,87 @@ var _share = __webpack_require__(48);
 
 var _share2 = _interopRequireDefault(_share);
 
-var _facebook = __webpack_require__(49);
+var _edit = __webpack_require__(49);
+
+var _edit2 = _interopRequireDefault(_edit);
+
+var _facebook = __webpack_require__(50);
 
 var _facebook2 = _interopRequireDefault(_facebook);
 
-var _dropbox = __webpack_require__(50);
+var _dropbox = __webpack_require__(51);
 
 var _dropbox2 = _interopRequireDefault(_dropbox);
 
-var _googledrive = __webpack_require__(51);
+var _googledrive = __webpack_require__(52);
 
 var _googledrive2 = _interopRequireDefault(_googledrive);
 
-var _flickr = __webpack_require__(52);
+var _flickr = __webpack_require__(53);
 
 var _flickr2 = _interopRequireDefault(_flickr);
 
-var _picasa = __webpack_require__(53);
+var _picasa = __webpack_require__(54);
 
 var _picasa2 = _interopRequireDefault(_picasa);
 
-var _instagram = __webpack_require__(54);
+var _instagram = __webpack_require__(55);
 
 var _instagram2 = _interopRequireDefault(_instagram);
 
-var _paypal = __webpack_require__(55);
+var _paypal = __webpack_require__(56);
 
 var _paypal2 = _interopRequireDefault(_paypal);
 
-var _plus = __webpack_require__(56);
+var _plus = __webpack_require__(57);
 
 var _plus2 = _interopRequireDefault(_plus);
 
-var _leftArrow = __webpack_require__(57);
+var _leftArrow = __webpack_require__(58);
 
 var _leftArrow2 = _interopRequireDefault(_leftArrow);
 
-var _leftArrow3 = __webpack_require__(58);
+var _leftArrow3 = __webpack_require__(59);
 
 var _leftArrow4 = _interopRequireDefault(_leftArrow3);
 
-var _rightArrow = __webpack_require__(59);
+var _rightArrow = __webpack_require__(60);
 
 var _rightArrow2 = _interopRequireDefault(_rightArrow);
 
-var _rightArrow3 = __webpack_require__(60);
+var _rightArrow3 = __webpack_require__(61);
 
 var _rightArrow4 = _interopRequireDefault(_rightArrow3);
 
-var _terms = __webpack_require__(61);
+var _terms = __webpack_require__(62);
 
 var _terms2 = _interopRequireDefault(_terms);
 
-var _market = __webpack_require__(62);
+var _market = __webpack_require__(63);
 
 var _market2 = _interopRequireDefault(_market);
 
-var _growth = __webpack_require__(63);
+var _growth = __webpack_require__(64);
 
 var _growth2 = _interopRequireDefault(_growth);
 
-var _eyeEmVision = __webpack_require__(64);
+var _eyeEmVision = __webpack_require__(65);
 
 var _eyeEmVision2 = _interopRequireDefault(_eyeEmVision);
 
-var _trophy = __webpack_require__(65);
+var _trophy = __webpack_require__(66);
 
 var _trophy2 = _interopRequireDefault(_trophy);
 
-var _trophyPlus = __webpack_require__(66);
+var _trophyPlus = __webpack_require__(67);
 
 var _trophyPlus2 = _interopRequireDefault(_trophyPlus);
 
-var _trophyMinus = __webpack_require__(67);
+var _trophyMinus = __webpack_require__(68);
 
 var _trophyMinus2 = _interopRequireDefault(_trophyMinus);
 
-var _userFollow = __webpack_require__(68);
+var _userFollow = __webpack_require__(69);
 
 var _userFollow2 = _interopRequireDefault(_userFollow);
 
@@ -1447,6 +1451,7 @@ var icons = {
   compDownload: _compDownload2.default,
   download: _download2.default,
   upload: _upload2.default,
+  edit: _edit2.default,
   dragndrop: _dragndrop2.default,
   addToLightbox: _addToLightbox2.default,
   isInLightbox: _isInLightbox2.default,
@@ -3000,6 +3005,53 @@ var React = _interopRequireWildcard(_react);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
+function EditIcon(props) {
+  return React.createElement(
+    "svg",
+    {
+      id: props.id,
+      className: props.className,
+      height: props.size,
+      width: props.size,
+      viewBox: "0 0 20 20"
+    },
+    React.createElement(
+      "g",
+      { stroke: "none", strokeWidth: "1", fillRule: "evenodd" },
+      React.createElement(
+        "g",
+        { transform: "translate(-92.000000, -71.000000)" },
+        React.createElement("path", { d: "M111.987145,79.7515302 C110.678486,79.7489428 109.857883,79.1204901 109.49037,78.0870045 C108.971532,76.918627 109.12758,75.8991002 109.9065,74.7579533 C109.487946,74.3613174 109.00607,73.8708177 108.658112,73.5095591 C107.443928,74.1864941 106.081527,74.4019162 104.91295,73.9256905 C103.890201,73.4698011 103.105384,72.3417347 102.832304,71.0127707 C102.25482,70.9999032 101.564465,70.992032 100.751659,71.0127707 C100.698504,72.3143926 100.068071,73.131754 99.0871421,73.5095591 C97.8551056,74.0153992 96.7427971,74.0680119 95.7581091,73.0934277 C95.1977163,73.7088369 94.7046053,74.1885654 94.0935926,74.7579533 C95.0233589,75.7437477 95.3271319,76.8916993 94.9258508,78.0870045 C94.3920937,79.0732629 93.3484463,79.6470315 92.0129469,79.7515302 C91.9989453,80.4938063 91.9927033,81.1794288 92.0129469,81.8321872 C93.3209819,82.0436031 94.0517015,82.8796067 94.5097217,83.9128442 C94.9405495,85.0810555 94.7832534,86.100168 94.0935926,87.2418954 C94.422471,87.6383651 94.9043465,88.1292791 95.34198,88.4902896 C96.4669047,87.8127742 97.8280573,87.5981806 99.0871421,88.0741582 C100.0198,88.5294672 100.805032,89.6579478 101.167788,90.9870781 C101.655597,91.0006079 102.344704,91.0076505 102.832304,90.9870781 C103.212745,89.6848756 103.843594,88.8683428 104.91295,88.4902896 C106.054479,87.9838691 107.16762,87.9324992 108.241983,88.906421 C108.713117,88.2904314 109.205395,87.8102886 109.49037,87.2418954 C108.88789,86.2563491 108.583285,85.1083975 109.074241,83.9128442 C109.519155,82.9268339 110.652686,82.1455143 111.987145,81.8321872 C112.000107,81.2974967 112.008013,80.6122885 111.987145,79.7515302 L111.987145,79.7515302 Z M105.745208,82.66445 C104.923279,84.7472319 102.479026,85.7284546 100.33553,84.745107 C98.2526267,83.9230882 97.2713421,81.4789895 98.2548839,79.3353988 C99.0776558,77.2524406 101.521909,76.2716345 103.664563,77.2547417 C105.747474,78.0765843 106.728342,80.5219329 105.745208,82.66445 L105.745208,82.66445 Z" })
+      )
+    )
+  );
+}
+/* eslint-disable max-len */
+
+
+EditIcon.defaultProps = {
+  size: 16
+};
+
+exports.default = EditIcon;
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var React = _interopRequireWildcard(_react);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function FacebookIcon(props) {
   return React.createElement(
     "svg",
@@ -3026,7 +3078,7 @@ FacebookIcon.defaultProps = {
 exports.default = FacebookIcon;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3069,7 +3121,7 @@ DropboxIcon.defaultProps = {
 exports.default = DropboxIcon;
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3114,7 +3166,7 @@ GoogleDriveIcon.defaultProps = {
 exports.default = GoogleDriveIcon;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3158,7 +3210,7 @@ FlickrIcon.defaultProps = {
 exports.default = FlickrIcon;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3269,7 +3321,7 @@ FlickrIcon.defaultProps = {
 exports.default = FlickrIcon;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3379,7 +3431,7 @@ InstagramIcon.defaultProps = {
 exports.default = InstagramIcon;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3429,7 +3481,7 @@ PaypalIcon.defaultProps = {
 exports.default = PaypalIcon;
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3467,7 +3519,7 @@ CommentIcon.defaultProps = {
 exports.default = CommentIcon;
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3517,7 +3569,7 @@ LeftArrowIcon.defaultProps = {
 exports.default = LeftArrowIcon;
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3556,7 +3608,7 @@ LeftArrow2Icon.defaultProps = {
 exports.default = LeftArrow2Icon;
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3603,7 +3655,7 @@ RightArrowIcon.defaultProps = {
 exports.default = RightArrowIcon;
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3644,7 +3696,7 @@ RightArrow2Icon.defaultProps = {
 exports.default = RightArrow2Icon;
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3686,7 +3738,7 @@ TermsIcon.defaultProps = {
 exports.default = TermsIcon;
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3730,7 +3782,7 @@ MarketIcon.defaultProps = {
 exports.default = MarketIcon;
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3772,7 +3824,7 @@ GrowthIcon.defaultProps = {
 exports.default = GrowthIcon;
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3810,7 +3862,7 @@ EyeEmVision.defaultProps = {
 exports.default = EyeEmVision;
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3848,7 +3900,7 @@ Trophy.defaultProps = {
 exports.default = Trophy;
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3883,7 +3935,7 @@ function TrophyPlus(props) {
 exports.default = TrophyPlus;
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3917,7 +3969,7 @@ function TrophyMinus(props) {
 exports.default = TrophyMinus;
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3958,7 +4010,7 @@ UserFollow.defaultProps = {
 exports.default = UserFollow;
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4088,7 +4140,7 @@ Input.defaultProps = {
 exports.default = Input;
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4175,7 +4227,7 @@ Select.defaultProps = {
 exports.default = Select;
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4185,7 +4237,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _text = __webpack_require__(72);
+var _text = __webpack_require__(73);
 
 var _text2 = _interopRequireDefault(_text);
 
@@ -4194,7 +4246,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _text2.default;
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4212,7 +4264,7 @@ var React = _interopRequireWildcard(_react);
 
 var _styleConfig = __webpack_require__(5);
 
-var _styledText = __webpack_require__(73);
+var _styledText = __webpack_require__(74);
 
 var _styledText2 = _interopRequireDefault(_styledText);
 
@@ -4274,7 +4326,7 @@ Text.defaultProps = {
 exports.default = Text;
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4356,7 +4408,7 @@ var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp)(_template
 exports.default = StyledText;
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4426,7 +4478,7 @@ Textarea.defaultProps = {
 exports.default = Textarea;
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4521,7 +4573,7 @@ Checkbox.defaultProps = {
 exports.default = Checkbox;
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4629,7 +4681,7 @@ RadioGroup.defaultProps = {
 exports.default = RadioGroup;
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4643,7 +4695,7 @@ var _templateObject = _taggedTemplateLiteral(['\n  ', ';\n\n  @font-face {\n    
 
 var _styledComponents = __webpack_require__(1);
 
-var _styledNormalize = __webpack_require__(78);
+var _styledNormalize = __webpack_require__(79);
 
 var _styledNormalize2 = _interopRequireDefault(_styledNormalize);
 
@@ -4654,7 +4706,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 exports.default = (0, _styledComponents.css)(_templateObject, _styledNormalize2.default);
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

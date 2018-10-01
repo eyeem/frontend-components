@@ -38,6 +38,7 @@ import LikeIcon from './icons/like.js';
 import CommentIcon from './icons/comment.js';
 import DragNDrop from './icons/dragndrop.js';
 import ShareIcon from './icons/share.js';
+import EditIcon from './icons/edit.js';
 
 import FacebookIcon from './icons/facebook.js';
 import DropboxIcon from './icons/dropbox.js';
@@ -90,6 +91,7 @@ const icons = {
   compDownload: CompDownloadIcon,
   download: DownloadIcon,
   upload: UploadIcon,
+  edit: EditIcon,
   dragndrop: DragNDrop,
   addToLightbox: AddToLightboxIcon,
   isInLightbox: IsInLightboxIcon,
