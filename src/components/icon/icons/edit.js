@@ -11,14 +11,9 @@ function EditIcon(props: { size?: number, className: string, id: string }) {
       width={props.size}
       viewBox="0 0 18 18"
     >
-      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g transform="translate(-3.000000, -3.000000)">
-          <path
-            d="M3,17.25 L3,21 L6.75,21 L17.81,9.94 L14.06,6.19 L3,17.25 Z M20.71,7.04 C21.1,6.65 21.1,6.02 20.71,5.63 L18.37,3.29 C17.98,2.9 17.35,2.9 16.96,3.29 L15.13,5.12 L18.88,8.87 L20.71,7.04 Z"
-            fillRule="nonzero"
-          />
-          <polygon points="0 0 24 0 24 24 0 24" />
-        </g>
+      <g transform="translate(0.000000, -1.000000)">
+        <polygon points="0 15.25 0 19 3.75 19 14.81 7.94 11.06 4.19" />
+        <path d="M17.71,5.04 C18.1,4.65 18.1,4.02 17.71,3.63 L15.37,1.29 C14.98,0.9 14.35,0.9 13.96,1.29 L12.13,3.12 L15.88,6.87 L17.71,5.04 Z" />
       </g>
     </svg>
   );
