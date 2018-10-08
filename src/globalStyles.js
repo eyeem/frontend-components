@@ -1,45 +1,47 @@
 import { css } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 
+const baseUrl = 'https://www.eyeem.com/node-static/fonts/sailec';
+
 export default css`
   ${styledNormalize};
 
   @font-face {
     font-family: 'Sailec Regular';
-    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.eot?#iefix');
-    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.eot?#iefix')
+    src: url('${baseUrl}/SailecRegular.eot?#iefix');
+    src: url('${baseUrl}/SailecRegular.eot?#iefix')
         format('eot'),
-      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.woff')
+      url('${baseUrl}/SailecRegular.woff')
         format('woff'),
-      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.ttf')
+      url('${baseUrl}/SailecRegular.ttf')
         format('truetype'),
-      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecRegular.svg#48d599a6-92b5-4d43-a4ac-8959f6971853')
+      url('${baseUrl}/SailecRegular.svg#48d599a6-92b5-4d43-a4ac-8959f6971853')
         format('svg');
   }
 
   @font-face {
     font-family: 'Sailec Bold';
-    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.eot?#iefix');
-    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.eot?#iefix')
+    src: url('${baseUrl}/SailecBold.eot?#iefix');
+    src: url('${baseUrl}/SailecBold.eot?#iefix')
         format('eot'),
-      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.woff')
+      url('${baseUrl}/SailecBold.woff')
         format('woff'),
-      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.ttf')
+      url('${baseUrl}/SailecBold.ttf')
         format('truetype'),
-      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/SailecBold.svg#25e09910-ffc3-4fc4-b0d1-db9a95dface8')
+      url('${baseUrl}/SailecBold.svg#25e09910-ffc3-4fc4-b0d1-db9a95dface8')
         format('svg');
   }
 
   @font-face {
     font-family: 'Sailec Light';
-    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.eot?#iefix');
-    src: url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.eot?#iefix')
+    src: url('${baseUrl}/sailec-light.eot?#iefix');
+    src: url('${baseUrl}/sailec-light.eot?#iefix')
         format('eot'),
-      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.woff')
+      url('${baseUrl}/sailec-light.woff')
         format('woff'),
-      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.ttf')
+      url('${baseUrl}/sailec-light.ttf')
         format('truetype'),
-      url('https://dtpuu5koy2g08.cloudfront.net/fonts/sailec/sailec-light.svg#48d599a6-92b5-4d43-a4ac-8959f6971853')
+      url('${baseUrl}/sailec-light.svg#48d599a6-92b5-4d43-a4ac-8959f6971853')
         format('svg');
   }
 
