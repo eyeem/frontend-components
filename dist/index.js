@@ -4700,9 +4700,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var baseUrl = 'https://www.eyeem.com/node-static/fonts/sailec';
+var DEFAULT_BASE_URL = 'https://dtpuu5koy2g08.cloudfront.net/fonts/sailec';
 
-exports.default = (0, _styledComponents.css)(_templateObject, _styledNormalize2.default, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl, baseUrl);
+var getBaseUrl = function getBaseUrl(theme) {
+  if (theme.fontBase) {
+    return theme.fontBase;
+  }
+
+  return DEFAULT_BASE_URL;
+};
+
+exports.default = function (_ref) {
+  var _ref$theme = _ref.theme,
+      theme = _ref$theme === undefined ? {} : _ref$theme;
+  return (0, _styledComponents.css)(_templateObject, _styledNormalize2.default, getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme), getBaseUrl(theme));
+};
 
 /***/ }),
 /* 79 */
