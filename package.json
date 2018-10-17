@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/eyeem/frontend-components#readme",
   "dependencies": {
-    "react": "^16.5.2",
     "styled-normalize": "^8.0.1"
   },
   "peerDependencies": {
