@@ -65,7 +65,7 @@ export const alignItems = (
 export const propsColorFromTheme = (selector: string) => (props: {}) =>
   fromInternalTheme(`colors.${_.get(props, selector)}`)(props);
 
-export const isRgbaColor = (color: string) => _.startsWith(color, 'rgba');
+export const isRgbaColor = (color: string) => color && color.startsWith('rgba');
 
 const getRGBComponents = (color: string) => {
   if (isRgbaColor(color)) {

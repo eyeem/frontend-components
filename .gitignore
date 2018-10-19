@@ -22,3 +22,6 @@ node_modules/
 .env.production.local
 
 build
+
+# Bundle size report
+dist/report.html

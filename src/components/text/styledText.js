@@ -39,7 +39,7 @@ const fontSizeToMargin = fontSize => (fontSize + 8) / 2;
 const fontSize = size => fromProps(`sizeValues.font.${size}`);
 const lineHeight = size => props => fontSizeToLineHeight(fontSize(size)(props));
 const marginBottom = size => props => {
-  if (_.isUndefined(props.margin)) {
+  if (!props.margin) {
     return fontSizeToMargin(fontSize(size)(props));
   }
   return props.margin;
