@@ -53,7 +53,8 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new BundleAnalyzerPlugin({
-      analyzerMode: 'static'
+      analyzerMode: 'static',
+      openAnalyzer: false
     })
   ]
 };
