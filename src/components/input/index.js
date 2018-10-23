@@ -43,7 +43,7 @@ const background = (props: {
     border-color: ${fromInternalTheme('colors.greys.grey4')};
     background-color: ${p =>
       p.disabled
-        ? fromInternalTheme('lightColors.lightRed')
+        ? fromInternalTheme('colors.lightColors.lightRed')
         : fromInternalTheme('colors.whites.white')};
   `;
 };

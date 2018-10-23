@@ -4067,7 +4067,7 @@ var background = function background(props) {
     return (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
   }
   return (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), function (p) {
-    return p.disabled ? (0, _styleUtils.fromInternalTheme)('lightColors.lightRed') : (0, _styleUtils.fromInternalTheme)('colors.whites.white');
+    return p.disabled ? (0, _styleUtils.fromInternalTheme)('colors.lightColors.lightRed') : (0, _styleUtils.fromInternalTheme)('colors.whites.white');
   });
 };
 
