@@ -41,7 +41,10 @@ const background = (props: {
   }
   return css`
     border-color: ${fromInternalTheme('colors.greys.grey4')};
-    background-color: ${fromInternalTheme('colors.whites.white')};
+    background-color: ${p =>
+      p.disabled
+        ? fromInternalTheme('lightColors.lightRed')
+        : fromInternalTheme('colors.whites.white')};
   `;
 };
 
@@ -87,7 +90,8 @@ declare type Props = {
   pending?: boolean,
   errorMessage?: string,
   showCheckmark?: boolean,
-  formRow?: boolean
+  formRow?: boolean,
+  disabled?: boolean
 };
 
 declare type State = {
@@ -116,6 +120,7 @@ class Input extends React.Component<Props, State> {
       <WrapperComponent>
         <StyledInput
           {...this.props.inputProps}
+          disabled={this.props.disabled}
           error={!!this.props.errorMessage}
           pending={this.props.pending}
           showCheckmark={this.props.showCheckmark}
