@@ -4105,7 +4105,6 @@ var Input = function (_React$Component) {
         WrapperComponent,
         null,
         _react2.default.createElement(StyledInput, _extends({}, this.props.inputProps, {
-          disabled: this.props.disabled,
           error: !!this.props.errorMessage,
           pending: this.props.pending,
           showCheckmark: this.props.showCheckmark,

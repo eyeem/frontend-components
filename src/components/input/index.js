@@ -86,12 +86,16 @@ const InnerHint = styled.p`
 `;
 
 declare type Props = {
-  inputProps: {},
+  inputProps: {
+    type?: string,
+    disabled?: boolean,
+    placeholder?: string,
+    'data-test-id'?: string
+  },
   pending?: boolean,
   errorMessage?: string,
   showCheckmark?: boolean,
-  formRow?: boolean,
-  disabled?: boolean
+  formRow?: boolean
 };
 
 declare type State = {
@@ -120,7 +124,6 @@ class Input extends React.Component<Props, State> {
       <WrapperComponent>
         <StyledInput
           {...this.props.inputProps}
-          disabled={this.props.disabled}
           error={!!this.props.errorMessage}
           pending={this.props.pending}
           showCheckmark={this.props.showCheckmark}
