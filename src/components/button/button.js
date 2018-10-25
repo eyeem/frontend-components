@@ -15,6 +15,7 @@ function Button(props: {
   // html tag name this button will render to
   renderAs?: string,
 
+  /** Theme color to render */
   color: string,
   size: string,
   display: string,
