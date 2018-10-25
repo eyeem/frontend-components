@@ -1,14 +1,22 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { storiesOf, addDecorator } from '@storybook/react';
 import { withInfo, setDefaults } from '@storybook/addon-info';
-import { withKnobs } from '@storybook/addon-knobs/react';
-import { selectV2 } from '@storybook/addon-knobs';
+import { setOptions } from '@storybook/addon-options';
+import { createGlobalStyle } from 'styled-components';
+import globalStyles from '../src/globalStyles';
 
-import Button from '../src/components/button';
-import Input from '../src/components/input';
+const GlobalStyles = createGlobalStyle`
+  ${globalStyles}
+`;
 
-import { color, icon, size } from './knobs/button';
+const GlobalStylesDecorator = storyFn => (
+  <React.Fragment>
+    <GlobalStyles />
+    {storyFn()}
+  </React.Fragment>
+);
+
+addDecorator(GlobalStylesDecorator);
 
 // addon-info
 setDefaults({
@@ -16,31 +24,15 @@ setDefaults({
   inline: true
 });
 
-storiesOf('Button', module)
-  .addDecorator((story, context) => withInfo('common info')(story)(context))
-  .addDecorator(withKnobs)
-  .add('with text', () => (
-    <Button size="small" color="green" onClick={action('clicked')}>
-      Hello Button
-    </Button>
-  ))
-  .add('with icon', () => (
-    <Button
-      size={selectV2(size.label, size.options, size.defaultValue)}
-      color={selectV2(color.label, color.options, color.defaultValue)}
-      icon={selectV2(icon.label, icon.options, icon.defaultValue)}
-    >
-      Button
-    </Button>
-  ))
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+// addon-options
+setOptions({
+  name: 'EyeEm Components',
+  addonPanelInRight: true,
+  url: 'https://github.com/eyeem/frontend-components'
+});
 
-storiesOf('Input', module).add('text field', () => (
-  <Input inputProps={{ placeholder: 'Name...' }} />
-));
+/* NOTE: Add all stories here. Use require() syntax so
+         global style decorator applies.
+*/
+require('./button');
+require('./input');
