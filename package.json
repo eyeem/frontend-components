@@ -9,7 +9,8 @@
     "test": "echo 'no tests yet :(';",
     "prepublish": "npm run build",
     "release": "np --no-yarn ",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook:dev": "start-storybook -p 9001 -c .storybook",
+    "storybook:prod": "build-storybook -c .storybook -o .out"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@storybook/addon-info": "^3.4.11",
+    "@storybook/addon-knobs": "^3.4.11",
     "@storybook/react": "^3.4.11",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
