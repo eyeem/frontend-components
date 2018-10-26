@@ -2,14 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
-import { selectV2, boolean } from '@storybook/addon-knobs';
 
 import { knobs, getKnobTypeForProp } from './knobs/button';
 
 import Button from '../src/components/button';
 
 const knobText = {
-  label: 'Text',
+  label: 'Child text',
   defaultValue: 'Hello'
 };
 
