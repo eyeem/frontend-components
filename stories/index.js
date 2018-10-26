@@ -1,22 +1,30 @@
 import React from 'react';
+import backgrounds from '@storybook/addon-backgrounds';
 import { storiesOf, addDecorator } from '@storybook/react';
 import { withInfo, setDefaults } from '@storybook/addon-info';
 import { setOptions } from '@storybook/addon-options';
 import { createGlobalStyle } from 'styled-components';
 import globalStyles from '../src/globalStyles';
+import { colors } from '../src/theme';
+
+const backgroundsDecorator = backgrounds([
+  { name: 'dark', value: colors.blacks.black5 },
+  { name: 'light', value: colors.whites.white, default: true }
+]);
 
 const GlobalStyles = createGlobalStyle`
   ${globalStyles}
 `;
 
-const GlobalStylesDecorator = storyFn => (
+const stylesDecorator = storyFn => (
   <React.Fragment>
     <GlobalStyles />
     {storyFn()}
   </React.Fragment>
 );
 
-addDecorator(GlobalStylesDecorator);
+addDecorator(stylesDecorator);
+addDecorator(backgroundsDecorator);
 
 // addon-info
 setDefaults({
