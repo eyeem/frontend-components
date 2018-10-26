@@ -1027,9 +1027,8 @@ function Button(props) {
   return React.createElement(
     _styledButton2.default,
     {
-      renderAs: props.renderAs
-      // eslint-disable-next-line react/prop-types
-      , 'data-test-id': props['data-test-id'],
+      renderAs: props.renderAs,
+      'data-test-id': props['data-test-id'],
       onClick: props.onClick,
       display: props.display,
       alignItems: props.alignItems,
@@ -1066,7 +1065,8 @@ Button.defaultProps = {
   spinner: false,
   fullWidth: false,
   moveIconToLeft: false,
-  renderAs: 'button'
+  renderAs: 'button',
+  progress: 100
 };
 
 exports.default = Button;
@@ -3990,7 +3990,8 @@ function UserFollow(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 20 20" },
+      viewBox: "0 0 20 20"
+    },
     React.createElement("path", {
       d: "M15.62 3.12V0h1.26v3.12H20v1.26h-3.12V7.5h-1.26V4.38H12.5V3.12h3.12zm-6.93 7.97c.83-.78 1.53-2.06 1.53-3.51 0-2.37-.68-4.3-3.12-4.33-2.44.03-3.12 1.96-3.12 4.33 0 1.43.69 2.7 1.51 3.49-.05 1.17-.61 1.74-2.43 2.42-1.9.7-3.06 1.42-3.06 1.91V17h14.38v-1.6c0-.49-1.28-1.21-3.18-1.91-1.8-.67-2.45-1.24-2.51-2.4zm0 0",
       fillRule: "evenodd"
@@ -4728,33 +4729,14 @@ exports.default = function (_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Normalize = exports.normalize = exports.version = void 0;
+exports.default = exports.normalize = exports.version = void 0;
 
 var _styledComponents = __webpack_require__(1);
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["", ""]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-/**
- * @deprecated
- */
-var version = '8.0.2';
+var version = '8.0.0';
 exports.version = version;
 var normalize = (0, _styledComponents.css)(["html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0;}h1{font-size:2em;margin:0.67em 0;}hr{box-sizing:content-box;height:0;overflow:visible;}pre{font-family:monospace,monospace;font-size:1em;}a{background-color:transparent;}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted;}b,strong{font-weight:bolder;}code,kbd,samp{font-family:monospace,monospace;font-size:1em;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}button,input{overflow:visible;}button,select{text-transform:none;}button,[type=\"button\"],[type=\"reset\"],[type=\"submit\"]{-webkit-appearance:button;}button::-moz-focus-inner,[type=\"button\"]::-moz-focus-inner,[type=\"reset\"]::-moz-focus-inner,[type=\"submit\"]::-moz-focus-inner{border-style:none;padding:0;}button:-moz-focusring,[type=\"button\"]:-moz-focusring,[type=\"reset\"]:-moz-focusring,[type=\"submit\"]:-moz-focusring{outline:1px dotted ButtonText;}fieldset{padding:0.35em 0.75em 0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}textarea{overflow:auto;}[type=\"checkbox\"],[type=\"radio\"]{box-sizing:border-box;padding:0;}[type=\"number\"]::-webkit-inner-spin-button,[type=\"number\"]::-webkit-outer-spin-button{height:auto;}[type=\"search\"]{-webkit-appearance:textfield;outline-offset:-2px;}[type=\"search\"]::-webkit-search-decoration{-webkit-appearance:none;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:list-item;}template{display:none;}[hidden]{display:none;}"]);
 exports.normalize = normalize;
-var Normalize = _styledComponents.createGlobalStyle ? (0, _styledComponents.createGlobalStyle)(_templateObject(), normalize) : function () {
-  return null;
-};
-exports.Normalize = Normalize;
 var _default = normalize;
 exports.default = _default;
 
