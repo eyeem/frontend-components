@@ -44,3 +44,4 @@ setOptions({
 */
 require('./button');
 require('./input');
+require('./icon');
