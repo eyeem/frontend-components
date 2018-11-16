@@ -150,7 +150,9 @@ function Icon(props: {
 }
 
 Icon.defaultProps = {
-  color: undefined
+  color: undefined,
+  type: undefined,
+  size: 16
 };
 
 export default Icon;
