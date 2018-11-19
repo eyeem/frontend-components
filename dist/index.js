@@ -1500,7 +1500,9 @@ function Icon(props) {
 }
 
 Icon.defaultProps = {
-  color: undefined
+  color: undefined,
+  type: undefined,
+  size: 16
 };
 
 exports.default = Icon;
@@ -4154,7 +4156,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _templateObject = _taggedTemplateLiteral(['\n      border-color: ', ';\n      background-color: ', ';\n    '], ['\n      border-color: ', ';\n      background-color: ', ';\n    ']),
     _templateObject2 = _taggedTemplateLiteral(['\n    border-color: ', ';\n    background-color: ', ';\n  '], ['\n    border-color: ', ';\n    background-color: ', ';\n  ']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  ', ';\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  box-shadow: none;\n  color: ', ';\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  background-image: url(\'/node-static/img/dropdown-arrow.svg\');\n  background-position: center right 16px;\n  background-size: 10px;\n  background-repeat: no-repeat;\n\n  appearance: none;\n  -webkit-appearance: none;\n  ', ' &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n'], ['\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  ', ';\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  box-shadow: none;\n  color: ', ';\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  background-image: url(\'/node-static/img/dropdown-arrow.svg\');\n  background-position: center right 16px;\n  background-size: 10px;\n  background-repeat: no-repeat;\n\n  appearance: none;\n  -webkit-appearance: none;\n  ', ' &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n']);
+    _templateObject3 = _taggedTemplateLiteral(['\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  ', ';\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  box-shadow: none;\n  color: ', ';\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  background-image: url("data:image/svg+xml,%3Csvg width=\'10\' height=\'5\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h10L5.028 5 0 0z\' fill-rule=\'evenodd\'/%3E%3C/svg%3E");\n  background-position: center right 16px;\n  background-size: 10px;\n  background-repeat: no-repeat;\n\n  appearance: none;\n  -webkit-appearance: none;\n  ', ' &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n'], ['\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  ', ';\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  box-shadow: none;\n  color: ', ';\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  background-image: url("data:image/svg+xml,%3Csvg width=\'10\' height=\'5\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h10L5.028 5 0 0z\' fill-rule=\'evenodd\'/%3E%3C/svg%3E");\n  background-position: center right 16px;\n  background-size: 10px;\n  background-repeat: no-repeat;\n\n  appearance: none;\n  -webkit-appearance: none;\n  ', ' &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -4201,8 +4203,7 @@ function Select(props) {
     _react2.default.createElement(
       StyledSelect,
       _extends({}, props.inputProps, {
-        error: !!props.errorMessage || props.error
-      }),
+        error: !!props.errorMessage || props.error }),
       options.map(function (option) {
         return _react2.default.createElement(
           'option',
@@ -4493,8 +4494,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 var _templateObject = _taggedTemplateLiteral(['\n  display: none;\n  visibility: hidden;\n  float: left;\n  margin-right: 16px;\n'], ['\n  display: none;\n  visibility: hidden;\n  float: left;\n  margin-right: 16px;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n      border-color: ', ';\n      background-color: ', ';\n    '], ['\n      border-color: ', ';\n      background-color: ', ';\n    ']),
     _templateObject3 = _taggedTemplateLiteral(['\n    border-color: ', ';\n    background-color: ', ';\n  '], ['\n    border-color: ', ';\n    background-color: ', ';\n  ']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  font-size: 14px;\n  display: block;\n  margin: 0 0 12px 12px;\n\n  padding-left: 16px;\n  min-height: 12px;\n  text-align: left;\n  line-height: 22px;\n  cursor: pointer;\n  &:after {\n    content: \' \';\n    display: table;\n    clear: both;\n  }\n\n  &:before {\n    ', ' content: \' \';\n    display: table;\n    position: absolute;\n    top: 3px;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border-style: solid;\n    border-width: 1px;\n    border-radius: 3px;\n    background-image: url(\'/node-static/img/check-white-9x7px.svg\');\n    background-position: center center;\n    background-size: ', ';\n    background-repeat: no-repeat;\n    content: \'\';\n    transition: transform 0.15s ease-out, background 0.15s ease-out,\n      border-color 0.15s ease-out;\n  }\n'], ['\n  font-size: 14px;\n  display: block;\n  margin: 0 0 12px 12px;\n\n  padding-left: 16px;\n  min-height: 12px;\n  text-align: left;\n  line-height: 22px;\n  cursor: pointer;\n  &:after {\n    content: \' \';\n    display: table;\n    clear: both;\n  }\n\n  &:before {\n    ', ' content: \' \';\n    display: table;\n    position: absolute;\n    top: 3px;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border-style: solid;\n    border-width: 1px;\n    border-radius: 3px;\n    background-image: url(\'/node-static/img/check-white-9x7px.svg\');\n    background-position: center center;\n    background-size: ', ';\n    background-repeat: no-repeat;\n    content: \'\';\n    transition: transform 0.15s ease-out, background 0.15s ease-out,\n      border-color 0.15s ease-out;\n  }\n']),
-    _templateObject5 = _taggedTemplateLiteral(['position: relative;'], ['position: relative;']);
+    _templateObject4 = _taggedTemplateLiteral(['\n  font-size: 14px;\n  display: block;\n  margin: 0 0 12px 12px;\n\n  padding-left: 16px;\n  min-height: 12px;\n  text-align: left;\n  line-height: 22px;\n  cursor: pointer;\n  &:after {\n    content: \' \';\n    display: table;\n    clear: both;\n  }\n\n  &:before {\n    ', ' content: \' \';\n    display: table;\n    position: absolute;\n    top: 3px;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border-style: solid;\n    border-width: 1px;\n    border-radius: 3px;\n    background-image: url("data:image/svg+xml,%3Csvg width=\'9\' height=\'7\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M2.685 6.772a.717.717 0 0 0 1.037 0l5.06-5.205A.733.733 0 0 0 8.76.522L8.43.213a.765.765 0 0 0-1.06.025L3.213 4.526 1.632 2.89a.763.763 0 0 0-1.063-.028l-.329.309a.73.73 0 0 0-.026 1.045l2.471 2.556z\' fill=\'%23FFF\' fill-rule=\'evenodd\'/%3E%3C/svg%3E");\n    background-position: center center;\n    background-size: ', ';\n    background-repeat: no-repeat;\n    content: \'\';\n    transition: transform 0.15s ease-out, background 0.15s ease-out,\n      border-color 0.15s ease-out;\n  }\n'], ['\n  font-size: 14px;\n  display: block;\n  margin: 0 0 12px 12px;\n\n  padding-left: 16px;\n  min-height: 12px;\n  text-align: left;\n  line-height: 22px;\n  cursor: pointer;\n  &:after {\n    content: \' \';\n    display: table;\n    clear: both;\n  }\n\n  &:before {\n    ', ' content: \' \';\n    display: table;\n    position: absolute;\n    top: 3px;\n    left: 0;\n    display: block;\n\n    width: 16px;\n    height: 16px;\n    border-style: solid;\n    border-width: 1px;\n    border-radius: 3px;\n    background-image: url("data:image/svg+xml,%3Csvg width=\'9\' height=\'7\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M2.685 6.772a.717.717 0 0 0 1.037 0l5.06-5.205A.733.733 0 0 0 8.76.522L8.43.213a.765.765 0 0 0-1.06.025L3.213 4.526 1.632 2.89a.763.763 0 0 0-1.063-.028l-.329.309a.73.73 0 0 0-.026 1.045l2.471 2.556z\' fill=\'%23FFF\' fill-rule=\'evenodd\'/%3E%3C/svg%3E");\n    background-position: center center;\n    background-size: ', ';\n    background-repeat: no-repeat;\n    content: \'\';\n    transition: transform 0.15s ease-out, background 0.15s ease-out,\n      border-color 0.15s ease-out;\n  }\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  position: relative;\n'], ['\n  position: relative;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -4549,8 +4550,7 @@ function Checkbox(props) {
       {
         htmlFor: props.inputProps.name,
         error: !!props.errorMessage,
-        checked: props.inputProps.checked
-      },
+        checked: props.inputProps.checked },
       props.label
     ),
     props.errorMessage && _react2.default.createElement(
@@ -4729,14 +4729,33 @@ exports.default = function (_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.normalize = exports.version = void 0;
+exports.default = exports.Normalize = exports.normalize = exports.version = void 0;
 
 var _styledComponents = __webpack_require__(1);
 
-var version = '8.0.0';
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["", ""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+/**
+ * @deprecated
+ */
+var version = '8.0.2';
 exports.version = version;
 var normalize = (0, _styledComponents.css)(["html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0;}h1{font-size:2em;margin:0.67em 0;}hr{box-sizing:content-box;height:0;overflow:visible;}pre{font-family:monospace,monospace;font-size:1em;}a{background-color:transparent;}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted;}b,strong{font-weight:bolder;}code,kbd,samp{font-family:monospace,monospace;font-size:1em;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}button,input{overflow:visible;}button,select{text-transform:none;}button,[type=\"button\"],[type=\"reset\"],[type=\"submit\"]{-webkit-appearance:button;}button::-moz-focus-inner,[type=\"button\"]::-moz-focus-inner,[type=\"reset\"]::-moz-focus-inner,[type=\"submit\"]::-moz-focus-inner{border-style:none;padding:0;}button:-moz-focusring,[type=\"button\"]:-moz-focusring,[type=\"reset\"]:-moz-focusring,[type=\"submit\"]:-moz-focusring{outline:1px dotted ButtonText;}fieldset{padding:0.35em 0.75em 0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}textarea{overflow:auto;}[type=\"checkbox\"],[type=\"radio\"]{box-sizing:border-box;padding:0;}[type=\"number\"]::-webkit-inner-spin-button,[type=\"number\"]::-webkit-outer-spin-button{height:auto;}[type=\"search\"]{-webkit-appearance:textfield;outline-offset:-2px;}[type=\"search\"]::-webkit-search-decoration{-webkit-appearance:none;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:list-item;}template{display:none;}[hidden]{display:none;}"]);
 exports.normalize = normalize;
+var Normalize = _styledComponents.createGlobalStyle ? (0, _styledComponents.createGlobalStyle)(_templateObject(), normalize) : function () {
+  return null;
+};
+exports.Normalize = Normalize;
 var _default = normalize;
 exports.default = _default;
 
