@@ -62,7 +62,7 @@ const StyledLabel = styled.label`
     border-style: solid;
     border-width: 1px;
     border-radius: 3px;
-    background-image: url('/node-static/img/check-white-9x7px.svg');
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.685 6.772a.717.717 0 0 0 1.037 0l5.06-5.205A.733.733 0 0 0 8.76.522L8.43.213a.765.765 0 0 0-1.06.025L3.213 4.526 1.632 2.89a.763.763 0 0 0-1.063-.028l-.329.309a.73.73 0 0 0-.026 1.045l2.471 2.556z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
     background-position: center center;
     background-size: ${fromPropsTernary('checked', '9px 7px', '0')};
     background-repeat: no-repeat;
@@ -72,7 +72,9 @@ const StyledLabel = styled.label`
   }
 `;
 
-const Wrapper = styled.div`position: relative;`;
+const Wrapper = styled.div`
+  position: relative;
+`;
 
 declare type Props = {
   inputProps: {
@@ -97,8 +99,7 @@ function Checkbox(props: Props) {
       <StyledLabel
         htmlFor={props.inputProps.name}
         error={!!props.errorMessage}
-        checked={props.inputProps.checked}
-      >
+        checked={props.inputProps.checked}>
         {props.label}
       </StyledLabel>
       {props.errorMessage && (
