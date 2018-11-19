@@ -39,7 +39,7 @@ const StyledSelect = styled.select`
   border-width: 1px;
   border-style: solid;
   border-radius: ${fromInternalTheme('borderRadius')};
-  background-image: url('/node-static/img/dropdown-arrow.svg');
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h10L5.028 5 0 0z' fill-rule='evenodd'/%3E%3C/svg%3E");
   background-position: center right 16px;
   background-size: 10px;
   background-repeat: no-repeat;
@@ -81,8 +81,7 @@ function Select(props: Props) {
     <WrapperComponent>
       <StyledSelect
         {...props.inputProps}
-        error={!!props.errorMessage || props.error}
-      >
+        error={!!props.errorMessage || props.error}>
         {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.text}
