@@ -22,8 +22,6 @@ const colorsOptions = Object.keys(textColors).reduce((acc, next) => {
     return acc;
 }, {});
 
-const fontOptions = textFonts;
-
 const getOptionsForProp = prop => {
     switch (prop) {
         case 'color':
@@ -39,7 +37,7 @@ const getOptionsForProp = prop => {
             return textAligns
 
         case 'font':
-            return fontOptions;
+            return textFonts;
 
         case 'display':
             return textDisplays;
@@ -124,6 +122,4 @@ const knobs = _.reduce(
     {}
   );
 
-  console.log('text knobs: ', knobs);
-  
 export {knobs, getKnobTypeForProp}
