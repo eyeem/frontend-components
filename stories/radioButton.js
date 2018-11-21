@@ -3,13 +3,12 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
-import { knobs, getKnobTypeForProp } from './knobs/radioGroup';
+import { knobs, getKnobTypeForProp } from './knobs/radioButton';
 
 import RadioGroup from '../src/components/radioGroup';
 
 const options = [
     { value: 'testValue1', text: ('Option1') },
-    { value: 'testValue2', text: ('Option2') },
   ];
 
   const onChangeHandler = () => {
