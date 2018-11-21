@@ -15,7 +15,7 @@ const options = [
     console.log('handler');
   }
 
-storiesOf('RadioGroup', module)
+storiesOf('RadioButton', module)
   .addDecorator((story, context) => withInfo('')(story)(context))
   .addDecorator(withKnobs)
   .add('with controllable props', () => {
