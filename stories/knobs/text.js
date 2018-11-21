@@ -1,125 +1,120 @@
-import React from 'react'
-import Text from '../../src/components/text';
-
+import React from 'react';
 import { selectV2, boolean } from '@storybook/addon-knobs';
 
-import { textSizes, textTopMargins, textColors, textFonts, textAligns, textDisplays } from '../../src/styleConfig';
+import {
+  textSizes,
+  textTopMargins,
+  textColors,
+  textFonts,
+  textAligns,
+  textDisplays
+} from '../../src/styleConfig';
+import Text from '../../src/components/text';
+import { makeKnobsFromDefaultProps } from './helpers';
 
 const { defaultProps } = Text;
 
 const sizesOptions = Object.keys(textSizes).reduce((acc, next) => {
-    acc[next] = next;
-    return acc;
+  acc[next] = next;
+  return acc;
 }, {});
 
 const topMarginsOptions = Object.keys(textTopMargins).reduce((acc, next) => {
-    acc[next] = next;
-    return acc;
+  acc[next] = next;
+  return acc;
 }, {});
 
 const colorsOptions = Object.keys(textColors).reduce((acc, next) => {
-    acc[next] = next;
-    return acc;
+  acc[next] = next;
+  return acc;
 }, {});
 
 const getOptionsForProp = prop => {
-    switch (prop) {
-        case 'color':
-            return colorsOptions;
-  
-        case 'size':
-            return sizesOptions;
-  
-        case 'topMargin':
-            return topMarginsOptions;
+  switch (prop) {
+    case 'color':
+      return colorsOptions;
 
-        case 'align':
-            return textAligns
+    case 'size':
+      return sizesOptions;
 
-        case 'font':
-            return textFonts;
+    case 'topMargin':
+      return topMarginsOptions;
 
-        case 'display':
-            return textDisplays;
+    case 'align':
+      return textAligns;
 
-        default:
-            return {};
-    }
+    case 'font':
+      return textFonts;
+
+    case 'display':
+      return textDisplays;
+
+    default:
+      return {};
+  }
 };
 
 const getKnobTypeForProp = (prop, value) => {
-    switch (prop) {
-        case 'ellipsis':
-            return {
-            knobFunction: boolean,
-            args: [value.label, value.defaultValue]
-            };
-    
-        case 'noWrap':
-            return {
-            knobFunction: boolean,
-            args: [value.label, value.defaultValue]
-            };
-    
-        case 'underline':
-            return {
-            knobFunction: boolean,
-            args: [value.label, value.defaultValue]
-            };
-  
-        case 'topMargin':
-            return {
-            knobFunction: selectV2,
-            args: [value.label, value.options, value.defaultValue]
-            };
-    
-        case 'color':
-            return {
-            knobFunction: selectV2,
-            args: [value.label, value.options, value.defaultValue]
-            };
-    
-        case 'size':
-            return {
-            knobFunction: selectV2,
-            args: [value.label, value.options, value.defaultValue]
-            };
+  switch (prop) {
+    case 'ellipsis':
+      return {
+        knobFunction: boolean,
+        args: [value.label, value.defaultValue]
+      };
 
-        case 'font':
-            return {
-                knobFunction: selectV2,
-                args: [value.label, value.options, value.defaultValue]
-            }
-  
-        case 'align':
-            return {
-            knobFunction: selectV2,
-            args: [value.label, value.options, value.defaultValue]
-            };
+    case 'noWrap':
+      return {
+        knobFunction: boolean,
+        args: [value.label, value.defaultValue]
+      };
 
-        case 'display':
-        return {
-            knobFunction: selectV2,
-            args: [value.label, value.options, value.defaultValue]
-            };
-    
-      default:
-        return { knobFunction: () => {}, args: [] };
-    }
+    case 'underline':
+      return {
+        knobFunction: boolean,
+        args: [value.label, value.defaultValue]
+      };
+
+    case 'topMargin':
+      return {
+        knobFunction: selectV2,
+        args: [value.label, value.options, value.defaultValue]
+      };
+
+    case 'color':
+      return {
+        knobFunction: selectV2,
+        args: [value.label, value.options, value.defaultValue]
+      };
+
+    case 'size':
+      return {
+        knobFunction: selectV2,
+        args: [value.label, value.options, value.defaultValue]
+      };
+
+    case 'font':
+      return {
+        knobFunction: selectV2,
+        args: [value.label, value.options, value.defaultValue]
+      };
+
+    case 'align':
+      return {
+        knobFunction: selectV2,
+        args: [value.label, value.options, value.defaultValue]
+      };
+
+    case 'display':
+      return {
+        knobFunction: selectV2,
+        args: [value.label, value.options, value.defaultValue]
+      };
+
+    default:
+      return { knobFunction: () => {}, args: [] };
+  }
 };
 
-const knobs = _.reduce(
-    defaultProps,
-    (result, val, key) => {
-      result[key] = {
-        defaultValue: val,
-        label: key,
-        options: getOptionsForProp(key)
-      };
-  
-      return result;
-    },
-    {}
-  );
+const knobs = makeKnobsFromDefaultProps(defaultProps, getOptionsForProp);
 
-export {knobs, getKnobTypeForProp}
+export { knobs, getKnobTypeForProp };
