@@ -4,6 +4,7 @@ import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import { knobs, getKnobTypeForProp } from './knobs/radioButton';
+import { knobPropsFactory } from './knobs/helpers';
 
 import RadioGroup from '../src/components/radioGroup';
 
@@ -19,17 +20,7 @@ storiesOf('RadioButton', module)
   .addDecorator((story, context) => withInfo('')(story)(context))
   .addDecorator(withKnobs)
   .add('with controllable props', () => {
-    const props = _.reduce(
-      knobs,
-      (result, value, key) => {
-        const { knobFunction, args } = getKnobTypeForProp(key, value);
-
-        result[key] = knobFunction(...args);
-
-        return result;
-      },
-      {}
-    );
+    const props = knobPropsFactory(knobs, getKnobTypeForProp);
 
     return (
       <RadioGroup 

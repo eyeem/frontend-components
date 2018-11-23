@@ -4,14 +4,14 @@ import RadioGroup from '../../src/components/radioGroup';
 import { boolean, text } from '@storybook/addon-knobs';
 
 const { defaultProps } = RadioGroup;
+import { makeKnobsFromDefaultProps } from './helpers';
 
-// const getOptionsForProp = prop => {
-//     switch (prop) {
-      
-//       default:
-//         return {};
-//     }
-//   };
+const getOptionsForProp = prop => {
+    switch (prop) {      
+      default:
+        return {};
+    }
+  };
 
 const getKnobTypeForProp = (prop, value) => {
     switch (prop) {
@@ -25,19 +25,7 @@ const getKnobTypeForProp = (prop, value) => {
             return { knobFunction: () => {}, args: [] };
     }
   };
-  
-  const knobs = _.reduce(
-    defaultProps,
-    (result, val, key) => {
-      result[key] = {
-        defaultValue: val,
-        label: key,
-        // options: getOptionsForProp(key)
-      };
-  
-      return result;
-    },
-    {}
-  );
+
+const knobs = makeKnobsFromDefaultProps(defaultProps, getOptionsForProp);
 
 export { knobs, getKnobTypeForProp };
