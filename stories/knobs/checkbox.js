@@ -4,10 +4,19 @@ import Checkbox from '../../src/components/checkbox';
 import { object, text } from '@storybook/addon-knobs';
 
 import { button } from '@storybook/addon-knobs/dist/react';
+import { makeKnobsFromDefaultProps } from './helpers';
 
 const { defaultProps } = Checkbox;
 
 const inputProps = {checked: true}
+
+const getOptionsForProp = prop => {
+  switch (prop) {
+
+    default:
+      return {};
+  }
+};
 
 const getKnobTypeForProp = (prop, value) => {
   switch (prop) {
@@ -28,18 +37,6 @@ const getKnobTypeForProp = (prop, value) => {
   }
 };
 
-const knobs = _.reduce(
-  defaultProps,
-  (result, val, key) => {
-    result[key] = {
-      defaultValue: val,
-      label: key,
-    };
-
-    return result;
-  },
-  {}
-);
-
+const knobs = makeKnobsFromDefaultProps(defaultProps, getOptionsForProp);
 
 export { knobs, getKnobTypeForProp };
