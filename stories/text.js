@@ -1,25 +1,26 @@
+import _ from 'lodash';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import { knobPropsFactory } from './knobs/helpers';
-import { knobs, getKnobTypeForProp } from './knobs/button';
+import { knobs, getKnobTypeForProp } from './knobs/text';
 
-import Button from '../src/components/button';
+import Text from '../src/components/text';
 
 const knobText = {
   label: 'Child text',
-  defaultValue: 'Hello'
+  defaultValue: 'We Love EyeEm'
 };
 
-storiesOf('Button', module)
+storiesOf('Text', module)
   .addDecorator((story, context) => withInfo('')(story)(context))
   .addDecorator(withKnobs)
   .add('with controllable props', () => {
     const props = knobPropsFactory(knobs, getKnobTypeForProp);
 
     return (
-      <Button {...props}>{text(knobText.label, knobText.defaultValue)}</Button>
+      <Text {...props}>{text(knobText.label, knobText.defaultValue)}</Text>
     );
   });
