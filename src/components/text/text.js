@@ -10,14 +10,16 @@ function Text(props: {
   id: string,
   to: string,
 
-  // html tag name this text will render to
+  /** html tag name this text will render to */
   renderAs?: string,
 
+  /** text-overflow: ellipsis */
   ellipsis?: boolean,
   noWrap?: boolean,
   underline?: boolean,
   color: string,
   size: string,
+  /** CSS text-align property */
   align: string,
   display: string,
   alignItems?: string,
@@ -30,7 +32,7 @@ function Text(props: {
   onClick?: Function,
   children: React.Node,
 
-  // use only when renderAs === 'a'
+  /** use only when renderAs === 'a' */
   href?: string,
   target?: string,
 

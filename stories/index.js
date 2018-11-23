@@ -57,3 +57,4 @@ require('./input');
 require('./icon');
 require('./select');
 require('./checkbox');
+require('./text');

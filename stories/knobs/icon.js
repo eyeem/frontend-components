@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
-import Icon from '../../src/components/icon';
 import { selectV2, boolean, number } from '@storybook/addon-knobs';
+import { button } from '@storybook/addon-knobs/dist/react';
 
 import { icons } from '../../src/styleConfig';
 import { colors } from '../../src/theme';
-import { button } from '@storybook/addon-knobs/dist/react';
+import Icon from '../../src/components/icon';
+import { makeKnobsFromDefaultProps } from './helpers';
 
 const { defaultProps } = Icon;
 
@@ -66,18 +67,6 @@ const getKnobTypeForProp = (prop, value) => {
   }
 };
 
-const knobs = _.reduce(
-  defaultProps,
-  (result, val, key) => {
-    result[key] = {
-      defaultValue: val,
-      label: key,
-      options: getOptionsForProp(key)
-    };
-
-    return result;
-  },
-  {}
-);
+const knobs = makeKnobsFromDefaultProps(defaultProps, getOptionsForProp);
 
 export { knobs, getKnobTypeForProp };
