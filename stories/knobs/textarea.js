@@ -3,9 +3,19 @@ import React from 'react';
 import Textarea from '../../src/components/textarea';
 import { text } from '@storybook/addon-knobs';
 
+import { makeKnobsFromDefaultProps } from './helpers';
+
 import { button, object } from '@storybook/addon-knobs/dist/react';
 
 const { defaultProps } = Textarea;
+
+const getOptionsForProp = prop => {
+  switch (prop) {
+  
+    default:
+      return {};
+  }
+};
 
 const getKnobTypeForProp = (prop, value) => {
 
@@ -21,17 +31,6 @@ const getKnobTypeForProp = (prop, value) => {
   }
 };
 
-const knobs = _.reduce(
-  defaultProps,
-  (result, val, key) => {
-    result[key] = {
-      defaultValue: val,
-      label: key,
-    };
-
-    return result;
-  },
-  {}
-);
+const knobs = makeKnobsFromDefaultProps(defaultProps, getOptionsForProp);
 
 export { knobs, getKnobTypeForProp };
