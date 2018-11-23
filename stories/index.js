@@ -48,3 +48,4 @@ require('./icon');
 require('./select');
 require('./checkbox');
 require('./textarea');
+require('./text');
