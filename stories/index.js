@@ -57,5 +57,6 @@ require('./input');
 require('./icon');
 require('./select');
 require('./checkbox');
-require('./radioButton')
+require('./textarea');
+require('./radioButton');
 require('./text');
