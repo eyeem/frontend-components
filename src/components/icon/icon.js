@@ -28,6 +28,7 @@ import ContactTumblrIcon from './icons/contactTumblr';
 
 import DownloadIcon from './icons/download';
 import UploadIcon from './icons/upload';
+import UpgradeIcon from './icons/upgrade';
 import CheckmarkIcon from './icons/checkmark';
 import CartIcon from './icons/cart';
 import CompDownloadIcon from './icons/compDownload';
@@ -90,6 +91,7 @@ const icons = {
   compDownload: CompDownloadIcon,
   download: DownloadIcon,
   upload: UploadIcon,
+  upgrade: UpgradeIcon,
   edit: EditIcon,
   dragndrop: DragNDrop,
   addToLightbox: AddToLightboxIcon,
