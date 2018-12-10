@@ -502,6 +502,7 @@ export const icons = {
     'checkmark',
     'download',
     'upload',
+    'upgrade',
     'compDownload',
     'like',
     'comment',
