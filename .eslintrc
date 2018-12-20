@@ -1,0 +1,17 @@
+{
+  "extends": ["eslint-config-eyeem", "plugin:jest/recommended"],
+  "rules": {
+    "import/extensions": [
+      1,
+      {
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
+    "react/prefer-stateless-function": 0
+  },
+  "env": {
+    "jest/globals": true
+  },
+  "plugins": ["jest"]
+}
