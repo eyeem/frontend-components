@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders default button 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 7px 15px;
+  max-height: 40px;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 2px;
+  background-color: #b2b2b2;
+  color: #ffffff;
+  fill: #ffffff;
+  vertical-align: top;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  pointer-events: all;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #cccccc;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:active {
+  background-color: #999999;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:focus {
+  outline: none;
+}
+
+<button
+  class="c0"
+>
+  Hello World
+</button>
+`;
