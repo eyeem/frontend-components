@@ -7,6 +7,7 @@
     "watch": "node_modules/.bin/webpack --config webpack.config.js --watch",
     "build": "node_modules/.bin/webpack --config webpack.config.js",
     "test": "jest",
+    "test:update": "jest --updateSnapshot",
     "prepublish": "npm run build",
     "release": "np --no-yarn ",
     "storybook:dev": "start-storybook -p 9001 -c .storybook",
@@ -71,7 +72,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
     }
   }
 }
