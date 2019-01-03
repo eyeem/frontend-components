@@ -4664,7 +4664,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var StyledRadio = _styledComponents2.default.input(_templateObject);
 
-var RadioRow = _styledComponents2.default.div(_templateObject2, (0, _styleUtils.fromPropsTernary)('radioColumned', 'display: inline-block;margin-right: 32px;', 'display: block;\n      margin-bottom: 6px;\n      &:last-child {\n        margin-bottom: 0;\n      }'));
+var RadioRow = _styledComponents2.default.div(_templateObject2, (0, _styleUtils.fromPropsTernary)('radioColumned', 'display: inline-block;margin-right: 32px;', 'display: block;\n      margin-bottom: 12px;\n      &:last-child {\n        margin-bottom: 0;\n      }'));
 
 var border = function border(props) {
   var border = (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.greys.grey3'));

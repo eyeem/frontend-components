@@ -19,7 +19,7 @@ const RadioRow = styled.div`
     'radioColumned',
     'display: inline-block;margin-right: 32px;',
     `display: block;
-      margin-bottom: 6px;
+      margin-bottom: 12px;
       &:last-child {
         margin-bottom: 0;
       }`
