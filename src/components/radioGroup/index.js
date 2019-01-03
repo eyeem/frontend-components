@@ -40,13 +40,14 @@ const StyledLabel = styled.label`
   position: relative;
   padding-left: 24px;
   cursor: pointer;
+  display: block;
 
   font-size: 14px;
   line-height: 22px;
 
   &:before {
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0;
     display: block;
 
