@@ -1044,7 +1044,8 @@ function Button(props) {
       moveIconToLeft: props.moveIconToLeft,
       colors: (0, _styleConfig.getButtonColorSet)(props.color),
       title: props.title,
-      htmlFor: props.htmlFor
+      htmlFor: props.htmlFor,
+      type: props.type
     },
     props.icon && React.createElement(_styledIcon2.default, {
       moveIconToLeft: props.moveIconToLeft,
