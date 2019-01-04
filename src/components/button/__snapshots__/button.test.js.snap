@@ -1,5 +1,309 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`it accepts property color with predefined eyeem color 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 7px 15px;
+  max-height: 40px;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 2px;
+  background-color: #ffaa33;
+  color: #ffffff;
+  fill: #ffffff;
+  vertical-align: top;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  pointer-events: all;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #ffbb5b;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:active {
+  background-color: #cc8828;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:focus {
+  outline: none;
+}
+
+<button
+  class="c0"
+>
+  Color Button
+</button>
+`;
+
+exports[`it accepts property disabled 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 7px 15px;
+  max-height: 40px;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 2px;
+  background-color: #b2b2b2;
+  color: #ffffff;
+  fill: #ffffff;
+  vertical-align: top;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  pointer-events: all;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+  cursor: default;
+  border-color: rgba(0,0,0,0);
+  background-color: #666666;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #cccccc;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:active {
+  background-color: #999999;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #666666;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:active {
+  background-color: #666666;
+  border-color: rgba(0,0,0,0);
+}
+
+<button
+  class="c0"
+  disabled=""
+>
+  Disabled Button
+</button>
+`;
+
+exports[`it accepts property fullWidth 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 7px 15px;
+  max-height: 40px;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 2px;
+  background-color: #b2b2b2;
+  color: #ffffff;
+  fill: #ffffff;
+  vertical-align: top;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  pointer-events: all;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #cccccc;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:active {
+  background-color: #999999;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:focus {
+  outline: none;
+}
+
+<button
+  class="c0"
+>
+  FullWidth Button
+</button>
+`;
+
+exports[`it accepts property icon=checkmark 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 7px 15px;
+  max-height: 40px;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 2px;
+  background-color: #b2b2b2;
+  color: #ffffff;
+  fill: #ffffff;
+  vertical-align: top;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  pointer-events: all;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #cccccc;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:active {
+  background-color: #999999;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c1 {
+  margin-right: 8px;
+  margin-bottom: -2px;
+}
+
+<button
+  class="c0"
+>
+  <svg
+    class="c1"
+    height="16"
+    viewBox="0 0 20 20"
+    width="16"
+  >
+    <path
+      d="M7.9 13.37l-4.28-4a1 1 0 0 0-1.37 1.46L8 16.2l9.8-10.74a1 1 0 0 0-1.47-1.35z"
+    />
+  </svg>
+  Icon Button
+</button>
+`;
+
+exports[`it changes color on hover 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 7px 15px;
+  max-height: 40px;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 2px;
+  background-color: #ffaa33;
+  color: #ffffff;
+  fill: #ffffff;
+  vertical-align: top;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  pointer-events: all;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #ffbb5b;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:active {
+  background-color: #cc8828;
+  border-color: rgba(0,0,0,0);
+}
+
+.c0:focus {
+  outline: none;
+}
+
+<button
+  class="c0"
+>
+  Hover Button
+</button>
+`;
+
 exports[`it renders default button 1`] = `
 .c0 {
   position: relative;
