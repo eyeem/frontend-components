@@ -25,6 +25,7 @@ test('it renders default input', () => {
   expect(component).toBeTruthy();
   expect(component.firstChild).toHaveProperty('type');
   expect(component.firstChild.type).toBe('text');
+  expect(component).toBeTruthy();
   expect(component).toMatchSnapshot();
 });
 

@@ -13,6 +13,8 @@ test('it renders default checkbox', () => {
   expect(checkboxElement.nodeName.toLowerCase()).toBe('input');
   expect(checkboxElement.type).toBe('checkbox');
   expect(labelElement.nodeName.toLowerCase()).toBe('label');
+  expect(checkboxElement).toBeTruthy();
+  expect(labelElement).toBeTruthy();
   expect(component).toMatchSnapshot();
 });
 
