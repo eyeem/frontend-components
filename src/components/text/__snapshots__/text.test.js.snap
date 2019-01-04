@@ -1,5 +1,312 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`it accepts property color 1`] = `
+.c0 {
+  display: block;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #999999;
+  fill: #999999;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 11px;
+  margin-top: 0px;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #cccccc;
+  fill: #cccccc;
+}
+
+.c0:active {
+  color: #333333;
+  fill: #333333;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width:40.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:48.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:64.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+<p
+  class="c0"
+>
+  color text
+</p>
+`;
+
+exports[`it accepts property underline 1`] = `
+.c0 {
+  display: block;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #333333;
+  fill: #333333;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 0;
+  margin-bottom: 11px;
+  margin-top: 0px;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #333333;
+  fill: #333333;
+}
+
+.c0:active {
+  color: #333333;
+  fill: #333333;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width:40.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:48.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:64.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+<p
+  class="c0"
+>
+  underline text
+</p>
+`;
+
+exports[`it changes color on active 1`] = `
+.c0 {
+  display: block;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #999999;
+  fill: #999999;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 11px;
+  margin-top: 0px;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #cccccc;
+  fill: #cccccc;
+}
+
+.c0:active {
+  color: #333333;
+  fill: #333333;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width:40.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:48.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:64.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+<p
+  class="c0"
+>
+  color text
+</p>
+`;
+
+exports[`it changes color on hover 1`] = `
+.c0 {
+  display: block;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #999999;
+  fill: #999999;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 11px;
+  margin-top: 0px;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+}
+
+.c0:focus,
+.c0:hover {
+  color: #cccccc;
+  fill: #cccccc;
+}
+
+.c0:active {
+  color: #333333;
+  fill: #333333;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width:40.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:48.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:64.0625em) {
+  .c0 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+  }
+}
+
+<p
+  class="c0"
+>
+  color text
+</p>
+`;
+
 exports[`it render default text 1`] = `
 .c0 {
   display: block;
