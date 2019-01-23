@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it accepts inputProps 1`] = `
+.c0 {
+  position: relative;
+  margin-top: 16px;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c1 {
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 9px 12px 10px 12px;
+  max-height: 40px;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  box-shadow: none;
+  color: #000000;
+  border-color: #cccccc;
+  background-color: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.c1::-webkit-input-placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1::-moz-placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1:-ms-input-placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1::placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1:focus {
+  border-color: #22cc88;
+}
+
+.c1:focus::-webkit-input-placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+.c1:focus::-moz-placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+.c1:focus:-ms-input-placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+.c1:focus::placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+<div
+  class="c0"
+>
+  <input
+    class="c1"
+    name="test name"
+    placeholder="test placeholde"
+    required=""
+    type="text"
+    value="test value"
+  />
+</div>
+`;
+
+exports[`it renders default input 1`] = `
+.c0 {
+  position: relative;
+  margin-top: 16px;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c1 {
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 9px 12px 10px 12px;
+  max-height: 40px;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  box-shadow: none;
+  color: #000000;
+  border-color: #cccccc;
+  background-color: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.c1::-webkit-input-placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1::-moz-placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1:-ms-input-placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1::placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1:focus {
+  border-color: #22cc88;
+}
+
+.c1:focus::-webkit-input-placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+.c1:focus::-moz-placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+.c1:focus:-ms-input-placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+.c1:focus::placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+<div
+  class="c0"
+>
+  <input
+    class="c1"
+    type="text"
+  />
+</div>
+`;

@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it accepts prop checked 1`] = `
+.c0 {
+  position: relative;
+  margin-top: 16px;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c1 {
+  display: none;
+  visibility: hidden;
+  float: left;
+  margin-right: 16px;
+}
+
+.c2 {
+  font-size: 14px;
+  display: block;
+  margin: 0 0 12px 12px;
+  padding-left: 16px;
+  min-height: 12px;
+  text-align: left;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.c2:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+.c2:before {
+  border-color: #22cc88;
+  background-color: #22cc88;
+  content: ' ';
+  display: table;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.685 6.772a.717.717 0 0 0 1.037 0l5.06-5.205A.733.733 0 0 0 8.76.522L8.43.213a.765.765 0 0 0-1.06.025L3.213 4.526 1.632 2.89a.763.763 0 0 0-1.063-.028l-.329.309a.73.73 0 0 0-.026 1.045l2.471 2.556z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-position: center center;
+  background-size: 9px 7px;
+  background-repeat: no-repeat;
+  content: '';
+  -webkit-transition: -webkit-transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+  -webkit-transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+  transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+}
+
+<div
+  class="c0"
+>
+  <input
+    checked=""
+    class="c1"
+    type="checkbox"
+  />
+  <label
+    class="c2"
+  >
+    Missing label
+  </label>
+</div>
+`;
+
+exports[`it renders default checkbox 1`] = `
+.c0 {
+  position: relative;
+  margin-top: 16px;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c1 {
+  display: none;
+  visibility: hidden;
+  float: left;
+  margin-right: 16px;
+}
+
+.c2 {
+  font-size: 14px;
+  display: block;
+  margin: 0 0 12px 12px;
+  padding-left: 16px;
+  min-height: 12px;
+  text-align: left;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.c2:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+.c2:before {
+  border-color: #cccccc;
+  background-color: #ffffff;
+  content: ' ';
+  display: table;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.685 6.772a.717.717 0 0 0 1.037 0l5.06-5.205A.733.733 0 0 0 8.76.522L8.43.213a.765.765 0 0 0-1.06.025L3.213 4.526 1.632 2.89a.763.763 0 0 0-1.063-.028l-.329.309a.73.73 0 0 0-.026 1.045l2.471 2.556z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-position: center center;
+  background-size: 0;
+  background-repeat: no-repeat;
+  content: '';
+  -webkit-transition: -webkit-transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+  -webkit-transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+  transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+}
+
+<div
+  class="c0"
+>
+  <input
+    class="c1"
+    id="missingName"
+    name="missingName"
+    type="checkbox"
+  />
+  <label
+    class="c2"
+    for="missingName"
+  >
+    Missing label
+  </label>
+</div>
+`;
+
+exports[`onChange is triggered properly 1`] = `
+.c0 {
+  position: relative;
+  margin-top: 16px;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c1 {
+  display: none;
+  visibility: hidden;
+  float: left;
+  margin-right: 16px;
+}
+
+.c2 {
+  font-size: 14px;
+  display: block;
+  margin: 0 0 12px 12px;
+  padding-left: 16px;
+  min-height: 12px;
+  text-align: left;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.c2:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+.c2:before {
+  border-color: #22cc88;
+  background-color: #22cc88;
+  content: ' ';
+  display: table;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.685 6.772a.717.717 0 0 0 1.037 0l5.06-5.205A.733.733 0 0 0 8.76.522L8.43.213a.765.765 0 0 0-1.06.025L3.213 4.526 1.632 2.89a.763.763 0 0 0-1.063-.028l-.329.309a.73.73 0 0 0-.026 1.045l2.471 2.556z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-position: center center;
+  background-size: 9px 7px;
+  background-repeat: no-repeat;
+  content: '';
+  -webkit-transition: -webkit-transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+  -webkit-transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+  transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+}
+
+<div
+  class="c0"
+>
+  <input
+    checked=""
+    class="c1"
+    type="checkbox"
+  />
+  <label
+    class="c2"
+  >
+    Missing label
+  </label>
+</div>
+`;

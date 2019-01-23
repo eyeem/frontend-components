@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders default radio group with 2 options 1`] = `
+.c0 {
+  position: relative;
+  margin-top: 16px;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c2 {
+  display: none;
+  visibility: hidden;
+  float: left;
+  margin-right: 16px;
+}
+
+.c1 {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.c3:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 5px solid #22cc88;
+  border-radius: 12px;
+  -webkit-transition: border-color 0.15s ease-out;
+  transition: border-color 0.15s ease-out;
+  content: '';
+}
+
+.c4 {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.c4:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #999999;
+  border-radius: 12px;
+  -webkit-transition: border-color 0.15s ease-out;
+  transition: border-color 0.15s ease-out;
+  content: '';
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <input
+      checked=""
+      class="c2"
+      id="undefined_firstValue"
+      type="radio"
+      value="firstValue"
+    />
+    <label
+      class="c3"
+      for="undefined_firstValue"
+    >
+      firstText
+    </label>
+  </div>
+  <div
+    class="c1"
+  >
+    <input
+      class="c2"
+      id="undefined_secondValue"
+      type="radio"
+      value="secondValue"
+    />
+    <label
+      class="c4"
+      for="undefined_secondValue"
+    >
+      secondText
+    </label>
+  </div>
+</div>
+`;
