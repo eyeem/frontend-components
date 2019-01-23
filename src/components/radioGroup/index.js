@@ -26,7 +26,7 @@ const RadioRow = styled.div`
   )};
 `;
 
-const border = props => {
+const border = (props: { checked: boolean, error: boolean }) => {
   if (props.error) {
     return css`1px solid ${fromInternalTheme('colors.solidColors.red')}`;
   }
@@ -71,7 +71,7 @@ type Props = {
     name: string,
     value: string
   },
-  errorMessage: string,
+  errorMessage?: string,
   formRow?: boolean,
   options: Array<{
     value: string,
@@ -115,6 +115,7 @@ function RadioGroup(props: Props) {
 }
 
 RadioGroup.defaultProps = {
+  errorMessage: null,
   inputProps: {
     name: 'missingName'
   },

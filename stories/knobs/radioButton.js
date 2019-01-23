@@ -1,6 +1,4 @@
-import _ from 'lodash';
-import React from 'react';
-import { boolean, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import RadioGroup from '../../src/components/radioGroup';
 import { makeKnobsFromDefaultProps } from './helpers';
 
