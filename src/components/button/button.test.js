@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import _get from 'lodash/get';
 
 import { render, getByText, cleanup, fireEvent } from 'react-testing-library';
 
@@ -46,7 +46,7 @@ test('it accepts property color with predefined eyeem color', () => {
   );
   const component = container.firstChild;
   const colorSelector = buttonColors[TESTING_COLOR].bgRegular;
-  const backgroundColor = _.get(colors, colorSelector);
+  const backgroundColor = _get(colors, colorSelector);
   expect(component).toHaveStyleRule('background-color', backgroundColor);
   expect(component).toMatchSnapshot();
 });
@@ -57,7 +57,7 @@ test('it changes color on hover', () => {
   );
   const component = container.firstChild;
   const colorSelector = buttonColors[TESTING_COLOR].bgHover;
-  const hoverColor = _.get(colors, colorSelector);
+  const hoverColor = _get(colors, colorSelector);
   expect(component).toHaveStyleRule('background-color', hoverColor, {
     modifier: ':hover'
   });

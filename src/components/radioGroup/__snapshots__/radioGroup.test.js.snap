@@ -19,7 +19,7 @@ exports[`it renders default radio group with 2 options 1`] = `
 
 .c1 {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 
 .c1:last-child {
@@ -30,13 +30,14 @@ exports[`it renders default radio group with 2 options 1`] = `
   position: relative;
   padding-left: 24px;
   cursor: pointer;
+  display: block;
   font-size: 14px;
   line-height: 22px;
 }
 
 .c3:before {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   display: block;
   width: 16px;
@@ -52,13 +53,14 @@ exports[`it renders default radio group with 2 options 1`] = `
   position: relative;
   padding-left: 24px;
   cursor: pointer;
+  display: block;
   font-size: 14px;
   line-height: 22px;
 }
 
 .c4:before {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   display: block;
   width: 16px;

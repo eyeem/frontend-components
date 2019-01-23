@@ -9,8 +9,7 @@ function PrizeIcon(props: { size?: number, className: string, id: string }) {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 13 13"
-    >
+      viewBox="0 0 13 13">
       <g stroke="none" strokeWidth="1" fillRule="evenodd">
         <g transform="translate(-4450.000000, -288.000000)">
           <g transform="translate(4430.000000, 284.000000)">

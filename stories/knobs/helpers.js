@@ -1,5 +1,7 @@
+import _reduce from 'lodash/reduce';
+
 const knobPropsFactory = (knobs, getKnobTypeForProp) =>
-  _.reduce(
+  _reduce(
     knobs,
     (result, value, key) => {
       const { knobFunction, args } = getKnobTypeForProp(key, value);
@@ -12,7 +14,7 @@ const knobPropsFactory = (knobs, getKnobTypeForProp) =>
   );
 
 const makeKnobsFromDefaultProps = (defaultProps, getOptionsForProp) =>
-  _.reduce(
+  _reduce(
     defaultProps,
     (result, val, key) => {
       result[key] = {

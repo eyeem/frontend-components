@@ -9,8 +9,7 @@ function AlertIcon(props: { size?: number, className: string, id: string }) {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 20 20"
-    >
+      viewBox="0 0 20 20">
       <g stroke="none" strokeWidth="1" fillRule="evenodd">
         <g transform="translate(-4066.000000, -284.000000)">
           <g transform="translate(4067.000000, 285.000000)">

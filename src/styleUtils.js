@@ -1,5 +1,5 @@
 /* @flow */
-import _ from 'lodash';
+import _get from 'lodash/get';
 import { css } from 'styled-components';
 import * as theme from './theme';
 
@@ -30,23 +30,24 @@ const typeToFontFamily = {
   light: '"Sailec Light", sans-serif'
 };
 
+// eslint-disable-next-line
 export const font = (type: 'regular' | 'bold' = 'regular' | 'light') => `
   font-weight: 300;
   font-family: ${typeToFontFamily[type]};
 `;
 
-export const fromInternalTheme = (selector: string) => (props: {}) =>
-  _.get(theme, selector);
+export const fromInternalTheme = (selector: string) => () =>
+  _get(theme, selector);
 export const fromTheme = (selector: string) => (props: { theme: {} }) =>
-  _.get(props.theme, selector);
+  _get(props.theme, selector);
 export const fromProps = (selector: string) => (props: {}) =>
-  _.get(props, selector);
+  _get(props, selector);
 export const fromPropsTernary = (
   selector: string,
   ifCase: string,
   elseCase: string
 ) => (props: {}) => {
-  if (_.get(props, selector)) {
+  if (_get(props, selector)) {
     return ifCase;
   }
   return elseCase;
@@ -63,9 +64,9 @@ export const alignItems = (
     : '';
 
 export const propsColorFromTheme = (selector: string) => (props: {}) =>
-  fromInternalTheme(`colors.${_.get(props, selector)}`)(props);
+  fromInternalTheme(`colors.${_get(props, selector)}`)(props);
 
-export const isRgbaColor = (color: string) => _.startsWith(color, 'rgba');
+export const isRgbaColor = (color: string) => color && color.startsWith('rgba');
 
 const getRGBComponents = (color: string) => {
   if (isRgbaColor(color)) {

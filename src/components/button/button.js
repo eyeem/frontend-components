@@ -57,8 +57,7 @@ function Button(props: {
       colors={getButtonColorSet(props.color)}
       title={props.title}
       htmlFor={props.htmlFor}
-      type={props.type}
-    >
+      type={props.type}>
       {props.icon && (
         <StyledIcon
           moveIconToLeft={props.moveIconToLeft}

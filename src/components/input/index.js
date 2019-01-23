@@ -136,8 +136,7 @@ class Input extends React.Component<Props, State> {
         {this.props.inputProps.type === 'password' && (
           <InnerHint
             onClick={this.togglePassword}
-            className="g_input_innerHint"
-          >
+            className="g_input_innerHint">
             {this.state.showPassword ? 'hide' : 'show'}
           </InnerHint>
         )}

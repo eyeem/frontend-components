@@ -13,8 +13,7 @@ function BackToTopIcon(props: {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 40 40"
-    >
+      viewBox="0 0 40 40">
       <g stroke="none" strokeWidth="1" fillRule="evenodd">
         <g transform="translate(-2615.000000, -111.000000)">
           <g transform="translate(2615.000000, 111.000000)">

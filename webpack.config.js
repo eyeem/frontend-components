@@ -1,4 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 // Constant with our paths
 const paths = {
@@ -15,6 +18,7 @@ module.exports = {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
+  mode: 'production',
   module: {
     rules: [
       {
@@ -38,5 +42,19 @@ module.exports = {
       amd: '_',
       root: '_'
     }
-  }
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        parallel: true
+      })
+    ]
+  },
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false
+    })
+  ]
 };

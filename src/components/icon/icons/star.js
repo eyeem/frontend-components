@@ -9,8 +9,7 @@ function StarIcon(props: { size?: number, className: string, id: string }) {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 14 14"
-    >
+      viewBox="0 0 14 14">
       <g stroke="none" strokeWidth="1" fillRule="evenodd">
         <g transform="translate(-2997.000000, -452.000000)">
           <g transform="translate(2998.000000, 453.000000)">

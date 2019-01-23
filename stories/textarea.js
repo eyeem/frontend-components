@@ -14,7 +14,5 @@ storiesOf('Textarea', module)
   .add('with controllable props', () => {
     const props = knobPropsFactory(knobs, getKnobTypeForProp);
 
-    return (
-      <Textarea {...props}/>
-    );
+    return <Textarea {...props} />;
   });

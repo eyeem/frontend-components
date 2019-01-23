@@ -14,11 +14,5 @@ storiesOf('Checkbox', module)
   .add('with controllable props', () => {
     const props = knobPropsFactory(knobs, getKnobTypeForProp);
 
-    return (
-      <Checkbox {...props}  label={'some text'}/>
-    );
+    return <Checkbox {...props} label="some text" />;
   });
-
-
-
- 

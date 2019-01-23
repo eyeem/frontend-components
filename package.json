@@ -4,8 +4,8 @@
   "description": "Shareable React Components for Frontend Projects at EyeEm",
   "main": "dist/index.js",
   "scripts": {
-    "watch": "node_modules/.bin/webpack --config webpack.config.js --watch",
-    "build": "node_modules/.bin/webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.js",
     "test": "jest",
     "test:update": "jest --updateSnapshot",
     "prepublish": "npm run build",
@@ -40,7 +40,7 @@
     "@storybook/addon-info": "^3.4.11",
     "@storybook/addon-knobs": "^3.4.11",
     "@storybook/addon-options": "^3.4.11",
-    "@storybook/react": "^3.4.11",
+    "@storybook/react": "^4.2.0-alpha.11",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
@@ -61,7 +61,10 @@
     "react-dom": "^16.6.0",
     "react-testing-library": "^5.4.1",
     "styled-components": "^4.0.0",
-    "webpack": "^3.6.0"
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.29.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -75,5 +78,9 @@
       "pre-commit": "lint-staged",
       "pre-push": "npm run test"
     }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "jsxBracketSameLine": true
   }
 }
