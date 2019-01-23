@@ -4,64 +4,64 @@ import styled from 'styled-components';
 
 import { fromInternalTheme } from '../../styleUtils';
 
-import StarIcon from './icons/star.js';
-import Star2Icon from './icons/star2.js';
-import Star3Icon from './icons/star3.js';
-import Star3IconPlus from './icons/star3Plus.js';
-import Star3IconMinus from './icons/star3Minus.js';
-import ImageIcon from './icons/image.js';
-import MailIcon from './icons/mail.js';
-import PhoneIcon from './icons/phone.js';
-import CloseIcon from './icons/close.js';
-import TimingIcon from './icons/timing.js';
-import PrizeIcon from './icons/prize.js';
-import RemoveIcon from './icons/remove.js';
-import AlertIcon from './icons/alert.js';
-import FlagIcon from './icons/flag.js';
-import EmbedIcon from './icons/embed.js';
-import DeleteIcon from './icons/delete.js';
-import BackToTopIcon from './icons/backToTop.js';
-import ContactEyeEmIcon from './icons/contactEyeEm.js';
-import ContactFacebookIcon from './icons/contactFacebook.js';
-import ContactTwitterIcon from './icons/contactTwitter.js';
-import ContactTumblrIcon from './icons/contactTumblr.js';
+import StarIcon from './icons/star';
+import Star2Icon from './icons/star2';
+import Star3Icon from './icons/star3';
+import Star3IconPlus from './icons/star3Plus';
+import Star3IconMinus from './icons/star3Minus';
+import ImageIcon from './icons/image';
+import MailIcon from './icons/mail';
+import PhoneIcon from './icons/phone';
+import CloseIcon from './icons/close';
+import TimingIcon from './icons/timing';
+import PrizeIcon from './icons/prize';
+import RemoveIcon from './icons/remove';
+import AlertIcon from './icons/alert';
+import FlagIcon from './icons/flag';
+import EmbedIcon from './icons/embed';
+import DeleteIcon from './icons/delete';
+import BackToTopIcon from './icons/backToTop';
+import ContactEyeEmIcon from './icons/contactEyeEm';
+import ContactFacebookIcon from './icons/contactFacebook';
+import ContactTwitterIcon from './icons/contactTwitter';
+import ContactTumblrIcon from './icons/contactTumblr';
 
-import DownloadIcon from './icons/download.js';
-import UploadIcon from './icons/upload.js';
-import CheckmarkIcon from './icons/checkmark.js';
-import CartIcon from './icons/cart.js';
-import CompDownloadIcon from './icons/compDownload.js';
-import AddToLightboxIcon from './icons/addToLightbox.js';
-import IsInLightboxIcon from './icons/isInLightbox.js';
-import LightboxIcon from './icons/lightbox.js';
-import LikeIcon from './icons/like.js';
-import CommentIcon from './icons/comment.js';
-import DragNDrop from './icons/dragndrop.js';
-import ShareIcon from './icons/share.js';
-import EditIcon from './icons/edit.js';
+import DownloadIcon from './icons/download';
+import UploadIcon from './icons/upload';
+import UpgradeIcon from './icons/upgrade';
+import CheckmarkIcon from './icons/checkmark';
+import CartIcon from './icons/cart';
+import CompDownloadIcon from './icons/compDownload';
+import AddToLightboxIcon from './icons/addToLightbox';
+import IsInLightboxIcon from './icons/isInLightbox';
+import LightboxIcon from './icons/lightbox';
+import LikeIcon from './icons/like';
+import CommentIcon from './icons/comment';
+import DragNDrop from './icons/dragndrop';
+import ShareIcon from './icons/share';
+import EditIcon from './icons/edit';
 
-import FacebookIcon from './icons/facebook.js';
-import DropboxIcon from './icons/dropbox.js';
-import GoogleDriveIcon from './icons/googledrive.js';
-import FlickrIcon from './icons/flickr.js';
-import PicasaIcon from './icons/picasa.js';
-import InstagramIcon from './icons/instagram.js';
-import PaypalIcon from './icons/paypal.js';
+import FacebookIcon from './icons/facebook';
+import DropboxIcon from './icons/dropbox';
+import GoogleDriveIcon from './icons/googledrive';
+import FlickrIcon from './icons/flickr';
+import PicasaIcon from './icons/picasa';
+import InstagramIcon from './icons/instagram';
+import PaypalIcon from './icons/paypal';
 
-import PlusIcon from './icons/plus.js';
-import LeftArrow from './icons/leftArrow.js';
-import LeftArrow2 from './icons/leftArrow2.js';
-import RightArrow from './icons/rightArrow.js';
-import RightArrow2 from './icons/rightArrow2.js';
-import Terms from './icons/terms.js';
-import Market from './icons/market.js';
-import Growth from './icons/growth.js';
-import EyeEmVision from './icons/eyeEmVision.js';
-import Trophy from './icons/trophy.js';
-import TrophyPlus from './icons/trophyPlus.js';
-import TrophyMinus from './icons/trophyMinus.js';
-
-import UserFollow from './icons/userFollow.js';
+import PlusIcon from './icons/plus';
+import LeftArrow from './icons/leftArrow';
+import LeftArrow2 from './icons/leftArrow2';
+import RightArrow from './icons/rightArrow';
+import RightArrow2 from './icons/rightArrow2';
+import Terms from './icons/terms';
+import Market from './icons/market';
+import Growth from './icons/growth';
+import EyeEmVision from './icons/eyeEmVision';
+import Trophy from './icons/trophy';
+import TrophyPlus from './icons/trophyPlus';
+import TrophyMinus from './icons/trophyMinus';
+import UserFollow from './icons/userFollow';
 
 const icons = {
   star: StarIcon,
@@ -91,6 +91,7 @@ const icons = {
   compDownload: CompDownloadIcon,
   download: DownloadIcon,
   upload: UploadIcon,
+  upgrade: UpgradeIcon,
   edit: EditIcon,
   dragndrop: DragNDrop,
   addToLightbox: AddToLightboxIcon,
@@ -151,7 +152,9 @@ function Icon(props: {
 }
 
 Icon.defaultProps = {
-  color: undefined
+  color: undefined,
+  type: undefined,
+  size: 16
 };
 
 export default Icon;

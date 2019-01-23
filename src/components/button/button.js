@@ -12,9 +12,10 @@ function Button(props: {
   title?: string,
   htmlFor?: string,
 
-  // html tag name this button will render to
+  /** html tag name this button will render to */
   renderAs?: string,
 
+  /** Theme color to render */
   color: string,
   size: string,
   display: string,
@@ -26,12 +27,11 @@ function Button(props: {
   spinner?: boolean,
   fullWidth?: boolean,
   moveIconToLeft?: boolean,
-  // eslint-disable-next-line react/no-unused-prop-types
   'data-test-id'?: string,
 
   onClick?: Function,
 
-  // use only when renderAs === 'a'
+  /** use only when renderAs === 'a' */
   href?: string,
   target?: string,
 
@@ -40,7 +40,6 @@ function Button(props: {
   return (
     <StyledButton
       renderAs={props.renderAs}
-      // eslint-disable-next-line react/prop-types
       data-test-id={props['data-test-id']}
       onClick={props.onClick}
       display={props.display}
@@ -58,7 +57,7 @@ function Button(props: {
       colors={getButtonColorSet(props.color)}
       title={props.title}
       htmlFor={props.htmlFor}
-    >
+      type={props.type}>
       {props.icon && (
         <StyledIcon
           moveIconToLeft={props.moveIconToLeft}
@@ -81,7 +80,8 @@ Button.defaultProps = {
   spinner: false,
   fullWidth: false,
   moveIconToLeft: false,
-  renderAs: 'button'
+  renderAs: 'button',
+  progress: 100
 };
 
 export default Button;

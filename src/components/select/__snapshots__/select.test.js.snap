@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders default select with 2 options 1`] = `
+.c0 {
+  position: relative;
+  margin-top: 16px;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c1 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  font-family: "Sailec Regular",sans-serif;
+  padding: 9px 12px 10px 12px;
+  max-height: 40px;
+  width: 100%;
+  box-shadow: none;
+  color: #000000;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h10L5.028 5 0 0z' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-position: center right 16px;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  border-color: #cccccc;
+  background-color: #ffffff;
+}
+
+.c1::-webkit-input-placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1::-moz-placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1:-ms-input-placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1::placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.c1:focus {
+  border-color: #22cc88;
+}
+
+.c1:focus::-webkit-input-placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+.c1:focus::-moz-placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+.c1:focus:-ms-input-placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+.c1:focus::placeholder {
+  color: rgba(0,0,0,.2);
+}
+
+<div
+  class="c0"
+>
+  <select
+    class="c1"
+  >
+    <option
+      value="firstValue"
+    >
+      firstText
+    </option>
+    <option
+      value="secondValue"
+    >
+      secondText
+    </option>
+  </select>
+</div>
+`;

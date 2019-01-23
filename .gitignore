@@ -22,6 +22,7 @@ node_modules/
 .env.production.local
 
 build
+.out
 
 # Bundle size report
 dist/report.html

@@ -41,7 +41,10 @@ const background = (props: {
   }
   return css`
     border-color: ${fromInternalTheme('colors.greys.grey4')};
-    background-color: ${fromInternalTheme('colors.whites.white')};
+    background-color: ${p =>
+      p.disabled
+        ? fromInternalTheme('colors.lightColors.lightRed')
+        : fromInternalTheme('colors.whites.white')};
   `;
 };
 
@@ -83,7 +86,12 @@ const InnerHint = styled.p`
 `;
 
 declare type Props = {
-  inputProps: {},
+  inputProps: {
+    type?: string,
+    disabled?: boolean,
+    placeholder?: string,
+    'data-test-id'?: string
+  },
   pending?: boolean,
   errorMessage?: string,
   showCheckmark?: boolean,
@@ -128,8 +136,7 @@ class Input extends React.Component<Props, State> {
         {this.props.inputProps.type === 'password' && (
           <InnerHint
             onClick={this.togglePassword}
-            className="g_input_innerHint"
-          >
+            className="g_input_innerHint">
             {this.state.showPassword ? 'hide' : 'show'}
           </InnerHint>
         )}
