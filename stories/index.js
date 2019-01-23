@@ -1,7 +1,7 @@
 import React from 'react';
 import backgrounds from '@storybook/addon-backgrounds';
-import { storiesOf, addDecorator } from '@storybook/react';
-import { withInfo, setDefaults } from '@storybook/addon-info';
+import { addDecorator } from '@storybook/react';
+import { setDefaults } from '@storybook/addon-info';
 import { setOptions } from '@storybook/addon-options';
 import styled, { createGlobalStyle } from 'styled-components';
 import globalStyles from '../src/globalStyles';
@@ -13,8 +13,6 @@ const GlobalStyles = createGlobalStyle`
 
 const CenterStyles = styled.div`
   > div > div {
-    display: flex;
-    justify-content: center;
     margin-top: 100px;
     width: 100%;
   }

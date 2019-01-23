@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { textSizes, textTopMargins, textColors } from '../../styleConfig';
 
-import StyledText from './styledText.js';
+import StyledText from './styledText';
 
 function Text(props: {
   className: string,
@@ -17,18 +17,18 @@ function Text(props: {
   ellipsis?: boolean,
   noWrap?: boolean,
   underline?: boolean,
-  color: string,
-  size: string,
+  color?: string,
+  size?: string,
   /** CSS text-align property */
-  align: string,
-  display: string,
-  alignItems?: string,
+  align?: string,
+  display?: string,
+  alignItems: string,
   margin?: number,
-  font: string,
+  font?: string,
   fontStyle: string,
-  topMargin: string,
+  topMargin?: string,
 
-  'data-test-id'?: string,
+  'data-test-id': string,
   onClick?: Function,
   children: React.Node,
 
@@ -36,7 +36,7 @@ function Text(props: {
   href?: string,
   target?: string,
 
-  cursor?: string
+  cursor: string
 }) {
   return (
     <StyledText
@@ -69,8 +69,7 @@ function Text(props: {
       ellipsis={props.ellipsis}
       noWrap={props.noWrap}
       underline={props.underline}
-      align={props.align}
-    >
+      align={props.align}>
       {props.children}
     </StyledText>
   );
@@ -88,7 +87,6 @@ Text.defaultProps = {
   margin: undefined,
   align: 'left',
   renderAs: 'p',
-  'data-test-id': undefined,
   onClick: undefined,
   target: undefined,
   href: undefined

@@ -1,7 +1,4 @@
-import _ from 'lodash';
-import React from 'react';
-import { selectV2, boolean, number } from '@storybook/addon-knobs';
-import { button } from '@storybook/addon-knobs/dist/react';
+import { selectV2, number } from '@storybook/addon-knobs';
 
 import { icons } from '../../src/styleConfig';
 import { colors } from '../../src/theme';
@@ -11,12 +8,13 @@ import { makeKnobsFromDefaultProps } from './helpers';
 const { defaultProps } = Icon;
 
 const colorsOptions = Object.keys(colors).reduce((acc, colorType) => {
-  Object.keys(colors[colorType]).forEach(
-    item =>
-      (acc[
-        `${colorType}.${item} - ${colors[colorType][item]}`
-      ] = `${colorType}.${item}`)
-  );
+  Object.keys(colors[colorType]).forEach(item => {
+    acc[
+      `${colorType}.${item} - ${colors[colorType][item]}`
+    ] = `${colorType}.${item}`;
+
+    return acc;
+  });
   return acc;
 }, {});
 
