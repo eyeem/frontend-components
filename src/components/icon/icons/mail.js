@@ -9,8 +9,7 @@ function MailIcon(props: { size?: number, className: string, id: string }) {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 16 16"
-    >
+      viewBox="0 0 16 16">
       <g stroke="none" strokeWidth="1" fillRule="evenodd">
         <g transform="translate(-2655.000000, -369.000000)">
           <g transform="translate(2615.000000, 111.000000)">

@@ -78,5 +78,9 @@
       "pre-commit": "lint-staged",
       "pre-push": "npm run test"
     }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "jsxBracketSameLine": true
   }
 }

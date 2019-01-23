@@ -9,8 +9,7 @@ function FlickrIcon(props: { size?: number, className: string, id: string }) {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 36 36"
-    >
+      viewBox="0 0 36 36">
       <g fill="none" fillRule="evenodd">
         <path
           d="M34.834 18.718c.068-.064.107-.153.107-.253 0-.196-.16-.356-.355-.356H17.832v8.91h8.91l8.092-8.302z"

@@ -8,8 +8,7 @@ function CommentIcon(props: { size?: number, className: string }) {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 16 16"
-    >
+      viewBox="0 0 16 16">
       <path d="M7 12H5V7H0V5h5V0h2v5h5v2H7z" />
     </svg>
   );

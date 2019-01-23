@@ -17,8 +17,7 @@ function InstagramIcon(props: {
       style={{
         enableBackground: 'new 0 0 551.034 551.034'
       }}
-      viewBox="-50 -50 670 670"
-    >
+      viewBox="-50 -50 670 670">
       <g>
         <linearGradient
           id="XMLID_2_"
@@ -27,8 +26,7 @@ function InstagramIcon(props: {
           y1="4.5714"
           x2="275.517"
           y2="549.7202"
-          gradientTransform="matrix(1 0 0 -1 0 554)"
-        >
+          gradientTransform="matrix(1 0 0 -1 0 554)">
           <stop offset="0" style={{ stopColor: '#E09B3D' }} />
           <stop offset="0.3" style={{ stopColor: '#C74C4D' }} />
           <stop offset="0.6" style={{ stopColor: '#C21975' }} />
@@ -51,8 +49,7 @@ function InstagramIcon(props: {
           y1="4.5714"
           x2="275.517"
           y2="549.7202"
-          gradientTransform="matrix(1 0 0 -1 0 554)"
-        >
+          gradientTransform="matrix(1 0 0 -1 0 554)">
           <stop offset="0" style={{ stopColor: '#E09B3D' }} />
           <stop offset="0.3" style={{ stopColor: '#C74C4D' }} />
           <stop offset="0.6" style={{ stopColor: '#C21975' }} />
@@ -72,8 +69,7 @@ function InstagramIcon(props: {
           y1="4.5714"
           x2="418.306"
           y2="549.7202"
-          gradientTransform="matrix(1 0 0 -1 0 554)"
-        >
+          gradientTransform="matrix(1 0 0 -1 0 554)">
           <stop offset="0" style={{ stopColor: '#E09B3D' }} />
           <stop offset="0.3" style={{ stopColor: '#C74C4D' }} />
           <stop offset="0.6" style={{ stopColor: '#C21975' }} />

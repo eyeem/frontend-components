@@ -13,8 +13,7 @@ function LeftArrowIcon(props: {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 5 8"
-    >
+      viewBox="0 0 5 8">
       <g stroke="none" strokeWidth="1" fillRule="evenodd">
         <g transform="translate(-200.000000, -1093.000000)">
           <path

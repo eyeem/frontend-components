@@ -13,8 +13,7 @@ function ContactTumblrIcon(props: {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 24 24"
-    >
+      viewBox="0 0 24 24">
       <g stroke="none" strokeWidth={1} fillRule="evenodd">
         <g transform="translate(-2762.000000, -199.000000)">
           <g transform="translate(2615.000000, 111.000000)" />
