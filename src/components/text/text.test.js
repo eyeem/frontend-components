@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import _get from 'lodash/get';
 
 import { render, cleanup, getByText } from 'react-testing-library';
 
@@ -31,7 +31,7 @@ test('it accepts property color', () => {
   const { container } = render(<Text color={TESTING_COLOR}>color text</Text>);
   const component = container.firstChild;
   const colorSelector = textColors[TESTING_COLOR].regular;
-  const color = _.get(colors, colorSelector);
+  const color = _get(colors, colorSelector);
   expect(component).toHaveStyleRule('color', color);
   expect(component).toMatchSnapshot();
 });
@@ -40,7 +40,7 @@ test('it changes color on hover', () => {
   const { container } = render(<Text color={TESTING_COLOR}>color text</Text>);
   const component = container.firstChild;
   const colorSelector = textColors[TESTING_COLOR].hover;
-  const color = _.get(colors, colorSelector);
+  const color = _get(colors, colorSelector);
   expect(component).toHaveStyleRule('color', color, { modifier: ':hover' });
   expect(component).toMatchSnapshot();
 });
@@ -49,7 +49,7 @@ test('it changes color on active', () => {
   const { container } = render(<Text color={TESTING_COLOR}>color text</Text>);
   const component = container.firstChild;
   const colorSelector = textColors[TESTING_COLOR].active;
-  const color = _.get(colors, colorSelector);
+  const color = _get(colors, colorSelector);
   expect(component).toHaveStyleRule('color', color, { modifier: ':active' });
   expect(component).toMatchSnapshot();
 });
