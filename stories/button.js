@@ -7,7 +7,7 @@ import { knobPropsFactory } from './knobs/helpers';
 import { knobs, getKnobTypeForProp } from './knobs/button';
 
 import Button from '../src/components/button';
-import StoryWrapper from '../src/Layout/StoryWrapper';
+import CenteredStoryWrapper from './decorators/centeredStoryWrapper';
 
 const knobText = {
   label: 'Child text',
@@ -15,7 +15,7 @@ const knobText = {
 };
 
 storiesOf('Button', module)
-  .addDecorator(story => <StoryWrapper>{story()}</StoryWrapper>)
+  .addDecorator(story => <CenteredStoryWrapper>{story()}</CenteredStoryWrapper>)
   .addDecorator((story, context) => withInfo('')(story)(context))
   .addDecorator(withKnobs)
   .add('with controllable props', () => {
