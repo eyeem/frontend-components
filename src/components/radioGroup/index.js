@@ -27,13 +27,13 @@ const RadioRow = styled.div`
 `;
 
 const border = props => {
-  let border = css`1px solid ${fromInternalTheme('colors.greys.grey3')}`;
+  let style = css`1px solid ${fromInternalTheme('colors.greys.grey3')}`;
   if (props.error) {
-    border = css`1px solid ${fromInternalTheme('colors.solidColors.red')}`;
+    style = css`1px solid ${fromInternalTheme('colors.solidColors.red')}`;
   } else if (props.checked) {
-    border = css`5px solid ${fromInternalTheme('colors.solidColors.green')}`;
+    style = css`5px solid ${fromInternalTheme('colors.solidColors.green')}`;
   }
-  return border;
+  return style;
 };
 
 const StyledLabel = styled.label`
@@ -64,18 +64,18 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-declare type Props = {
-  inputProps: {
+type Props = {
+  inputProps?: {
     name: string,
     value: string
   },
-  errorMessage?: string,
+  errorMessage: string,
   formRow?: boolean,
   options: Array<{
     value: string,
     text: string
   }>,
-  radioColumned?: boolean
+  radioColumned: boolean
 };
 
 const compareAsString = (val1: number | string, val2: number | string) =>
@@ -113,7 +113,6 @@ function RadioGroup(props: Props) {
 }
 
 RadioGroup.defaultProps = {
-  errorMessage: undefined,
   inputProps: {
     name: 'missingName'
   },
