@@ -27,13 +27,15 @@ const RadioRow = styled.div`
 `;
 
 const border = props => {
-  let style = css`1px solid ${fromInternalTheme('colors.greys.grey3')}`;
   if (props.error) {
-    style = css`1px solid ${fromInternalTheme('colors.solidColors.red')}`;
-  } else if (props.checked) {
-    style = css`5px solid ${fromInternalTheme('colors.solidColors.green')}`;
+    return css`1px solid ${fromInternalTheme('colors.solidColors.red')}`;
   }
-  return style;
+
+  if (props.checked) {
+    return css`5px solid ${fromInternalTheme('colors.solidColors.green')}`;
+  }
+
+  return css`1px solid ${fromInternalTheme('colors.greys.grey3')}`;
 };
 
 const StyledLabel = styled.label`
