@@ -50,6 +50,7 @@ setOptions({
 /* NOTE: Add all stories here. Use require() syntax so
          global style decorator applies.
 */
+require('./ui.all');
 require('./button');
 require('./input');
 require('./icon');
