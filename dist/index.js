@@ -4348,8 +4348,7 @@ function Text(props) {
       ellipsis: props.ellipsis,
       noWrap: props.noWrap,
       underline: props.underline,
-      align: props.align
-    },
+      align: props.align },
     props.children
   );
 }
@@ -4366,7 +4365,6 @@ Text.defaultProps = {
   margin: undefined,
   align: 'left',
   renderAs: 'p',
-  'data-test-id': undefined,
   onClick: undefined,
   target: undefined,
   href: undefined
