@@ -4,7 +4,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import { knobPropsFactory } from './knobs/helpers';
-import { knobs, getKnobTypeForProp } from './knobs/button';
+import { knobs, getKnobTypeForProp } from './knobs/buttonv2';
 import Themer from './themer';
 
 import Buttonv2 from '../src/components/buttonv2';

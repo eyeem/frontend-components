@@ -1,7 +1,7 @@
 /* @flow */
 import * as React from 'react';
 
-import { buttonSizes } from '../../styleConfig';
+import { buttonv2Sizes } from '../../styleConfig';
 import StyledButtonv2 from './styledButtonv2';
 import StyledIcon from './styledIcon';
 
@@ -45,7 +45,7 @@ function Buttonv2(props: {
       fill={props.fill}
       id={props.id}
       className={props.className}
-      sizeValues={buttonSizes[props.size]}
+      sizeValues={buttonv2Sizes[props.size]}
       disabled={props.disabled}
       fullWidth={props.fullWidth}
       moveIconToLeft={props.moveIconToLeft}
@@ -55,7 +55,7 @@ function Buttonv2(props: {
       {props.icon && (
         <StyledIcon
           moveIconToLeft={props.moveIconToLeft}
-          size={buttonSizes[props.size].iconSize}
+          size={buttonv2Sizes[props.size].iconSize}
           type={props.icon}
           marginRight={props.children ? '8px' : 0}
         />
