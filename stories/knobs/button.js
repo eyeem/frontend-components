@@ -1,13 +1,10 @@
-import _ from 'lodash';
-import React from 'react';
 import { selectV2, boolean, number } from '@storybook/addon-knobs';
-import { button } from '@storybook/addon-knobs/dist/react';
 
-import Button from '../../src/components/button';
-import { buttonColors, buttonSizes, icons } from '../../src/styleConfig';
+import Buttonv2 from '../../src/components/buttonv2';
+import { buttonColors, buttonSizes, icons, fills } from '../../src/styleConfig';
 import { makeKnobsFromDefaultProps } from './helpers';
 
-const { defaultProps } = Button;
+const { defaultProps } = Buttonv2;
 
 const colorsOptions = Object.keys(buttonColors).reduce((acc, curr) => {
   acc[curr] = curr;
@@ -27,6 +24,12 @@ const sizesOptions = Object.keys(buttonSizes).reduce((acc, curr) => {
   return acc;
 }, {});
 
+const fillOptions = fills.reduce((acc, curr) => {
+  acc[curr] = curr;
+
+  return acc;
+}, {});
+
 const getOptionsForProp = prop => {
   switch (prop) {
     case 'color':
@@ -37,6 +40,9 @@ const getOptionsForProp = prop => {
 
     case 'size':
       return sizesOptions;
+
+    case 'fill':
+      return fillOptions;
 
     case 'progress':
       return {
@@ -54,6 +60,12 @@ const getOptionsForProp = prop => {
 const getKnobTypeForProp = (prop, value) => {
   switch (prop) {
     case 'color':
+      return {
+        knobFunction: selectV2,
+        args: [value.label, value.options, value.defaultValue]
+      };
+
+    case 'fill':
       return {
         knobFunction: selectV2,
         args: [value.label, value.options, value.defaultValue]

@@ -527,3 +527,5 @@ export const icons = {
     'star3'
   ]
 };
+
+export const fills = ['solid', 'outline'];
