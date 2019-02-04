@@ -3,6 +3,7 @@ import * as React from 'react';
 
 import { buttonSizes } from '../../styleConfig';
 import StyledButtonv2 from './styledButtonv2';
+import StyledIcon from './styledIcon';
 
 function Buttonv2(props: {
   className: string,
@@ -15,12 +16,11 @@ function Buttonv2(props: {
 
   size?: string,
   display?: string,
+  icon?: string | false,
   alignItems: string,
   fill?: 'outline' | 'solid',
 
-  progress?: number,
   disabled?: boolean,
-  spinner?: boolean,
   fullWidth?: boolean,
   moveIconToLeft?: boolean,
   'data-test-id': string,
@@ -44,16 +44,22 @@ function Buttonv2(props: {
       target={props.target}
       fill={props.fill}
       id={props.id}
-      progress={props.progress}
       className={props.className}
       sizeValues={buttonSizes[props.size]}
       disabled={props.disabled}
-      spinner={props.spinner}
       fullWidth={props.fullWidth}
       moveIconToLeft={props.moveIconToLeft}
       title={props.title}
       htmlFor={props.htmlFor}
       type={props.type}>
+      {props.icon && (
+        <StyledIcon
+          moveIconToLeft={props.moveIconToLeft}
+          size={buttonSizes[props.size].iconSize}
+          type={props.icon}
+          marginRight={props.children ? '8px' : 0}
+        />
+      )}
       {props.children}
     </StyledButtonv2>
   );
@@ -63,12 +69,11 @@ Buttonv2.defaultProps = {
   size: 'default',
   fill: 'solid',
   display: 'inline-block',
+  icon: false,
   disabled: false,
-  spinner: false,
   fullWidth: false,
   moveIconToLeft: false,
-  renderAs: 'button',
-  progress: 100
+  renderAs: 'button'
 };
 
 export default Buttonv2;

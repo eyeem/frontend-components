@@ -1,14 +1,13 @@
 /* @flow */
 import theme from 'styled-theming';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import createComponentFromTagProp from 'react-create-component-from-tag-prop';
 import { colors } from '../../theme';
 import {
   font,
   fromProps,
   alignItems,
-  fromPropsTernary,
-  propsColorFromTheme
+  fromPropsTernary
 } from '../../styleUtils';
 
 const ComponentFromTagProp = createComponentFromTagProp({
@@ -26,77 +25,6 @@ const ComponentFromTagProp = createComponentFromTagProp({
     'alignItems'
   ]
 });
-
-const disabled = props => {
-  if (props.disabled || (props.progress && props.progress < 100)) {
-    return css`
-      cursor: default;
-      border-color: ${propsColorFromTheme('colors.borderDisabled')};
-      background-color: ${propsColorFromTheme('colors.bgDisabled')};
-      color: ${propsColorFromTheme('colors.fontDisabled')};
-      fill: ${propsColorFromTheme('colors.fontDisabled')};
-      &:focus,
-      &:hover {
-        color: ${propsColorFromTheme('colors.fontDisabled')};
-        fill: ${propsColorFromTheme('colors.fontDisabled')};
-        background-color: ${propsColorFromTheme('colors.bgDisabled')};
-        border-color: ${propsColorFromTheme('colors.borderDisabled')};
-      }
-      &:active {
-        background-color: ${propsColorFromTheme('colors.bgDisabled')};
-        border-color: ${propsColorFromTheme('colors.borderDisabled')};
-      }
-    `;
-  }
-  return '';
-};
-
-const progress = props => {
-  if (props.progress && props.progress < 100) {
-    return css`
-      background-image: linear-gradient(
-        to right,
-        ${propsColorFromTheme('colors.bgRegular')} 0%,
-        ${propsColorFromTheme('colors.bgRegular')} ${fromProps('progress')}%,
-        ${propsColorFromTheme('colors.bgDisabled')} ${fromProps('progress')}%,
-        ${propsColorFromTheme('colors.bgDisabled')} 100%
-      );
-    `;
-  }
-  return '';
-};
-
-const spinner = props => {
-  if (props.spinner) {
-    const spinnerImg =
-      props.colors &&
-      props.colors.bgRegular &&
-      ['ghost', 'white', 'trans'].filter(
-        item => props.colors.bgRegular.indexOf(item) !== -1
-      ).length > 0
-        ? 'spinner-32-black.png'
-        : 'spinner-32-white.png';
-
-    return `
-      overflow: hidden;
-      &:before {
-        display: inline-block;
-        margin-bottom: -2px;
-        margin-right: ${props.children ? '12px' : '0'};
-
-        width: 16px;
-        height: 16px;
-        background-image: url("/node-static/img/${spinnerImg}");
-        background-position: center;
-        background-size: 16px 16px;
-        background-repeat: no-repeat;
-        content: "";
-        animation: spin .7s linear infinite;
-      }
-    `;
-  }
-  return '';
-};
 
 const backgroundColorDefault = theme.variants('mode', 'fill', {
   outline: {
@@ -247,7 +175,7 @@ const StyledButtonv2 = styled(ComponentFromTagProp)`
   border-style: solid;
   background-color: ${backgroundColorDefault};
   color: ${textColorDefault};
-  fill: ${propsColorFromTheme('colors.fontRegular')};
+  fill: ${textColorDefault};
   ${props => alignItems(props.alignItems)}
   vertical-align: top;
   text-decoration: none;
@@ -259,14 +187,15 @@ const StyledButtonv2 = styled(ComponentFromTagProp)`
   &:focus,
   &:hover {
     color: ${textColorHover};
-    fill: ${propsColorFromTheme('colors.fontHover')};
+    fill: ${textColorHover};
     background-color: ${backgroundColorHover};
     border-color: ${borderColorHover};
   }
   &:active {
     background-color: ${backgroundColorActive};
     border-color: ${borderColorActive};
-    color: ${textColorActive}
+    fill: ${textColorActive};
+    color: ${textColorActive};
   }
   &:focus {
     outline: none;
@@ -274,11 +203,12 @@ const StyledButtonv2 = styled(ComponentFromTagProp)`
   &:disabled {
     background-color: ${backgroundColorDisabled};
     border-color: ${borderColorDisabled};
+    fill: ${textColorDisabled};
     color: ${textColorDisabled};
   }
   ${fromPropsTernary('moveIconToLeft', 'padding-left: 32px;', '')} ${font(
-  'regular'
-)} ${spinner} ${disabled} ${progress};
+    'regular'
+  )};
 `;
 
 export default StyledButtonv2;
