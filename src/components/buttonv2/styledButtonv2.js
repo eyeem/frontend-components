@@ -120,6 +120,28 @@ const backgroundColorHover = theme.variants('mode', 'fill', {
   }
 });
 
+const backgroundColorActive = theme.variants('mode', 'fill', {
+  outline: {
+    light: colors.whites.white,
+    dark: colors.blacks.black1
+  },
+  solid: {
+    light: colors.greys.grey3,
+    dark: colors.greys.grey2
+  }
+});
+
+const backgroundColorDisabled = theme.variants('mode', 'fill', {
+  outline: {
+    light: colors.whites.white,
+    dark: colors.blacks.black1
+  },
+  solid: {
+    light: colors.greys.grey4,
+    dark: colors.greys.grey1
+  }
+});
+
 const borderColorDefault = theme.variants('mode', 'fill', {
   outline: {
     light: colors.blacks.black1,
@@ -142,10 +164,43 @@ const borderColorHover = theme.variants('mode', 'fill', {
   }
 });
 
+const borderColorActive = theme.variants('mode', 'fill', {
+  outline: {
+    light: colors.greys.grey3,
+    dark: colors.greys.grey2
+  },
+  solid: {
+    light: colors.greys.grey1,
+    dark: colors.greys.grey3
+  }
+});
+
+const borderColorDisabled = theme.variants('mode', 'fill', {
+  outline: {
+    light: colors.greys.grey4,
+    dark: colors.greys.grey1
+  },
+  solid: {
+    light: colors.greys.grey4,
+    dark: colors.greys.grey1
+  }
+});
+
 const textColorDefault = theme.variants('mode', 'fill', {
   outline: {
     light: colors.blacks.black1,
     dark: colors.whites.white
+  },
+  solid: {
+    light: colors.whites.white,
+    dark: colors.blacks.black1
+  }
+});
+
+const textColorActive = theme.variants('mode', 'fill', {
+  outline: {
+    light: colors.greys.grey3,
+    dark: colors.greys.grey2
   },
   solid: {
     light: colors.whites.white,
@@ -159,8 +214,19 @@ const textColorHover = theme.variants('mode', 'fill', {
     dark: colors.greys.grey4
   },
   solid: {
-    light: colors.greys.grey1,
-    dark: colors.greys.grey4
+    light: colors.whites.white,
+    dark: colors.blacks.black1
+  }
+});
+
+const textColorDisabled = theme.variants('mode', 'fill', {
+  outline: {
+    light: colors.greys.grey4,
+    dark: colors.greys.grey1
+  },
+  solid: {
+    light: colors.whites.white,
+    dark: colors.blacks.black1
   }
 });
 
@@ -177,7 +243,8 @@ const StyledButtonv2 = styled(ComponentFromTagProp)`
   padding: ${fromProps('sizeValues.padding')};
   max-height: ${fromProps('sizeValues.maxHeight')};
   border-color: ${borderColorDefault};
-  border: 1px solid;
+  border-width: 1px;
+  border-style: solid;
   background-color: ${backgroundColorDefault};
   color: ${textColorDefault};
   fill: ${propsColorFromTheme('colors.fontRegular')};
@@ -197,11 +264,17 @@ const StyledButtonv2 = styled(ComponentFromTagProp)`
     border-color: ${borderColorHover};
   }
   &:active {
-    background-color: ${propsColorFromTheme('colors.bgActive')};
-    border-color: ${propsColorFromTheme('colors.borderActive')};
+    background-color: ${backgroundColorActive};
+    border-color: ${borderColorActive};
+    color: ${textColorActive}
   }
   &:focus {
     outline: none;
+  }
+  &:disabled {
+    background-color: ${backgroundColorDisabled};
+    border-color: ${borderColorDisabled};
+    color: ${textColorDisabled};
   }
   ${fromPropsTernary('moveIconToLeft', 'padding-left: 32px;', '')} ${font(
   'regular'
