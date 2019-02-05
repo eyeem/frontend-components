@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import type { Node } from 'react';
 
 import {
   StyledAccordion,
@@ -10,7 +11,7 @@ import {
 
 type AccordionItem = {
   title: string,
-  body: React.Node
+  body: Node
 };
 
 type Props = {
