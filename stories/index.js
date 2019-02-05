@@ -52,6 +52,7 @@ setOptions({
          global style decorator applies.
 */
 require('./buttonv2');
+require('./accordion');
 require('./button');
 require('./input');
 require('./icon');
