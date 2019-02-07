@@ -476,6 +476,44 @@ export const buttonSizes = {
   }
 };
 
+export const buttonv2Sizes = {
+  default: {
+    fontSize: '14px',
+    lineHeight: '20px',
+    padding: '12px 20px',
+    maxHeight: '48px',
+    iconSize: '16'
+  },
+  large: {
+    fontSize: '14px',
+    lineHeight: '20px',
+    padding: '16px 24px',
+    maxHeight: '56px',
+    iconSize: '18'
+  },
+  xlarge: {
+    fontSize: '14px',
+    lineHeight: '20px',
+    padding: '20px 28px',
+    maxHeight: '64px',
+    iconSize: '18'
+  },
+  small: {
+    fontSize: '14px',
+    lineHeight: '20px',
+    padding: '8px 16px',
+    maxHeight: '40px',
+    iconSize: '14'
+  },
+  minimal: {
+    padding: '4px 12px',
+    fontSize: '14px',
+    lineHeight: '16px',
+    maxHeight: '32px',
+    iconSize: '16'
+  }
+};
+
 export const icons = {
   eyeconfont: [
     'star',
@@ -527,3 +565,5 @@ export const icons = {
     'star3'
   ]
 };
+
+export const fills = ['solid', 'outline'];

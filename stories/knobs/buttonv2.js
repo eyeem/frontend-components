@@ -1,10 +1,15 @@
 import { selectV2, boolean, number } from '@storybook/addon-knobs';
 
-import Button from '../../src/components/button';
-import { buttonColors, buttonSizes, icons, fills } from '../../src/styleConfig';
+import Buttonv2 from '../../src/components/buttonv2';
+import {
+  buttonColors,
+  buttonv2Sizes,
+  icons,
+  fills
+} from '../../src/styleConfig';
 import { makeKnobsFromDefaultProps } from './helpers';
 
-const { defaultProps } = Button;
+const { defaultProps } = Buttonv2;
 
 const colorsOptions = Object.keys(buttonColors).reduce((acc, curr) => {
   acc[curr] = curr;
@@ -18,7 +23,7 @@ const iconsOptions = icons.buttons.reduce((acc, curr) => {
   return acc;
 }, {});
 
-const sizesOptions = Object.keys(buttonSizes).reduce((acc, curr) => {
+const sizesOptions = Object.keys(buttonv2Sizes).reduce((acc, curr) => {
   acc[curr] = curr;
 
   return acc;

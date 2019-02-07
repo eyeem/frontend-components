@@ -1,5 +1,6 @@
 /* @flow */
 import StyledButton from './components/button/';
+import Buttonv2 from './components/buttonv2/';
 import Icon from './components/icon/';
 import FormRow from './components/formRow/';
 import Input from './components/input/';
@@ -18,6 +19,7 @@ import globalStyles from './globalStyles';
 
 export {
   StyledButton,
+  Buttonv2,
   Icon,
   Input,
   Select,

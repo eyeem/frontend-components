@@ -7,7 +7,7 @@
 		exports["eyeem-components"] = factory(require("react"), require("styled-components"), require("react-create-component-from-tag-prop"), require("lodash"));
 	else
 		root["eyeem-components"] = factory(root["react"], root["styled-components"], root["react-create-component-from-tag-prop"], root["_"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_9__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -99,13 +99,13 @@ exports.idealTextColor = exports.isRgbaColor = exports.propsColorFromTheme = exp
 
 var _templateObject = _taggedTemplateLiteral(['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  '], ['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  ']);
 
-var _lodash = __webpack_require__(7);
+var _lodash = __webpack_require__(9);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
 var _styledComponents = __webpack_require__(1);
 
-var _theme = __webpack_require__(8);
+var _theme = __webpack_require__(7);
 
 var theme = _interopRequireWildcard(_theme);
 
@@ -763,12 +763,52 @@ var buttonSizes = exports.buttonSizes = {
   }
 };
 
+var buttonv2Sizes = exports.buttonv2Sizes = {
+  default: {
+    fontSize: '14px',
+    lineHeight: '20px',
+    padding: '12px 20px',
+    maxHeight: '48px',
+    iconSize: '16'
+  },
+  large: {
+    fontSize: '14px',
+    lineHeight: '20px',
+    padding: '16px 24px',
+    maxHeight: '56px',
+    iconSize: '18'
+  },
+  xlarge: {
+    fontSize: '14px',
+    lineHeight: '20px',
+    padding: '20px 28px',
+    maxHeight: '64px',
+    iconSize: '18'
+  },
+  small: {
+    fontSize: '14px',
+    lineHeight: '20px',
+    padding: '8px 16px',
+    maxHeight: '40px',
+    iconSize: '14'
+  },
+  minimal: {
+    padding: '4px 12px',
+    fontSize: '14px',
+    lineHeight: '16px',
+    maxHeight: '32px',
+    iconSize: '16'
+  }
+};
+
 var icons = exports.icons = {
   eyeconfont: ['star', 'image', 'mail', 'phone', 'close', 'timing', 'prize', 'remove', 'alert', 'flag', 'embed', 'delete', 'edit', 'backToTop', 'contactEyeEm', 'contactFacebook', 'contactTwitter', 'contactTumblr'],
   buttons: ['cart', 'checkmark', 'download', 'upload', 'upgrade', 'compDownload', 'like', 'comment', 'addToLightbox', 'isInLightbox', 'dragndrop', 'share', 'facebook', 'paypal'],
   services: ['dropbox', 'googledrive', 'flickr', 'picasa', 'instagram'],
   uncategorized: ['leftArrow', 'rightArrow', 'leftArrow2', 'rightArrow2', 'plus', 'terms', 'market', 'growth', 'star2', 'star3']
 };
+
+var fills = exports.fills = ['solid', 'outline'];
 
 /***/ }),
 /* 6 */
@@ -778,12 +818,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_6__;
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
-
-/***/ }),
-/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -870,7 +904,7 @@ var colors = exports.colors = {
 var borderRadius = exports.borderRadius = '2px';
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -889,6 +923,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _icon2.default;
 
 /***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_9__;
+
+/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -898,13 +938,17 @@ exports.default = _icon2.default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.globalStyles = exports.theme = exports.styleUtils = exports.styleConfig = exports.Flyout = exports.RadioGroup = exports.Checkbox = exports.FormRow = exports.Textarea = exports.StyledText = exports.Select = exports.Input = exports.Icon = exports.StyledButton = undefined;
+exports.globalStyles = exports.theme = exports.styleUtils = exports.styleConfig = exports.Flyout = exports.RadioGroup = exports.Checkbox = exports.FormRow = exports.Textarea = exports.StyledText = exports.Select = exports.Input = exports.Icon = exports.Buttonv2 = exports.StyledButton = undefined;
 
 var _button = __webpack_require__(11);
 
 var _button2 = _interopRequireDefault(_button);
 
-var _icon = __webpack_require__(9);
+var _buttonv = __webpack_require__(71);
+
+var _buttonv2 = _interopRequireDefault(_buttonv);
+
+var _icon = __webpack_require__(8);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -912,27 +956,27 @@ var _formRow = __webpack_require__(3);
 
 var _formRow2 = _interopRequireDefault(_formRow);
 
-var _input = __webpack_require__(71);
+var _input = __webpack_require__(76);
 
 var _input2 = _interopRequireDefault(_input);
 
-var _select = __webpack_require__(72);
+var _select = __webpack_require__(77);
 
 var _select2 = _interopRequireDefault(_select);
 
-var _text = __webpack_require__(73);
+var _text = __webpack_require__(78);
 
 var _text2 = _interopRequireDefault(_text);
 
-var _textarea = __webpack_require__(76);
+var _textarea = __webpack_require__(81);
 
 var _textarea2 = _interopRequireDefault(_textarea);
 
-var _checkbox = __webpack_require__(77);
+var _checkbox = __webpack_require__(82);
 
 var _checkbox2 = _interopRequireDefault(_checkbox);
 
-var _radioGroup = __webpack_require__(78);
+var _radioGroup = __webpack_require__(83);
 
 var _radioGroup2 = _interopRequireDefault(_radioGroup);
 
@@ -948,11 +992,11 @@ var _styleUtils = __webpack_require__(2);
 
 var styleUtils = _interopRequireWildcard(_styleUtils);
 
-var _theme = __webpack_require__(8);
+var _theme = __webpack_require__(7);
 
 var theme = _interopRequireWildcard(_theme);
 
-var _globalStyles = __webpack_require__(79);
+var _globalStyles = __webpack_require__(84);
 
 var _globalStyles2 = _interopRequireDefault(_globalStyles);
 
@@ -961,6 +1005,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.StyledButton = _button2.default;
+exports.Buttonv2 = _buttonv2.default;
 exports.Icon = _icon2.default;
 exports.Input = _input2.default;
 exports.Select = _select2.default;
@@ -1159,7 +1204,7 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _styleUtils = __webpack_require__(2);
 
-var _icon = __webpack_require__(9);
+var _icon = __webpack_require__(8);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -4068,6 +4113,360 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _buttonv = __webpack_require__(72);
+
+var _buttonv2 = _interopRequireDefault(_buttonv);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _buttonv2.default;
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var React = _interopRequireWildcard(_react);
+
+var _styleConfig = __webpack_require__(5);
+
+var _styledButtonv = __webpack_require__(73);
+
+var _styledButtonv2 = _interopRequireDefault(_styledButtonv);
+
+var _styledIcon = __webpack_require__(75);
+
+var _styledIcon2 = _interopRequireDefault(_styledIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function Buttonv2(props) {
+  return React.createElement(
+    _styledButtonv2.default,
+    {
+      renderAs: props.renderAs,
+      'data-test-id': props['data-test-id'],
+      onClick: props.onClick,
+      display: props.display,
+      alignItems: props.alignItems,
+      href: props.href,
+      target: props.target,
+      fill: props.fill,
+      id: props.id,
+      className: props.className,
+      sizeValues: _styleConfig.buttonv2Sizes[props.size],
+      disabled: props.disabled,
+      fullWidth: props.fullWidth,
+      moveIconToLeft: props.moveIconToLeft,
+      title: props.title,
+      htmlFor: props.htmlFor,
+      type: props.type },
+    props.icon && React.createElement(_styledIcon2.default, {
+      moveIconToLeft: props.moveIconToLeft,
+      size: _styleConfig.buttonv2Sizes[props.size].iconSize,
+      type: props.icon,
+      marginRight: props.children ? '8px' : 0
+    }),
+    props.children
+  );
+}
+
+Buttonv2.defaultProps = {
+  size: 'default',
+  fill: 'solid',
+  display: 'inline-block',
+  icon: false,
+  disabled: false,
+  fullWidth: false,
+  moveIconToLeft: false,
+  renderAs: 'button'
+};
+
+exports.default = Buttonv2;
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  display: ', ';\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: ', ';\n  font-size: ', ';\n  line-height: ', ';\n  padding: ', ';\n  max-height: ', ';\n  border-color: ', ';\n  border-width: 1px;\n  border-style: solid;\n  background-color: ', ';\n  color: ', ';\n  fill: ', ';\n  ', '\n  vertical-align: top;\n  text-decoration: none;\n  text-shadow: none;\n  cursor: pointer;\n  transition: background-color 0.2s ease-in-out, border 0.2s ease-out,\n    color 0.2s ease-out, fill 0.2s ease-out;\n  pointer-events: all;\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:active {\n    background-color: ', ';\n    border-color: ', ';\n    fill: ', ';\n    color: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  &:disabled {\n    background-color: ', ';\n    border-color: ', ';\n    fill: ', ';\n    color: ', ';\n  }\n  ', ' ', ';\n'], ['\n  position: relative;\n  display: ', ';\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: ', ';\n  font-size: ', ';\n  line-height: ', ';\n  padding: ', ';\n  max-height: ', ';\n  border-color: ', ';\n  border-width: 1px;\n  border-style: solid;\n  background-color: ', ';\n  color: ', ';\n  fill: ', ';\n  ', '\n  vertical-align: top;\n  text-decoration: none;\n  text-shadow: none;\n  cursor: pointer;\n  transition: background-color 0.2s ease-in-out, border 0.2s ease-out,\n    color 0.2s ease-out, fill 0.2s ease-out;\n  pointer-events: all;\n  &:focus,\n  &:hover {\n    color: ', ';\n    fill: ', ';\n    background-color: ', ';\n    border-color: ', ';\n  }\n  &:active {\n    background-color: ', ';\n    border-color: ', ';\n    fill: ', ';\n    color: ', ';\n  }\n  &:focus {\n    outline: none;\n  }\n  &:disabled {\n    background-color: ', ';\n    border-color: ', ';\n    fill: ', ';\n    color: ', ';\n  }\n  ', ' ', ';\n']);
+
+var _styledTheming = __webpack_require__(74);
+
+var _styledTheming2 = _interopRequireDefault(_styledTheming);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _reactCreateComponentFromTagProp = __webpack_require__(6);
+
+var _reactCreateComponentFromTagProp2 = _interopRequireDefault(_reactCreateComponentFromTagProp);
+
+var _theme = __webpack_require__(7);
+
+var _styleUtils = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var ComponentFromTagProp = (0, _reactCreateComponentFromTagProp2.default)({
+  tag: 'button',
+  prop: 'renderAs',
+  propsToOmit: ['renderAs', 'progress', 'sizeValues', 'spinner', 'fullWidth', 'moveIconToLeft', 'fill', 'display', 'alignItems']
+});
+
+var backgroundColorDefault = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.whites.white,
+    dark: _theme.colors.blacks.black1
+  },
+  solid: {
+    light: _theme.colors.blacks.black1,
+    dark: _theme.colors.whites.white
+  }
+});
+
+var backgroundColorHover = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.whites.white,
+    dark: _theme.colors.blacks.black1
+  },
+  solid: {
+    light: _theme.colors.greys.grey1,
+    dark: _theme.colors.greys.grey4
+  }
+});
+
+var backgroundColorActive = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.whites.white,
+    dark: _theme.colors.blacks.black1
+  },
+  solid: {
+    light: _theme.colors.greys.grey3,
+    dark: _theme.colors.greys.grey2
+  }
+});
+
+var backgroundColorDisabled = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.whites.white,
+    dark: _theme.colors.blacks.black1
+  },
+  solid: {
+    light: _theme.colors.greys.grey4,
+    dark: _theme.colors.greys.grey1
+  }
+});
+
+var borderColorDefault = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.blacks.black1,
+    dark: _theme.colors.whites.white
+  },
+  solid: {
+    light: _theme.colors.blacks.black1,
+    dark: _theme.colors.whites.white
+  }
+});
+
+var borderColorHover = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.greys.grey1,
+    dark: _theme.colors.greys.grey4
+  },
+  solid: {
+    light: _theme.colors.greys.grey1,
+    dark: _theme.colors.greys.grey4
+  }
+});
+
+var borderColorActive = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.greys.grey3,
+    dark: _theme.colors.greys.grey2
+  },
+  solid: {
+    light: _theme.colors.greys.grey1,
+    dark: _theme.colors.greys.grey3
+  }
+});
+
+var borderColorDisabled = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.greys.grey4,
+    dark: _theme.colors.greys.grey1
+  },
+  solid: {
+    light: _theme.colors.greys.grey4,
+    dark: _theme.colors.greys.grey1
+  }
+});
+
+var textColorDefault = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.blacks.black1,
+    dark: _theme.colors.whites.white
+  },
+  solid: {
+    light: _theme.colors.whites.white,
+    dark: _theme.colors.blacks.black1
+  }
+});
+
+var textColorActive = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.greys.grey3,
+    dark: _theme.colors.greys.grey2
+  },
+  solid: {
+    light: _theme.colors.whites.white,
+    dark: _theme.colors.blacks.black1
+  }
+});
+
+var textColorHover = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.greys.grey1,
+    dark: _theme.colors.greys.grey4
+  },
+  solid: {
+    light: _theme.colors.whites.white,
+    dark: _theme.colors.blacks.black1
+  }
+});
+
+var textColorDisabled = _styledTheming2.default.variants('mode', 'fill', {
+  outline: {
+    light: _theme.colors.greys.grey4,
+    dark: _theme.colors.greys.grey1
+  },
+  solid: {
+    light: _theme.colors.whites.white,
+    dark: _theme.colors.blacks.black1
+  }
+});
+
+var StyledButtonv2 = (0, _styledComponents2.default)(ComponentFromTagProp)(_templateObject, function (props) {
+  return props.display;
+}, (0, _styleUtils.fromPropsTernary)('fullWidth', '100%', 'auto'), (0, _styleUtils.fromProps)('sizeValues.fontSize'), (0, _styleUtils.fromProps)('sizeValues.lineHeight'), (0, _styleUtils.fromProps)('sizeValues.padding'), (0, _styleUtils.fromProps)('sizeValues.maxHeight'), borderColorDefault, backgroundColorDefault, textColorDefault, textColorDefault, function (props) {
+  return (0, _styleUtils.alignItems)(props.alignItems);
+}, textColorHover, textColorHover, backgroundColorHover, borderColorHover, backgroundColorActive, borderColorActive, textColorActive, textColorActive, backgroundColorDisabled, borderColorDisabled, textColorDisabled, textColorDisabled, (0, _styleUtils.fromPropsTernary)('moveIconToLeft', 'padding-left: 32px;', ''), (0, _styleUtils.font)('regular'));
+
+exports.default = StyledButtonv2;
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function getThemeValue(name, props, values) {
+  var value = (
+    props.theme &&
+    props.theme[name]
+  );
+
+  var themeValue;
+
+  if (typeof value === 'function') {
+    themeValue = value(values);
+  } else {
+    themeValue = values[value];
+  }
+
+  if (typeof themeValue === 'function') {
+    return themeValue(props);
+  } else {
+    return themeValue;
+  }
+}
+
+function theme(name, values) {
+  return function(props) {
+    return getThemeValue(name, props, values);
+  };
+}
+
+theme.variants = function(name, prop, values) {
+  return function(props) {
+    var variant = props[prop] && values[props[prop]];
+    return variant && getThemeValue(name, props, variant);
+  };
+};
+
+module.exports = theme;
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  margin-right: ', ';\n  margin-bottom: -2px;\n  ', ';\n'], ['\n  margin-right: ', ';\n  margin-bottom: -2px;\n  ', ';\n']);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _styleUtils = __webpack_require__(2);
+
+var _icon = __webpack_require__(8);
+
+var _icon2 = _interopRequireDefault(_icon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var iconLeftStyles = function iconLeftStyles(props) {
+  if (props.moveIconToLeft) {
+    var halfHeight = props.size / 2;
+    return '\n      position: absolute;\n      left: 12px;\n      top: calc(50% - ' + halfHeight + 'px);\n      margin-right: 0;\n      margin-bottom: 0;\n    ';
+  }
+  return '';
+};
+
+var StyledIcon = (0, _styledComponents2.default)(_icon2.default)(_templateObject, (0, _styleUtils.fromProps)('marginRight'), iconLeftStyles);
+
+exports.default = StyledIcon;
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -4190,7 +4589,7 @@ Input.defaultProps = {
 exports.default = Input;
 
 /***/ }),
-/* 72 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4276,7 +4675,7 @@ Select.defaultProps = {
 exports.default = Select;
 
 /***/ }),
-/* 73 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4286,7 +4685,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _text = __webpack_require__(74);
+var _text = __webpack_require__(79);
 
 var _text2 = _interopRequireDefault(_text);
 
@@ -4295,7 +4694,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _text2.default;
 
 /***/ }),
-/* 74 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4313,7 +4712,7 @@ var React = _interopRequireWildcard(_react);
 
 var _styleConfig = __webpack_require__(5);
 
-var _styledText = __webpack_require__(75);
+var _styledText = __webpack_require__(80);
 
 var _styledText2 = _interopRequireDefault(_styledText);
 
@@ -4373,7 +4772,7 @@ Text.defaultProps = {
 exports.default = Text;
 
 /***/ }),
-/* 75 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4392,7 +4791,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _lodash = __webpack_require__(7);
+var _lodash = __webpack_require__(9);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -4455,7 +4854,7 @@ var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp)(_template
 exports.default = StyledText;
 
 /***/ }),
-/* 76 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4525,7 +4924,7 @@ Textarea.defaultProps = {
 exports.default = Textarea;
 
 /***/ }),
-/* 77 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4619,7 +5018,7 @@ Checkbox.defaultProps = {
 exports.default = Checkbox;
 
 /***/ }),
-/* 78 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4727,7 +5126,7 @@ RadioGroup.defaultProps = {
 exports.default = RadioGroup;
 
 /***/ }),
-/* 79 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4741,7 +5140,7 @@ var _templateObject = _taggedTemplateLiteral(['\n  ', ';\n\n  @font-face {\n    
 
 var _styledComponents = __webpack_require__(1);
 
-var _styledNormalize = __webpack_require__(80);
+var _styledNormalize = __webpack_require__(85);
 
 var _styledNormalize2 = _interopRequireDefault(_styledNormalize);
 
@@ -4766,7 +5165,7 @@ exports.default = function (_ref) {
 };
 
 /***/ }),
-/* 80 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

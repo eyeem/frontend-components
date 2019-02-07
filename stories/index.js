@@ -22,6 +22,7 @@ const backgroundsDecorator = backgrounds([
   { name: 'dark', value: colors.blacks.black5 },
   { name: 'light', value: colors.whites.white, default: true }
 ]);
+
 const centerDecorator = storyFn => <CenterStyles>{storyFn()}</CenterStyles>;
 const stylesDecorator = storyFn => (
   <React.Fragment>
@@ -50,6 +51,7 @@ setOptions({
 /* NOTE: Add all stories here. Use require() syntax so
          global style decorator applies.
 */
+require('./buttonv2');
 require('./button');
 require('./input');
 require('./icon');
