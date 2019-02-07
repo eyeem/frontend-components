@@ -10,27 +10,15 @@ import StoryWrapper from '../src/Layout/StoryWrapper';
 
 const items = [
   {
-    title: (
-      <StyledText renderAs="h3" size="headline4">
-        1. Billing Information
-      </StyledText>
-    ),
+    title: '1. Billing Information',
     body: <StyledText>Body content</StyledText>
   },
   {
-    title: (
-      <StyledText renderAs="h3" size="headline4">
-        2. Payment Method
-      </StyledText>
-    ),
+    title: '2. Payment Method',
     body: <StyledText>Body content</StyledText>
   },
   {
-    title: (
-      <StyledText renderAs="h3" size="headline4">
-        3. Review
-      </StyledText>
-    ),
+    title: '3. Review',
     body: <StyledText>Body content</StyledText>
   }
 ];

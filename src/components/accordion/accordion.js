@@ -2,6 +2,8 @@
 import React from 'react';
 import type { Node } from 'react';
 
+import StyledText from '../text';
+
 import {
   StyledAccordionItem,
   StyledAccordionItemBody,
@@ -9,7 +11,7 @@ import {
 } from './styledAccordion';
 
 type AccordionItem = {
-  title: Node,
+  title: string,
   body: Node
 };
 
@@ -36,7 +38,9 @@ const Accordion = (props: Props) => {
             aria-controls={`accordion__body-${index}`}
             tabIndex={0}
             aria-selected={props.activeIndex === index}>
-            {item.title}
+            <StyledText renderAs="h3" size="headline4">
+              {item.title}
+            </StyledText>
           </StyledAccordionItemTitle>
           <StyledAccordionItemBody
             role="tabpanel"
