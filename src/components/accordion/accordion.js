@@ -12,11 +12,12 @@ import {
 
 type AccordionItem = {
   title: string,
+  titleSupplement: Node, // only shown if filled-in accordion step info
   body: Node
 };
 
 type Props = {
-  /** An array of objects with title and body properties. */
+  /** An array of objects with title, titleSupplement and body properties. */
   items: AccordionItem[],
 
   /** Controlled externally by whatever is rendering the accordion */
@@ -31,7 +32,7 @@ const Accordion = (props: Props) => {
   return (
     <div role="tablist">
       {props.items.map((item, index) => (
-        <StyledAccordionItem key={item.title}>
+        <StyledAccordionItem key={JSON.stringify(item.title)}>
           <StyledAccordionItemTitle
             role="tab"
             id={`accordion__title-${index}`}
@@ -41,6 +42,7 @@ const Accordion = (props: Props) => {
             <StyledText renderAs="h3" size="headline4">
               {item.title}
             </StyledText>
+            {props.activeIndex !== index && item.titleSupplement}
           </StyledAccordionItemTitle>
           <StyledAccordionItemBody
             role="tabpanel"

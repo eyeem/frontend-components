@@ -16,6 +16,16 @@ const themeDecorator = storyFn => <Themer>{storyFn()}</Themer>;
 const items = [
   {
     title: '1. Billing Information',
+    titleSupplement: (
+      <div>
+        <StyledText margin={0} display="block" size="pStatic">
+          Jesse Box
+        </StyledText>
+        <StyledText margin={0} display="block" size="pStatic">
+          Boxhagener Str.
+        </StyledText>
+      </div>
+    ),
     body: (
       <div>
         <StyledText>Body content</StyledText>
@@ -25,6 +35,13 @@ const items = [
   },
   {
     title: '2. Payment Method',
+    titleSupplement: (
+      <div>
+        <StyledText margin={0} display="block" size="pStatic">
+          Visa XXX
+        </StyledText>
+      </div>
+    ),
     body: (
       <div>
         <StyledText>Body content</StyledText>
