@@ -96,4 +96,23 @@ storiesOf('Box', module)
         <span>borderColor="solidColors.red"</span>
       </Box>
     </div>
+  ))
+  .add('ratios', () => (
+    <div>
+      <StyledText>
+        <a href="https://github.com/jxnblk/styled-system/blob/master/docs/api.md#layout">
+          https://github.com/jxnblk/styled-system/blob/master/docs/api.md#layout
+        </a>
+      </StyledText>
+
+      <Box bg="lightColors.lightBlue" ratio={1 / 2} mb={2}>
+        <span>ratio="1 / 2"</span>
+      </Box>
+      <Box bg="lightColors.lightBlue" ratio={9 / 16} mb={2}>
+        <span>ratio="9 / 16"</span>
+      </Box>
+      <Box bg="lightColors.lightBlue" ratio={3 / 4} mb={2}>
+        <span>ratio="3/ 4"</span>
+      </Box>
+    </div>
   ));

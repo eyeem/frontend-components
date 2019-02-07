@@ -5,7 +5,8 @@ import {
   space,
   borders,
   borderColor,
-  width
+  width,
+  ratio
 } from 'styled-system';
 
 const Box = styled.div`
@@ -15,6 +16,7 @@ const Box = styled.div`
   ${borders}
   ${borderColor}
   ${width}
+  ${ratio}
 `;
 
 Box.propTypes = {
@@ -23,7 +25,8 @@ Box.propTypes = {
   ...space.propTypes,
   ...borders.propTypes,
   ...borderColor.propTypes,
-  ...width.propTypes
+  ...width.propTypes,
+  ...ratio.propTypes
 };
 
 Box.displayName = 'Box';
