@@ -4,12 +4,35 @@ import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import Accordion from '../src/components/accordion';
+import StyledText from '../src/components/text';
+
 import StoryWrapper from '../src/Layout/StoryWrapper';
 
 const items = [
-  { title: '1. Billing Information', body: <p>Body content</p> },
-  { title: '2. Payment Method', body: <p>Body content</p> },
-  { title: '3. Review', body: <p>Body content</p> }
+  {
+    title: (
+      <StyledText renderAs="h3" size="headline4">
+        1. Billing Information
+      </StyledText>
+    ),
+    body: <StyledText>Body content</StyledText>
+  },
+  {
+    title: (
+      <StyledText renderAs="h3" size="headline4">
+        2. Payment Method
+      </StyledText>
+    ),
+    body: <StyledText>Body content</StyledText>
+  },
+  {
+    title: (
+      <StyledText renderAs="h3" size="headline4">
+        3. Review
+      </StyledText>
+    ),
+    body: <StyledText>Body content</StyledText>
+  }
 ];
 
 storiesOf('Accordion', module)
@@ -17,5 +40,5 @@ storiesOf('Accordion', module)
   .addDecorator((story, context) => withInfo('')(story)(context))
   .addDecorator(withKnobs)
   .add('with controllable props', () => (
-    <Accordion activeIndex={0} items={items} />
+    <Accordion activeIndex={1} items={items} />
   ));

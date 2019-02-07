@@ -3,14 +3,13 @@ import React from 'react';
 import type { Node } from 'react';
 
 import {
-  StyledAccordion,
   StyledAccordionItem,
   StyledAccordionItemBody,
   StyledAccordionItemTitle
 } from './styledAccordion';
 
 type AccordionItem = {
-  title: string,
+  title: Node,
   body: Node
 };
 
@@ -27,7 +26,7 @@ const Accordion = (props: Props) => {
   }
 
   return (
-    <StyledAccordion role="tablist">
+    <div role="tablist">
       {props.items.map((item, index) => (
         <StyledAccordionItem key={item.title}>
           <StyledAccordionItemTitle
@@ -36,7 +35,7 @@ const Accordion = (props: Props) => {
             aria-controls={`accordion__body-${index}`}
             tabIndex={0}
             aria-selected={props.activeIndex === index}>
-            <h3>{item.title}</h3>
+            {item.title}
           </StyledAccordionItemTitle>
           <StyledAccordionItemBody
             role="tabpanel"
@@ -48,7 +47,7 @@ const Accordion = (props: Props) => {
           </StyledAccordionItemBody>
         </StyledAccordionItem>
       ))}
-    </StyledAccordion>
+    </div>
   );
 };
 
