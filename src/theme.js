@@ -74,3 +74,8 @@ export const colors = {
 };
 
 export const borderRadius = '2px';
+
+/* NOTE: styled-system
+         https://jxnblk.com/styled-system/#space-theming
+*/
+export const space = [0, 4, 8, 16, 32, 64];
