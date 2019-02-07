@@ -14,6 +14,7 @@ type AccordionItem = {
 };
 
 type Props = {
+  /** An array of objects with title and body properties. */
   items: AccordionItem[],
 
   /** Controlled externally by whatever is rendering the accordion */
