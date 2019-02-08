@@ -10,6 +10,7 @@ import Textarea from './components/textarea/';
 import Checkbox from './components/checkbox/';
 import RadioGroup from './components/radioGroup/';
 import Flyout from './components/flyout/';
+import Accordion from './components/accordion/';
 
 import * as styleConfig from './styleConfig';
 import * as styleUtils from './styleUtils';
@@ -18,6 +19,7 @@ import * as theme from './theme';
 import globalStyles from './globalStyles';
 
 export {
+  Accordion,
   StyledButton,
   Buttonv2,
   Icon,
