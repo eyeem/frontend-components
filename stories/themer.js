@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { theme as parentTheme } from '../src';
+import { theme as parentTheme, Box } from '../src';
 
 const WrappedButton = styled.span`
   padding: 0.5rem;
@@ -19,7 +19,7 @@ class Themer extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: '1rem' }}>
+      <Box px={4}>
         <span style={{ fontWeight: 600 }}>Theme:</span>
         {THEMES.map(theme => (
           <WrappedButton
@@ -39,7 +39,7 @@ class Themer extends Component {
         <ThemeProvider theme={{ mode: this.state.theme, ...parentTheme }}>
           {this.props.children}
         </ThemeProvider>
-      </div>
+      </Box>
     );
   }
 }

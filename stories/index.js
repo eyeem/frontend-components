@@ -62,3 +62,4 @@ require('./textarea');
 require('./radioButton');
 require('./text');
 require('./box');
+require('./flex');

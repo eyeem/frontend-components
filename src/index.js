@@ -11,6 +11,8 @@ import Checkbox from './components/checkbox/';
 import RadioGroup from './components/radioGroup/';
 import Flyout from './components/flyout/';
 import Accordion from './components/accordion/';
+import Box from './components/box/';
+import Flex from './components/flex/';
 
 import * as styleConfig from './styleConfig';
 import * as styleUtils from './styleUtils';
@@ -22,6 +24,8 @@ export {
   Accordion,
   StyledButton,
   Buttonv2,
+  Box,
+  Flex,
   Icon,
   Input,
   Select,

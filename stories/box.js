@@ -4,11 +4,10 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { space } from '../src/theme';
 
-import Themer from './themer';
-
 import StyledText from '../src/components/text';
 import Box from '../src/components/box';
 import StoryWrapper from '../src/Layout/StoryWrapper';
+import Themer from './themer';
 
 const themeDecorator = storyFn => <Themer>{storyFn()}</Themer>;
 

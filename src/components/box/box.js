@@ -6,7 +6,8 @@ import {
   borders,
   borderColor,
   width,
-  ratio
+  ratio,
+  flex
 } from 'styled-system';
 
 const Box = styled.div`
@@ -17,6 +18,7 @@ const Box = styled.div`
   ${borderColor}
   ${width}
   ${ratio}
+  ${flex}
 `;
 
 Box.propTypes = {
@@ -26,7 +28,9 @@ Box.propTypes = {
   ...borders.propTypes,
   ...borderColor.propTypes,
   ...width.propTypes,
-  ...ratio.propTypes
+  ...ratio.propTypes,
+  /** only to be used for flex-items! */
+  ...flex.propTypes
 };
 
 Box.displayName = 'Box';
