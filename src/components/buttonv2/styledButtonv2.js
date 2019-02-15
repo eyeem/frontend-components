@@ -179,6 +179,7 @@ const StyledButtonv2 = styled(ComponentFromTagProp)`
   ${props => alignItems(props.alignItems)}
   vertical-align: top;
   text-decoration: none;
+  text-align: center;
   text-shadow: none;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out, border 0.2s ease-out,
