@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {
+  display,
   color,
   bgColor,
   space,
@@ -11,6 +12,7 @@ import {
 } from 'styled-system';
 
 const Box = styled.div`
+  ${display}
   ${color}
   ${bgColor}
   ${space}
@@ -22,6 +24,7 @@ const Box = styled.div`
 `;
 
 Box.propTypes = {
+  ...display.propTypes,
   ...color.propTypes,
   ...bgColor.propTypes,
   ...space.propTypes,

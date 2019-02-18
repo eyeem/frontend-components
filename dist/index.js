@@ -6298,7 +6298,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n'], ['\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n'], ['\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n']);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -6310,9 +6310,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Box = _styledComponents2.default.div(_templateObject, _styledSystem.color, _styledSystem.bgColor, _styledSystem.space, _styledSystem.borders, _styledSystem.borderColor, _styledSystem.width, _styledSystem.ratio, _styledSystem.flex);
+var Box = _styledComponents2.default.div(_templateObject, _styledSystem.display, _styledSystem.color, _styledSystem.bgColor, _styledSystem.space, _styledSystem.borders, _styledSystem.borderColor, _styledSystem.width, _styledSystem.ratio, _styledSystem.flex);
 
-Box.propTypes = _extends({}, _styledSystem.color.propTypes, _styledSystem.bgColor.propTypes, _styledSystem.space.propTypes, _styledSystem.borders.propTypes, _styledSystem.borderColor.propTypes, _styledSystem.width.propTypes, _styledSystem.ratio.propTypes, _styledSystem.flex.propTypes);
+Box.propTypes = _extends({}, _styledSystem.display.propTypes, _styledSystem.color.propTypes, _styledSystem.bgColor.propTypes, _styledSystem.space.propTypes, _styledSystem.borders.propTypes, _styledSystem.borderColor.propTypes, _styledSystem.width.propTypes, _styledSystem.ratio.propTypes, _styledSystem.flex.propTypes);
 
 Box.displayName = 'Box';
 
