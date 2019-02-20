@@ -55,6 +55,7 @@ require('./buttonv2');
 require('./accordion');
 require('./button');
 require('./input');
+require('./inputv2');
 require('./icon');
 require('./select');
 require('./checkbox');
