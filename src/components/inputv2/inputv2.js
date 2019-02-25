@@ -199,6 +199,15 @@ class Inputv2 extends React.Component<Props, State> {
     this.setState({ value: event.target.value });
   };
 
+  componentDidMount() {
+    if (!this.props.name) {
+      // eslint-disable-next-line
+      console.error(
+        '<Inputv2>: Missing this.props.name, which is needed for accessibility markup.'
+      );
+    }
+  }
+
   render() {
     const isActive = this.state.value.length || this.state.isFocused;
 
