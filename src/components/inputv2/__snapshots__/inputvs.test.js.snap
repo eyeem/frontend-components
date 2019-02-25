@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders default input 1`] = `
+.c1 {
+  padding: 16px;
+  position: relative;
+  border-width: 1.5px;
+  border-style: solid;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c2 {
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  top: 22px;
+  font-weight: initial;
+  -webkit-transform: translateX(0) translateY(0) scale(1);
+  -ms-transform: translateX(0) translateY(0) scale(1);
+  transform: translateX(0) translateY(0) scale(1);
+}
+
+.c3 {
+  width: 100%;
+  border: 0;
+  line-height: 22px;
+  font-size: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 36px;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c3::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c3::-moz-placeholder {
+  color: transparent;
+}
+
+.c3:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c3::placeholder {
+  color: transparent;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c0 {
+  height: 96px;
+  position: relative;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="name"
+    >
+      Name
+    </label>
+    <input
+      class="c3"
+      id="name"
+      name="name"
+      placeholder="Name"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;

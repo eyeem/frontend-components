@@ -110,7 +110,11 @@ const InputWrapper = styled(Box)`
 
   &:hover {
     border-color: ${props =>
-      props.isInvalid ? colors.solidColors.redv2 : borderColorHover};
+      props.isInvalid // eslint-disable-line
+        ? colors.solidColors.redv2
+        : props.isDisabled
+        ? borderColorDisabled
+        : borderColorHover};
   }
 
   ${props => props.isInvalid && xIcon}
@@ -217,6 +221,7 @@ class Inputv2 extends React.Component<Props, State> {
           isFocused={this.state.isFocused}
           isInvalid={!!this.props.errorMessage}
           isValidated={this.props.isValidated}
+          isDisabled={this.props.inputProps.disabled}
           p={3}>
           <StyledLabel htmlFor={this.props.name} isActive={isActive}>
             {this.props.inputProps.placeholder}
@@ -226,6 +231,7 @@ class Inputv2 extends React.Component<Props, State> {
             id={this.props.name}
             value={this.state.value}
             onChange={this.setValue}
+            disabled={this.props.inputProps.disabled}
             onFocus={() => this.setFocus(true)}
             onBlur={() => this.setFocus(false)}
             name={this.props.name}

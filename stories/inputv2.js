@@ -25,4 +25,7 @@ storiesOf('Inputv2', module)
       errorMessage="This is the error message."
       inputProps={{ placeholder: 'Name' }}
     />
+  ))
+  .add('disabled', () => (
+    <Inputv2 name="name" inputProps={{ placeholder: 'Name', disabled: true }} />
   ));
