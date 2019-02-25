@@ -13,10 +13,16 @@ storiesOf('Inputv2', module)
   .addDecorator(story => <StoryWrapper>{story()}</StoryWrapper>)
   .addDecorator((story, context) => withInfo('')(story)(context))
   .addDecorator(themeDecorator)
-  .add('text field', () => (
+  .add('default', () => (
+    <Inputv2 name="name" inputProps={{ placeholder: 'Name' }} />
+  ))
+  .add('validated', () => (
+    <Inputv2 name="name" isValidated inputProps={{ placeholder: 'Name' }} />
+  ))
+  .add('invalid', () => (
     <Inputv2
       name="name"
-      errorMessage=" nope"
+      errorMessage="This is the error message."
       inputProps={{ placeholder: 'Name' }}
     />
   ));

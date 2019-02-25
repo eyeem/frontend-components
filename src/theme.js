@@ -30,6 +30,7 @@ export const colors = {
 
   solidColors: {
     green: '#22cc88',
+    greenv2: '#48B307',
     greenHover: '#4ed69f',
     greenActive: '#1ba36c',
     orange: '#ffaa33',
@@ -37,7 +38,8 @@ export const colors = {
     orangeActive: '#cc8828',
     red: '#ff3333',
     redHover: '#ff5b5b',
-    redActive: '#cc2828'
+    redActive: '#cc2828',
+    redv2: '#EA3223'
   },
 
   foreigns: {
