@@ -4,6 +4,7 @@ import Buttonv2 from './components/buttonv2/';
 import Icon from './components/icon/';
 import FormRow from './components/formRow/';
 import Input from './components/input/';
+import Inputv2 from './components/inputv2/';
 import Select from './components/select/';
 import StyledText from './components/text/';
 import Textarea from './components/textarea/';
@@ -28,6 +29,7 @@ export {
   Flex,
   Icon,
   Input,
+  Inputv2,
   Select,
   StyledText,
   Textarea,
