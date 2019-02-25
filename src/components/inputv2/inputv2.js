@@ -45,10 +45,10 @@ const getBorderForState = state => {
   if (state.isInvalid) {
     return borderColorInvalid;
   }
-  if (state.isValidated) {
+  if (state.isFocused) {
     return borderColorActive;
   }
-  if (state.isFocused) {
+  if (state.isValidated) {
     return borderColorActive;
   }
   if (state.isDisabled) {
@@ -191,7 +191,7 @@ class Inputv2 extends React.Component<Props, State> {
     value: ''
   };
 
-  toggleFocus = (val: boolean) => {
+  setFocus = (val: boolean) => {
     this.setState({ isFocused: val });
   };
 
@@ -217,8 +217,8 @@ class Inputv2 extends React.Component<Props, State> {
             id={this.props.name}
             value={this.state.value}
             onChange={this.setValue}
-            onFocus={() => this.toggleFocus(true)}
-            onBlur={() => this.toggleFocus(false)}
+            onFocus={() => this.setFocus(true)}
+            onBlur={() => this.setFocus(false)}
             name={this.props.name}
             isActive={isActive}
             type={this.props.inputProps.type || 'text'}
