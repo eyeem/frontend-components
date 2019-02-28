@@ -2,8 +2,6 @@
 import React from 'react';
 import type { Node } from 'react';
 
-import StyledText from '../text';
-
 import {
   StyledAccordionItem,
   StyledAccordionItemBody,
@@ -11,7 +9,7 @@ import {
 } from './styledAccordion';
 
 type AccordionItem = {
-  title: string,
+  title: Node,
   titleSupplement: Node, // only shown if filled-in accordion step info
   body: Node
 };
@@ -39,9 +37,7 @@ const Accordion = (props: Props) => {
             aria-controls={`accordion__body-${index}`}
             tabIndex={0}
             aria-selected={props.activeIndex === index}>
-            <StyledText renderAs="h3" size="headline4">
-              {item.title}
-            </StyledText>
+            {item.title}
             {props.activeIndex !== index && item.titleSupplement}
           </StyledAccordionItemTitle>
           <StyledAccordionItemBody

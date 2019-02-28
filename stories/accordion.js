@@ -15,7 +15,11 @@ const themeDecorator = storyFn => <Themer>{storyFn()}</Themer>;
 
 const items = [
   {
-    title: '1. Billing Information',
+    title: (
+      <StyledText renderAs="h3" size="headline4" font="bold">
+        1. Billing Information
+      </StyledText>
+    ),
     titleSupplement: (
       <div>
         <StyledText margin={0} display="block" size="pStatic">
@@ -34,7 +38,11 @@ const items = [
     )
   },
   {
-    title: '2. Payment Method',
+    title: (
+      <StyledText renderAs="h3" size="headline4" font="bold">
+        2. Payment Method
+      </StyledText>
+    ),
     titleSupplement: (
       <div>
         <StyledText margin={0} display="block" size="pStatic">
@@ -50,7 +58,11 @@ const items = [
     )
   },
   {
-    title: '3. Review',
+    title: (
+      <StyledText renderAs="h3" size="headline4" font="bold">
+        3. Review
+      </StyledText>
+    ),
     body: (
       <div>
         <StyledText>Body content</StyledText>
