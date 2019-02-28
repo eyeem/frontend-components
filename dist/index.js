@@ -7674,29 +7674,32 @@ var Accordion = function Accordion(props) {
     'div',
     { role: 'tablist' },
     props.items.map(function (item, index) {
-      return _react2.default.createElement(
-        _styledAccordion.StyledAccordionItem,
-        { key: JSON.stringify(item.title) },
+      return (
+        // eslint-disable-next-line
         _react2.default.createElement(
-          _styledAccordion.StyledAccordionItemTitle,
-          {
-            role: 'tab',
-            id: 'accordion__title-' + index,
-            'aria-controls': 'accordion__body-' + index,
-            tabIndex: 0,
-            'aria-selected': props.activeIndex === index },
-          item.title,
-          props.activeIndex !== index && item.titleSupplement
-        ),
-        _react2.default.createElement(
-          _styledAccordion.StyledAccordionItemBody,
-          {
-            role: 'tabpanel',
-            id: 'accordion__body-' + index,
-            labelledby: 'accordion__title-' + index,
-            'aria-hidden': props.activeIndex === index,
-            isShown: props.activeIndex === index },
-          item.body
+          _styledAccordion.StyledAccordionItem,
+          { key: 'acc-item-' + index },
+          _react2.default.createElement(
+            _styledAccordion.StyledAccordionItemTitle,
+            {
+              role: 'tab',
+              id: 'accordion__title-' + index,
+              'aria-controls': 'accordion__body-' + index,
+              tabIndex: 0,
+              'aria-selected': props.activeIndex === index },
+            item.title,
+            props.activeIndex !== index && item.titleSupplement
+          ),
+          _react2.default.createElement(
+            _styledAccordion.StyledAccordionItemBody,
+            {
+              role: 'tabpanel',
+              id: 'accordion__body-' + index,
+              labelledby: 'accordion__title-' + index,
+              'aria-hidden': props.activeIndex === index,
+              isShown: props.activeIndex === index },
+            item.body
+          )
         )
       );
     })

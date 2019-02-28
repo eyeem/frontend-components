@@ -30,7 +30,8 @@ const Accordion = (props: Props) => {
   return (
     <div role="tablist">
       {props.items.map((item, index) => (
-        <StyledAccordionItem key={JSON.stringify(item.title)}>
+        // eslint-disable-next-line
+        <StyledAccordionItem key={`acc-item-${index}`}>
           <StyledAccordionItemTitle
             role="tab"
             id={`accordion__title-${index}`}
