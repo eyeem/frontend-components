@@ -20,7 +20,7 @@ export const StyledAccordionItemBody = styled.div`
 `;
 
 export const StyledAccordionItem = styled.div`
-  border: 1px solid black;
+  border: 1.5px solid black;
   padding: 1.5rem;
   margin-bottom: 1rem;
 `;
