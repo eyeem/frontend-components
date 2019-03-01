@@ -1,3 +1,5 @@
+import { BREAKPOINTS } from './styleUtils';
+
 export const colors = {
   whites: {
     white: '#ffffff',
@@ -78,6 +80,13 @@ export const colors = {
 export const borderRadius = '2px';
 
 /* NOTE: styled-system
-         https://jxnblk.com/styled-system/#space-theming
+         https://styled-system.com/#space-theming
+         https://styled-system.com/#responsive-styles
 */
-export const space = [0, 4, 8, 16, 32, 64];
+export const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
+export const breakpoints = {
+  sm: `${BREAKPOINTS.small}px`,
+  md: `${BREAKPOINTS.medium}px`,
+  lg: `${BREAKPOINTS.large}px`,
+  xl: `${BREAKPOINTS.xlarge}px`
+};

@@ -1,4 +1,8 @@
 import styled, { keyframes } from 'styled-components';
+import { colors } from '../../theme';
+import { media } from '../../styleUtils';
+
+import Box from '../box';
 
 const fadeIn = keyframes`
   from {
@@ -10,19 +14,19 @@ const fadeIn = keyframes`
   }
 `;
 
-export const StyledAccordionItemBody = styled.div`
+export const StyledAccordionItemBody = styled(Box)`
   display: ${props => (props.isShown ? 'block' : 'none')};
   opacity: 0;
   animation: ${fadeIn} ease 400ms;
   animation-fill-mode: forwards;
-  padding-bottom: 2rem;
-  padding-top: 1rem;
 `;
 
-export const StyledAccordionItem = styled.div`
-  border: 1.5px solid black;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-`;
+export const StyledAccordionItem = styled(Box)`
+  border-top: 1px solid ${colors.greys.grey4};
+  border-bottom: 1px solid ${colors.greys.grey4};
 
-export const StyledAccordionItemTitle = styled.div``;
+  ${media.medium`
+    border-left: 1px solid ${colors.greys.grey4};
+    border-right: 1px solid ${colors.greys.grey4};
+  `}
+`;
