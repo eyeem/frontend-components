@@ -1,4 +1,5 @@
 /* @flow */
+/* eslint-disable security/detect-object-injection */
 import _ from 'lodash';
 import { css } from 'styled-components';
 import * as theme from './theme';
@@ -9,6 +10,13 @@ export const BREAKPOINTS = {
   medium: 641,
   large: 769,
   xlarge: 1025
+};
+
+export const STYLED_SYSTEM_BP = {
+  sm: `${BREAKPOINTS.small}px`,
+  md: `${BREAKPOINTS.medium}px`,
+  lg: `${BREAKPOINTS.large}px`,
+  xl: `${BREAKPOINTS.xlarge}px`
 };
 
 // iterate through the sizes and create a media template
@@ -30,12 +38,13 @@ const typeToFontFamily = {
   light: '"Sailec Light", sans-serif'
 };
 
-export const font = (type: 'regular' | 'bold' = 'regular' | 'light') => `
+// eslint-disable-next-line
+export const font = (type: "regular" | "bold" = "regular" | "light") => `
   font-weight: 300;
   font-family: ${typeToFontFamily[type]};
 `;
 
-export const fromInternalTheme = (selector: string) => (props: {}) =>
+export const fromInternalTheme = (selector: string) => () =>
   _.get(theme, selector);
 export const fromTheme = (selector: string) => (props: { theme: {} }) =>
   _.get(props.theme, selector);

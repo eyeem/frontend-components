@@ -4,9 +4,10 @@ import type { Node } from 'react';
 
 import {
   StyledAccordionItem,
-  StyledAccordionItemBody,
-  StyledAccordionItemTitle
+  StyledAccordionItemBody
 } from './styledAccordion';
+
+import Box from '../box';
 
 type AccordionItem = {
   title: Node,
@@ -30,25 +31,33 @@ const Accordion = (props: Props) => {
   return (
     <div role="tablist">
       {props.items.map((item, index) => (
-        // eslint-disable-next-line
-        <StyledAccordionItem key={`acc-item-${index}`}>
-          <StyledAccordionItemTitle
-            role="tab"
-            id={`accordion__title-${index}`}
-            aria-controls={`accordion__body-${index}`}
-            tabIndex={0}
-            aria-selected={props.activeIndex === index}>
-            {item.title}
-            {props.activeIndex !== index && item.titleSupplement}
-          </StyledAccordionItemTitle>
-          <StyledAccordionItemBody
-            role="tabpanel"
-            id={`accordion__body-${index}`}
-            labelledby={`accordion__title-${index}`}
-            aria-hidden={props.activeIndex === index}
-            isShown={props.activeIndex === index}>
-            {item.body}
-          </StyledAccordionItemBody>
+        <StyledAccordionItem
+          p={{ sm: 3, md: 4 }}
+          mb={3}
+          // eslint-disable-next-line
+          key={`acc-item-${index}`}
+        >
+          <Box p={{ sm: 2, md: 1 }}>
+            <div
+              role="tab"
+              id={`accordion__title-${index}`}
+              aria-controls={`accordion__body-${index}`}
+              tabIndex={0}
+              aria-selected={props.activeIndex === index}>
+              {item.title}
+              {props.activeIndex !== index && item.titleSupplement}
+            </div>
+            <StyledAccordionItemBody
+              pt={3}
+              pb={1}
+              role="tabpanel"
+              id={`accordion__body-${index}`}
+              labelledby={`accordion__title-${index}`}
+              aria-hidden={props.activeIndex === index}
+              isShown={props.activeIndex === index}>
+              {item.body}
+            </StyledAccordionItemBody>
+          </Box>
         </StyledAccordionItem>
       ))}
     </div>

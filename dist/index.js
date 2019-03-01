@@ -7,7 +7,7 @@
 		exports["eyeem-components"] = factory(require("react"), require("styled-components"), require("react-create-component-from-tag-prop"), require("lodash"));
 	else
 		root["eyeem-components"] = factory(root["react"], root["styled-components"], root["react-create-component-from-tag-prop"], root["_"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_8__, __WEBPACK_EXTERNAL_MODULE_12__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_12__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -95,7 +95,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.idealTextColor = exports.isRgbaColor = exports.propsColorFromTheme = exports.alignItems = exports.fromPropsTernary = exports.fromProps = exports.fromTheme = exports.fromInternalTheme = exports.font = exports.media = exports.BREAKPOINTS = undefined;
+exports.idealTextColor = exports.isRgbaColor = exports.propsColorFromTheme = exports.alignItems = exports.fromPropsTernary = exports.fromProps = exports.fromTheme = exports.fromInternalTheme = exports.font = exports.media = exports.STYLED_SYSTEM_BP = exports.BREAKPOINTS = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  '], ['\n    @media (min-width: ', 'em) {\n      ', ';\n    }\n  ']);
 
@@ -105,7 +105,7 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 var _styledComponents = __webpack_require__(1);
 
-var _theme = __webpack_require__(7);
+var _theme = __webpack_require__(5);
 
 var theme = _interopRequireWildcard(_theme);
 
@@ -114,6 +114,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+/* eslint-disable security/detect-object-injection */
+
 
 // breakpoint lower limits
 var BREAKPOINTS = exports.BREAKPOINTS = {
@@ -121,6 +123,13 @@ var BREAKPOINTS = exports.BREAKPOINTS = {
   medium: 641,
   large: 769,
   xlarge: 1025
+};
+
+var STYLED_SYSTEM_BP = exports.STYLED_SYSTEM_BP = {
+  sm: BREAKPOINTS.small + 'px',
+  md: BREAKPOINTS.medium + 'px',
+  lg: BREAKPOINTS.large + 'px',
+  xl: BREAKPOINTS.xlarge + 'px'
 };
 
 // iterate through the sizes and create a media template
@@ -140,13 +149,14 @@ var typeToFontFamily = {
   light: '"Sailec Light", sans-serif'
 };
 
+// eslint-disable-next-line
 var font = exports.font = function font() {
-  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'regular' | 'light';
+  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "regular" | "light";
   return '\n  font-weight: 300;\n  font-family: ' + typeToFontFamily[type] + ';\n';
 };
 
 var fromInternalTheme = exports.fromInternalTheme = function fromInternalTheme(selector) {
-  return function (props) {
+  return function () {
     return _lodash2.default.get(theme, selector);
   };
 };
@@ -274,6 +284,125 @@ exports.default = Flyout;
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.breakpoints = exports.space = exports.borderRadius = exports.colors = undefined;
+
+var _styleUtils = __webpack_require__(2);
+
+var colors = exports.colors = {
+  whites: {
+    white: '#ffffff',
+    pearlWhite: '#fafafa',
+    transparent: 'rgba(0,0,0,0)'
+  },
+
+  greys: {
+    grey1: '#666666',
+    grey2: '#888888',
+    grey3: '#999999',
+    grey4: '#cccccc',
+    grey5: '#e5e5e5',
+    grey6: '#f2f2f2',
+    grey7: '#f5f5f5'
+  },
+
+  blacks: {
+    black1: '#000000',
+    black2: '#111111',
+    black3: '#1d1d1d',
+    black4: '#292929',
+    black5: '#333333'
+  },
+
+  lightColors: {
+    lightRed: '#fff5f5',
+    lightBlue: '#e7f0fb'
+  },
+
+  solidColors: {
+    green: '#22cc88',
+    greenv2: '#48B307',
+    greenHover: '#4ed69f',
+    greenActive: '#1ba36c',
+    orange: '#ffaa33',
+    orangeHover: '#ffbb5b',
+    orangeActive: '#cc8828',
+    red: '#ff3333',
+    redHover: '#ff5b5b',
+    redActive: '#cc2828',
+    redv2: '#EA3223'
+  },
+
+  foreigns: {
+    tumblr: '#34465d',
+    twitter: '#55acee',
+    facebook1: '#3a5795',
+    facebook2: '#3b5998',
+    facebook2Hover: '#4c70ba',
+    facebook2Disabled: '#96abd6',
+    paypal: '#009cde',
+    paypalActive: '#007CB1',
+    paypalDisabled: '#7FCEEF',
+    paypalHover: '#008CC8'
+  },
+
+  uncategorized: {
+    unnamed1: '#b2b2b2',
+    unnamed3: 'rgba(255,255,255,.2)',
+    unnamed7: 'rgba(51,51,51,.6)',
+    unnamed8: 'rgba(0,0,0,.8)',
+    unnamed9: 'rgba(0,0,0,.6)',
+    unnamed10: 'rgba(0,0,0,.4)',
+    unnamed12: 'rgba(255,255,255,.3)',
+    unnamed13: 'rgba(255,255,255,.1)',
+    unnamed15: 'rgba(0,0,0,.1)',
+    unnamed16: 'rgba(0,0,0,.2)',
+    unnamed17: 'rgba(0,0,0,.7)',
+    unnamed24: '#ff6666',
+    unnamed28: 'rgba(255,255,255,.6)',
+    unnamed30: 'rgba(255,255,255,.5)',
+    unnamed31: '#5555ff',
+    unnamed39: 'rgba(0,0,0,.5)'
+  }
+};
+
+var borderRadius = exports.borderRadius = '2px';
+
+/* NOTE: styled-system
+         https://styled-system.com/#space-theming
+         https://styled-system.com/#responsive-styles
+*/
+var space = exports.space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
+exports.breakpoints = _styleUtils.STYLED_SYSTEM_BP;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _box = __webpack_require__(85);
+
+var _box2 = _interopRequireDefault(_box);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _box2.default;
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -463,7 +592,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1001,107 +1130,13 @@ var icons = exports.icons = {
 var fills = exports.fills = ['solid', 'outline'];
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var colors = exports.colors = {
-  whites: {
-    white: '#ffffff',
-    pearlWhite: '#fafafa',
-    transparent: 'rgba(0,0,0,0)'
-  },
-
-  greys: {
-    grey1: '#666666',
-    grey2: '#888888',
-    grey3: '#999999',
-    grey4: '#cccccc',
-    grey5: '#e5e5e5',
-    grey6: '#f2f2f2',
-    grey7: '#f5f5f5'
-  },
-
-  blacks: {
-    black1: '#000000',
-    black2: '#111111',
-    black3: '#1d1d1d',
-    black4: '#292929',
-    black5: '#333333'
-  },
-
-  lightColors: {
-    lightRed: '#fff5f5',
-    lightBlue: '#e7f0fb'
-  },
-
-  solidColors: {
-    green: '#22cc88',
-    greenv2: '#48B307',
-    greenHover: '#4ed69f',
-    greenActive: '#1ba36c',
-    orange: '#ffaa33',
-    orangeHover: '#ffbb5b',
-    orangeActive: '#cc8828',
-    red: '#ff3333',
-    redHover: '#ff5b5b',
-    redActive: '#cc2828',
-    redv2: '#EA3223'
-  },
-
-  foreigns: {
-    tumblr: '#34465d',
-    twitter: '#55acee',
-    facebook1: '#3a5795',
-    facebook2: '#3b5998',
-    facebook2Hover: '#4c70ba',
-    facebook2Disabled: '#96abd6',
-    paypal: '#009cde',
-    paypalActive: '#007CB1',
-    paypalDisabled: '#7FCEEF',
-    paypalHover: '#008CC8'
-  },
-
-  uncategorized: {
-    unnamed1: '#b2b2b2',
-    unnamed3: 'rgba(255,255,255,.2)',
-    unnamed7: 'rgba(51,51,51,.6)',
-    unnamed8: 'rgba(0,0,0,.8)',
-    unnamed9: 'rgba(0,0,0,.6)',
-    unnamed10: 'rgba(0,0,0,.4)',
-    unnamed12: 'rgba(255,255,255,.3)',
-    unnamed13: 'rgba(255,255,255,.1)',
-    unnamed15: 'rgba(0,0,0,.1)',
-    unnamed16: 'rgba(0,0,0,.2)',
-    unnamed17: 'rgba(0,0,0,.7)',
-    unnamed24: '#ff6666',
-    unnamed28: 'rgba(255,255,255,.6)',
-    unnamed30: 'rgba(255,255,255,.5)',
-    unnamed31: '#5555ff',
-    unnamed39: 'rgba(0,0,0,.5)'
-  }
-};
-
-var borderRadius = exports.borderRadius = '2px';
-
-/* NOTE: styled-system
-         https://jxnblk.com/styled-system/#space-theming
-*/
-var space = exports.space = [0, 4, 8, 16, 32, 64];
-
-/***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_8__;
+module.exports = __WEBPACK_EXTERNAL_MODULE_9__;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1118,25 +1153,6 @@ var _icon2 = _interopRequireDefault(_icon);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _icon2.default;
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _box = __webpack_require__(85);
-
-var _box2 = _interopRequireDefault(_box);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _box2.default;
 
 /***/ }),
 /* 11 */
@@ -1997,7 +2013,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(89);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
 /* 16 */
@@ -2038,7 +2054,7 @@ var _buttonv = __webpack_require__(78);
 
 var _buttonv2 = _interopRequireDefault(_buttonv);
 
-var _icon = __webpack_require__(9);
+var _icon = __webpack_require__(10);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -2082,7 +2098,7 @@ var _accordion = __webpack_require__(100);
 
 var _accordion2 = _interopRequireDefault(_accordion);
 
-var _box = __webpack_require__(10);
+var _box = __webpack_require__(6);
 
 var _box2 = _interopRequireDefault(_box);
 
@@ -2090,7 +2106,7 @@ var _flex = __webpack_require__(103);
 
 var _flex2 = _interopRequireDefault(_flex);
 
-var _styleConfig = __webpack_require__(6);
+var _styleConfig = __webpack_require__(8);
 
 var styleConfig = _interopRequireWildcard(_styleConfig);
 
@@ -2098,7 +2114,7 @@ var _styleUtils = __webpack_require__(2);
 
 var styleUtils = _interopRequireWildcard(_styleUtils);
 
-var _theme = __webpack_require__(7);
+var _theme = __webpack_require__(5);
 
 var theme = _interopRequireWildcard(_theme);
 
@@ -2164,7 +2180,7 @@ var _react = __webpack_require__(0);
 
 var React = _interopRequireWildcard(_react);
 
-var _styleConfig = __webpack_require__(6);
+var _styleConfig = __webpack_require__(8);
 
 var _styledButton = __webpack_require__(20);
 
@@ -2246,7 +2262,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactCreateComponentFromTagProp = __webpack_require__(8);
+var _reactCreateComponentFromTagProp = __webpack_require__(9);
 
 var _reactCreateComponentFromTagProp2 = _interopRequireDefault(_reactCreateComponentFromTagProp);
 
@@ -2314,7 +2330,7 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _styleUtils = __webpack_require__(2);
 
-var _icon = __webpack_require__(9);
+var _icon = __webpack_require__(10);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -5246,7 +5262,7 @@ var _react = __webpack_require__(0);
 
 var React = _interopRequireWildcard(_react);
 
-var _styleConfig = __webpack_require__(6);
+var _styleConfig = __webpack_require__(8);
 
 var _styledButtonv = __webpack_require__(80);
 
@@ -5325,11 +5341,11 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactCreateComponentFromTagProp = __webpack_require__(8);
+var _reactCreateComponentFromTagProp = __webpack_require__(9);
 
 var _reactCreateComponentFromTagProp2 = _interopRequireDefault(_reactCreateComponentFromTagProp);
 
-var _theme = __webpack_require__(7);
+var _theme = __webpack_require__(5);
 
 var _styleUtils = __webpack_require__(2);
 
@@ -5502,7 +5518,7 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _styleUtils = __webpack_require__(2);
 
-var _icon = __webpack_require__(9);
+var _icon = __webpack_require__(10);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -5708,7 +5724,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _box = __webpack_require__(10);
+var _box = __webpack_require__(6);
 
 var _box2 = _interopRequireDefault(_box);
 
@@ -5716,7 +5732,7 @@ var _text = __webpack_require__(16);
 
 var _text2 = _interopRequireDefault(_text);
 
-var _theme = __webpack_require__(7);
+var _theme = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5973,7 +5989,7 @@ if (process.env.NODE_ENV !== 'production') {
   module.exports = __webpack_require__(93)();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
 /* 88 */
@@ -6230,7 +6246,7 @@ exports.isSuspense = isSuspense;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
 /* 90 */
@@ -6829,7 +6845,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   return ReactPropTypes;
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
 /* 91 */
@@ -7036,7 +7052,7 @@ checkPropTypes.resetWarningCache = function() {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
 /* 93 */
@@ -7126,7 +7142,7 @@ var _react = __webpack_require__(0);
 
 var React = _interopRequireWildcard(_react);
 
-var _styleConfig = __webpack_require__(6);
+var _styleConfig = __webpack_require__(8);
 
 var _styledText = __webpack_require__(95);
 
@@ -7211,7 +7227,7 @@ var _lodash = __webpack_require__(12);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _reactCreateComponentFromTagProp = __webpack_require__(8);
+var _reactCreateComponentFromTagProp = __webpack_require__(9);
 
 var _reactCreateComponentFromTagProp2 = _interopRequireDefault(_reactCreateComponentFromTagProp);
 
@@ -7663,6 +7679,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _styledAccordion = __webpack_require__(102);
 
+var _box = __webpack_require__(6);
+
+var _box2 = _interopRequireDefault(_box);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Accordion = function Accordion(props) {
@@ -7674,13 +7694,19 @@ var Accordion = function Accordion(props) {
     'div',
     { role: 'tablist' },
     props.items.map(function (item, index) {
-      return (
-        // eslint-disable-next-line
+      return _react2.default.createElement(
+        _styledAccordion.StyledAccordionItem,
+        {
+          p: { sm: 3, md: 4 },
+          mb: 3
+          // eslint-disable-next-line
+          , key: 'acc-item-' + index
+        },
         _react2.default.createElement(
-          _styledAccordion.StyledAccordionItem,
-          { key: 'acc-item-' + index },
+          _box2.default,
+          { p: { sm: 2, md: 1 } },
           _react2.default.createElement(
-            _styledAccordion.StyledAccordionItemTitle,
+            'div',
             {
               role: 'tab',
               id: 'accordion__title-' + index,
@@ -7693,6 +7719,8 @@ var Accordion = function Accordion(props) {
           _react2.default.createElement(
             _styledAccordion.StyledAccordionItemBody,
             {
+              pt: 3,
+              pb: 1,
               role: 'tabpanel',
               id: 'accordion__body-' + index,
               labelledby: 'accordion__title-' + index,
@@ -7705,7 +7733,6 @@ var Accordion = function Accordion(props) {
     })
   );
 };
-
 exports.default = Accordion;
 
 /***/ }),
@@ -7718,16 +7745,24 @@ exports.default = Accordion;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledAccordionItemTitle = exports.StyledAccordionItem = exports.StyledAccordionItemBody = undefined;
+exports.StyledAccordionItem = exports.StyledAccordionItemBody = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n  from {\n    opacity: 0;\n  }\n\n  to {\n    opacity: 1;\n  }\n'], ['\n  from {\n    opacity: 0;\n  }\n\n  to {\n    opacity: 1;\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  display: ', ';\n  opacity: 0;\n  animation: ', ' ease 400ms;\n  animation-fill-mode: forwards;\n  padding-bottom: 2rem;\n  padding-top: 1rem;\n'], ['\n  display: ', ';\n  opacity: 0;\n  animation: ', ' ease 400ms;\n  animation-fill-mode: forwards;\n  padding-bottom: 2rem;\n  padding-top: 1rem;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  border: 1.5px solid black;\n  padding: 1.5rem;\n  margin-bottom: 1rem;\n'], ['\n  border: 1.5px solid black;\n  padding: 1.5rem;\n  margin-bottom: 1rem;\n']),
-    _templateObject4 = _taggedTemplateLiteral([''], ['']);
+    _templateObject2 = _taggedTemplateLiteral(['\n  display: ', ';\n  opacity: 0;\n  animation: ', ' ease 400ms;\n  animation-fill-mode: forwards;\n'], ['\n  display: ', ';\n  opacity: 0;\n  animation: ', ' ease 400ms;\n  animation-fill-mode: forwards;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  border-top: 1px solid ', ';\n  border-bottom: 1px solid ', ';\n\n  ', '\n'], ['\n  border-top: 1px solid ', ';\n  border-bottom: 1px solid ', ';\n\n  ', '\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n    border-left: 1px solid ', ';\n    border-right: 1px solid ', ';\n  '], ['\n    border-left: 1px solid ', ';\n    border-right: 1px solid ', ';\n  ']);
 
 var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _theme = __webpack_require__(5);
+
+var _styleUtils = __webpack_require__(2);
+
+var _box = __webpack_require__(6);
+
+var _box2 = _interopRequireDefault(_box);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -7735,13 +7770,11 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var fadeIn = (0, _styledComponents.keyframes)(_templateObject);
 
-var StyledAccordionItemBody = exports.StyledAccordionItemBody = _styledComponents2.default.div(_templateObject2, function (props) {
+var StyledAccordionItemBody = exports.StyledAccordionItemBody = (0, _styledComponents2.default)(_box2.default)(_templateObject2, function (props) {
   return props.isShown ? 'block' : 'none';
 }, fadeIn);
 
-var StyledAccordionItem = exports.StyledAccordionItem = _styledComponents2.default.div(_templateObject3);
-
-var StyledAccordionItemTitle = exports.StyledAccordionItemTitle = _styledComponents2.default.div(_templateObject4);
+var StyledAccordionItem = exports.StyledAccordionItem = (0, _styledComponents2.default)(_box2.default)(_templateObject3, _theme.colors.greys.grey4, _theme.colors.greys.grey4, _styleUtils.media.medium(_templateObject4, _theme.colors.greys.grey4, _theme.colors.greys.grey4));
 
 /***/ }),
 /* 103 */
@@ -7783,7 +7816,7 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _styledSystem = __webpack_require__(14);
 
-var _box = __webpack_require__(10);
+var _box = __webpack_require__(6);
 
 var _box2 = _interopRequireDefault(_box);
 
