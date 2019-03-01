@@ -1,4 +1,4 @@
-import { BREAKPOINTS } from './styleUtils';
+import { STYLED_SYSTEM_BP as breakpoints } from './styleUtils';
 
 export const colors = {
   whites: {
@@ -84,9 +84,4 @@ export const borderRadius = '2px';
          https://styled-system.com/#responsive-styles
 */
 export const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
-export const breakpoints = {
-  sm: `${BREAKPOINTS.small}px`,
-  md: `${BREAKPOINTS.medium}px`,
-  lg: `${BREAKPOINTS.large}px`,
-  xl: `${BREAKPOINTS.xlarge}px`
-};
+export { breakpoints };
