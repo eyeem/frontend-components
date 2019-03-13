@@ -7700,8 +7700,7 @@ var Accordion = function Accordion(props) {
           p: { sm: 3, md: 4 },
           mb: 3
           // eslint-disable-next-line
-          , key: 'acc-item-' + index
-        },
+          , key: 'acc-item-' + index },
         _react2.default.createElement(
           _box2.default,
           { p: { sm: 2, md: 1 } },
@@ -7716,7 +7715,7 @@ var Accordion = function Accordion(props) {
             item.title,
             props.activeIndex !== index && item.titleSupplement && _react2.default.createElement(
               _box2.default,
-              { pt: 3 },
+              { py: 3 },
               item.titleSupplement
             )
           ),
@@ -7724,7 +7723,7 @@ var Accordion = function Accordion(props) {
             _styledAccordion.StyledAccordionItemBody,
             {
               pt: 4,
-              pb: 1,
+              pb: 3,
               role: 'tabpanel',
               id: 'accordion__body-' + index,
               labelledby: 'accordion__title-' + index,
