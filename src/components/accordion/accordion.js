@@ -45,10 +45,12 @@ const Accordion = (props: Props) => {
               tabIndex={0}
               aria-selected={props.activeIndex === index}>
               {item.title}
-              {props.activeIndex !== index && item.titleSupplement}
+              {props.activeIndex !== index && item.titleSupplement && (
+                <Box pt={3}>{item.titleSupplement}</Box>
+              )}
             </div>
             <StyledAccordionItemBody
-              pt={3}
+              pt={4}
               pb={1}
               role="tabpanel"
               id={`accordion__body-${index}`}
