@@ -14,18 +14,19 @@ storiesOf('Inputv2', module)
   .addDecorator((story, context) => withInfo('')(story)(context))
   .addDecorator(themeDecorator)
   .add('default', () => (
-    <Inputv2 name="name" inputProps={{ placeholder: 'Name' }} />
+    <Inputv2 inputProps={{ placeholder: 'Name', name: 'name' }} />
   ))
   .add('validated', () => (
-    <Inputv2 name="name" isValidated inputProps={{ placeholder: 'Name' }} />
+    <Inputv2 isValidated inputProps={{ placeholder: 'Name', name: 'name' }} />
   ))
   .add('invalid', () => (
     <Inputv2
-      name="name"
       errorMessage="This is the error message."
-      inputProps={{ placeholder: 'Name' }}
+      inputProps={{ placeholder: 'Name', name: 'name' }}
     />
   ))
   .add('disabled', () => (
-    <Inputv2 name="name" inputProps={{ placeholder: 'Name', disabled: true }} />
+    <Inputv2
+      inputProps={{ placeholder: 'Name', disabled: true, name: 'name' }}
+    />
   ));

@@ -7,7 +7,7 @@ afterEach(cleanup);
 
 test('it renders default input', () => {
   const { container } = render(
-    <Inputv2 name="name" inputProps={{ placeholder: 'Name' }} />
+    <Inputv2 inputProps={{ placeholder: 'Name', name: 'name' }} />
   );
 
   const label = getByLabelText(container, 'Name');
@@ -19,7 +19,9 @@ test('it renders default input', () => {
 
 test('it accepts property disabled', () => {
   const { container } = render(
-    <Inputv2 name="name" inputProps={{ placeholder: 'Name', disabled: true }} />
+    <Inputv2
+      inputProps={{ placeholder: 'Name', disabled: true, name: 'name' }}
+    />
   );
   const input = container.querySelector('input');
 
