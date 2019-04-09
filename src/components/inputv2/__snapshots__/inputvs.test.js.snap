@@ -16,10 +16,13 @@ exports[`it renders default input 1`] = `
   -webkit-transition: transform 0.2s ease;
   transition: transform 0.2s ease;
   top: 22px;
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
   font-weight: initial;
-  -webkit-transform: translateX(0) translateY(0) scale(1);
-  -ms-transform: translateX(0) translateY(0) scale(1);
-  transform: translateX(0) translateY(0) scale(1);
+  -webkit-transform: translateY(0) scale(1);
+  -ms-transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .c3 {

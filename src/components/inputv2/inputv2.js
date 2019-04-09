@@ -126,12 +126,11 @@ const StyledLabel = styled.label`
   transition: transform 0.2s ease;
   top: 22px;
   color: ${labelColor};
+  transform-origin: left;
   font-weight: ${props => (props.isActive ? '600' : 'initial')};
 
   transform: ${props =>
-    props.isActive
-      ? 'translateX(-4px) translateY(-10px) scale(0.8)'
-      : 'translateX(0) translateY(0) scale(1)'};
+    props.isActive ? 'translateY(-10px) scale(0.8)' : 'translateY(0) scale(1)'};
 `;
 
 const StyledInput = styled.input`
@@ -174,11 +173,11 @@ type InputProps = {
   type?: string,
   disabled?: boolean,
   placeholder?: string,
-  'data-test-id'?: string
+  'data-test-id'?: string,
+  name: string
 };
 
 type Props = {
-  name: string,
   inputProps: InputProps,
   errorMessage: string,
   isValidated: boolean
@@ -204,10 +203,10 @@ class Inputv2 extends React.Component<Props, State> {
   };
 
   componentDidMount() {
-    if (!this.props.name) {
+    if (!this.props.inputProps.name) {
       // eslint-disable-next-line
       console.error(
-        '<Inputv2>: Missing this.props.name, which is needed for accessibility markup.'
+        '<Inputv2>: Missing this.props.inputProps.name, which is needed for accessibility markup.'
       );
     }
   }
@@ -223,18 +222,17 @@ class Inputv2 extends React.Component<Props, State> {
           isValidated={this.props.isValidated}
           isDisabled={this.props.inputProps.disabled}
           p={3}>
-          <StyledLabel htmlFor={this.props.name} isActive={isActive}>
+          <StyledLabel htmlFor={this.props.inputProps.name} isActive={isActive}>
             {this.props.inputProps.placeholder}
           </StyledLabel>
           <StyledInput
             {...this.props.inputProps}
-            id={this.props.name}
+            id={this.props.inputProps.name}
             value={this.state.value}
             onChange={this.setValue}
             disabled={this.props.inputProps.disabled}
             onFocus={() => this.setFocus(true)}
             onBlur={() => this.setFocus(false)}
-            name={this.props.name}
             isActive={isActive}
             type={this.props.inputProps.type || 'text'}
           />
