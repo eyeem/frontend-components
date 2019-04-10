@@ -174,7 +174,9 @@ type InputProps = {
   disabled?: boolean,
   placeholder?: string,
   'data-test-id'?: string,
-  name: string
+  name: string,
+  value: string,
+  onChange: Function
 };
 
 type Props = {
@@ -184,22 +186,16 @@ type Props = {
 };
 
 type State = {
-  isFocused: boolean,
-  value: string
+  isFocused: boolean
 };
 
 class Inputv2 extends React.Component<Props, State> {
   state = {
-    isFocused: false,
-    value: ''
+    isFocused: false
   };
 
   setFocus = (val: boolean) => {
     this.setState({ isFocused: val });
-  };
-
-  setValue = event => {
-    this.setState({ value: event.target.value });
   };
 
   componentDidMount() {
@@ -212,7 +208,8 @@ class Inputv2 extends React.Component<Props, State> {
   }
 
   render() {
-    const isActive = this.state.value.length || this.state.isFocused;
+    const { value } = this.props.inputProps;
+    const isActive = (value && value.length) || this.state.isFocused;
 
     return (
       <ElementWrapper>
@@ -228,8 +225,8 @@ class Inputv2 extends React.Component<Props, State> {
           <StyledInput
             {...this.props.inputProps}
             id={this.props.inputProps.name}
-            value={this.state.value}
-            onChange={this.setValue}
+            value={this.props.inputProps.value}
+            onChange={this.props.inputProps.onChange}
             disabled={this.props.inputProps.disabled}
             onFocus={() => this.setFocus(true)}
             onBlur={() => this.setFocus(false)}

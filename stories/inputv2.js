@@ -9,24 +9,35 @@ import Themer from './themer';
 
 const themeDecorator = storyFn => <Themer>{storyFn()}</Themer>;
 
+class Wrapper extends React.Component {
+  state = { value: '' };
+
+  onChange = event => {
+    this.setState({ value: event.target.value });
+  };
+
+  render() {
+    return (
+      <Inputv2
+        isValidated={this.props.isValidated}
+        errorMessage={this.props.errorMessage}
+        inputProps={{
+          placeholder: 'Name',
+          name: 'name',
+          value: this.state.value,
+          onChange: this.onChange,
+          disabled: this.props.disabled
+        }}
+      />
+    );
+  }
+}
+
 storiesOf('Inputv2', module)
   .addDecorator(story => <StoryWrapper>{story()}</StoryWrapper>)
   .addDecorator((story, context) => withInfo('')(story)(context))
   .addDecorator(themeDecorator)
-  .add('default', () => (
-    <Inputv2 inputProps={{ placeholder: 'Name', name: 'name' }} />
-  ))
-  .add('validated', () => (
-    <Inputv2 isValidated inputProps={{ placeholder: 'Name', name: 'name' }} />
-  ))
-  .add('invalid', () => (
-    <Inputv2
-      errorMessage="This is the error message."
-      inputProps={{ placeholder: 'Name', name: 'name' }}
-    />
-  ))
-  .add('disabled', () => (
-    <Inputv2
-      inputProps={{ placeholder: 'Name', disabled: true, name: 'name' }}
-    />
-  ));
+  .add('default', () => <Wrapper />)
+  .add('validated', () => <Wrapper isValidated />)
+  .add('invalid', () => <Wrapper errorMessage="This is the error message." />)
+  .add('disabled', () => <Wrapper disabled />);
