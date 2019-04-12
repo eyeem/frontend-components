@@ -101,7 +101,20 @@ const checkmarkIcon = css`
   }
 `;
 
+const StyledLabel = styled.label`
+  position: absolute;
+  transition: transform 0.2s ease;
+  top: 22px;
+  color: ${labelColor};
+  transform-origin: left;
+  font-weight: ${props => (props.isActive ? '600' : 'initial')};
+
+  transform: ${props =>
+    props.isActive ? 'translateY(-12px) scale(0.8)' : 'translateY(0) scale(1)'};
+`;
+
 const InputWrapper = styled(Box)`
+  padding: 12px 16px;
   position: relative;
   border-width: 1.5px;
   border-style: solid;
@@ -115,38 +128,30 @@ const InputWrapper = styled(Box)`
         : props.isDisabled
         ? borderColorDisabled
         : borderColorHover};
+
+    ${StyledLabel} {
+      color: ${colors.greys.grey1};
+    }
   }
 
   ${props => props.isInvalid && xIcon}
   ${props => props.isValidated && checkmarkIcon}
 `;
 
-const StyledLabel = styled.label`
-  position: absolute;
-  transition: transform 0.2s ease;
-  top: 22px;
-  color: ${labelColor};
-  transform-origin: left;
-  font-weight: ${props => (props.isActive ? '600' : 'initial')};
-
-  transform: ${props =>
-    props.isActive ? 'translateY(-10px) scale(0.8)' : 'translateY(0) scale(1)'};
-`;
-
 const StyledInput = styled.input`
   width: 100%;
   border: 0;
-  line-height: 22px;
+  line-height: 24px;
   font-size: 16px;
   padding-top: 4px;
-  padding-bottom: 4px;
+  padding-bottom: 9px;
   padding-right: 36px;
   background-color: transparent;
   transition: transform 0.2s ease;
   color: ${textColor};
 
   transform: ${props =>
-    props.isActive ? 'translateY(10px)' : 'translateY(0)'};
+    props.isActive ? 'translateY(12px)' : 'translateY(0)'};
 
   ::placeholder {
     color: transparent;
@@ -164,8 +169,9 @@ const ElementWrapper = styled.div`
 
 const ErrorWrapper = styled(StyledText)`
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   left: 0;
+  line-height: 16px;
   color: ${colors.solidColors.redv2};
 `;
 
@@ -217,8 +223,7 @@ class Inputv2 extends React.Component<Props, State> {
           isFocused={this.state.isFocused}
           isInvalid={!!this.props.errorMessage}
           isValidated={this.props.isValidated}
-          isDisabled={this.props.inputProps.disabled}
-          p={3}>
+          isDisabled={this.props.inputProps.disabled}>
           <StyledLabel htmlFor={this.props.inputProps.name} isActive={isActive}>
             {this.props.inputProps.placeholder}
           </StyledLabel>
@@ -235,7 +240,7 @@ class Inputv2 extends React.Component<Props, State> {
           />
         </InputWrapper>
         {this.props.errorMessage && (
-          <ErrorWrapper size="pStatic" font="bold">
+          <ErrorWrapper size="pMin" font="bold">
             {this.props.errorMessage}
           </ErrorWrapper>
         )}

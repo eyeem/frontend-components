@@ -41,8 +41,8 @@ const background = (props: {
   }
   return css`
     border-color: ${fromInternalTheme('colors.greys.grey4')};
-    background-color: ${p =>
-      p.disabled
+    background-color: ${prop =>
+      prop.disabled
         ? fromInternalTheme('colors.lightColors.lightRed')
         : fromInternalTheme('colors.whites.white')};
   `;
@@ -113,9 +113,7 @@ class Input extends React.Component<Props, State> {
   };
 
   togglePassword = () =>
-    this.setState({
-      showPassword: !this.state.showPassword
-    });
+    this.setState(state => ({ showPassword: !state.showPassword }));
 
   render() {
     const WrapperComponent = this.props.formRow ? FormRow : 'div';
@@ -136,8 +134,7 @@ class Input extends React.Component<Props, State> {
         {this.props.inputProps.type === 'password' && (
           <InnerHint
             onClick={this.togglePassword}
-            className="g_input_innerHint"
-          >
+            className="g_input_innerHint">
             {this.state.showPassword ? 'hide' : 'show'}
           </InnerHint>
         )}
