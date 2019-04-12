@@ -18,41 +18,17 @@ class Wrapper extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Inputv2
-          isValidated={this.props.isValidated}
-          errorMessage={this.props.errorMessage}
-          inputProps={{
-            placeholder: 'Name',
-            name: 'name',
-            value: this.state.value,
-            onChange: this.onChange,
-            disabled: this.props.disabled
-          }}
-        />
-        <Inputv2
-          isValidated={this.props.isValidated}
-          errorMessage={this.props.errorMessage}
-          inputProps={{
-            placeholder: 'Name',
-            name: 'name',
-            value: this.state.value,
-            onChange: this.onChange,
-            disabled: this.props.disabled
-          }}
-        />
-        <Inputv2
-          isValidated={this.props.isValidated}
-          errorMessage={this.props.errorMessage}
-          inputProps={{
-            placeholder: 'Name',
-            name: 'name',
-            value: this.state.value,
-            onChange: this.onChange,
-            disabled: this.props.disabled
-          }}
-        />
-      </React.Fragment>
+      <Inputv2
+        isValidated={this.props.isValidated}
+        errorMessage={this.props.errorMessage}
+        inputProps={{
+          placeholder: 'Name',
+          name: 'name',
+          value: this.state.value,
+          onChange: this.onChange,
+          disabled: this.props.disabled
+        }}
+      />
     );
   }
 }
