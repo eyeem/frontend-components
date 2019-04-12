@@ -34,10 +34,10 @@ exports[`it renders default input 1`] = `
   border: 0;
   line-height: 24px;
   font-size: 16px;
-  padding-top: 4px;
+  padding-top: 5px;
   padding-bottom: 9px;
   padding-right: 36px;
-  background-color: transparent;
+  background-color: transparent !important;
   -webkit-transition: -webkit-transform 0.2s ease;
   -webkit-transition: transform 0.2s ease;
   transition: transform 0.2s ease;

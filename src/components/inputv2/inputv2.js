@@ -88,6 +88,7 @@ const checkmarkIcon = css`
     right: 30px;
     top: 30px;
     background-color: ${colors.solidColors.greenv2};
+    z-index: 1;
   }
   &::before {
     height: 2px;
@@ -143,15 +144,15 @@ const StyledInput = styled.input`
   border: 0;
   line-height: 24px;
   font-size: 16px;
-  padding-top: 4px;
+  padding-top: 5px;
   padding-bottom: 9px;
   padding-right: 36px;
-  background-color: transparent;
+  background-color: transparent !important;
   transition: transform 0.2s ease;
   color: ${textColor};
 
   transform: ${props =>
-    props.isActive ? 'translateY(12px)' : 'translateY(0)'};
+    props.isActive ? 'translateY(11px)' : 'translateY(0)'};
 
   ::placeholder {
     color: transparent;
