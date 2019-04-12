@@ -5538,12 +5538,12 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n      border-color: ", ";\n      background-color: ", ";\n    "], ["\n      border-color: ", ";\n      background-color: ", ";\n    "]),
-    _templateObject2 = _taggedTemplateLiteral(["\n      border-color: ", ";\n      background-color: ", ";\n      background-image: url(\"/node-static/img/spinner-32-black.gif\");\n      background-position: center right 8px;\n      background-size: 16px;\n      background-repeat: no-repeat;\n    "], ["\n      border-color: ", ";\n      background-color: ", ";\n      background-image: url(\"/node-static/img/spinner-32-black.gif\");\n      background-position: center right 8px;\n      background-size: 16px;\n      background-repeat: no-repeat;\n    "]),
-    _templateObject3 = _taggedTemplateLiteral(["\n      border-color: ", ";\n      background-color: ", ";\n      padding-right: 30px;\n      background-image: url(\"/node-static/img/check-green.svg\");\n      background-position: center right 8px;\n      background-size: 15px;\n      background-repeat: no-repeat;\n    "], ["\n      border-color: ", ";\n      background-color: ", ";\n      padding-right: 30px;\n      background-image: url(\"/node-static/img/check-green.svg\");\n      background-position: center right 8px;\n      background-size: 15px;\n      background-repeat: no-repeat;\n    "]),
-    _templateObject4 = _taggedTemplateLiteral(["\n    border-color: ", ";\n    background-color: ", ";\n  "], ["\n    border-color: ", ";\n    background-color: ", ";\n  "]),
-    _templateObject5 = _taggedTemplateLiteral(["\n  ", ";\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ", ";\n  }\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ", ";\n  box-shadow: none;\n  color: ", ";\n  ", " appearance: none;\n  -webkit-appearance: none;\n\n  &:focus {\n    border-color: ", ";\n    &::placeholder {\n      color: ", ";\n    }\n  }\n"], ["\n  ", ";\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ", ";\n  }\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ", ";\n  box-shadow: none;\n  color: ", ";\n  ", " appearance: none;\n  -webkit-appearance: none;\n\n  &:focus {\n    border-color: ", ";\n    &::placeholder {\n      color: ", ";\n    }\n  }\n"]),
-    _templateObject6 = _taggedTemplateLiteral(["\n  font-size: 12px;\n\n  position: absolute;\n  top: 2px;\n  right: 12px;\n  cursor: pointer;\n\n  color: ", ";\n"], ["\n  font-size: 12px;\n\n  position: absolute;\n  top: 2px;\n  right: 12px;\n  cursor: pointer;\n\n  color: ", ";\n"]);
+var _templateObject = _taggedTemplateLiteral(['\n      border-color: ', ';\n      background-color: ', ';\n    '], ['\n      border-color: ', ';\n      background-color: ', ';\n    ']),
+    _templateObject2 = _taggedTemplateLiteral(['\n      border-color: ', ';\n      background-color: ', ';\n      background-image: url(\'/node-static/img/spinner-32-black.gif\');\n      background-position: center right 8px;\n      background-size: 16px;\n      background-repeat: no-repeat;\n    '], ['\n      border-color: ', ';\n      background-color: ', ';\n      background-image: url(\'/node-static/img/spinner-32-black.gif\');\n      background-position: center right 8px;\n      background-size: 16px;\n      background-repeat: no-repeat;\n    ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n      border-color: ', ';\n      background-color: ', ';\n      padding-right: 30px;\n      background-image: url(\'/node-static/img/check-green.svg\');\n      background-position: center right 8px;\n      background-size: 15px;\n      background-repeat: no-repeat;\n    '], ['\n      border-color: ', ';\n      background-color: ', ';\n      padding-right: 30px;\n      background-image: url(\'/node-static/img/check-green.svg\');\n      background-position: center right 8px;\n      background-size: 15px;\n      background-repeat: no-repeat;\n    ']),
+    _templateObject4 = _taggedTemplateLiteral(['\n    border-color: ', ';\n    background-color: ', ';\n  '], ['\n    border-color: ', ';\n    background-color: ', ';\n  ']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  ', ';\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  box-shadow: none;\n  color: ', ';\n  ', ' appearance: none;\n  -webkit-appearance: none;\n\n  &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n'], ['\n  ', ';\n  font-size: 16px;\n  line-height: 20px;\n  &::placeholder {\n    color: ', ';\n  }\n  padding: 9px 12px 10px 12px;\n  max-height: 40px;\n  width: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: ', ';\n  box-shadow: none;\n  color: ', ';\n  ', ' appearance: none;\n  -webkit-appearance: none;\n\n  &:focus {\n    border-color: ', ';\n    &::placeholder {\n      color: ', ';\n    }\n  }\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  font-size: 12px;\n\n  position: absolute;\n  top: 2px;\n  right: 12px;\n  cursor: pointer;\n\n  color: ', ';\n'], ['\n  font-size: 12px;\n\n  position: absolute;\n  top: 2px;\n  right: 12px;\n  cursor: pointer;\n\n  color: ', ';\n']);
 
 var _react = __webpack_require__(0);
 
@@ -5575,22 +5575,22 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var background = function background(props) {
   if (props.error) {
-    return (0, _styledComponents.css)(_templateObject, (0, _styleUtils.fromInternalTheme)("colors.solidColors.red"), (0, _styleUtils.fromInternalTheme)("colors.lightColors.lightRed"));
+    return (0, _styledComponents.css)(_templateObject, (0, _styleUtils.fromInternalTheme)('colors.solidColors.red'), (0, _styleUtils.fromInternalTheme)('colors.lightColors.lightRed'));
   }
   if (props.pending) {
-    return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromInternalTheme)("colors.greys.grey4"), (0, _styleUtils.fromInternalTheme)("colors.whites.white"));
+    return (0, _styledComponents.css)(_templateObject2, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
   }
   if (props.showCheckmark) {
-    return (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)("colors.greys.grey4"), (0, _styleUtils.fromInternalTheme)("colors.whites.white"));
+    return (0, _styledComponents.css)(_templateObject3, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), (0, _styleUtils.fromInternalTheme)('colors.whites.white'));
   }
-  return (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromInternalTheme)("colors.greys.grey4"), function (p) {
-    return p.disabled ? (0, _styleUtils.fromInternalTheme)("colors.lightColors.lightRed") : (0, _styleUtils.fromInternalTheme)("colors.whites.white");
+  return (0, _styledComponents.css)(_templateObject4, (0, _styleUtils.fromInternalTheme)('colors.greys.grey4'), function (prop) {
+    return prop.disabled ? (0, _styleUtils.fromInternalTheme)('colors.lightColors.lightRed') : (0, _styleUtils.fromInternalTheme)('colors.whites.white');
   });
 };
 
-var StyledInput = _styledComponents2.default.input(_templateObject5, (0, _styleUtils.font)("regular"), (0, _styleUtils.fromInternalTheme)("colors.uncategorized.unnamed10"), (0, _styleUtils.fromInternalTheme)("borderRadius"), (0, _styleUtils.fromInternalTheme)("colors.blacks.black1"), background, (0, _styleUtils.fromInternalTheme)("colors.solidColors.green"), (0, _styleUtils.fromInternalTheme)("colors.uncategorized.unnamed16"));
+var StyledInput = _styledComponents2.default.input(_templateObject5, (0, _styleUtils.font)('regular'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed10'), (0, _styleUtils.fromInternalTheme)('borderRadius'), (0, _styleUtils.fromInternalTheme)('colors.blacks.black1'), background, (0, _styleUtils.fromInternalTheme)('colors.solidColors.green'), (0, _styleUtils.fromInternalTheme)('colors.uncategorized.unnamed16'));
 
-var InnerHint = _styledComponents2.default.p(_templateObject6, (0, _styleUtils.fromInternalTheme)("colors.greys.grey3"));
+var InnerHint = _styledComponents2.default.p(_templateObject6, (0, _styleUtils.fromInternalTheme)('colors.greys.grey3'));
 
 var Input = function (_React$Component) {
   _inherits(Input, _React$Component);
@@ -5607,16 +5607,16 @@ var Input = function (_React$Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Input.__proto__ || Object.getPrototypeOf(Input)).call.apply(_ref, [this].concat(args))), _this), _this.state = { showPassword: false }, _this.togglePassword = function () {
-      return _this.setState({
-        showPassword: !_this.state.showPassword
+      return _this.setState(function (state) {
+        return { showPassword: !state.showPassword };
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Input, [{
-    key: "render",
+    key: 'render',
     value: function render() {
-      var WrapperComponent = this.props.formRow ? _formRow2.default : "div";
+      var WrapperComponent = this.props.formRow ? _formRow2.default : 'div';
 
       return _react2.default.createElement(
         WrapperComponent,
@@ -5625,19 +5625,18 @@ var Input = function (_React$Component) {
           error: !!this.props.errorMessage,
           pending: this.props.pending,
           showCheckmark: this.props.showCheckmark,
-          type: this.state.showPassword && "text" || this.props.inputProps.type || "text"
+          type: this.state.showPassword && 'text' || this.props.inputProps.type || 'text'
         })),
-        this.props.inputProps.type === "password" && _react2.default.createElement(
+        this.props.inputProps.type === 'password' && _react2.default.createElement(
           InnerHint,
           {
             onClick: this.togglePassword,
-            className: "g_input_innerHint"
-          },
-          this.state.showPassword ? "hide" : "show"
+            className: 'g_input_innerHint' },
+          this.state.showPassword ? 'hide' : 'show'
         ),
         this.props.errorMessage && _react2.default.createElement(
           _flyout2.default,
-          { fontColor: "whites.white", backgroundColor: "solidColors.red" },
+          { fontColor: 'whites.white', backgroundColor: 'solidColors.red' },
           this.props.errorMessage
         )
       );
@@ -5691,11 +5690,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _templateObject = _taggedTemplateLiteral(['\n  &::before,\n  &::after {\n    content: \'\';\n    position: absolute;\n    height: 16px;\n    width: 16px;\n    right: 20px;\n    top: 22px;\n    border-width: 2px;\n    border-color: ', ';\n  }\n  &::before {\n    transform: translateX(8px) translateY(4px) rotate(45deg);\n    border-left-style: solid;\n  }\n  &::after {\n    border-bottom-style: solid;\n    transform: translateX(8px) translateY(-6px) rotate(45deg);\n  }\n'], ['\n  &::before,\n  &::after {\n    content: \'\';\n    position: absolute;\n    height: 16px;\n    width: 16px;\n    right: 20px;\n    top: 22px;\n    border-width: 2px;\n    border-color: ', ';\n  }\n  &::before {\n    transform: translateX(8px) translateY(4px) rotate(45deg);\n    border-left-style: solid;\n  }\n  &::after {\n    border-bottom-style: solid;\n    transform: translateX(8px) translateY(-6px) rotate(45deg);\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  &::before,\n  &::after {\n    content: \'\';\n    position: absolute;\n    right: 30px;\n    top: 30px;\n    background-color: ', ';\n  }\n  &::before {\n    height: 2px;\n    width: 8px;\n    transform: rotate(45deg);\n  }\n  &::after {\n    width: 16px;\n    height: 2px;\n    transform: rotate(135deg) translateX(-10px) translateY(-7px);\n  }\n'], ['\n  &::before,\n  &::after {\n    content: \'\';\n    position: absolute;\n    right: 30px;\n    top: 30px;\n    background-color: ', ';\n  }\n  &::before {\n    height: 2px;\n    width: 8px;\n    transform: rotate(45deg);\n  }\n  &::after {\n    width: 16px;\n    height: 2px;\n    transform: rotate(135deg) translateX(-10px) translateY(-7px);\n  }\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  position: relative;\n  border-width: 1.5px;\n  border-style: solid;\n  transition: border-color 0.2s ease;\n  border-color: ', ';\n\n  &:hover {\n    border-color: ', ';\n  }\n\n  ', '\n  ', '\n'], ['\n  position: relative;\n  border-width: 1.5px;\n  border-style: solid;\n  transition: border-color 0.2s ease;\n  border-color: ', ';\n\n  &:hover {\n    border-color: ', ';\n  }\n\n  ', '\n  ', '\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  position: absolute;\n  transition: transform 0.2s ease;\n  top: 22px;\n  color: ', ';\n  transform-origin: left;\n  font-weight: ', ';\n\n  transform: ', ';\n'], ['\n  position: absolute;\n  transition: transform 0.2s ease;\n  top: 22px;\n  color: ', ';\n  transform-origin: left;\n  font-weight: ', ';\n\n  transform: ', ';\n']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  width: 100%;\n  border: 0;\n  line-height: 22px;\n  font-size: 16px;\n  padding-top: 4px;\n  padding-bottom: 4px;\n  padding-right: 36px;\n  background-color: transparent;\n  transition: transform 0.2s ease;\n  color: ', ';\n\n  transform: ', ';\n\n  ::placeholder {\n    color: transparent;\n  }\n\n  :focus {\n    outline: none;\n  }\n'], ['\n  width: 100%;\n  border: 0;\n  line-height: 22px;\n  font-size: 16px;\n  padding-top: 4px;\n  padding-bottom: 4px;\n  padding-right: 36px;\n  background-color: transparent;\n  transition: transform 0.2s ease;\n  color: ', ';\n\n  transform: ', ';\n\n  ::placeholder {\n    color: transparent;\n  }\n\n  :focus {\n    outline: none;\n  }\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  position: absolute;\n  transition: transform 0.2s ease;\n  top: 22px;\n  color: ', ';\n  transform-origin: left;\n  font-weight: ', ';\n\n  transform: ', ';\n'], ['\n  position: absolute;\n  transition: transform 0.2s ease;\n  top: 22px;\n  color: ', ';\n  transform-origin: left;\n  font-weight: ', ';\n\n  transform: ', ';\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  padding: 12px 16px;\n  position: relative;\n  border-width: 1.5px;\n  border-style: solid;\n  transition: border-color 0.2s ease;\n  border-color: ', ';\n\n  &:hover {\n    border-color: ', ';\n\n    ', ' {\n      color: ', ';\n    }\n  }\n\n  ', '\n  ', '\n'], ['\n  padding: 12px 16px;\n  position: relative;\n  border-width: 1.5px;\n  border-style: solid;\n  transition: border-color 0.2s ease;\n  border-color: ', ';\n\n  &:hover {\n    border-color: ', ';\n\n    ', ' {\n      color: ', ';\n    }\n  }\n\n  ', '\n  ', '\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  width: 100%;\n  border: 0;\n  line-height: 24px;\n  font-size: 16px;\n  padding-top: 4px;\n  padding-bottom: 9px;\n  padding-right: 36px;\n  background-color: transparent;\n  transition: transform 0.2s ease;\n  color: ', ';\n\n  transform: ', ';\n\n  ::placeholder {\n    color: transparent;\n  }\n\n  :focus {\n    outline: none;\n  }\n'], ['\n  width: 100%;\n  border: 0;\n  line-height: 24px;\n  font-size: 16px;\n  padding-top: 4px;\n  padding-bottom: 9px;\n  padding-right: 36px;\n  background-color: transparent;\n  transition: transform 0.2s ease;\n  color: ', ';\n\n  transform: ', ';\n\n  ::placeholder {\n    color: transparent;\n  }\n\n  :focus {\n    outline: none;\n  }\n']),
     _templateObject6 = _taggedTemplateLiteral(['\n  height: 96px;\n  position: relative;\n'], ['\n  height: 96px;\n  position: relative;\n']),
-    _templateObject7 = _taggedTemplateLiteral(['\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  color: ', ';\n'], ['\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  color: ', ';\n']);
+    _templateObject7 = _taggedTemplateLiteral(['\n  position: absolute;\n  bottom: 8px;\n  left: 0;\n  line-height: 16px;\n  color: ', ';\n'], ['\n  position: absolute;\n  bottom: 8px;\n  left: 0;\n  line-height: 16px;\n  color: ', ';\n']);
 
 var _styledTheming = __webpack_require__(13);
 
@@ -5785,23 +5784,23 @@ var xIcon = (0, _styledComponents.css)(_templateObject, _theme.colors.solidColor
 
 var checkmarkIcon = (0, _styledComponents.css)(_templateObject2, _theme.colors.solidColors.greenv2);
 
-var InputWrapper = (0, _styledComponents2.default)(_box2.default)(_templateObject3, getBorderForState, function (props) {
+var StyledLabel = _styledComponents2.default.label(_templateObject3, labelColor, function (props) {
+  return props.isActive ? '600' : 'initial';
+}, function (props) {
+  return props.isActive ? 'translateY(-12px) scale(0.8)' : 'translateY(0) scale(1)';
+});
+
+var InputWrapper = (0, _styledComponents2.default)(_box2.default)(_templateObject4, getBorderForState, function (props) {
   return props.isInvalid // eslint-disable-line
   ? _theme.colors.solidColors.redv2 : props.isDisabled ? borderColorDisabled : borderColorHover;
-}, function (props) {
+}, StyledLabel, _theme.colors.greys.grey1, function (props) {
   return props.isInvalid && xIcon;
 }, function (props) {
   return props.isValidated && checkmarkIcon;
 });
 
-var StyledLabel = _styledComponents2.default.label(_templateObject4, labelColor, function (props) {
-  return props.isActive ? '600' : 'initial';
-}, function (props) {
-  return props.isActive ? 'translateY(-10px) scale(0.8)' : 'translateY(0) scale(1)';
-});
-
 var StyledInput = _styledComponents2.default.input(_templateObject5, textColor, function (props) {
-  return props.isActive ? 'translateY(10px)' : 'translateY(0)';
+  return props.isActive ? 'translateY(12px)' : 'translateY(0)';
 });
 
 var ElementWrapper = _styledComponents2.default.div(_templateObject6);
@@ -5855,8 +5854,7 @@ var Inputv2 = function (_React$Component) {
             isFocused: this.state.isFocused,
             isInvalid: !!this.props.errorMessage,
             isValidated: this.props.isValidated,
-            isDisabled: this.props.inputProps.disabled,
-            p: 3 },
+            isDisabled: this.props.inputProps.disabled },
           _react2.default.createElement(
             StyledLabel,
             { htmlFor: this.props.inputProps.name, isActive: isActive },
@@ -5879,7 +5877,7 @@ var Inputv2 = function (_React$Component) {
         ),
         this.props.errorMessage && _react2.default.createElement(
           ErrorWrapper,
-          { size: 'pStatic', font: 'bold' },
+          { size: 'pMin', font: 'bold' },
           this.props.errorMessage
         )
       );
