@@ -5688,13 +5688,13 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    height: 16px;\n    width: 16px;\n    right: 20px;\n    top: 22px;\n    border-width: 2px;\n    border-color: ", ";\n  }\n  &::before {\n    transform: translateX(8px) translateY(4px) rotate(45deg);\n    border-left-style: solid;\n  }\n  &::after {\n    border-bottom-style: solid;\n    transform: translateX(8px) translateY(-6px) rotate(45deg);\n  }\n"], ["\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    height: 16px;\n    width: 16px;\n    right: 20px;\n    top: 22px;\n    border-width: 2px;\n    border-color: ", ";\n  }\n  &::before {\n    transform: translateX(8px) translateY(4px) rotate(45deg);\n    border-left-style: solid;\n  }\n  &::after {\n    border-bottom-style: solid;\n    transform: translateX(8px) translateY(-6px) rotate(45deg);\n  }\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    right: 30px;\n    top: 30px;\n    background-color: ", ";\n    z-index: 1;\n  }\n  &::before {\n    height: 2px;\n    width: 8px;\n    transform: rotate(45deg);\n  }\n  &::after {\n    width: 16px;\n    height: 2px;\n    transform: rotate(135deg) translateX(-10px) translateY(-7px);\n  }\n"], ["\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    right: 30px;\n    top: 30px;\n    background-color: ", ";\n    z-index: 1;\n  }\n  &::before {\n    height: 2px;\n    width: 8px;\n    transform: rotate(45deg);\n  }\n  &::after {\n    width: 16px;\n    height: 2px;\n    transform: rotate(135deg) translateX(-10px) translateY(-7px);\n  }\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  transition: transform 0.2s ease;\n  top: 22px;\n  color: ", ";\n  transform-origin: left;\n  font-weight: ", ";\n\n  transform: ", ";\n"], ["\n  position: absolute;\n  transition: transform 0.2s ease;\n  top: 22px;\n  color: ", ";\n  transform-origin: left;\n  font-weight: ", ";\n\n  transform: ", ";\n"]),
-    _templateObject4 = _taggedTemplateLiteral(["\n  padding: 12px 16px;\n  position: relative;\n  border-width: 1.5px;\n  border-style: solid;\n  transition: border-color 0.2s ease;\n  border-color: ", ";\n\n  &:hover {\n    border-color: ", ";\n\n    ", " {\n      color: ", ";\n    }\n  }\n\n  ", "\n  ", "\n"], ["\n  padding: 12px 16px;\n  position: relative;\n  border-width: 1.5px;\n  border-style: solid;\n  transition: border-color 0.2s ease;\n  border-color: ", ";\n\n  &:hover {\n    border-color: ", ";\n\n    ", " {\n      color: ", ";\n    }\n  }\n\n  ", "\n  ", "\n"]),
-    _templateObject5 = _taggedTemplateLiteral(["\n  width: 100%;\n  border: 0;\n  line-height: 24px;\n  font-size: 16px;\n  padding-top: 5px;\n  padding-bottom: 9px;\n  padding-right: 36px;\n  background-color: transparent !important;\n  transition: transform 0.2s ease;\n  color: ", ";\n\n  transform: ", ";\n\n  ::placeholder {\n    color: transparent;\n  }\n\n  :focus {\n    outline: none;\n  }\n"], ["\n  width: 100%;\n  border: 0;\n  line-height: 24px;\n  font-size: 16px;\n  padding-top: 5px;\n  padding-bottom: 9px;\n  padding-right: 36px;\n  background-color: transparent !important;\n  transition: transform 0.2s ease;\n  color: ", ";\n\n  transform: ", ";\n\n  ::placeholder {\n    color: transparent;\n  }\n\n  :focus {\n    outline: none;\n  }\n"]),
-    _templateObject6 = _taggedTemplateLiteral(["\n  height: 96px;\n  position: relative;\n"], ["\n  height: 96px;\n  position: relative;\n"]),
-    _templateObject7 = _taggedTemplateLiteral(["\n  position: absolute;\n  bottom: 8px;\n  left: 0;\n  line-height: 16px;\n  color: ", ";\n"], ["\n  position: absolute;\n  bottom: 8px;\n  left: 0;\n  line-height: 16px;\n  color: ", ";\n"]);
+var _templateObject = _taggedTemplateLiteral(['\n  &::before,\n  &::after {\n    content: \'\';\n    position: absolute;\n    height: 16px;\n    width: 16px;\n    right: 20px;\n    top: 22px;\n    border-width: 2px;\n    border-color: ', ';\n  }\n  &::before {\n    transform: translateX(8px) translateY(4px) rotate(45deg);\n    border-left-style: solid;\n  }\n  &::after {\n    border-bottom-style: solid;\n    transform: translateX(8px) translateY(-6px) rotate(45deg);\n  }\n'], ['\n  &::before,\n  &::after {\n    content: \'\';\n    position: absolute;\n    height: 16px;\n    width: 16px;\n    right: 20px;\n    top: 22px;\n    border-width: 2px;\n    border-color: ', ';\n  }\n  &::before {\n    transform: translateX(8px) translateY(4px) rotate(45deg);\n    border-left-style: solid;\n  }\n  &::after {\n    border-bottom-style: solid;\n    transform: translateX(8px) translateY(-6px) rotate(45deg);\n  }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  &::before,\n  &::after {\n    content: \'\';\n    position: absolute;\n    right: 30px;\n    top: 30px;\n    background-color: ', ';\n    z-index: 1;\n  }\n  &::before {\n    height: 2px;\n    width: 8px;\n    transform: rotate(45deg);\n  }\n  &::after {\n    width: 16px;\n    height: 2px;\n    transform: rotate(135deg) translateX(-10px) translateY(-7px);\n  }\n'], ['\n  &::before,\n  &::after {\n    content: \'\';\n    position: absolute;\n    right: 30px;\n    top: 30px;\n    background-color: ', ';\n    z-index: 1;\n  }\n  &::before {\n    height: 2px;\n    width: 8px;\n    transform: rotate(45deg);\n  }\n  &::after {\n    width: 16px;\n    height: 2px;\n    transform: rotate(135deg) translateX(-10px) translateY(-7px);\n  }\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  position: absolute;\n  transition: transform 0.2s ease;\n  top: 22px;\n  color: ', ';\n  transform-origin: left;\n  font-weight: ', ';\n\n  transform: ', ';\n'], ['\n  position: absolute;\n  transition: transform 0.2s ease;\n  top: 22px;\n  color: ', ';\n  transform-origin: left;\n  font-weight: ', ';\n\n  transform: ', ';\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  padding: 12px 16px;\n  position: relative;\n  border-width: 1.5px;\n  border-style: solid;\n  transition: border-color 0.2s ease;\n  border-color: ', ';\n\n  ', '\n  ', '\n'], ['\n  padding: 12px 16px;\n  position: relative;\n  border-width: 1.5px;\n  border-style: solid;\n  transition: border-color 0.2s ease;\n  border-color: ', ';\n\n  ', '\n  ', '\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  width: 100%;\n  border: 0;\n  line-height: 24px;\n  font-size: 16px;\n  padding-top: 5px;\n  padding-bottom: 9px;\n  padding-right: 36px;\n  background-color: transparent !important;\n  transition: transform 0.2s ease;\n  color: ', ';\n\n  transform: ', ';\n\n  ::placeholder {\n    color: transparent;\n  }\n\n  :focus {\n    outline: none;\n  }\n'], ['\n  width: 100%;\n  border: 0;\n  line-height: 24px;\n  font-size: 16px;\n  padding-top: 5px;\n  padding-bottom: 9px;\n  padding-right: 36px;\n  background-color: transparent !important;\n  transition: transform 0.2s ease;\n  color: ', ';\n\n  transform: ', ';\n\n  ::placeholder {\n    color: transparent;\n  }\n\n  :focus {\n    outline: none;\n  }\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  height: 96px;\n  position: relative;\n'], ['\n  height: 96px;\n  position: relative;\n']),
+    _templateObject7 = _taggedTemplateLiteral(['\n  position: absolute;\n  bottom: 8px;\n  left: 0;\n  line-height: 16px;\n  color: ', ';\n  &:hover,\n  &:focus {\n    color: ', ';\n  }\n'], ['\n  position: absolute;\n  bottom: 8px;\n  left: 0;\n  line-height: 16px;\n  color: ', ';\n  &:hover,\n  &:focus {\n    color: ', ';\n  }\n']);
 
 var _styledTheming = __webpack_require__(13);
 
@@ -5728,37 +5728,37 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var borderColorDefault = (0, _styledTheming2.default)("mode", {
+var borderColorDefault = (0, _styledTheming2.default)('mode', {
   light: _theme.colors.greys.grey3,
   dark: _theme.colors.greys.grey2
 });
 
-var borderColorDisabled = (0, _styledTheming2.default)("mode", {
+var borderColorDisabled = (0, _styledTheming2.default)('mode', {
   light: _theme.colors.greys.grey4,
   dark: _theme.colors.greys.grey1
 });
 
-var borderColorHover = (0, _styledTheming2.default)("mode", {
+var borderColorHover = (0, _styledTheming2.default)('mode', {
   light: _theme.colors.greys.grey1,
   dark: _theme.colors.greys.grey4
 });
 
-var borderColorActive = (0, _styledTheming2.default)("mode", {
+var borderColorActive = (0, _styledTheming2.default)('mode', {
   light: _theme.colors.blacks.black1,
   dark: _theme.colors.whites.white
 });
 
-var borderColorInvalid = (0, _styledTheming2.default)("mode", {
+var borderColorInvalid = (0, _styledTheming2.default)('mode', {
   light: _theme.colors.solidColors.redv2,
   dark: _theme.colors.solidColors.redv2
 });
 
-var labelColor = (0, _styledTheming2.default)("mode", {
+var labelColor = (0, _styledTheming2.default)('mode', {
   light: _theme.colors.greys.grey3,
   dark: _theme.colors.greys.grey2
 });
 
-var textColor = (0, _styledTheming2.default)("mode", {
+var textColor = (0, _styledTheming2.default)('mode', {
   light: _theme.colors.blacks.black1,
   dark: _theme.colors.whites.white
 });
@@ -5776,36 +5776,49 @@ var getBorderForState = function getBorderForState(state) {
   if (state.isDisabled) {
     return borderColorDisabled;
   }
+  if (state.isHovered) {
+    return state.isInvalid // eslint-disable-line
+    ? _theme.colors.solidColors.redv2 : state.isDisabled ? borderColorDisabled : borderColorHover;
+  }
 
   return borderColorDefault;
+};
+
+var getLabelColor = function getLabelColor(state) {
+  if (state.isHovered) {
+    return _theme.colors.greys.grey1;
+  }
+
+  if (state.isFocused) {
+    return _theme.colors.greys.grey3;
+  }
+
+  return labelColor;
 };
 
 var xIcon = (0, _styledComponents.css)(_templateObject, _theme.colors.solidColors.redv2);
 
 var checkmarkIcon = (0, _styledComponents.css)(_templateObject2, _theme.colors.solidColors.greenv2);
 
-var StyledLabel = _styledComponents2.default.label(_templateObject3, labelColor, function (props) {
-  return props.isActive ? "600" : "initial";
+var StyledLabel = _styledComponents2.default.label(_templateObject3, getLabelColor, function (props) {
+  return props.isActive ? '600' : 'initial';
 }, function (props) {
-  return props.isActive ? "translateY(-12px) scale(0.8)" : "translateY(0) scale(1)";
+  return props.isActive ? 'translateY(-12px) scale(0.8)' : 'translateY(0) scale(1)';
 });
 
 var InputWrapper = (0, _styledComponents2.default)(_box2.default)(_templateObject4, getBorderForState, function (props) {
-  return props.isInvalid // eslint-disable-line
-  ? _theme.colors.solidColors.redv2 : props.isDisabled ? borderColorDisabled : borderColorHover;
-}, StyledLabel, _theme.colors.greys.grey1, function (props) {
   return props.isInvalid && xIcon;
 }, function (props) {
   return props.isValidated && checkmarkIcon;
 });
 
 var StyledInput = _styledComponents2.default.input(_templateObject5, textColor, function (props) {
-  return props.isActive ? "translateY(11px)" : "translateY(0)";
+  return props.isActive ? 'translateY(11px)' : 'translateY(0)';
 });
 
 var ElementWrapper = _styledComponents2.default.div(_templateObject6);
 
-var ErrorWrapper = (0, _styledComponents2.default)(_text2.default)(_templateObject7, _theme.colors.solidColors.redv2);
+var ErrorWrapper = (0, _styledComponents2.default)(_text2.default)(_templateObject7, _theme.colors.solidColors.redv2, _theme.colors.solidColors.redv2);
 
 var Inputv2 = function (_React$Component) {
   _inherits(Inputv2, _React$Component);
@@ -5822,22 +5835,25 @@ var Inputv2 = function (_React$Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Inputv2.__proto__ || Object.getPrototypeOf(Inputv2)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      isFocused: false
+      isFocused: false,
+      isHovered: false
     }, _this.setFocus = function (val) {
       _this.setState({ isFocused: val });
+    }, _this.setHover = function (val) {
+      _this.setState({ isHovered: val });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Inputv2, [{
-    key: "componentDidMount",
+    key: 'componentDidMount',
     value: function componentDidMount() {
       if (!this.props.inputProps.name) {
         // eslint-disable-next-line
-        console.error("<Inputv2>: Missing this.props.inputProps.name, which is needed for accessibility markup.");
+        console.error('<Inputv2>: Missing this.props.inputProps.name, which is needed for accessibility markup.');
       }
     }
   }, {
-    key: "render",
+    key: 'render',
     value: function render() {
       var _this2 = this;
 
@@ -5852,10 +5868,10 @@ var Inputv2 = function (_React$Component) {
           InputWrapper,
           {
             isFocused: this.state.isFocused,
+            isHovered: this.state.isHovered,
             isInvalid: !!this.props.errorMessage,
             isValidated: this.props.isValidated,
-            isDisabled: this.props.inputProps.disabled
-          },
+            isDisabled: this.props.inputProps.disabled },
           _react2.default.createElement(
             StyledLabel,
             { htmlFor: this.props.inputProps.name, isActive: isActive },
@@ -5872,13 +5888,19 @@ var Inputv2 = function (_React$Component) {
             onBlur: function onBlur() {
               return _this2.setFocus(false);
             },
+            onMouseEnter: function onMouseEnter() {
+              return _this2.setHover(true);
+            },
+            onMouseLeave: function onMouseLeave() {
+              return _this2.setHover(false);
+            },
             isActive: isActive,
-            type: this.props.inputProps.type || "text"
+            type: this.props.inputProps.type || 'text'
           }))
         ),
         this.props.errorMessage && _react2.default.createElement(
           ErrorWrapper,
-          { size: "pMin", font: "bold" },
+          { size: 'pMin', font: 'bold' },
           this.props.errorMessage
         )
       );

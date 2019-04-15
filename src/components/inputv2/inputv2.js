@@ -54,8 +54,27 @@ const getBorderForState = state => {
   if (state.isDisabled) {
     return borderColorDisabled;
   }
+  if (state.isHovered) {
+    return state.isInvalid // eslint-disable-line
+      ? colors.solidColors.redv2
+      : state.isDisabled
+      ? borderColorDisabled
+      : borderColorHover;
+  }
 
   return borderColorDefault;
+};
+
+const getLabelColor = state => {
+  if (state.isHovered) {
+    return colors.greys.grey1;
+  }
+
+  if (state.isFocused) {
+    return colors.greys.grey3;
+  }
+
+  return labelColor;
 };
 
 const xIcon = css`
@@ -106,7 +125,7 @@ const StyledLabel = styled.label`
   position: absolute;
   transition: transform 0.2s ease;
   top: 22px;
-  color: ${labelColor};
+  color: ${getLabelColor};
   transform-origin: left;
   font-weight: ${props => (props.isActive ? '600' : 'initial')};
 
@@ -121,19 +140,6 @@ const InputWrapper = styled(Box)`
   border-style: solid;
   transition: border-color 0.2s ease;
   border-color: ${getBorderForState};
-
-  &:hover {
-    border-color: ${props =>
-      props.isInvalid // eslint-disable-line
-        ? colors.solidColors.redv2
-        : props.isDisabled
-        ? borderColorDisabled
-        : borderColorHover};
-
-    ${StyledLabel} {
-      color: ${colors.greys.grey1};
-    }
-  }
 
   ${props => props.isInvalid && xIcon}
   ${props => props.isValidated && checkmarkIcon}
@@ -174,6 +180,10 @@ const ErrorWrapper = styled(StyledText)`
   left: 0;
   line-height: 16px;
   color: ${colors.solidColors.redv2};
+  &:hover,
+  &:focus {
+    color: ${colors.solidColors.redv2};
+  }
 `;
 
 type InputProps = {
@@ -193,16 +203,22 @@ type Props = {
 };
 
 type State = {
-  isFocused: boolean
+  isFocused: boolean,
+  isHovered: boolean
 };
 
 class Inputv2 extends React.Component<Props, State> {
   state = {
-    isFocused: false
+    isFocused: false,
+    isHovered: false
   };
 
   setFocus = (val: boolean) => {
     this.setState({ isFocused: val });
+  };
+
+  setHover = (val: boolean) => {
+    this.setState({ isHovered: val });
   };
 
   componentDidMount() {
@@ -222,6 +238,7 @@ class Inputv2 extends React.Component<Props, State> {
       <ElementWrapper>
         <InputWrapper
           isFocused={this.state.isFocused}
+          isHovered={this.state.isHovered}
           isInvalid={!!this.props.errorMessage}
           isValidated={this.props.isValidated}
           isDisabled={this.props.inputProps.disabled}>
@@ -236,6 +253,8 @@ class Inputv2 extends React.Component<Props, State> {
             disabled={this.props.inputProps.disabled}
             onFocus={() => this.setFocus(true)}
             onBlur={() => this.setFocus(false)}
+            onMouseEnter={() => this.setHover(true)}
+            onMouseLeave={() => this.setHover(false)}
             isActive={isActive}
             type={this.props.inputProps.type || 'text'}
           />

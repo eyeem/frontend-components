@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`it renders default input 1`] = `
-.c3 {
+.c2 {
   position: absolute;
   -webkit-transition: -webkit-transform 0.2s ease;
   -webkit-transition: transform 0.2s ease;
@@ -25,11 +25,7 @@ exports[`it renders default input 1`] = `
   transition: border-color 0.2s ease;
 }
 
-.c1:hover .c2 {
-  color: #666666;
-}
-
-.c4 {
+.c3 {
   width: 100%;
   border: 0;
   line-height: 24px;
@@ -46,23 +42,23 @@ exports[`it renders default input 1`] = `
   transform: translateY(0);
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: transparent;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: transparent;
 }
 
-.c4::placeholder {
+.c3::placeholder {
   color: transparent;
 }
 
-.c4:focus {
+.c3:focus {
   outline: none;
 }
 
@@ -78,13 +74,13 @@ exports[`it renders default input 1`] = `
     class="c1"
   >
     <label
-      class="c2 c3"
+      class="c2"
       for="name"
     >
       Name
     </label>
     <input
-      class="c4"
+      class="c3"
       id="name"
       name="name"
       placeholder="Name"
