@@ -53,9 +53,9 @@ exports[`it accepts prop checked 1`] = `
   background-size: 9px 7px;
   background-repeat: no-repeat;
   content: '';
-  -webkit-transition: -webkit-transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
-  -webkit-transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
-  transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+  -webkit-transition: -webkit-transform 0.15s ease-out,background 0.15s ease-out,border-color 0.15s ease-out;
+  -webkit-transition: transform 0.15s ease-out,background 0.15s ease-out,border-color 0.15s ease-out;
+  transition: transform 0.15s ease-out,background 0.15s ease-out,border-color 0.15s ease-out;
 }
 
 <div
@@ -127,9 +127,9 @@ exports[`it renders default checkbox 1`] = `
   background-size: 0;
   background-repeat: no-repeat;
   content: '';
-  -webkit-transition: -webkit-transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
-  -webkit-transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
-  transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+  -webkit-transition: -webkit-transform 0.15s ease-out,background 0.15s ease-out,border-color 0.15s ease-out;
+  -webkit-transition: transform 0.15s ease-out,background 0.15s ease-out,border-color 0.15s ease-out;
+  transition: transform 0.15s ease-out,background 0.15s ease-out,border-color 0.15s ease-out;
 }
 
 <div
@@ -203,9 +203,9 @@ exports[`onChange is triggered properly 1`] = `
   background-size: 9px 7px;
   background-repeat: no-repeat;
   content: '';
-  -webkit-transition: -webkit-transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
-  -webkit-transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
-  transition: transform 0.15s ease-out,background 0.15s ease-out, border-color 0.15s ease-out;
+  -webkit-transition: -webkit-transform 0.15s ease-out,background 0.15s ease-out,border-color 0.15s ease-out;
+  -webkit-transition: transform 0.15s ease-out,background 0.15s ease-out,border-color 0.15s ease-out;
+  transition: transform 0.15s ease-out,background 0.15s ease-out,border-color 0.15s ease-out;
 }
 
 <div

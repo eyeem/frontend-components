@@ -11,5 +11,6 @@
     ],
     "react",
     "stage-2"
-  ]
+  ],
+  "plugins": [["babel-plugin-styled-components", { "filename": false }]]
 }

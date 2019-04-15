@@ -59,7 +59,7 @@ const getBorderForState = state => {
     return borderColorActive;
   }
   if (state.isValidated) {
-    return borderColorActive;
+    return borderColorDefault;
   }
   if (state.isDisabled) {
     return borderColorDisabled;
@@ -95,7 +95,7 @@ const xIcon = css`
     height: 16px;
     width: 16px;
     right: 20px;
-    top: 22px;
+    top: 24px;
     border-width: 2px;
     border-color: ${colors.solidColors.redv2};
     z-index: 1;
@@ -116,7 +116,7 @@ const checkmarkIcon = css`
     content: '';
     position: absolute;
     right: 30px;
-    top: 30px;
+    top: 32px;
     background-color: ${colors.solidColors.greenv2};
     z-index: 1;
   }
