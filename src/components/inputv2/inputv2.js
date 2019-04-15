@@ -98,6 +98,7 @@ const xIcon = css`
     top: 22px;
     border-width: 2px;
     border-color: ${colors.solidColors.redv2};
+    z-index: 1;
   }
   &::before {
     transform: translateX(8px) translateY(4px) rotate(45deg);
