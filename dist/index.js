@@ -5753,6 +5753,16 @@ var borderColorInvalid = (0, _styledTheming2.default)('mode', {
   dark: _theme.colors.solidColors.redv2
 });
 
+var labelColorHover = (0, _styledTheming2.default)('mode', {
+  light: _theme.colors.greys.grey1,
+  dark: _theme.colors.greys.grey4
+});
+
+var labelColorFocus = (0, _styledTheming2.default)('mode', {
+  light: _theme.colors.greys.grey3,
+  dark: _theme.colors.greys.grey2
+});
+
 var labelColor = (0, _styledTheming2.default)('mode', {
   light: _theme.colors.greys.grey3,
   dark: _theme.colors.greys.grey2
@@ -5786,11 +5796,11 @@ var getBorderForState = function getBorderForState(state) {
 
 var getLabelColor = function getLabelColor(state) {
   if (state.isHovered) {
-    return _theme.colors.greys.grey1;
+    return labelColorHover;
   }
 
   if (state.isFocused) {
-    return _theme.colors.greys.grey3;
+    return labelColorFocus;
   }
 
   return labelColor;
@@ -5871,7 +5881,8 @@ var Inputv2 = function (_React$Component) {
             isHovered: this.state.isHovered,
             isInvalid: !!this.props.errorMessage,
             isValidated: this.props.isValidated,
-            isDisabled: this.props.inputProps.disabled },
+            isDisabled: this.props.inputProps.disabled
+          },
           _react2.default.createElement(
             StyledLabel,
             { htmlFor: this.props.inputProps.name, isActive: isActive },

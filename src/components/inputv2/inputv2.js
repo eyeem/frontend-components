@@ -31,6 +31,16 @@ const borderColorInvalid = theme('mode', {
   dark: colors.solidColors.redv2
 });
 
+const labelColorHover = theme('mode', {
+  light: colors.greys.grey1,
+  dark: colors.greys.grey4
+});
+
+const labelColorFocus = theme('mode', {
+  light: colors.greys.grey3,
+  dark: colors.greys.grey2
+});
+
 const labelColor = theme('mode', {
   light: colors.greys.grey3,
   dark: colors.greys.grey2
@@ -67,11 +77,11 @@ const getBorderForState = state => {
 
 const getLabelColor = state => {
   if (state.isHovered) {
-    return colors.greys.grey1;
+    return labelColorHover;
   }
 
   if (state.isFocused) {
-    return colors.greys.grey3;
+    return labelColorFocus;
   }
 
   return labelColor;
