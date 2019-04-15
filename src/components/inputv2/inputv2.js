@@ -31,6 +31,16 @@ const borderColorInvalid = theme('mode', {
   dark: colors.solidColors.redv2
 });
 
+const labelColorHover = theme('mode', {
+  light: colors.greys.grey1,
+  dark: colors.greys.grey4
+});
+
+const labelColorFocus = theme('mode', {
+  light: colors.greys.grey3,
+  dark: colors.greys.grey2
+});
+
 const labelColor = theme('mode', {
   light: colors.greys.grey3,
   dark: colors.greys.grey2
@@ -54,8 +64,27 @@ const getBorderForState = state => {
   if (state.isDisabled) {
     return borderColorDisabled;
   }
+  if (state.isHovered) {
+    return state.isInvalid // eslint-disable-line
+      ? colors.solidColors.redv2
+      : state.isDisabled
+      ? borderColorDisabled
+      : borderColorHover;
+  }
 
   return borderColorDefault;
+};
+
+const getLabelColor = state => {
+  if (state.isHovered) {
+    return labelColorHover;
+  }
+
+  if (state.isFocused) {
+    return labelColorFocus;
+  }
+
+  return labelColor;
 };
 
 const xIcon = css`
@@ -88,6 +117,7 @@ const checkmarkIcon = css`
     right: 30px;
     top: 30px;
     background-color: ${colors.solidColors.greenv2};
+    z-index: 1;
   }
   &::before {
     height: 2px;
@@ -101,52 +131,44 @@ const checkmarkIcon = css`
   }
 `;
 
+const StyledLabel = styled.label`
+  position: absolute;
+  transition: transform 0.2s ease;
+  top: 22px;
+  color: ${getLabelColor};
+  transform-origin: left;
+  font-weight: ${props => (props.isActive ? '600' : 'initial')};
+
+  transform: ${props =>
+    props.isActive ? 'translateY(-12px) scale(0.8)' : 'translateY(0) scale(1)'};
+`;
+
 const InputWrapper = styled(Box)`
+  padding: 12px 16px;
   position: relative;
   border-width: 1.5px;
   border-style: solid;
   transition: border-color 0.2s ease;
   border-color: ${getBorderForState};
 
-  &:hover {
-    border-color: ${props =>
-      props.isInvalid // eslint-disable-line
-        ? colors.solidColors.redv2
-        : props.isDisabled
-        ? borderColorDisabled
-        : borderColorHover};
-  }
-
   ${props => props.isInvalid && xIcon}
   ${props => props.isValidated && checkmarkIcon}
-`;
-
-const StyledLabel = styled.label`
-  position: absolute;
-  transition: transform 0.2s ease;
-  top: 22px;
-  color: ${labelColor};
-  transform-origin: left;
-  font-weight: ${props => (props.isActive ? '600' : 'initial')};
-
-  transform: ${props =>
-    props.isActive ? 'translateY(-10px) scale(0.8)' : 'translateY(0) scale(1)'};
 `;
 
 const StyledInput = styled.input`
   width: 100%;
   border: 0;
-  line-height: 22px;
+  line-height: 24px;
   font-size: 16px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 5px;
+  padding-bottom: 9px;
   padding-right: 36px;
-  background-color: transparent;
+  background-color: transparent !important;
   transition: transform 0.2s ease;
   color: ${textColor};
 
   transform: ${props =>
-    props.isActive ? 'translateY(10px)' : 'translateY(0)'};
+    props.isActive ? 'translateY(11px)' : 'translateY(0)'};
 
   ::placeholder {
     color: transparent;
@@ -164,9 +186,14 @@ const ElementWrapper = styled.div`
 
 const ErrorWrapper = styled(StyledText)`
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   left: 0;
+  line-height: 16px;
   color: ${colors.solidColors.redv2};
+  &:hover,
+  &:focus {
+    color: ${colors.solidColors.redv2};
+  }
 `;
 
 type InputProps = {
@@ -186,16 +213,22 @@ type Props = {
 };
 
 type State = {
-  isFocused: boolean
+  isFocused: boolean,
+  isHovered: boolean
 };
 
 class Inputv2 extends React.Component<Props, State> {
   state = {
-    isFocused: false
+    isFocused: false,
+    isHovered: false
   };
 
   setFocus = (val: boolean) => {
     this.setState({ isFocused: val });
+  };
+
+  setHover = (val: boolean) => {
+    this.setState({ isHovered: val });
   };
 
   componentDidMount() {
@@ -215,10 +248,10 @@ class Inputv2 extends React.Component<Props, State> {
       <ElementWrapper>
         <InputWrapper
           isFocused={this.state.isFocused}
+          isHovered={this.state.isHovered}
           isInvalid={!!this.props.errorMessage}
           isValidated={this.props.isValidated}
-          isDisabled={this.props.inputProps.disabled}
-          p={3}>
+          isDisabled={this.props.inputProps.disabled}>
           <StyledLabel htmlFor={this.props.inputProps.name} isActive={isActive}>
             {this.props.inputProps.placeholder}
           </StyledLabel>
@@ -230,12 +263,14 @@ class Inputv2 extends React.Component<Props, State> {
             disabled={this.props.inputProps.disabled}
             onFocus={() => this.setFocus(true)}
             onBlur={() => this.setFocus(false)}
+            onMouseEnter={() => this.setHover(true)}
+            onMouseLeave={() => this.setHover(false)}
             isActive={isActive}
             type={this.props.inputProps.type || 'text'}
           />
         </InputWrapper>
         {this.props.errorMessage && (
-          <ErrorWrapper size="pStatic" font="bold">
+          <ErrorWrapper size="pMin" font="bold">
             {this.props.errorMessage}
           </ErrorWrapper>
         )}
