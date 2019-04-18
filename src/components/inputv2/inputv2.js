@@ -262,8 +262,20 @@ class Inputv2 extends React.Component<Props, State> {
             value={this.props.inputProps.value}
             onChange={this.props.inputProps.onChange}
             disabled={this.props.inputProps.disabled}
-            onFocus={() => this.setFocus(true)}
-            onBlur={() => this.setFocus(false)}
+            onFocus={event => {
+              if (this.props.inputProps.onFocus) {
+                this.props.inputProps.onFocus(event);
+              }
+
+              this.setFocus(true);
+            }}
+            onBlur={event => {
+              if (this.props.inputProps.onBlur) {
+                this.props.inputProps.onBlur(event);
+              }
+
+              return this.setFocus(false);
+            }}
             onMouseEnter={() => this.setHover(true)}
             onMouseLeave={() => this.setHover(false)}
             isActive={isActive}
