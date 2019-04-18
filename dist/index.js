@@ -5896,10 +5896,18 @@ var Inputv2 = function (_React$Component) {
             value: this.props.inputProps.value,
             onChange: this.props.inputProps.onChange,
             disabled: this.props.inputProps.disabled,
-            onFocus: function onFocus() {
-              return _this2.setFocus(true);
+            onFocus: function onFocus(event) {
+              if (_this2.props.inputProps.onFocus) {
+                _this2.props.inputProps.onFocus(event);
+              }
+
+              _this2.setFocus(true);
             },
-            onBlur: function onBlur() {
+            onBlur: function onBlur(event) {
+              if (_this2.props.inputProps.onBlur) {
+                _this2.props.inputProps.onBlur(event);
+              }
+
               return _this2.setFocus(false);
             },
             onMouseEnter: function onMouseEnter() {
