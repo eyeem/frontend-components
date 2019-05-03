@@ -152,8 +152,8 @@ const InputWrapper = styled(Box)`
   transition: border-color 0.2s ease;
   border-color: ${getBorderForState};
 
-  ${props => props.isInvalid && xIcon}
-  ${props => props.isValidated && checkmarkIcon}
+  ${props => !props.isPasswordInput && props.isInvalid && xIcon}
+  ${props => !props.isPasswordInput && props.isValidated && checkmarkIcon}
 `;
 
 const StyledInput = styled.input`
@@ -197,6 +197,25 @@ const ErrorWrapper = styled(StyledText)`
   }
 `;
 
+const InnerHint = styled.span`
+  font-size: 12px;
+  background-image: ${props =>
+    props.showPassword
+      ? `url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-eye-off'%3E%3Cpath d='M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24M1 1l22 22'/%3E%3C/svg%3E");`
+      : `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-eye'%3E%3Cpath d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E");`}
+  
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 16px;
+  cursor: pointer;
+
+  color: ${colors.greys.grey3};
+`;
+
 type InputProps = {
   type?: string,
   disabled?: boolean,
@@ -215,13 +234,15 @@ type Props = {
 
 type State = {
   isFocused: boolean,
-  isHovered: boolean
+  isHovered: boolean,
+  showPassword: boolean
 };
 
 class Inputv2 extends React.Component<Props, State> {
   state = {
     isFocused: false,
-    isHovered: false
+    isHovered: false,
+    showPassword: false
   };
 
   setFocus = (val: boolean) => {
@@ -241,6 +262,9 @@ class Inputv2 extends React.Component<Props, State> {
     }
   }
 
+  togglePassword = () =>
+    this.setState(state => ({ showPassword: !state.showPassword }));
+
   render() {
     const { value } = this.props.inputProps;
     const isActive = (value && value.length) || this.state.isFocused;
@@ -252,7 +276,8 @@ class Inputv2 extends React.Component<Props, State> {
           isHovered={this.state.isHovered}
           isInvalid={!!this.props.errorMessage}
           isValidated={this.props.isValidated}
-          isDisabled={this.props.inputProps.disabled}>
+          isDisabled={this.props.inputProps.disabled}
+          isPasswordInput={this.props.inputProps.type === 'password'}>
           <StyledLabel htmlFor={this.props.inputProps.name} isActive={isActive}>
             {this.props.inputProps.placeholder}
           </StyledLabel>
@@ -279,8 +304,18 @@ class Inputv2 extends React.Component<Props, State> {
             onMouseEnter={() => this.setHover(true)}
             onMouseLeave={() => this.setHover(false)}
             isActive={isActive}
-            type={this.props.inputProps.type || 'text'}
+            type={
+              (this.state.showPassword && 'text') ||
+              this.props.inputProps.type ||
+              'text'
+            }
           />
+          {this.props.inputProps.type === 'password' && (
+            <InnerHint
+              onClick={this.togglePassword}
+              showPassword={this.state.showPassword}
+            />
+          )}
         </InputWrapper>
         {this.props.errorMessage && (
           <ErrorWrapper size="pMin" font="bold">

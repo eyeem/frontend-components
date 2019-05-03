@@ -26,7 +26,8 @@ class Wrapper extends React.Component {
           name: 'name',
           value: this.state.value,
           onChange: this.onChange,
-          disabled: this.props.disabled
+          disabled: this.props.disabled,
+          type: this.props.type
         }}
       />
     );
@@ -40,4 +41,5 @@ storiesOf('Inputv2', module)
   .add('default', () => <Wrapper />)
   .add('validated', () => <Wrapper isValidated />)
   .add('invalid', () => <Wrapper errorMessage="This is the error message." />)
-  .add('disabled', () => <Wrapper disabled />);
+  .add('disabled', () => <Wrapper disabled />)
+  .add('password', () => <Wrapper type="password" />);
