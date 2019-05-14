@@ -95,7 +95,9 @@ declare type Props = {
   pending?: boolean,
   errorMessage?: string,
   showCheckmark?: boolean,
-  formRow?: boolean
+  formRow?: boolean,
+  showPassword?: string,
+  hidePassword?: string
 };
 
 declare type State = {
@@ -133,7 +135,9 @@ class Input extends React.Component<Props, State> {
         />
         {this.props.inputProps.type === 'password' && (
           <InnerHint onClick={this.togglePassword}>
-            {this.state.showPassword ? 'hide' : 'show'}
+            {this.state.showPassword
+              ? this.props.inputProps.hidePassword || 'hide'
+              : this.props.inputProps.showPassword || 'show'}
           </InnerHint>
         )}
         {this.props.errorMessage && (
