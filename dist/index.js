@@ -5614,7 +5614,7 @@ var Input = function (_React$Component) {
         this.props.inputProps.type === 'password' && _react2.default.createElement(
           InnerHint,
           { onClick: this.togglePassword },
-          this.state.showPassword ? 'hide' : 'show'
+          this.state.showPassword ? this.props.inputProps.hidePassword || 'hide' : this.props.inputProps.showPassword || 'show'
         ),
         this.props.errorMessage && _react2.default.createElement(
           _flyout2.default,
