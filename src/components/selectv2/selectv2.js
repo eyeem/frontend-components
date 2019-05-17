@@ -44,6 +44,10 @@ const StyledSelect = styled.select`
     text-shadow: none;
   }
 
+  &::-ms-expand {
+    display: none;
+  }
+
   :focus {
     outline: none;
   }
