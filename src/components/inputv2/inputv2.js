@@ -1,14 +1,14 @@
 // @flow
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Box from '../box';
-import StyledText from '../text';
 import { colors } from '../../theme';
+import { textColor } from '../v2helpers/colors';
 import {
-  getBorderForState,
-  getLabelColor,
-  textColor
-} from '../helpers/fieldBorders';
+  ElementWrapper,
+  ErrorWrapper,
+  StyledLabel,
+  StyledWrapper
+} from '../v2helpers/styledFields';
 
 const xIcon = css`
   &::before,
@@ -55,26 +55,7 @@ const checkmarkIcon = css`
   }
 `;
 
-const StyledLabel = styled.label`
-  position: absolute;
-  transition: transform 0.2s ease;
-  top: 22px;
-  color: ${getLabelColor};
-  transform-origin: left;
-  font-weight: ${props => (props.isActive ? '600' : 'initial')};
-
-  transform: ${props =>
-    props.isActive ? 'translateY(-12px) scale(0.8)' : 'translateY(0) scale(1)'};
-`;
-
-const InputWrapper = styled(Box)`
-  padding: 12px 16px;
-  position: relative;
-  border-width: 1.5px;
-  border-style: solid;
-  transition: border-color 0.2s ease;
-  border-color: ${getBorderForState};
-
+const InputWrapper = styled(StyledWrapper)`
   ${props => !props.isPasswordInput && props.isInvalid && xIcon}
   ${props => !props.isPasswordInput && props.isValidated && checkmarkIcon}
 `;
@@ -100,23 +81,6 @@ const StyledInput = styled.input`
 
   :focus {
     outline: none;
-  }
-`;
-
-const ElementWrapper = styled.div`
-  height: 96px;
-  position: relative;
-`;
-
-const ErrorWrapper = styled(StyledText)`
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  line-height: 16px;
-  color: ${colors.solidColors.redv2};
-  &:hover,
-  &:focus {
-    color: ${colors.solidColors.redv2};
   }
 `;
 

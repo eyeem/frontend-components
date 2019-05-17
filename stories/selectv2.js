@@ -59,5 +59,4 @@ storiesOf('Selectv2', module)
   .add('default', () => <Wrapper />)
   .add('validated', () => <Wrapper isValidated />)
   .add('invalid', () => <Wrapper errorMessage="This is the error message." />)
-  .add('disabled', () => <Wrapper disabled />)
-  .add('password', () => <Wrapper type="password" />);
+  .add('disabled', () => <Wrapper disabled />);

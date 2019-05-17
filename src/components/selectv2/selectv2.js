@@ -1,42 +1,20 @@
 // @flow
 import React from 'react';
 import styled from 'styled-components';
-import Box from '../box';
-import StyledText from '../text';
 import Icon from '../icon';
-import { colors } from '../../theme';
+import { textColor } from '../v2helpers/colors';
 import {
-  getBorderForState,
-  getLabelColor,
-  textColor
-} from '../helpers/fieldBorders';
-
-const StyledLabel = styled.label`
-  position: absolute;
-  transition: transform 0.2s ease;
-  top: 22px;
-  color: ${getLabelColor};
-  transform-origin: left;
-  font-weight: ${props => (props.isActive ? '600' : 'initial')};
-
-  transform: ${props =>
-    props.isActive ? 'translateY(-12px) scale(0.8)' : 'translateY(0) scale(1)'};
-`;
+  ElementWrapper,
+  ErrorWrapper,
+  StyledLabel,
+  StyledWrapper
+} from '../v2helpers/styledFields';
 
 const StyledIcon = styled(Icon)`
   transform: rotate(-90deg);
   position: absolute;
   right: 16px;
   top: 24px;
-`;
-
-const SelectWrapper = styled(Box)`
-  padding: 12px 16px;
-  position: relative;
-  border-width: 1.5px;
-  border-style: solid;
-  transition: border-color 0.2s ease;
-  border-color: ${getBorderForState};
 `;
 
 const StyledSelect = styled.select`
@@ -67,23 +45,6 @@ const StyledSelect = styled.select`
 
   :focus {
     outline: none;
-  }
-`;
-
-const ElementWrapper = styled.div`
-  height: 96px;
-  position: relative;
-`;
-
-const ErrorWrapper = styled(StyledText)`
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  line-height: 16px;
-  color: ${colors.solidColors.redv2};
-  &:hover,
-  &:focus {
-    color: ${colors.solidColors.redv2};
   }
 `;
 
@@ -159,7 +120,7 @@ export default class Selectv2 extends React.Component<Props, State> {
 
     return (
       <ElementWrapper>
-        <SelectWrapper
+        <StyledWrapper
           isFocused={this.state.isFocused}
           isHovered={this.state.isHovered}
           isInvalid={!!this.props.errorMessage}
@@ -201,7 +162,7 @@ export default class Selectv2 extends React.Component<Props, State> {
               </option>
             ))}
           </StyledSelect>
-        </SelectWrapper>
+        </StyledWrapper>
         {this.props.errorMessage && (
           <ErrorWrapper size="pMin" font="bold">
             {this.props.errorMessage}
