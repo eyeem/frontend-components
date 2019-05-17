@@ -37,6 +37,7 @@ exports[`it renders default select 1`] = `
   position: absolute;
   right: 16px;
   top: 24px;
+  opacity: 1;
 }
 
 .c4 {
@@ -67,6 +68,10 @@ exports[`it renders default select 1`] = `
 
 .c4:-moz-focusring option:disabled {
   text-shadow: none;
+}
+
+.c4::-ms-expand {
+  display: none;
 }
 
 .c4:focus {
