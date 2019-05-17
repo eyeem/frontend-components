@@ -57,6 +57,5 @@ storiesOf('Selectv2', module)
   .addDecorator((story, context) => withInfo('')(story)(context))
   .addDecorator(themeDecorator)
   .add('default', () => <Wrapper />)
-  .add('validated', () => <Wrapper isValidated />)
   .add('invalid', () => <Wrapper errorMessage="This is the error message." />)
   .add('disabled', () => <Wrapper disabled />);

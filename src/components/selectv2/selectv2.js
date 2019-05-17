@@ -15,6 +15,7 @@ const StyledIcon = styled(Icon)`
   position: absolute;
   right: 16px;
   top: 24px;
+  opacity: ${props => (props.isDisabled ? '0.4' : '1')};
 `;
 
 const StyledSelect = styled.select`
@@ -104,7 +105,7 @@ export default class Selectv2 extends React.Component<Props, State> {
     if (!this.props.selectProps.name) {
       // eslint-disable-next-line
       console.error(
-        '<Inputv2>: Missing this.props.selectProps.name, which is needed for accessibility markup.'
+        '<Selectv2>: Missing this.props.selectProps.name, which is needed for accessibility markup.'
       );
     }
   }
@@ -131,7 +132,10 @@ export default class Selectv2 extends React.Component<Props, State> {
             isActive={isActive}>
             {this.props.selectProps.label}
           </StyledLabel>
-          <StyledIcon type="leftArrow" />
+          <StyledIcon
+            type="leftArrow"
+            isDisabled={this.props.selectProps.disabled}
+          />
           <StyledSelect
             {...this.props.selectProps}
             alignLeft={isFirefox}
