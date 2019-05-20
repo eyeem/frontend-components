@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Icon from '../icon';
-import { textColor } from '../v2helpers/colors';
+import { textColor, getBorderForState } from '../v2helpers/colors';
 import {
   ElementWrapper,
   ErrorWrapper,
@@ -16,6 +16,10 @@ const StyledIcon = styled(Icon)`
   right: 16px;
   top: 24px;
   opacity: ${props => (props.isDisabled ? '0.4' : '1')};
+
+  path {
+    fill: ${getBorderForState};
+  }
 `;
 
 const StyledSelect = styled.select`
@@ -119,9 +123,7 @@ export default class Selectv2 extends React.Component<Props, State> {
     const isActive = (value && value.length) || this.state.isFocused;
     // In FF, the select element has a padding left that can't be changed
     // so we shift the whole element left to align the text
-    const isFirefox = window
-      ? window.navigator.userAgent.includes('Firefox')
-      : false;
+    const isFirefox = window && window.navigator.userAgent.includes('Firefox');
 
     return (
       <ElementWrapper>
@@ -139,6 +141,10 @@ export default class Selectv2 extends React.Component<Props, State> {
           <StyledIcon
             type="leftArrow"
             isDisabled={this.props.selectProps.disabled}
+            isFocused={this.state.isFocused}
+            isHovered={this.state.isHovered}
+            isInvalid={!!this.props.errorMessage}
+            isValidated={this.props.isValidated}
           />
           <StyledSelect
             {...this.props.selectProps}
