@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders default select 1`] = `
+.c2 {
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  top: 22px;
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  font-weight: initial;
+  -webkit-transform: translateY(0) scale(1);
+  -ms-transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
+}
+
+.c1 {
+  padding: 12px 16px;
+  position: relative;
+  border-width: 1.5px;
+  border-style: solid;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c0 {
+  height: 96px;
+  position: relative;
+}
+
+.c3 {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 16px;
+  top: 24px;
+  opacity: 1;
+}
+
+.c4 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 0;
+  line-height: 24px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 9px;
+  margin-left: 0px;
+  padding-right: 36px;
+  background-color: transparent !important;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c4:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.c4:-moz-focusring option:disabled {
+  text-shadow: none;
+}
+
+.c4::-ms-expand {
+  display: none;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="name"
+    >
+      Name
+    </label>
+    <svg
+      class="c3"
+      height="16"
+      viewBox="0 0 5 8"
+      width="16"
+    >
+      <g
+        fill-rule="evenodd"
+        stroke="none"
+        stroke-width="1"
+      >
+        <g
+          transform="translate(-200.000000, -1093.000000)"
+        >
+          <path
+            d="M203.593525,1097.00197 L200,1100.33058 L200.677418,1101.00393 L204.995756,1097.00393 L205,1097.00393 L204.997878,1097.00197 L205,1097 L204.995756,1097 L200.677418,1093 L200,1093.67335 L203.593525,1097.00197 Z"
+            transform="translate(202.500000, 1097.001966) scale(-1, 1) translate(-202.500000, -1097.001966)"
+          />
+        </g>
+      </g>
+    </svg>
+    <select
+      class="c4"
+      id="name"
+      label="Name"
+      name="name"
+    >
+      <option
+        value="bananas"
+      >
+        bananas
+      </option>
+      <option
+        value="apples"
+      >
+        apples
+      </option>
+      <option
+        value="carrots"
+      >
+        carrots
+      </option>
+    </select>
+  </div>
+</div>
+`;

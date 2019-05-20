@@ -1,91 +1,14 @@
 // @flow
-import theme from 'styled-theming';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Box from '../box';
-import StyledText from '../text';
 import { colors } from '../../theme';
-
-const borderColorDefault = theme('mode', {
-  light: colors.greys.grey3,
-  dark: colors.greys.grey2
-});
-
-const borderColorDisabled = theme('mode', {
-  light: colors.greys.grey4,
-  dark: colors.greys.grey1
-});
-
-const borderColorHover = theme('mode', {
-  light: colors.greys.grey1,
-  dark: colors.greys.grey4
-});
-
-const borderColorActive = theme('mode', {
-  light: colors.blacks.black1,
-  dark: colors.whites.white
-});
-
-const borderColorInvalid = theme('mode', {
-  light: colors.solidColors.redv2,
-  dark: colors.solidColors.redv2
-});
-
-const labelColorHover = theme('mode', {
-  light: colors.greys.grey1,
-  dark: colors.greys.grey4
-});
-
-const labelColorFocus = theme('mode', {
-  light: colors.greys.grey3,
-  dark: colors.greys.grey2
-});
-
-const labelColor = theme('mode', {
-  light: colors.greys.grey3,
-  dark: colors.greys.grey2
-});
-
-const textColor = theme('mode', {
-  light: colors.blacks.black1,
-  dark: colors.whites.white
-});
-
-const getBorderForState = state => {
-  if (state.isInvalid) {
-    return borderColorInvalid;
-  }
-  if (state.isFocused) {
-    return borderColorActive;
-  }
-  if (state.isValidated) {
-    return borderColorDefault;
-  }
-  if (state.isDisabled) {
-    return borderColorDisabled;
-  }
-  if (state.isHovered) {
-    return state.isInvalid // eslint-disable-line
-      ? colors.solidColors.redv2
-      : state.isDisabled
-      ? borderColorDisabled
-      : borderColorHover;
-  }
-
-  return borderColorDefault;
-};
-
-const getLabelColor = state => {
-  if (state.isHovered) {
-    return labelColorHover;
-  }
-
-  if (state.isFocused) {
-    return labelColorFocus;
-  }
-
-  return labelColor;
-};
+import { textColor } from '../v2helpers/colors';
+import {
+  ElementWrapper,
+  ErrorWrapper,
+  StyledLabel,
+  StyledWrapper
+} from '../v2helpers/styledFields';
 
 const xIcon = css`
   &::before,
@@ -132,26 +55,7 @@ const checkmarkIcon = css`
   }
 `;
 
-const StyledLabel = styled.label`
-  position: absolute;
-  transition: transform 0.2s ease;
-  top: 22px;
-  color: ${getLabelColor};
-  transform-origin: left;
-  font-weight: ${props => (props.isActive ? '600' : 'initial')};
-
-  transform: ${props =>
-    props.isActive ? 'translateY(-12px) scale(0.8)' : 'translateY(0) scale(1)'};
-`;
-
-const InputWrapper = styled(Box)`
-  padding: 12px 16px;
-  position: relative;
-  border-width: 1.5px;
-  border-style: solid;
-  transition: border-color 0.2s ease;
-  border-color: ${getBorderForState};
-
+const InputWrapper = styled(StyledWrapper)`
   ${props => !props.isPasswordInput && props.isInvalid && xIcon}
   ${props => !props.isPasswordInput && props.isValidated && checkmarkIcon}
 `;
@@ -177,23 +81,6 @@ const StyledInput = styled.input`
 
   :focus {
     outline: none;
-  }
-`;
-
-const ElementWrapper = styled.div`
-  height: 96px;
-  position: relative;
-`;
-
-const ErrorWrapper = styled(StyledText)`
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  line-height: 16px;
-  color: ${colors.solidColors.redv2};
-  &:hover,
-  &:focus {
-    color: ${colors.solidColors.redv2};
   }
 `;
 
@@ -223,7 +110,9 @@ type InputProps = {
   'data-test-id'?: string,
   name: string,
   value: string,
-  onChange: Function
+  onChange: Function,
+  onFocus?: Function,
+  onBlur?: Function
 };
 
 type Props = {
