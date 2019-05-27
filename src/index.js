@@ -6,6 +6,7 @@ import FormRow from './components/formRow/';
 import Input from './components/input/';
 import Inputv2 from './components/inputv2/';
 import Select from './components/select/';
+import Selectv2 from './components/selectv2/';
 import StyledText from './components/text/';
 import Textarea from './components/textarea/';
 import Checkbox from './components/checkbox/';
@@ -31,6 +32,7 @@ export {
   Input,
   Inputv2,
   Select,
+  Selectv2,
   StyledText,
   Textarea,
   FormRow,
