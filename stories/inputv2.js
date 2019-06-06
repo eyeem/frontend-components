@@ -42,4 +42,5 @@ storiesOf('Inputv2', module)
   .add('validated', () => <Wrapper isValidated />)
   .add('invalid', () => <Wrapper errorMessage="This is the error message." />)
   .add('disabled', () => <Wrapper disabled />)
-  .add('password', () => <Wrapper type="password" />);
+  .add('password', () => <Wrapper type="password" />)
+  .add('date', () => <Wrapper type="date" />);

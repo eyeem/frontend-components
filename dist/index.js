@@ -5919,7 +5919,7 @@ var Inputv2 = function (_React$Component) {
 
       var value = this.props.inputProps.value;
 
-      var isActive = value && value.length || this.state.isFocused;
+      var isActive = this.props.inputProps.type === 'date' || value && value.length || this.state.isFocused;
 
       return _react2.default.createElement(
         _styledFields.ElementWrapper,
