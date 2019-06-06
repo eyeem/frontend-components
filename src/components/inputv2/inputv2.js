@@ -156,7 +156,10 @@ class Inputv2 extends React.Component<Props, State> {
 
   render() {
     const { value } = this.props.inputProps;
-    const isActive = (value && value.length) || this.state.isFocused;
+    const isActive =
+      this.props.inputProps.type === 'date' ||
+      (value && value.length) ||
+      this.state.isFocused;
 
     return (
       <ElementWrapper>
