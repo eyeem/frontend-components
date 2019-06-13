@@ -117,6 +117,18 @@ class Input extends React.Component<Props, State> {
   togglePassword = () =>
     this.setState(state => ({ showPassword: !state.showPassword }));
 
+  getInputType() {
+    if (this.state.showPassword) {
+      return 'text';
+    }
+
+    if (this.props.inputProps.type) {
+      return this.props.inputProps.type;
+    }
+
+    return 'text';
+  }
+
   render() {
     const WrapperComponent = this.props.formRow ? FormRow : 'div';
 
@@ -127,11 +139,7 @@ class Input extends React.Component<Props, State> {
           error={!!this.props.errorMessage}
           pending={this.props.pending}
           showCheckmark={this.props.showCheckmark}
-          type={
-            (this.state.showPassword && 'text') ||
-            this.props.inputProps.type ||
-            'text'
-          }
+          type={this.getInputType()}
         />
         {this.props.inputProps.type === 'password' && (
           <InnerHint onClick={this.togglePassword}>

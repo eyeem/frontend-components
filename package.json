@@ -2,14 +2,20 @@
   "name": "eyeem-components",
   "version": "1.6.3",
   "description": "Shareable React Components for Frontend Projects at EyeEm",
+  "source": "src/index.js",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "watch": "node_modules/.bin/webpack --config webpack.config.js --watch",
-    "build": "node_modules/.bin/webpack --config webpack.config.js",
+    "build": "microbundle --no-sourcemap",
     "test": "jest",
     "test:update": "jest --updateSnapshot",
-    "prepublish": "npm run build",
-    "release": "np --no-yarn ",
+    "prepare": "npm t",
+    "release": "npm t && np --no-yarn ",
     "storybook:dev": "start-storybook -p 9001 -c .storybook",
     "storybook:prod": "build-storybook -c .storybook -o .out"
   },
@@ -56,6 +62,7 @@
     "jest-styled-components": "^6.3.1",
     "lint-staged": "^8.1.0",
     "lodash": "^4.17.4",
+    "microbundle": "^0.11.0",
     "np": "^5.0.1",
     "prettier": "^1.16.4",
     "react": "^16.6.0",
