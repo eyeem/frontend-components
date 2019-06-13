@@ -123,7 +123,9 @@ export default class Selectv2 extends React.Component<Props, State> {
     const isActive = (value && value.length) || this.state.isFocused;
     // In FF, the select element has a padding left that can't be changed
     // so we shift the whole element left to align the text
-    const isFirefox = window && window.navigator.userAgent.includes('Firefox');
+    const isFirefox =
+      typeof window !== 'undefined' &&
+      window.navigator.userAgent.includes('Firefox');
 
     return (
       <ElementWrapper>
