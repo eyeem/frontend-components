@@ -7266,7 +7266,7 @@ var Selectv2 = function (_React$Component) {
       var isActive = value && value.length || this.state.isFocused;
       // In FF, the select element has a padding left that can't be changed
       // so we shift the whole element left to align the text
-      var isFirefox = window && window.navigator.userAgent.includes('Firefox');
+      var isFirefox = typeof window !== 'undefined' && window.navigator.userAgent.includes('Firefox');
 
       return _react2.default.createElement(
         _styledFields.ElementWrapper,
