@@ -7806,9 +7806,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Flex = (0, _styledComponents2.default)(_box2.default).withConfig({
   displayName: 'flex__Flex',
   componentId: 'sc-1r0f8c5-0'
-})(['display:flex;', ' ', ' ', ' ', ''], _styledSystem.flexWrap, _styledSystem.flexDirection, _styledSystem.alignItems, _styledSystem.justifyContent);
+})(['display:flex;', ' ', ' ', ' ', ' ', ''], _styledSystem.flexWrap, _styledSystem.flexDirection, _styledSystem.alignItems, _styledSystem.justifyContent, _styledSystem.alignSelf);
 
-Flex.propTypes = _extends({}, _styledSystem.flexWrap.propTypes, _styledSystem.flexDirection.propTypes, _styledSystem.alignItems.propTypes, _styledSystem.justifyContent.propTypes);
+Flex.propTypes = _extends({}, _styledSystem.flexWrap.propTypes, _styledSystem.flexDirection.propTypes, _styledSystem.alignItems.propTypes, _styledSystem.justifyContent.propTypes, _styledSystem.alignSelf.propTypes);
 
 Flex.displayName = 'Flex';
 

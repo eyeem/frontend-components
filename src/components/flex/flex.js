@@ -3,7 +3,8 @@ import {
   flexWrap,
   flexDirection,
   alignItems,
-  justifyContent
+  justifyContent,
+  alignSelf
 } from 'styled-system';
 
 import Box from '../box';
@@ -15,13 +16,15 @@ const Flex = styled(Box)`
   ${flexDirection}
   ${alignItems}
   ${justifyContent}
+  ${alignSelf}
 `;
 
 Flex.propTypes = {
   ...flexWrap.propTypes,
   ...flexDirection.propTypes,
   ...alignItems.propTypes,
-  ...justifyContent.propTypes
+  ...justifyContent.propTypes,
+  ...alignSelf.propTypes
 };
 
 Flex.displayName = 'Flex';
