@@ -62,7 +62,7 @@
     "jest-styled-components": "^6.3.1",
     "lint-staged": "^8.1.0",
     "lodash": "^4.17.4",
-    "microbundle": "^0.11.0",
+    "microbundle": "^0.12.0-next.3",
     "np": "^5.0.1",
     "prettier": "^1.16.4",
     "react": "^16.6.0",
