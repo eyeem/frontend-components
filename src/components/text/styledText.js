@@ -29,7 +29,8 @@ const ComponentFromTagProp = createComponentFromTagProp({
     'cursor',
     'align',
     'display',
-    'alignItems'
+    'alignItems',
+    'textTransform'
   ]
 });
 
@@ -69,6 +70,7 @@ const StyledText = styled(ComponentFromTagProp)`
   color: ${propsColorFromTheme('colors.regular')};
   fill: ${propsColorFromTheme('colors.regular')};
   font-style: ${props => props.fontStyle};
+  text-transform: ${props => props.textTransform};
   font-size: ${fontSize('small')}px;
   line-height: ${lineHeight('small')}px;
   text-decoration: ${fromPropsTernary('underline', 'underline', 'none')};

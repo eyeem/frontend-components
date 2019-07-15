@@ -27,6 +27,7 @@ function Text(props: {
   font?: string,
   fontStyle: string,
   topMargin?: string,
+  textTransform?: string,
 
   'data-test-id': string,
   onClick?: Function,
@@ -64,6 +65,7 @@ function Text(props: {
       }
       margin={props.margin}
       marginTop={textTopMargins[props.topMargin || 'none']}
+      textTransform={props.textTransform}
       display={props.display}
       alignItems={props.alignItems}
       ellipsis={props.ellipsis}
@@ -89,7 +91,8 @@ Text.defaultProps = {
   renderAs: 'p',
   onClick: undefined,
   target: undefined,
-  href: undefined
+  href: undefined,
+  textTransform: 'none'
 };
 
 export default Text;

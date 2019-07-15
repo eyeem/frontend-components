@@ -10,6 +10,7 @@ exports[`it accepts property color 1`] = `
   text-align: left;
   color: #999999;
   fill: #999999;
+  text-transform: none;
   font-size: 14px;
   line-height: 22px;
   -webkit-text-decoration: none;
@@ -87,6 +88,7 @@ exports[`it accepts property underline 1`] = `
   text-align: left;
   color: #333333;
   fill: #333333;
+  text-transform: none;
   font-size: 14px;
   line-height: 22px;
   -webkit-text-decoration: underline;
@@ -163,6 +165,7 @@ exports[`it changes color on active 1`] = `
   text-align: left;
   color: #999999;
   fill: #999999;
+  text-transform: none;
   font-size: 14px;
   line-height: 22px;
   -webkit-text-decoration: none;
@@ -240,6 +243,7 @@ exports[`it changes color on hover 1`] = `
   text-align: left;
   color: #999999;
   fill: #999999;
+  text-transform: none;
   font-size: 14px;
   line-height: 22px;
   -webkit-text-decoration: none;
@@ -317,6 +321,7 @@ exports[`it render default text 1`] = `
   text-align: left;
   color: #333333;
   fill: #333333;
+  text-transform: none;
   font-size: 14px;
   line-height: 22px;
   -webkit-text-decoration: none;
