@@ -16,5 +16,9 @@ This project itself doesn't feature a showcase app, it should be developed toget
 - `npm link eyeem-components` (adds eyeem-components as symlink into node_modules folder)
 - `npm run start`
 
+## Creating a PR
+- `npm run build`
+- Commit the new dist along with your PR
+
 ## Publish new version
 - `$ npm run release`
