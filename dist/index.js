@@ -6950,6 +6950,7 @@ function Text(props) {
       cursor: props.cursor || _styleConfig.textColors[props.color] && _styleConfig.textColors[props.color].hover ? 'pointer' : undefined,
       margin: props.margin,
       marginTop: _styleConfig.textTopMargins[props.topMargin || 'none'],
+      textTransform: props.textTransform,
       display: props.display,
       alignItems: props.alignItems,
       ellipsis: props.ellipsis,
@@ -6974,7 +6975,8 @@ Text.defaultProps = {
   renderAs: 'p',
   onClick: undefined,
   target: undefined,
-  href: undefined
+  href: undefined,
+  textTransform: 'none'
 };
 
 exports.default = Text;
@@ -7013,7 +7015,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var ComponentFromTagProp = (0, _reactCreateComponentFromTagProp2.default)({
   tag: 'a',
   prop: 'renderAs',
-  propsToOmit: ['renderAs', 'underline', 'colors', 'font', 'fontStyle', 'sizeValues', 'margin', 'marginTop', 'ellipsis', 'noWrap', 'cursor', 'align', 'display', 'alignItems']
+  propsToOmit: ['renderAs', 'underline', 'colors', 'font', 'fontStyle', 'sizeValues', 'margin', 'marginTop', 'ellipsis', 'noWrap', 'cursor', 'align', 'display', 'alignItems', 'textTransform']
 });
 
 var fontSizeToLineHeight = function fontSizeToLineHeight(fontSize) {
@@ -7051,8 +7053,10 @@ var ellipsis = function ellipsis(props) {
 var StyledText = (0, _styledComponents2.default)(ComponentFromTagProp).withConfig({
   displayName: 'styledText__StyledText',
   componentId: 'sc-1d7of2u-0'
-})(['display:', ';letter-spacing:', 'px;text-align:', ';color:', ';fill:', ';font-style:', ';font-size:', 'px;line-height:', 'px;text-decoration:', ';margin:0;margin-bottom:', 'px;margin-top:', 'px;cursor:', ';transition:color 0.2s ease-out;', ' ', ' ', ';', ';&:focus,&:hover{color:', ';fill:', ';}&:active{color:', ';fill:', ';}&:focus{outline:none;}&:last-child{margin-bottom:0;}', ' ', ' ', ''], (0, _styleUtils.fromProps)('display'), (0, _styleUtils.fromProps)('sizeValues.letterSpacing'), (0, _styleUtils.fromProps)('align'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), function (props) {
+})(['display:', ';letter-spacing:', 'px;text-align:', ';color:', ';fill:', ';font-style:', ';text-transform:', ';font-size:', 'px;line-height:', 'px;text-decoration:', ';margin:0;margin-bottom:', 'px;margin-top:', 'px;cursor:', ';transition:color 0.2s ease-out;', ' ', ' ', ';', ';&:focus,&:hover{color:', ';fill:', ';}&:active{color:', ';fill:', ';}&:focus{outline:none;}&:last-child{margin-bottom:0;}', ' ', ' ', ''], (0, _styleUtils.fromProps)('display'), (0, _styleUtils.fromProps)('sizeValues.letterSpacing'), (0, _styleUtils.fromProps)('align'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), (0, _styleUtils.propsColorFromTheme)('colors.regular'), function (props) {
   return props.fontStyle;
+}, function (props) {
+  return props.textTransform;
 }, fontSize('small'), lineHeight('small'), (0, _styleUtils.fromPropsTernary)('underline', 'underline', 'none'), marginBottom('small'), (0, _styleUtils.fromProps)('marginTop.small'), (0, _styleUtils.fromProps)('cursor'), function (props) {
   return (0, _styleUtils.alignItems)(props.alignItems);
 }, function (props) {
