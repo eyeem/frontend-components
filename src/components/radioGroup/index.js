@@ -49,7 +49,7 @@ const StyledLabel = styled.label`
     position: absolute;
     top: 2px;
     left: 0;
-    display: ${props => (props.hideCheckbox ? 'none' : 'block')}
+    display: ${props => (props.hideCheckbox ? 'none' : 'block')};
 
     width: 16px;
     height: 16px;
