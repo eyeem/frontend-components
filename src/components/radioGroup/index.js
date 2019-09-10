@@ -26,7 +26,7 @@ const RadioRow = styled.div`
   )};
 `;
 
-const border = props => {
+const getBorder = props => {
   let border = css`1px solid ${fromInternalTheme('colors.greys.grey3')}`;
   if (props.error) {
     border = css`1px solid ${fromInternalTheme('colors.solidColors.red')}`;
@@ -39,7 +39,7 @@ const border = props => {
 const StyledLabel = styled.label`
   position: relative;
   padding-left: 24px;
-  cursor: pointer;
+  cursor: ${props => (props.hideCheckbox ? 'default' : 'pointer')};
   display: block;
 
   font-size: 14px;
@@ -49,11 +49,11 @@ const StyledLabel = styled.label`
     position: absolute;
     top: 2px;
     left: 0;
-    display: block;
+    display: ${props => (props.hideCheckbox ? 'none' : 'block')};
 
     width: 16px;
     height: 16px;
-    border: ${border};
+    border: ${getBorder};
     border-radius: 12px;
     transition: border-color 0.15s ease-out;
     content: '';
@@ -75,7 +75,8 @@ declare type Props = {
     value: string,
     text: string
   }>,
-  radioColumned?: boolean
+  radioColumned?: boolean,
+  hideCheckbox: boolean
 };
 
 const compareAsString = (val1: number | string, val2: number | string) =>
@@ -96,6 +97,7 @@ function RadioGroup(props: Props) {
             id={`${props.inputProps.name}_${option.value}`}
           />
           <StyledLabel
+            hideCheckbox={props.hideCheckbox}
             error={!!props.errorMessage}
             checked={compareAsString(option.value, props.inputProps.value)}
             htmlFor={`${props.inputProps.name}_${option.value}`}>

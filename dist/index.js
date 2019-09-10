@@ -7555,7 +7555,7 @@ var RadioRow = _styledComponents2.default.div.withConfig({
   componentId: 'sc-1avoelm-1'
 })(['', ';'], (0, _styleUtils.fromPropsTernary)('radioColumned', 'display: inline-block;margin-right: 32px;', 'display: block;\n      margin-bottom: 12px;\n      &:last-child {\n        margin-bottom: 0;\n      }'));
 
-var border = function border(props) {
+var getBorder = function getBorder(props) {
   var border = (0, _styledComponents.css)(['1px solid ', ''], (0, _styleUtils.fromInternalTheme)('colors.greys.grey3'));
   if (props.error) {
     border = (0, _styledComponents.css)(['1px solid ', ''], (0, _styleUtils.fromInternalTheme)('colors.solidColors.red'));
@@ -7568,7 +7568,11 @@ var border = function border(props) {
 var StyledLabel = _styledComponents2.default.label.withConfig({
   displayName: 'radioGroup__StyledLabel',
   componentId: 'sc-1avoelm-2'
-})(['position:relative;padding-left:24px;cursor:pointer;display:block;font-size:14px;line-height:22px;&:before{position:absolute;top:2px;left:0;display:block;width:16px;height:16px;border:', ';border-radius:12px;transition:border-color 0.15s ease-out;content:\'\';}'], border);
+})(['position:relative;padding-left:24px;cursor:', ';display:block;font-size:14px;line-height:22px;&:before{position:absolute;top:2px;left:0;display:', ';width:16px;height:16px;border:', ';border-radius:12px;transition:border-color 0.15s ease-out;content:\'\';}'], function (props) {
+  return props.hideCheckbox ? 'default' : 'pointer';
+}, function (props) {
+  return props.hideCheckbox ? 'none' : 'block';
+}, getBorder);
 
 var Wrapper = _styledComponents2.default.div.withConfig({
   displayName: 'radioGroup__Wrapper',
@@ -7598,6 +7602,7 @@ function RadioGroup(props) {
         _react2.default.createElement(
           StyledLabel,
           {
+            hideCheckbox: props.hideCheckbox,
             error: !!props.errorMessage,
             checked: compareAsString(option.value, props.inputProps.value),
             htmlFor: props.inputProps.name + '_' + option.value },
