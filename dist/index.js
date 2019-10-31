@@ -3841,9 +3841,14 @@ function DownloadIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 18 18"
-    },
-    React.createElement("path", { d: "m10 8.01v-8.01h-2.01v8.01h-4.316l5.204 5.338 5.468-5.338h-4.35m-10 7.993h18v-1h-18v1" })
+      viewBox: "0 0 22 22" },
+    React.createElement("path", { d: "M12 13.375v-10", stroke: "#fff", strokeWidth: "1.5", fill: "none" }),
+    React.createElement("path", {
+      d: "M16.25 9.75L12 14 7.75 9.75M4 19.25h16",
+      stroke: "#fff",
+      strokeWidth: "1.5",
+      fill: "none"
+    })
   );
 }
 /* eslint-disable max-len */
@@ -3918,11 +3923,12 @@ function UpgradeIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 16 16"
-    },
+      viewBox: "0 0 24 24" },
     React.createElement("path", {
-      d: "M7.25 4.81L3.53 8.53a.75.75 0 0 1-1.06-1.06L8 1.94l5.53 5.53a.75.75 0 0 1-1.06 1.06L8.75 4.81V13a.75.75 0 1 1-1.5 0V4.81z",
-      fillRule: "nonzero"
+      d: "M12 19V5M5 12l7-7 7 7",
+      stroke: "#fff",
+      strokeWidth: "1.5",
+      fill: "none"
     })
   );
 }
@@ -3960,9 +3966,8 @@ function CheckmarkIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 20 20"
-    },
-    React.createElement("path", { d: "M7.9 13.37l-4.28-4a1 1 0 0 0-1.37 1.46L8 16.2l9.8-10.74a1 1 0 0 0-1.47-1.35z" })
+      viewBox: "0 0 24 24" },
+    React.createElement("path", { d: "M4 12l5 5L20 6", stroke: "#fff", strokeWidth: "1.5", fill: "none" })
   );
 }
 /* eslint-disable max-len */
@@ -3999,9 +4004,15 @@ function CartIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 30 30"
-    },
-    React.createElement("path", { d: "M20.05 23H9.95c.033.162.05.33.05.5 0 1.38-1.12 2.5-2.5 2.5S5 24.88 5 23.5 6.12 21 7.5 21h15c1.38 0 2.5 1.12 2.5 2.5S23.88 26 22.5 26 20 24.88 20 23.5c0-.17.017-.338.05-.5zM6.375 7H24.01c1.1 0 1.843.882 1.66 1.982l-1.506 9.036c-.09.542-.61.982-1.157.982H6.993c-.548 0-1.067-.44-1.157-.982L4 7l-.176-1H.99C.445 6 0 5.556 0 5c0-.552.45-1 .99-1h4.02c.512 0 .934.398.985.898.013.04.024.084.03.128L6.376 7z" })
+      viewBox: "0 0 24 24" },
+    React.createElement(
+      "g",
+      { stroke: "#fff", strokeWidth: "1.5" },
+      React.createElement("path", {
+        fill: "none",
+        d: "M18.024 6.75l2.1 13.5H3.876l2.1-13.5zM7.75 5.5a4.25 4.25 0 018.5 0v1.25h-8.5z"
+      })
+    )
   );
 }
 /* eslint-disable max-len */
@@ -4077,10 +4088,14 @@ function AddToLightboxIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 18 18"
-    },
-    React.createElement("path", { d: "M12 8v2.003c0 .55-.444.997-1 .997-.552 0-1-.453-1-.997V8H7.997C7.447 8 7 7.556 7 7c0-.552.453-1 .997-1H10V3.997c0-.55.444-.997 1-.997.552 0 1 .453 1 .997V6h2.003c.55 0 .997.444.997 1 0 .552-.453 1-.997 1H12zm-5.994 6h9.988c1.11 0 2.006-.898 2.006-2.006V2.006C18 .896 17.102 0 15.994 0H6.006C4.896 0 4 .898 4 2.006v9.988C4 13.104 4.898 14 6.006 14z" }),
-    React.createElement("path", { d: "M2 5.996C2 5.446 1.556 5 1 5c-.552 0-1 .447-1 1v9.997C0 17.103.894 18 2.003 18H12c.553 0 1-.444 1-1 0-.552-.445-1-.996-1H2.996c-.55 0-.996-.445-.996-.996V5.996z" })
+      viewBox: "0 0 24 24" },
+    React.createElement("path", { d: "M3 17V3h14v14H3z", stroke: "#fff", strokeWidth: "1.5", fill: "none" }),
+    React.createElement("path", {
+      d: "M10 21h11V10M10 6v8m-4-4h8",
+      stroke: "#fff",
+      strokeWidth: "1.5",
+      fill: "none"
+    })
   );
 }
 /* eslint-disable max-len */
@@ -4117,10 +4132,14 @@ function IsInLightboxIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 18 18"
-    },
-    React.createElement("path", { d: "M6.006 14h9.988c1.11 0 2.006-.898 2.006-2.006V2.006C18 .896 17.102 0 15.994 0H6.006C4.896 0 4 .898 4 2.006v9.988C4 13.104 4.898 14 6.006 14zM15 7c0 .552-.453 1-.997 1H7.997C7.447 8 7 7.556 7 7c0-.552.453-1 .997-1h6.006c.55 0 .997.444.997 1z" }),
-    React.createElement("path", { d: "M2 5.996C2 5.446 1.556 5 1 5c-.552 0-1 .447-1 1v9.997C0 17.103.894 18 2.003 18H12c.553 0 1-.444 1-1 0-.552-.445-1-.996-1H2.996c-.55 0-.996-.445-.996-.996V5.996z" })
+      viewBox: "0 0 24 24" },
+    React.createElement("path", { d: "M3 17V3h14v14H3z", stroke: "#fff", strokeWidth: "1.5", fill: "none" }),
+    React.createElement("path", {
+      d: "M10 21h11V10M6 10h8",
+      stroke: "#fff",
+      strokeWidth: "1.5",
+      fill: "none"
+    })
   );
 }
 /* eslint-disable max-len */
@@ -4201,9 +4220,13 @@ function LikeIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 16 16"
-    },
-    React.createElement("path", { d: "M7.998 16l-.33-.246h-.004c-1.054-.78-6.36-4.79-7.275-7.208C-.1 7.242-.13 5.79.31 4.46.77 3.094 1.66 2.02 2.82 1.44 3.413 1.147 4.036 1 4.673 1c1.265 0 2.456.584 3.326 1.6.87-1.016 2.067-1.6 3.327-1.6.64 0 1.26.147 1.85.442 1.164.578 2.057 1.653 2.51 3.017.445 1.33.418 2.782-.077 4.086-.944 2.5-6.634 6.734-7.28 7.208l-.33.246z" })
+      viewBox: "0 0 24 24" },
+    React.createElement("path", {
+      d: "M4 13S-.5 8 4 4c4-3.5 8 1 8 1s4-4.5 8-1c4.5 4 0 9 0 9l-8 8-8-8z",
+      stroke: "#fff",
+      strokeWidth: "1.5",
+      fill: "none"
+    })
   );
 }
 /* eslint-disable max-len */
@@ -4239,9 +4262,13 @@ function CommentIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 16 16"
-    },
-    React.createElement("path", { d: "M8 0C4.136 0 1 3.136 1 7c0 1.914.773 3.647 2.022 4.914L3 16l3.35-2.217c.53.132 1.08.215 1.65.215 3.864 0 7-3.132 7-7C15 3.137 11.864 0 8 0z" })
+      viewBox: "0 0 24 24" },
+    React.createElement("path", {
+      d: "M16.322 19.414l-.143-.009-.126.068a8.5 8.5 0 113.501-3.573c-.047.091-.054.174-.055.191v.002a.638.638 0 00.004.166c.006.053.017.12.029.193.025.148.062.348.108.58.092.466.22 1.074.349 1.677.125.586.252 1.168.35 1.612-.391-.096-.889-.218-1.4-.34-.559-.135-1.136-.27-1.603-.374a26.5 26.5 0 00-.61-.13 3.583 3.583 0 00-.404-.063z",
+      stroke: "#fff",
+      strokeWidth: "1.5",
+      fill: "none"
+    })
   );
 }
 /* eslint-disable max-len */
