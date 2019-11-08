@@ -11,6 +11,7 @@ function UserFollow(props: { size?: number, className: string, id: string }) {
       width={props.size}
       viewBox="0 0 24 24">
       <path
+        fill="none"
         d="M14 11h8m-4-4v8m-9.189 6H3c0-2.797 1-7 6-7s6 4.205 6 7H8.811zM9 10a3 3 0 100-6 3 3 0 000 6z"
         stroke="#fff"
         strokeWidth="2"

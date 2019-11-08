@@ -15,6 +15,7 @@ function UpgradeIcon(props: { size?: number, className: string, id: string }) {
       </clipPath>
       <g clipPath="url(#a)">
         <path
+          fill="none"
           d="M15 12.5l7 3.5-10 5-10-5 7-3.5M7.5 8L12 3.5m0 0L16.5 8M12 3.5V16"
           stroke="#fff"
           strokeWidth="2"

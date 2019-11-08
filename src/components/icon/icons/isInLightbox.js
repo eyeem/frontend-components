@@ -15,6 +15,7 @@ function IsInLightboxIcon(props: {
       width={props.size}
       viewBox="0 0 24 24">
       <path
+        fill="none"
         d="m21 10v11h-11m-4-11h8m-11-7v14h14v-14z"
         stroke="#fff"
         strokeWidth="2"

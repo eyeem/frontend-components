@@ -15,6 +15,7 @@ function AddToLightboxIcon(props: {
       width={props.size}
       viewBox="0 0 24 24">
       <path
+        fill="none"
         d="M6 10h8m-4-4v8m11-4v11H10M3 3v14h14V3z"
         stroke="#fff"
         strokeWidth="2"

@@ -3843,6 +3843,7 @@ function DownloadIcon(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
+      fill: "none",
       d: "M18 9.875L12 16m0 0L6 9.875M12 16c-.01-5.421 0-14 0-14M3 21h18",
       stroke: "#fff",
       strokeWidth: "2"
@@ -3931,6 +3932,7 @@ function UpgradeIcon(props) {
       "g",
       { clipPath: "url(#a)" },
       React.createElement("path", {
+        fill: "none",
         d: "M15 12.5l7 3.5-10 5-10-5 7-3.5M7.5 8L12 3.5m0 0L16.5 8M12 3.5V16",
         stroke: "#fff",
         strokeWidth: "2"
@@ -4012,6 +4014,7 @@ function CartIcon(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
+      fill: "none",
       d: "M7.5 7H6L4 21h16L18 7h-1.5m-9 0s.081-1.812 1.071-3.312c1.486-2.25 5.372-2.25 6.858 0C16.419 5.188 16.5 7 16.5 7m-9 0h9",
       stroke: "#fff",
       strokeWidth: "2"
@@ -4093,6 +4096,7 @@ function AddToLightboxIcon(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
+      fill: "none",
       d: "M6 10h8m-4-4v8m11-4v11H10M3 3v14h14V3z",
       stroke: "#fff",
       strokeWidth: "2"
@@ -4135,6 +4139,7 @@ function IsInLightboxIcon(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
+      fill: "none",
       d: "m21 10v11h-11m-4-11h8m-11-7v14h14v-14z",
       stroke: "#fff",
       strokeWidth: "2"
@@ -4221,6 +4226,7 @@ function LikeIcon(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
+      fill: "none",
       d: "M2.556 10.31C3.081 15.03 12 20.802 12 20.802s8.919-5.246 9.444-10.492c.524-5.247-2.694-7.437-6.296-6.296C13.597 4.504 12 6.742 12 6.742s-1.597-2.237-3.148-2.728c-3.602-1.14-6.82 1.574-6.296 6.296z",
       stroke: "#fff",
       strokeWidth: "2"
@@ -4262,6 +4268,7 @@ function CommentIcon(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
+      fill: "none",
       clipRule: "evenodd",
       d: "M12 21a8.96 8.96 0 004.292-1.087L21 21l-1.002-4.87A9 9 0 1012 21z",
       stroke: "#fff",
@@ -5367,6 +5374,7 @@ function UserFollow(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
+      fill: "none",
       d: "M14 11h8m-4-4v8m-9.189 6H3c0-2.797 1-7 6-7s6 4.205 6 7H8.811zM9 10a3 3 0 100-6 3 3 0 000 6z",
       stroke: "#fff",
       strokeWidth: "2"
