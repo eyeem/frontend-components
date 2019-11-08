@@ -63,6 +63,8 @@ import TrophyPlus from './icons/trophyPlus';
 import TrophyMinus from './icons/trophyMinus';
 import UserFollow from './icons/userFollow';
 import Info from './icons/info';
+import LightboxEdit from './icons/lightboxEdit';
+import More from './icons/more';
 
 const icons = {
   star: StarIcon,
@@ -125,7 +127,9 @@ const icons = {
 
   userFollow: UserFollow,
 
-  info: Info
+  info: Info,
+  lightboxEdit: LightboxEdit,
+  more: More
 };
 
 function Icon(props: {
