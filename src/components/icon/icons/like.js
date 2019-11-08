@@ -10,10 +10,9 @@ function LikeIcon(props: { size?: number, className: string }) {
       width={props.size}
       viewBox="0 0 24 24">
       <path
-        d="M4 13S-.5 8 4 4c4-3.5 8 1 8 1s4-4.5 8-1c4.5 4 0 9 0 9l-8 8-8-8z"
+        d="M2.556 10.31C3.081 15.03 12 20.802 12 20.802s8.919-5.246 9.444-10.492c.524-5.247-2.694-7.437-6.296-6.296C13.597 4.504 12 6.742 12 6.742s-1.597-2.237-3.148-2.728c-3.602-1.14-6.82 1.574-6.296 6.296z"
         stroke="#fff"
-        strokeWidth="1.5"
-        fill="none"
+        strokeWidth="2"
       />
     </svg>
   );

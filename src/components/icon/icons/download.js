@@ -9,13 +9,11 @@ function DownloadIcon(props: { size?: number, className: string, id: string }) {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 22 22">
-      <path d="M12 13.375v-10" stroke="#fff" strokeWidth="1.5" fill="none" />
+      viewBox="0 0 24 24">
       <path
-        d="M16.25 9.75L12 14 7.75 9.75M4 19.25h16"
+        d="M18 9.875L12 16m0 0L6 9.875M12 16c-.01-5.421 0-14 0-14M3 21h18"
         stroke="#fff"
-        strokeWidth="1.5"
-        fill="none"
+        strokeWidth="2"
       />
     </svg>
   );

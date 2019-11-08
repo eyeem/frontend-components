@@ -14,12 +14,10 @@ function IsInLightboxIcon(props: {
       height={props.size}
       width={props.size}
       viewBox="0 0 24 24">
-      <path d="M3 17V3h14v14H3z" stroke="#fff" strokeWidth="1.5" fill="none" />
       <path
-        d="M10 21h11V10M6 10h8"
+        d="m21 10v11h-11m-4-11h8m-11-7v14h14v-14z"
         stroke="#fff"
-        strokeWidth="1.5"
-        fill="none"
+        strokeWidth="2"
       />
     </svg>
   );

@@ -3841,13 +3841,11 @@ function DownloadIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 22 22" },
-    React.createElement("path", { d: "M12 13.375v-10", stroke: "#fff", strokeWidth: "1.5", fill: "none" }),
+      viewBox: "0 0 24 24" },
     React.createElement("path", {
-      d: "M16.25 9.75L12 14 7.75 9.75M4 19.25h16",
+      d: "M18 9.875L12 16m0 0L6 9.875M12 16c-.01-5.421 0-14 0-14M3 21h18",
       stroke: "#fff",
-      strokeWidth: "1.5",
-      fill: "none"
+      strokeWidth: "2"
     })
   );
 }
@@ -3924,12 +3922,20 @@ function UpgradeIcon(props) {
       height: props.size,
       width: props.size,
       viewBox: "0 0 24 24" },
-    React.createElement("path", {
-      d: "M12 19V5M5 12l7-7 7 7",
-      stroke: "#fff",
-      strokeWidth: "1.5",
-      fill: "none"
-    })
+    React.createElement(
+      "clipPath",
+      { id: "a" },
+      React.createElement("path", { d: "M0 0h24v24H0z" })
+    ),
+    React.createElement(
+      "g",
+      { clipPath: "url(#a)" },
+      React.createElement("path", {
+        d: "M15 12.5l7 3.5-10 5-10-5 7-3.5M7.5 8L12 3.5m0 0L16.5 8M12 3.5V16",
+        stroke: "#fff",
+        strokeWidth: "2"
+      })
+    )
   );
 }
 /* eslint-disable max-len */
@@ -4005,14 +4011,11 @@ function CartIcon(props) {
       height: props.size,
       width: props.size,
       viewBox: "0 0 24 24" },
-    React.createElement(
-      "g",
-      { stroke: "#fff", strokeWidth: "1.5" },
-      React.createElement("path", {
-        fill: "none",
-        d: "M18.024 6.75l2.1 13.5H3.876l2.1-13.5zM7.75 5.5a4.25 4.25 0 018.5 0v1.25h-8.5z"
-      })
-    )
+    React.createElement("path", {
+      d: "M7.5 7H6L4 21h16L18 7h-1.5m-9 0s.081-1.812 1.071-3.312c1.486-2.25 5.372-2.25 6.858 0C16.419 5.188 16.5 7 16.5 7m-9 0h9",
+      stroke: "#fff",
+      strokeWidth: "2"
+    })
   );
 }
 /* eslint-disable max-len */
@@ -4089,12 +4092,10 @@ function AddToLightboxIcon(props) {
       height: props.size,
       width: props.size,
       viewBox: "0 0 24 24" },
-    React.createElement("path", { d: "M3 17V3h14v14H3z", stroke: "#fff", strokeWidth: "1.5", fill: "none" }),
     React.createElement("path", {
-      d: "M10 21h11V10M10 6v8m-4-4h8",
+      d: "M6 10h8m-4-4v8m11-4v11H10M3 3v14h14V3z",
       stroke: "#fff",
-      strokeWidth: "1.5",
-      fill: "none"
+      strokeWidth: "2"
     })
   );
 }
@@ -4133,12 +4134,10 @@ function IsInLightboxIcon(props) {
       height: props.size,
       width: props.size,
       viewBox: "0 0 24 24" },
-    React.createElement("path", { d: "M3 17V3h14v14H3z", stroke: "#fff", strokeWidth: "1.5", fill: "none" }),
     React.createElement("path", {
-      d: "M10 21h11V10M6 10h8",
+      d: "m21 10v11h-11m-4-11h8m-11-7v14h14v-14z",
       stroke: "#fff",
-      strokeWidth: "1.5",
-      fill: "none"
+      strokeWidth: "2"
     })
   );
 }
@@ -4222,10 +4221,9 @@ function LikeIcon(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
-      d: "M4 13S-.5 8 4 4c4-3.5 8 1 8 1s4-4.5 8-1c4.5 4 0 9 0 9l-8 8-8-8z",
+      d: "M2.556 10.31C3.081 15.03 12 20.802 12 20.802s8.919-5.246 9.444-10.492c.524-5.247-2.694-7.437-6.296-6.296C13.597 4.504 12 6.742 12 6.742s-1.597-2.237-3.148-2.728c-3.602-1.14-6.82 1.574-6.296 6.296z",
       stroke: "#fff",
-      strokeWidth: "1.5",
-      fill: "none"
+      strokeWidth: "2"
     })
   );
 }
@@ -4264,10 +4262,10 @@ function CommentIcon(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
-      d: "M16.322 19.414l-.143-.009-.126.068a8.5 8.5 0 113.501-3.573c-.047.091-.054.174-.055.191v.002a.638.638 0 00.004.166c.006.053.017.12.029.193.025.148.062.348.108.58.092.466.22 1.074.349 1.677.125.586.252 1.168.35 1.612-.391-.096-.889-.218-1.4-.34-.559-.135-1.136-.27-1.603-.374a26.5 26.5 0 00-.61-.13 3.583 3.583 0 00-.404-.063z",
+      clipRule: "evenodd",
+      d: "M12 21a8.96 8.96 0 004.292-1.087L21 21l-1.002-4.87A9 9 0 1012 21z",
       stroke: "#fff",
-      strokeWidth: "1.5",
-      fill: "none"
+      strokeWidth: "2"
     })
   );
 }
@@ -5367,11 +5365,11 @@ function UserFollow(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 20 20"
-    },
+      viewBox: "0 0 24 24" },
     React.createElement("path", {
-      d: "M15.62 3.12V0h1.26v3.12H20v1.26h-3.12V7.5h-1.26V4.38H12.5V3.12h3.12zm-6.93 7.97c.83-.78 1.53-2.06 1.53-3.51 0-2.37-.68-4.3-3.12-4.33-2.44.03-3.12 1.96-3.12 4.33 0 1.43.69 2.7 1.51 3.49-.05 1.17-.61 1.74-2.43 2.42-1.9.7-3.06 1.42-3.06 1.91V17h14.38v-1.6c0-.49-1.28-1.21-3.18-1.91-1.8-.67-2.45-1.24-2.51-2.4zm0 0",
-      fillRule: "evenodd"
+      d: "M14 11h8m-4-4v8m-9.189 6H3c0-2.797 1-7 6-7s6 4.205 6 7H8.811zM9 10a3 3 0 100-6 3 3 0 000 6z",
+      stroke: "#fff",
+      strokeWidth: "2"
     })
   );
 }

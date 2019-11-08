@@ -14,12 +14,10 @@ function AddToLightboxIcon(props: {
       height={props.size}
       width={props.size}
       viewBox="0 0 24 24">
-      <path d="M3 17V3h14v14H3z" stroke="#fff" strokeWidth="1.5" fill="none" />
       <path
-        d="M10 21h11V10M10 6v8m-4-4h8"
+        d="M6 10h8m-4-4v8m11-4v11H10M3 3v14h14V3z"
         stroke="#fff"
-        strokeWidth="1.5"
-        fill="none"
+        strokeWidth="2"
       />
     </svg>
   );
