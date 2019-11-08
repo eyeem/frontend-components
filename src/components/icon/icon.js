@@ -62,6 +62,7 @@ import Trophy from './icons/trophy';
 import TrophyPlus from './icons/trophyPlus';
 import TrophyMinus from './icons/trophyMinus';
 import UserFollow from './icons/userFollow';
+import Info from './icons/info';
 
 const icons = {
   star: StarIcon,
@@ -122,14 +123,16 @@ const icons = {
   trophyPlus: TrophyPlus,
   trophyMinus: TrophyMinus,
 
-  userFollow: UserFollow
+  userFollow: UserFollow,
+
+  info: Info
 };
 
 function Icon(props: {
   className: string,
   id: string,
   type: string,
-  size: number,
+  size?: number,
   color?: string, // if this is undefined, the icon just inherits the parents' 'fill' CSS property
   iconProps: Object
 }) {
@@ -153,7 +156,6 @@ function Icon(props: {
 
 Icon.defaultProps = {
   color: undefined,
-  type: undefined,
   size: 16
 };
 

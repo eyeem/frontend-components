@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 import * as React from 'react';
 
-function FlagIcon(props: { size?: number, className: string, id: string }) {
+function Info(props: { size?: number, className: string, id: string }) {
   return (
     <svg
       id={props.id}
@@ -11,17 +11,16 @@ function FlagIcon(props: { size?: number, className: string, id: string }) {
       width={props.size}
       viewBox="0 0 24 24">
       <path
-        d="M4 14V3h15l-4 5.5 4 5.5zm0 0v8"
+        d="M12 11v6m0-10v2m0 13c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
         stroke="#fff"
         strokeWidth="2"
-        fill="none"
       />
     </svg>
   );
 }
 
-FlagIcon.defaultProps = {
-  size: 16
+Info.defaultProps = {
+  size: 24
 };
 
-export default FlagIcon;
+export default Info;
