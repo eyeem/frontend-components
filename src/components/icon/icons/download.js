@@ -10,18 +10,17 @@ function DownloadIcon(props: { size?: number, className: string, id: string }) {
       height={props.size}
       width={props.size}
       viewBox="0 0 24 24">
-      <path
-        fill="none"
-        d="M18 9.875L12 16m0 0L6 9.875M12 16c-.01-5.421 0-14 0-14M3 21h18"
-        stroke="#fff"
-        strokeWidth="2"
-      />
+      <g stroke="#fff" strokeWidth="2" fill="none">
+        <path d="m3 21h18" />
+        <path d="m6 10 6 6 6-6" />
+        <path d="m12 2v14" />
+      </g>{' '}
     </svg>
   );
 }
 
 DownloadIcon.defaultProps = {
-  size: 18
+  size: 24
 };
 
 export default DownloadIcon;

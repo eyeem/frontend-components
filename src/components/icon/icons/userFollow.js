@@ -21,7 +21,7 @@ function UserFollow(props: { size?: number, className: string, id: string }) {
 }
 
 UserFollow.defaultProps = {
-  size: 20
+  size: 16
 };
 
 export default UserFollow;

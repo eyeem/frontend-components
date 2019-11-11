@@ -563,7 +563,6 @@ export const icons = {
     'growth',
     'star2',
     'star3',
-    'lightboxEdit',
     'more'
   ]
 };
