@@ -562,7 +562,9 @@ export const icons = {
     'market',
     'growth',
     'star2',
-    'star3'
+    'star3',
+    'lightboxEdit',
+    'more'
   ]
 };
 

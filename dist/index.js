@@ -926,7 +926,7 @@ var icons = exports.icons = {
   eyeconfont: ['star', 'image', 'mail', 'phone', 'close', 'timing', 'prize', 'remove', 'alert', 'flag', 'embed', 'delete', 'edit', 'backToTop', 'contactEyeEm', 'contactFacebook', 'contactTwitter', 'contactTumblr'],
   buttons: ['cart', 'checkmark', 'download', 'upload', 'upgrade', 'compDownload', 'like', 'comment', 'addToLightbox', 'isInLightbox', 'dragndrop', 'share', 'facebook', 'paypal'],
   services: ['dropbox', 'googledrive', 'flickr', 'picasa', 'instagram'],
-  uncategorized: ['leftArrow', 'rightArrow', 'leftArrow2', 'rightArrow2', 'plus', 'terms', 'market', 'growth', 'star2', 'star3']
+  uncategorized: ['leftArrow', 'rightArrow', 'leftArrow2', 'rightArrow2', 'plus', 'terms', 'market', 'growth', 'star2', 'star3', 'lightboxEdit', 'more']
 };
 
 var fills = exports.fills = ['solid', 'outline'];
@@ -3871,15 +3871,19 @@ function UploadIcon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 16 16" },
-    React.createElement("path", { d: "M6.02 11.025h2.99V6.012h2.974L7.46 1 2.983 6.012H6.02v5.013zM0 14h15v-1H0v1z" })
+      viewBox: "0 0 24 24" },
+    React.createElement("path", {
+      d: "M6 8.125L12 2m0 0l6 6.125M12 2c.01 5.421 0 14 0 14m-9 5h18",
+      stroke: "#fff",
+      strokeWidth: "2"
+    })
   );
 }
 /* eslint-disable max-len */
 
 
 UploadIcon.defaultProps = {
-  size: 18
+  size: 24
 };
 
 exports.default = UploadIcon;
@@ -4346,7 +4350,7 @@ function ShareIcon(props) {
       viewBox: "0 0 24 24" },
     React.createElement("path", {
       d: "M9.989 12.882l-.873-.489-.977 1.745.872.489zm3.924 4.49l.872.49.977-1.746-.872-.489zm-4.844-7.72l-.848.53 1.06 1.696.847-.53zm5.862-1.304l.848-.53-1.06-1.696-.847.53zM7 16a4 4 0 004-4H9a2 2 0 01-2 2zm4-4a4 4 0 00-4-4v2a2 2 0 012 2zM7 8a4 4 0 00-4 4h2a2 2 0 012-2zm-4 4a4 4 0 004 4v-2a2 2 0 01-2-2zm14 10a4 4 0 004-4h-2a2 2 0 01-2 2zm4-4a4 4 0 00-4-4v2a2 2 0 012 2zm-4-4a4 4 0 00-4 4h2a2 2 0 012-2zm-4 4a4 4 0 004 4v-2a2 2 0 01-2-2zm4-8a4 4 0 004-4h-2a2 2 0 01-2 2zm4-4a4 4 0 00-4-4v2a2 2 0 012 2zm-4-4a4 4 0 00-4 4h2a2 2 0 012-2zm-4 4a4 4 0 004 4V8a2 2 0 01-2-2zm-3.989 8.627l4.902 2.745.977-1.744-4.901-2.746zm1.117-3.279l4.803-3-1.06-1.696-4.802 3z",
-      fill: "none"
+      fill: "inherit"
     })
   );
 }
@@ -5449,6 +5453,7 @@ function LightboxEdit(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
+      fill: "none",
       d: "M16.496 10.243l-2.589-2.589M9.375 19.305L20 8.68l-4.53-4.53L4.845 14.775m4.53 4.53L4 19.863l.845-5.088m4.53 4.53l-4.53-4.53",
       stroke: "#fff",
       strokeWidth: "2",

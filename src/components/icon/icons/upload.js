@@ -9,14 +9,18 @@ function UploadIcon(props: { size?: number, className: string, id: string }) {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 16 16">
-      <path d="M6.02 11.025h2.99V6.012h2.974L7.46 1 2.983 6.012H6.02v5.013zM0 14h15v-1H0v1z" />
+      viewBox="0 0 24 24">
+      <path
+        d="M6 8.125L12 2m0 0l6 6.125M12 2c.01 5.421 0 14 0 14m-9 5h18"
+        stroke="#fff"
+        strokeWidth="2"
+      />
     </svg>
   );
 }
 
 UploadIcon.defaultProps = {
-  size: 18
+  size: 24
 };
 
 export default UploadIcon;
