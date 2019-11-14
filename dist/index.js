@@ -3962,7 +3962,12 @@ function CheckmarkIcon(props) {
       height: props.size,
       width: props.size,
       viewBox: "0 0 24 24" },
-    React.createElement("path", { d: "M4 12l5 5L20 6", stroke: "#fff", strokeWidth: "1.5", fill: "none" })
+    React.createElement("path", {
+      fill: "none",
+      d: "M2.5 12l6.806 7L21.5 5",
+      stroke: "#fff",
+      strokeWidth: "2"
+    })
   );
 }
 /* eslint-disable max-len */
@@ -4386,6 +4391,7 @@ function EditIcon(props) {
       width: props.size,
       viewBox: "0 0 24 24" },
     React.createElement("path", {
+      fill: "none",
       clipRule: "evenodd",
       d: "M22 7.478L9.383 20.326 3 21l1.003-6.152L16.62 2 22 7.478z",
       stroke: "#fff",

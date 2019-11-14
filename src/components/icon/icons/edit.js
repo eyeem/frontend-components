@@ -11,6 +11,7 @@ function EditIcon(props: { size?: number, className: string, id: string }) {
       width={props.size}
       viewBox="0 0 24 24">
       <path
+        fill="none"
         clipRule="evenodd"
         d="M22 7.478L9.383 20.326 3 21l1.003-6.152L16.62 2 22 7.478z"
         stroke="#fff"

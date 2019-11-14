@@ -14,7 +14,12 @@ function CheckmarkIcon(props: {
       height={props.size}
       width={props.size}
       viewBox="0 0 24 24">
-      <path d="M4 12l5 5L20 6" stroke="#fff" strokeWidth="1.5" fill="none" />
+      <path
+        fill="none"
+        d="M2.5 12l6.806 7L21.5 5"
+        stroke="#fff"
+        strokeWidth="2"
+      />
     </svg>
   );
 }
