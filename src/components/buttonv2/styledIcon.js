@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { fromProps } from '../../styleUtils';
+import { fromProps, fromTheme } from '../../styleUtils';
 
 import Icon from '../icon/';
 
@@ -18,10 +18,30 @@ const iconLeftStyles = props => {
   return '';
 };
 
+const getCustomIconColors = props => {
+  let style = '';
+  if (props.iconStroke) {
+    style += `
+      path {
+        stroke: ${fromTheme(`colors.${[props.iconStroke]}`)(props)};
+      }
+    `;
+  }
+  if (props.iconFill) {
+    style += `
+      path {
+        fill: ${fromTheme(`colors.${[props.iconFill]}`)(props)};
+      }
+    `;
+  }
+  return style;
+};
+
 const StyledIcon = styled(Icon)`
   margin-right: ${fromProps('marginRight')};
   margin-bottom: -2px;
   ${iconLeftStyles};
+  ${getCustomIconColors}
 `;
 
 export default StyledIcon;
