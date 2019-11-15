@@ -1,3 +1,6 @@
+import _ from 'lodash';
+import { colors } from '../../src/theme';
+
 const knobPropsFactory = (knobs, getKnobTypeForProp) =>
   _.reduce(
     knobs,
@@ -26,4 +29,15 @@ const makeKnobsFromDefaultProps = (defaultProps, getOptionsForProp) =>
     {}
   );
 
-export { knobPropsFactory, makeKnobsFromDefaultProps };
+const colorsOptions = Object.keys(colors).reduce((acc, colorType) => {
+  Object.keys(colors[colorType]).forEach(item => {
+    acc[
+      `${colorType}.${item} - ${colors[colorType][item]}`
+    ] = `${colorType}.${item}`;
+
+    return acc;
+  });
+  return acc;
+}, {});
+
+export { colorsOptions, knobPropsFactory, makeKnobsFromDefaultProps };

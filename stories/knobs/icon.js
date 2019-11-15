@@ -1,22 +1,10 @@
 import { selectV2, number } from '@storybook/addon-knobs';
 
 import { icons } from '../../src/styleConfig';
-import { colors } from '../../src/theme';
 import Icon from '../../src/components/icon';
-import { makeKnobsFromDefaultProps } from './helpers';
+import { makeKnobsFromDefaultProps, colorsOptions } from './helpers';
 
 const { defaultProps } = Icon;
-
-const colorsOptions = Object.keys(colors).reduce((acc, colorType) => {
-  Object.keys(colors[colorType]).forEach(item => {
-    acc[
-      `${colorType}.${item} - ${colors[colorType][item]}`
-    ] = `${colorType}.${item}`;
-
-    return acc;
-  });
-  return acc;
-}, {});
 
 const iconsOptions = icons.buttons.reduce((acc, curr) => {
   acc[curr] = curr;
