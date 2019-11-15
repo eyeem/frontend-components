@@ -12,18 +12,16 @@ function RightArrow2Icon(props: {
       className={props.className}
       height={props.size}
       width={props.size}
-      viewBox="0 0 20 20"
-    >
-      <path
-        d="m3.414 8 5.793-5.793c.39-.39.39-1.024 0-1.414s-1.024-.39-1.414 0l-7.4 7.4c-.39.39-.39 1.023 0 1.414l7.4 7.4c.39.39 1.024.39 1.414 0s.39-1.025 0-1.415l-5.592-5.592h12.385c.552 0 1-.448 1-1s-.448-1-1-1z"
-        transform="matrix(-1 0 0 -1 17.1005 17.8)"
-      />
+      viewBox="0 0 24 24">
+      <g fill="none" stroke="#fff" strokeWidth="2">
+        <path d="M13 19l7-7-7-7M4 12h16" />
+      </g>
     </svg>
   );
 }
 
 RightArrow2Icon.defaultProps = {
-  size: 18
+  size: 24
 };
 
 export default RightArrow2Icon;

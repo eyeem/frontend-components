@@ -4967,16 +4967,20 @@ function LeftArrow2Icon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 19 18"
-    },
-    React.createElement("path", { d: "M3.414 8l5.793-5.793c.39-.39.39-1.024 0-1.414-.39-.39-1.024-.39-1.414 0l-7.4 7.4c-.39.39-.39 1.023 0 1.414l7.4 7.4c.39.39 1.024.39 1.414 0 .39-.39.39-1.025 0-1.415L3.615 10H16c.552 0 1-.448 1-1s-.448-1-1-1H3.414z" })
+      viewBox: "0 0 24 24" },
+    React.createElement(
+      "g",
+      { fill: "none", stroke: "#fff", strokeWidth: "2" },
+      React.createElement("path", { d: "m11 5-7 7.0001 7 6.9999" }),
+      React.createElement("path", { d: "m20 12h-16" })
+    )
   );
 }
 /* eslint-disable max-len */
 
 
 LeftArrow2Icon.defaultProps = {
-  size: 18
+  size: 24
 };
 
 exports.default = LeftArrow2Icon;
@@ -5053,18 +5057,18 @@ function RightArrow2Icon(props) {
       className: props.className,
       height: props.size,
       width: props.size,
-      viewBox: "0 0 20 20"
-    },
-    React.createElement("path", {
-      d: "m3.414 8 5.793-5.793c.39-.39.39-1.024 0-1.414s-1.024-.39-1.414 0l-7.4 7.4c-.39.39-.39 1.023 0 1.414l7.4 7.4c.39.39 1.024.39 1.414 0s.39-1.025 0-1.415l-5.592-5.592h12.385c.552 0 1-.448 1-1s-.448-1-1-1z",
-      transform: "matrix(-1 0 0 -1 17.1005 17.8)"
-    })
+      viewBox: "0 0 24 24" },
+    React.createElement(
+      "g",
+      { fill: "none", stroke: "#fff", strokeWidth: "2" },
+      React.createElement("path", { d: "M13 19l7-7-7-7M4 12h16" })
+    )
   );
 }
 
 
 RightArrow2Icon.defaultProps = {
-  size: 18
+  size: 24
 };
 
 exports.default = RightArrow2Icon;
