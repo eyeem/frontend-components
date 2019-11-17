@@ -1,8 +1,21 @@
 /* @flow */
-import theme from 'styled-theming';
 import styled from 'styled-components';
 import createComponentFromTagProp from 'react-create-component-from-tag-prop';
-import { colors } from '../../theme';
+import {
+  backgroundColorDefault,
+  backgroundColorHover,
+  backgroundColorActive,
+  backgroundColorDisabled,
+  borderColorDefault,
+  borderColorHover,
+  borderColorActive,
+  borderColorDisabled,
+  textColorDefault,
+  textColorActive,
+  textColorHover,
+  textColorDisabled
+} from './buttonColors';
+
 import {
   font,
   fromProps,
@@ -24,138 +37,6 @@ const ComponentFromTagProp = createComponentFromTagProp({
     'display',
     'alignItems'
   ]
-});
-
-const backgroundColorDefault = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.whites.white,
-    dark: colors.blacks.black1
-  },
-  solid: {
-    light: colors.blacks.black1,
-    dark: colors.whites.white
-  }
-});
-
-const backgroundColorHover = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.whites.white,
-    dark: colors.blacks.black1
-  },
-  solid: {
-    light: colors.greys.grey1,
-    dark: colors.greys.grey4
-  }
-});
-
-const backgroundColorActive = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.whites.white,
-    dark: colors.blacks.black1
-  },
-  solid: {
-    light: colors.greys.grey3,
-    dark: colors.greys.grey2
-  }
-});
-
-const backgroundColorDisabled = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.whites.white,
-    dark: colors.blacks.black1
-  },
-  solid: {
-    light: colors.greys.grey4,
-    dark: colors.greys.grey1
-  }
-});
-
-const borderColorDefault = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.blacks.black1,
-    dark: colors.whites.white
-  },
-  solid: {
-    light: colors.blacks.black1,
-    dark: colors.whites.white
-  }
-});
-
-const borderColorHover = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.greys.grey1,
-    dark: colors.greys.grey4
-  },
-  solid: {
-    light: colors.greys.grey1,
-    dark: colors.greys.grey4
-  }
-});
-
-const borderColorActive = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.greys.grey3,
-    dark: colors.greys.grey2
-  },
-  solid: {
-    light: colors.greys.grey1,
-    dark: colors.greys.grey3
-  }
-});
-
-const borderColorDisabled = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.greys.grey4,
-    dark: colors.greys.grey1
-  },
-  solid: {
-    light: colors.greys.grey4,
-    dark: colors.greys.grey1
-  }
-});
-
-const textColorDefault = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.blacks.black1,
-    dark: colors.whites.white
-  },
-  solid: {
-    light: colors.whites.white,
-    dark: colors.blacks.black1
-  }
-});
-
-const textColorActive = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.greys.grey3,
-    dark: colors.greys.grey2
-  },
-  solid: {
-    light: colors.whites.white,
-    dark: colors.blacks.black1
-  }
-});
-
-const textColorHover = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.greys.grey1,
-    dark: colors.greys.grey4
-  },
-  solid: {
-    light: colors.whites.white,
-    dark: colors.blacks.black1
-  }
-});
-
-const textColorDisabled = theme.variants('mode', 'fill', {
-  outline: {
-    light: colors.greys.grey4,
-    dark: colors.greys.grey1
-  },
-  solid: {
-    light: colors.whites.white,
-    dark: colors.blacks.black1
-  }
 });
 
 const StyledButtonv2 = styled(ComponentFromTagProp)`
