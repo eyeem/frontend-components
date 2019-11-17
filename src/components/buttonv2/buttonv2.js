@@ -17,8 +17,8 @@ function Buttonv2(props: {
   size?: string,
   display?: string,
   icon?: string | false,
-  iconStroke?: string | false,
-  iconFill?: string | false,
+  followTextColorIconStroke?: string | false,
+  followTextColorIconFill?: string | false,
   alignItems: string,
   fill?: 'outline' | 'solid',
 
@@ -59,9 +59,10 @@ function Buttonv2(props: {
           moveIconToLeft={props.moveIconToLeft}
           size={buttonv2Sizes[props.size].iconSize}
           type={props.icon}
+          fill={props.fill}
           marginRight={props.children ? '8px' : 0}
-          iconFill={props.iconFill}
-          iconStroke={props.iconStroke}
+          followTextColorIconStroke={props.followTextColorIconStroke}
+          followTextColorIconFill={props.followTextColorIconFill}
         />
       )}
       {props.children}
@@ -74,8 +75,8 @@ Buttonv2.defaultProps = {
   fill: 'solid',
   display: 'inline-block',
   icon: false,
-  iconStroke: false,
-  iconFill: false,
+  followTextColorIconStroke: false,
+  followTextColorIconFill: false,
   disabled: false,
   fullWidth: false,
   moveIconToLeft: false,

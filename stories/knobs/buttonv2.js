@@ -28,10 +28,10 @@ const getOptionsForProp = prop => {
     case 'icon':
       return iconsOptions;
 
-    case 'iconFill':
+    case 'followTextColorIconfill':
       return colorsOptions;
 
-    case 'iconStroke':
+    case 'followTextColorIconStroke':
       return colorsOptions;
 
     case 'size':
@@ -67,15 +67,15 @@ const getKnobTypeForProp = (prop, value) => {
         args: [value.label, value.options, value.defaultValue]
       };
 
-    case 'iconFill':
+    case 'followTextColorIconFill':
       return {
-        knobFunction: selectV2,
+        knobFunction: boolean,
         args: [value.label, value.options, value.defaultValue]
       };
 
-    case 'iconStroke':
+    case 'followTextColorIconStroke':
       return {
-        knobFunction: selectV2,
+        knobFunction: boolean,
         args: [value.label, value.options, value.defaultValue]
       };
 

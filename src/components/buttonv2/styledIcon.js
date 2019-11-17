@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-import { fromProps, fromTheme } from '../../styleUtils';
+import { fromProps } from '../../styleUtils';
+
+import { textColorDefault } from './buttonColors';
 
 import Icon from '../icon/';
 
@@ -20,17 +22,17 @@ const iconLeftStyles = props => {
 
 const getCustomIconColors = props => {
   let style = '';
-  if (props.iconStroke) {
+  if (props.followTextColorIconStroke) {
     style += `
       path {
-        stroke: ${fromTheme(`colors.${[props.iconStroke]}`)(props)};
+        stroke: ${textColorDefault(props)};
       }
     `;
   }
-  if (props.iconFill) {
+  if (props.followTextColorIconFill) {
     style += `
       path {
-        fill: ${fromTheme(`colors.${[props.iconFill]}`)(props)};
+        fill: ${textColorDefault(props)};
       }
     `;
   }
