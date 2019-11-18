@@ -53,7 +53,9 @@ function Buttonv2(props: {
       moveIconToLeft={props.moveIconToLeft}
       title={props.title}
       htmlFor={props.htmlFor}
-      type={props.type}>
+      type={props.type}
+      followTextColorIconStroke={props.followTextColorIconStroke}
+      followTextColorIconFill={props.followTextColorIconFill}>
       {props.icon && (
         <StyledIcon
           moveIconToLeft={props.moveIconToLeft}
@@ -61,8 +63,6 @@ function Buttonv2(props: {
           type={props.icon}
           fill={props.fill}
           marginRight={props.children ? '8px' : 0}
-          followTextColorIconStroke={props.followTextColorIconStroke}
-          followTextColorIconFill={props.followTextColorIconFill}
         />
       )}
       {props.children}

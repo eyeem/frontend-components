@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 import { fromProps } from '../../styleUtils';
 
-import { textColorDefault } from './buttonColors';
-
 import Icon from '../icon/';
 
 const iconLeftStyles = props => {
@@ -20,30 +18,10 @@ const iconLeftStyles = props => {
   return '';
 };
 
-const getCustomIconColors = props => {
-  let style = '';
-  if (props.followTextColorIconStroke) {
-    style += `
-      path {
-        stroke: ${textColorDefault(props)};
-      }
-    `;
-  }
-  if (props.followTextColorIconFill) {
-    style += `
-      path {
-        fill: ${textColorDefault(props)};
-      }
-    `;
-  }
-  return style;
-};
-
 const StyledIcon = styled(Icon)`
   margin-right: ${fromProps('marginRight')};
   margin-bottom: -2px;
   ${iconLeftStyles};
-  ${getCustomIconColors}
 `;
 
 export default StyledIcon;

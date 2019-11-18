@@ -14,7 +14,7 @@ function DownloadIcon(props: { size?: number, className: string, id: string }) {
         <path d="m3 21h18" />
         <path d="m6 10 6 6 6-6" />
         <path d="m12 2v14" />
-      </g>{' '}
+      </g>
     </svg>
   );
 }
