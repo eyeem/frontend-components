@@ -39,6 +39,48 @@ const ComponentFromTagProp = createComponentFromTagProp({
   ]
 });
 
+const getFillAndStroke = (props, colorFunction) => {
+  let style = '';
+  if (props.followTextColorIconStroke) {
+    style += `
+        stroke: ${colorFunction(props)};
+    `;
+  }
+  if (props.followTextColorIconFill) {
+    style += `
+        fill: ${colorFunction(props)};
+    `;
+  }
+  return style;
+};
+
+const getIconStyles = props => {
+  if (props.followTextColorIconStroke || props.followTextColorIconFill) {
+    return `
+      path {
+        transition: stroke 0.2s ease-out, fill 0.2s ease-out;
+        ${getFillAndStroke(props, textColorDefault)}
+      }
+      &:hover {
+        path {
+          ${getFillAndStroke(props, textColorHover)}
+        }
+      }
+      &:active {
+        path {
+          ${getFillAndStroke(props, textColorActive)}
+        }
+      }
+      &:disabled {
+        path {
+          ${getFillAndStroke(props, textColorDisabled)}
+        }
+      }
+    `;
+  }
+  return undefined;
+};
+
 const StyledButtonv2 = styled(ComponentFromTagProp)`
   position: relative;
   display: ${props => props.display};
@@ -91,6 +133,7 @@ const StyledButtonv2 = styled(ComponentFromTagProp)`
   ${fromPropsTernary('moveIconToLeft', 'padding-left: 32px;', '')} ${font(
     'regular'
   )};
+  ${props => getIconStyles(props)}
 `;
 
 export default StyledButtonv2;
