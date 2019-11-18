@@ -35,7 +35,9 @@ const ComponentFromTagProp = createComponentFromTagProp({
     'moveIconToLeft',
     'fill',
     'display',
-    'alignItems'
+    'alignItems',
+    'followTextColorIconStroke',
+    'followTextColorIconFill'
   ]
 });
 
