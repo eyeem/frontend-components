@@ -1,25 +1,13 @@
 import { selectV2, boolean, number } from '@storybook/addon-knobs';
 
 import Buttonv2 from '../../src/components/buttonv2';
-import {
-  buttonColors,
-  buttonv2Sizes,
-  icons,
-  fills
-} from '../../src/styleConfig';
-import { makeKnobsFromDefaultProps } from './helpers';
+import { buttonv2Sizes, icons, fills } from '../../src/styleConfig';
+import { makeKnobsFromDefaultProps, colorsOptions } from './helpers';
 
 const { defaultProps } = Buttonv2;
 
-const colorsOptions = Object.keys(buttonColors).reduce((acc, curr) => {
-  acc[curr] = curr;
-
-  return acc;
-}, {});
-
 const iconsOptions = icons.buttons.reduce((acc, curr) => {
   acc[curr] = curr;
-
   return acc;
 }, {});
 
@@ -37,11 +25,14 @@ const fillOptions = fills.reduce((acc, curr) => {
 
 const getOptionsForProp = prop => {
   switch (prop) {
-    case 'color':
-      return colorsOptions;
-
     case 'icon':
       return iconsOptions;
+
+    case 'followTextColorIconfill':
+      return colorsOptions;
+
+    case 'followTextColorIconStroke':
+      return colorsOptions;
 
     case 'size':
       return sizesOptions;
@@ -64,12 +55,6 @@ const getOptionsForProp = prop => {
 
 const getKnobTypeForProp = (prop, value) => {
   switch (prop) {
-    case 'color':
-      return {
-        knobFunction: selectV2,
-        args: [value.label, value.options, value.defaultValue]
-      };
-
     case 'fill':
       return {
         knobFunction: selectV2,
@@ -79,6 +64,18 @@ const getKnobTypeForProp = (prop, value) => {
     case 'icon':
       return {
         knobFunction: selectV2,
+        args: [value.label, value.options, value.defaultValue]
+      };
+
+    case 'followTextColorIconFill':
+      return {
+        knobFunction: boolean,
+        args: [value.label, value.options, value.defaultValue]
+      };
+
+    case 'followTextColorIconStroke':
+      return {
+        knobFunction: boolean,
         args: [value.label, value.options, value.defaultValue]
       };
 
