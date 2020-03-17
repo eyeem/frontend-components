@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { render, getByText, cleanup, fireEvent } from 'react-testing-library';
+import { render, getByText, cleanup, fireEvent } from '@testing-library/react';
 
 import { colors } from '../../theme';
 import Buttonv2 from './buttonv2';
