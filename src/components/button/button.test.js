@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { render, getByText, cleanup, fireEvent } from 'react-testing-library';
+import { render, getByText, cleanup, fireEvent } from '@testing-library/react';
 
 import { colors } from '../../theme';
 import { buttonColors } from '../../styleConfig';

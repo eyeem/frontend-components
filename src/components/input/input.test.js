@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from 'react-testing-library';
+import { render, cleanup } from '@testing-library/react';
 
 import Input from './index';
 
@@ -10,7 +10,7 @@ const TEST_NAME = 'test name';
 const testInputProps = {
   required: true,
   value: TEST_VALUE,
-  onChange: () => this.onInputChangedHandler,
+  onChange: () => onInputChangedHandler,
   name: TEST_NAME,
   placeholder: TEST_PLACEHOLDER
 };

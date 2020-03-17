@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup, fireEvent } from 'react-testing-library';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 
 import Checkbox from './index';
 
@@ -33,7 +33,7 @@ test('it accepts prop checked', () => {
 
 test('onChange is triggered properly', () => {
   const onChangeHandler = jest.fn();
-  const { container, rerender } = render(
+  const { container } = render(
     <Checkbox
       inputProps={{ checked: true, onChange: () => onChangeHandler() }}
     />

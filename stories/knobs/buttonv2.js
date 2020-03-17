@@ -1,4 +1,4 @@
-import { selectV2, boolean, number } from '@storybook/addon-knobs';
+import { select, boolean, number } from '@storybook/addon-knobs';
 
 import Buttonv2 from '../../src/components/buttonv2';
 import { buttonv2Sizes, icons, fills } from '../../src/styleConfig';
@@ -57,13 +57,13 @@ const getKnobTypeForProp = (prop, value) => {
   switch (prop) {
     case 'fill':
       return {
-        knobFunction: selectV2,
+        knobFunction: select,
         args: [value.label, value.options, value.defaultValue]
       };
 
     case 'icon':
       return {
-        knobFunction: selectV2,
+        knobFunction: select,
         args: [value.label, value.options, value.defaultValue]
       };
 
@@ -81,7 +81,7 @@ const getKnobTypeForProp = (prop, value) => {
 
     case 'size':
       return {
-        knobFunction: selectV2,
+        knobFunction: select,
         args: [value.label, value.options, value.defaultValue]
       };
 

@@ -21,8 +21,8 @@ exports[`it accepts property disabled 1`] = `
   text-align: center;
   text-shadow: none;
   cursor: pointer;
-  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
-  transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
   pointer-events: all;
   font-weight: 300;
   font-family: "Sailec Regular",sans-serif;
@@ -61,8 +61,8 @@ exports[`it accepts property fullWidth 1`] = `
   text-align: center;
   text-shadow: none;
   cursor: pointer;
-  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
-  transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
   pointer-events: all;
   font-weight: 300;
   font-family: "Sailec Regular",sans-serif;
@@ -100,8 +100,8 @@ exports[`it accepts property icon=checkmark 1`] = `
   text-align: center;
   text-shadow: none;
   cursor: pointer;
-  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
-  transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
   pointer-events: all;
   font-weight: 300;
   font-family: "Sailec Regular",sans-serif;
@@ -161,8 +161,8 @@ exports[`it renders black background in dark mode with outline fill set 1`] = `
   text-align: center;
   text-shadow: none;
   cursor: pointer;
-  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
-  transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
   pointer-events: all;
   font-weight: 300;
   font-family: "Sailec Regular",sans-serif;
@@ -222,8 +222,8 @@ exports[`it renders default button 1`] = `
   text-align: center;
   text-shadow: none;
   cursor: pointer;
-  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
-  transition: background-color 0.2s ease-in-out,border 0.2s ease-out,color 0.2s ease-out,fill 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
+  transition: background-color 0.2s ease-in-out,border 0.2s ease-out, color 0.2s ease-out,fill 0.2s ease-out;
   pointer-events: all;
   font-weight: 300;
   font-family: "Sailec Regular",sans-serif;

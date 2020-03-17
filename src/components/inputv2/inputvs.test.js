@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, getByLabelText, cleanup } from 'react-testing-library';
+import { render, getByLabelText, cleanup } from '@testing-library/react';
 
 import Inputv2 from './inputv2';
 

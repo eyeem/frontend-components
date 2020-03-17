@@ -1,5 +1,4 @@
-import React from 'react';
-import { selectV2, boolean } from '@storybook/addon-knobs';
+import { select, boolean } from '@storybook/addon-knobs';
 
 import {
   textSizes,
@@ -76,37 +75,37 @@ const getKnobTypeForProp = (prop, value) => {
 
     case 'topMargin':
       return {
-        knobFunction: selectV2,
+        knobFunction: select,
         args: [value.label, value.options, value.defaultValue]
       };
 
     case 'color':
       return {
-        knobFunction: selectV2,
+        knobFunction: select,
         args: [value.label, value.options, value.defaultValue]
       };
 
     case 'size':
       return {
-        knobFunction: selectV2,
+        knobFunction: select,
         args: [value.label, value.options, value.defaultValue]
       };
 
     case 'font':
       return {
-        knobFunction: selectV2,
+        knobFunction: select,
         args: [value.label, value.options, value.defaultValue]
       };
 
     case 'align':
       return {
-        knobFunction: selectV2,
+        knobFunction: select,
         args: [value.label, value.options, value.defaultValue]
       };
 
     case 'display':
       return {
-        knobFunction: selectV2,
+        knobFunction: select,
         args: [value.label, value.options, value.defaultValue]
       };
 
