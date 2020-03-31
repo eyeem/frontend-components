@@ -13,6 +13,7 @@ module.exports = {
     filename: 'index.js',
     library: 'eyeem-components',
     libraryTarget: 'umd',
+    globalObject: "typeof self !== 'undefined' ? self : this",
     umdNamedDefine: true
   },
   module: {
